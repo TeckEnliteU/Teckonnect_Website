@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  background: #f5f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.navbar.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar.hide {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+/* CONTAINER */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  max-width: 1100px;
+
+  padding: 10px 18px;
+  border-radius: 60px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* LEFT LOGO */
+.nav-left .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.nav-left img {
+  height: 32px;
+}
+
+/* CENTER LINKS */
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+/* NAV ITEMS */
+.nav-item a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-item a.active {
+  color: #000;
+  background: rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* RIGHT CTA */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ENLITEU LOGO */
+.external-logo img {
+  height: 28px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.external-logo img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}

@@ -1,0 +1,704 @@
+/* HERO */
+.partnersHero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #ffffff, #eef5ff);
+}
+
+/* SOFT ANIMATED GRADIENT GLOW */
+.partnersHero::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #008abd55, transparent 70%);
+  top: -120px;
+  left: -120px;
+  filter: blur(80px);
+  animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+.partnersHero::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #a3cf5d55, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(80px);
+  animation: floatGlow 7s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatGlow {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+
+/* CONTENT */
+.heroContent {
+  max-width: 850px;
+  z-index: 2;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* BADGE */
+.heroBadge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(79, 162, 231, 0.15);
+  color: #053a51;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border: 1px solid rgba(93, 127, 207, 0.4);
+
+  backdrop-filter: blur(6px);
+}
+
+/* TITLE */
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* ACCENT TEXT */
+.heroTitle span {
+  color: #a3cf5d;
+}
+
+/* DESCRIPTION */
+.heroDesc {
+  font-size: 1.1rem;
+  color: #525354;
+  line-height: 1.7;
+}
+
+/* ENTRY ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.3rem;
+  }
+
+  .heroDesc {
+    font-size: 1rem;
+  }
+}
+/* intro */
+/* =========================
+   SECTION
+========================= */
+.partnersIntro {
+  padding: 140px 80px;
+  background: radial-gradient(circle at top left, #053a51, #020b10);
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.partnersIntroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+.partnersIntroContent {
+  width: 50%;
+
+  /* 👇 smooth entry */
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+.partnersIntroVisual {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   BADGE
+========================= */
+.partnersIntroBadge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(163, 207, 93, 0.1);
+  color: #a3cf5d;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.partnersIntroTitle {
+  font-size: 48px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #a3cf5d, #008abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.partnersIntroText {
+  color: #bcd3df;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================
+   IMAGE CARD
+========================= */
+.partnersIntroImageCard {
+  width: 380px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(0, 138, 189, 0.15);
+
+  transition: transform 0.4s ease;
+}
+
+/* IMAGE */
+.partnersIntroImageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HOVER */
+.partnersIntroImageCard:hover {
+  transform: scale(1.05);
+}
+
+/* FLOAT */
+.partnersIntroImageCard {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .partnersIntroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .partnersIntroContent,
+  .partnersIntroVisual {
+    width: 100%;
+  }
+}
+/* keytechnolo */
+.keyPartnerSection {
+  height: 140vh; /* ✅ more smooth scroll space */
+  padding: 140px 20px;
+  background: radial-gradient(circle at center, #f8fafc, #eef2f7);
+  text-align: center;
+}
+
+/* TITLE */
+.keypartnerh2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subText {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 80px;
+}
+
+/* STICKY AREA */
+.stickyWrapper {
+  position: sticky;
+  top: 20%;
+  height: 520px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 80px; /* ✅ side spacing */
+  max-width: 1200px; /* ✅ center layout */
+  margin: 0 auto;
+}
+
+/* CARD */
+.card {
+  position: absolute;
+  width: 300px;
+  height: 360px;
+  padding: 28px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+/* IMAGE */
+/* LOGO */
+.card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #053a51;
+}
+
+/* DESCRIPTION */
+.card p {
+  font-size: 14.5px;
+  color: #4a5568;
+  line-height: 1.6;
+
+  flex-grow: 1; /* 🔥 THIS FIXES ALIGNMENT */
+}
+
+/* BADGE (always bottom aligned) */
+.card span {
+  font-size: 12px;
+  color: #666;
+
+  background: rgba(0, 0, 0, 0.05);
+  padding: 8px 12px;
+  border-radius: 12px;
+
+  margin-top: 20px;
+}
+/* STACK ORDER */
+.card:nth-child(1) {
+  z-index: 3;
+}
+.card:nth-child(2) {
+  z-index: 2;
+}
+.card:nth-child(3) {
+  z-index: 1;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 60px 140px rgba(0, 0, 0, 0.25);
+}
+/* partners  list*/
+/* =========================
+   MAIN SECTION
+========================= */
+.partnersList {
+  padding: 160px 80px;
+  background: linear-gradient(180deg, #020b10 0%, #053a51 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+.partnersListHero {
+  max-width: 900px;
+  margin: 0 auto 120px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+.partnersListHero h2 {
+  font-size: 56px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a3cf5d, #008abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.partnersListHero h3 {
+  color: #008abd;
+  margin: 10px 0 20px;
+}
+
+.partnersListHero p {
+  color: #bcd3df;
+  line-height: 1.8;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.partnersListSection {
+  margin-bottom: 120px;
+}
+
+.partnersListTitle {
+  font-size: 30px;
+  color: #a3cf5d;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   GRID
+========================= */
+.partnersListCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   CARD (HIGH-END)
+========================= */
+.partnersListCard {
+  position: relative;
+  padding: 32px;
+  border-radius: 20px;
+
+  background: #0b1f28;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.5s ease;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  overflow: hidden;
+}
+
+/* 🔥 GRADIENT OVERLAY */
+.partnersListCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(135deg, #053a51, #008abd, #a3cf5d);
+
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: 0;
+}
+
+/* CONTENT ABOVE */
+.partnersListCard * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXT */
+.partnersListCard h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.partnersListCard span {
+  font-size: 13px;
+  color: #a3cf5d;
+}
+
+.partnersListCard p {
+  margin-top: 10px;
+  color: #bcd3df;
+  line-height: 1.6;
+}
+
+/* 🚀 HOVER EFFECT */
+.partnersListCard:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 70px rgba(0, 138, 189, 0.35);
+}
+
+/* 🔥 FULL COLOR APPLY */
+.partnersListCard:hover::before {
+  opacity: 1;
+}
+
+/* 🔥 TEXT COLOR CHANGE */
+.partnersListCard:hover h4,
+.partnersListCard:hover span,
+.partnersListCard:hover p {
+  color: #000;
+}
+
+/* =========================
+   CYBER SECTION (HERO STYLE)
+========================= */
+.partnersListCyber {
+  margin-top: 140px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+
+  padding: 90px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #000000, #053a51);
+
+  box-shadow:
+    0 0 120px rgba(163, 207, 93, 0.15),
+    inset 0 0 50px rgba(255, 255, 255, 0.03);
+
+  transition: 0.4s;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.partnersListCyber:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 120px rgba(163, 207, 93, 0.25);
+}
+
+/* CONTENT */
+.partnersListCyberContent h3 {
+  font-size: 36px;
+  color: #a3cf5d;
+}
+
+.partnersListCyberContent span {
+  color: #008abd;
+  font-size: 14px;
+}
+
+.partnersListCyberContent p {
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+/* IMAGE */
+.partnersListCyberImage img {
+  width: 80px;
+  filter: drop-shadow(0 0 25px rgba(163, 207, 93, 0.4));
+  transition: 0.4s;
+}
+
+.partnersListCyber:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+.partnersListFooter {
+  margin-top: 100px;
+  text-align: center;
+  color: #bcd3df;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* =========================
+   CTA
+========================= */
+.partnersListActions {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.partnersListPrimary {
+  padding: 14px 32px;
+  border-radius: 40px;
+
+  background: linear-gradient(90deg, #a3cf5d, #008abd);
+  color: #000;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.partnersListPrimary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(163, 207, 93, 0.5);
+}
+
+.partnersListSecondary {
+  padding: 14px 32px;
+  border-radius: 40px;
+
+  border: 1px solid #a3cf5d;
+  color: #a3cf5d;
+
+  transition: 0.3s;
+}
+
+.partnersListSecondary:hover {
+  background: #a3cf5d;
+  color: #000;
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+/* =========================
+   🔥 PRO LEVEL REVEAL
+========================= */
+.partnersListReveal {
+  opacity: 0;
+
+  transform: translateY(80px) scale(0.94) rotateX(8deg);
+
+  filter: blur(10px);
+
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.9s ease;
+}
+
+/* FINAL STATE */
+.partnersListShow {
+  opacity: 1;
+
+  transform: translateY(0) scale(1) rotateX(0deg);
+
+  filter: blur(0);
+}
+
+/* =========================
+   LOGO CONTAINER
+========================= */
+.partnersListLogo {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   LOGO IMAGE
+========================= */
+.partnersListLogo img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   HOVER EFFECT (PREMIUM)
+========================= */
+.partnersListCard:hover .partnersListLogo {
+  background: #fff;
+  transform: scale(1.1);
+
+  box-shadow: 0 0 20px rgba(163, 207, 93, 0.5);
+}
+
+/* LOGO COLOR CHANGE (IF WHITE LOGO) */
+.partnersListLogo img {
+  filter: brightness(0) invert(1);
+}
+
+.partnersListCard:hover .partnersListLogo img {
+  filter: none;
+}
