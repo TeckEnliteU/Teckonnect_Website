@@ -1,107 +1,98 @@
-import React, { useEffect, useRef } from 'react';
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../Services.module.css';
 
-import {
-  FaShieldAlt,
-  FaSyncAlt,
-  FaCloud,
-  FaServer,
-  FaLock,
-} from 'react-icons/fa';
+import ms from '/icons/MicrosoftN.svg';
+import aws from '/icons/aws.svg';
+import ibm from '/icons/ibm.svg';
+import adobe from '/icons/adobeN.svg';
+import centerLogo from '/icons/log.svg';
 
-import msLogo from '/icons/microsoft.png';
-import awsLogo from '/icons/AWS.png';
-import ibmLogo from '/icons/ibm.png';
-const icons = [
-  { type: 'img', src: msLogo },
-  { type: 'img', src: awsLogo },
-  { type: 'img', src: ibmLogo },
-  { type: 'icon', comp: <FaCloud /> },
-  { type: 'icon', comp: <FaServer /> },
-  { type: 'icon', comp: <FaShieldAlt /> },
-  { type: 'icon', comp: <FaLock /> },
-  { type: 'icon', comp: <FaSyncAlt /> },
-];
-
-const ServicesIntroBlast = () => {
-  const iconRefs = useRef([]);
+const ServicesFinal = () => {
+  const sectionRef = useRef(null);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const animate = () => {
-      // BLAST UP
-      iconRefs.current.forEach((el, i) => {
-        if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+        }
+      },
+      { threshold: 0.4 },
+    );
 
-        const spread = (i - icons.length / 2) * 45;
-        const height = -200 - Math.random() * 80;
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-        el.style.transition =
-          'transform 1s cubic-bezier(0.22,1,0.36,1), opacity 0.4s';
-
-        el.style.transform = `
-          translate(-50%, -50%)
-          translate(${spread}px, ${height}px)
-          scale(1)
-        `;
-        el.style.opacity = 1;
-      });
-
-      // RETURN
-      setTimeout(() => {
-        iconRefs.current.forEach((el) => {
-          if (!el) return;
-
-          el.style.transition = 'transform 0.8s ease, opacity 0.3s';
-          el.style.transform = 'translate(-50%, -50%) scale(0.5)';
-          el.style.opacity = 0;
-        });
-      }, 2000);
-    };
-
-    animate();
-    const loop = setInterval(animate, 3500);
-
-    return () => clearInterval(loop);
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className={styles.servicesintroBlastSection}>
-      <div className={styles.servicesintroBlastCard}>
-        {/* TEXT */}
-        <div className={styles.servicesintroBlastText}>
+    <section
+      ref={sectionRef}
+      className={styles.section}
+    >
+      {/* TEXT */}
+      <div className={`${styles.text} ${active ? styles.show : ''}`}>
+        <div className={styles.textMask}>
           <h2>
-            <span className={styles.highlight}>Powerful</span> Integration
+            Integrated <span>Services</span> Across Global
+            <br />
+            Technology Platforms
           </h2>
+
           <p>
-            Connect seamlessly with your cloud ecosystem for a unified, secure,
-            and scalable workflow.
+            Most organisations operate across Microsoft, AWS, IBM, and Adobe—
+            unified under one managed service model.
           </p>
         </div>
+      </div>
 
-        {/* MAIL BOX */}
-        <div className={styles.servicesintroBlastBox}>
-          <div className={styles.servicesintroLid}></div>
-
-          {icons.map((item, i) => (
+      {/* VISUAL */}
+      <div className={styles.container}>
+        {/* LINES */}
+        <div
+          className={`${styles.lineWrapper} ${active ? styles.lineShow : ''}`}
+        >
+          {[0, 1, 2, 3].map((_, i) => (
             <div
               key={i}
-              ref={(el) => (iconRefs.current[i] = el)}
-              className={styles.servicesintroBlastIcon}
-            >
-              {item.type === 'img' ? (
-                <img
-                  src={item.src}
-                  alt=""
-                />
-              ) : (
-                item.comp
-              )}
-            </div>
+              className={styles.line}
+            />
           ))}
         </div>
+
+        {/* CENTER */}
+        <div className={styles.center}>
+          <img
+            src={centerLogo}
+            alt=""
+          />
+        </div>
+
+        {/* LOGOS */}
+        <img
+          src={ms}
+          className={`${styles.logo} ${active ? styles.l1 : ''}`}
+        />
+        <img
+          src={aws}
+          className={`${styles.logo} ${active ? styles.l2 : ''}`}
+        />
+        <img
+          src={ibm}
+          className={`${styles.logo} ${active ? styles.l3 : ''}`}
+        />
+        <img
+          src={adobe}
+          className={`${styles.logo} ${active ? styles.l4 : ''}`}
+        />
       </div>
     </section>
   );
 };
 
-export default ServicesIntroBlast;
+export default ServicesFinal;

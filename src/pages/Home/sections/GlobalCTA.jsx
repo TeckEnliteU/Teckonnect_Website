@@ -1,157 +1,163 @@
+// 'use client';
+
+// import styles from '../home.module.css';
+// import { Link } from 'react-router-dom';
+// const logos = [
+//   '/icons/aws.svg',
+//   '/icons/microsoft.svg',
+//   '/icons/ibm.svg',
+//   '/logos/google.png',
+//   '/logos/oracle.png',
+// ];
+
+// export default function GlobalCTA() {
+//   return (
+//     <section className={styles.ctaSection}>
+//       <div className={styles.ctaBox}>
+//         {/* ORBITS */}
+//         <div className={styles.orbitWrap}>
+//           <div className={`${styles.orbit} ${styles.orbit1}`}>
+//             <img src={logos[0]} />
+//           </div>
+
+//           <div className={`${styles.orbit} ${styles.orbit2}`}>
+//             <img src={logos[1]} />
+//           </div>
+
+//           <div className={`${styles.orbit} ${styles.orbit3}`}>
+//             <img src={logos[2]} />
+//           </div>
+
+//           <div className={`${styles.orbit} ${styles.orbit4}`}>
+//             <img src={logos[3]} />
+//           </div>
+//         </div>
+
+//         {/* CONTENT */}
+//         <div className={styles.ctaContent}>
+//           {/* <span>GET ORGANIZED, STAY AHEAD</span> */}
+
+//           <h2>
+//             Bring clarity and confidence to
+//             <br />
+//             your IT environment
+//           </h2>
+
+//           <p>
+//             Start a conversation to understand your current
+//             environment,risks,and
+//             <br />
+//             opportunities—and explore a clearer way forward.
+//           </p>
+
+//           <Link to="/contact">
+//             <button>Get started today</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 'use client';
 
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Sphere, Html } from '@react-three/drei';
-import { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import styles from '../home.module.css';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-function Globe() {
-  const ref = useRef();
-  useFrame(() => {
-    ref.current.rotation.y += 0.002;
-  });
+/* ========================= */
+/* 🔥 ANIMATION SYSTEM */
+/* ========================= */
 
-  return (
-    <Sphere
-      ref={ref}
-      args={[2, 64, 64]}
-    >
-      <meshBasicMaterial
-        wireframe
-        color="#3b82f6"
-      />
-    </Sphere>
-  );
-}
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.2,
+    },
+  },
+};
 
-function Particles() {
-  const group = useRef();
-  useFrame(({ clock }) => {
-    group.current.rotation.y = clock.elapsedTime * 0.1;
-  });
+const textReveal = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    clipPath: 'inset(0 0 100% 0)',
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    clipPath: 'inset(0 0 0% 0)',
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
 
-  return (
-    <group ref={group}>
-      {Array.from({ length: 120 }).map((_, i) => (
-        <mesh
-          key={i}
-          position={[
-            (Math.random() - 0.5) * 6,
-            (Math.random() - 0.5) * 6,
-            (Math.random() - 0.5) * 6,
-          ]}
-        >
-          <sphereGeometry args={[0.02, 8, 8]} />
-          <meshBasicMaterial color="#22c55e" />
-        </mesh>
-      ))}
-    </group>
-  );
-}
+/* ========================= */
+/* DATA */
+/* ========================= */
 
-const countries = [
-  { name: 'UAE', flag: '/flags/uae.png', pos: [2.3, 0.8, 0] },
-  { name: 'UK', flag: '/flags/uk.png', pos: [-2.3, 0.6, 0] },
-  { name: 'India', flag: '/flags/india.png', pos: [0, -1.9, 0] },
-  { name: 'Australia', flag: '/flags/australia.png', pos: [1.6, -0.9, 0] },
+const logos = [
+  '/icons/aws white.svg',
+  '/icons/microsoft white.svg',
+  '/icons/ibm white.svg',
+  '/icons/adobe white.svg',
 ];
 
-function Labels() {
-  return countries.map((c, i) => (
-    <Html
-      key={i}
-      position={c.pos}
-      center
-    >
-      {/* <div className={styles.flagCard}> */}
-      <div className={styles.globalctcFlagCard}>
-        <img
-          src={c.flag}
-          alt={c.name}
-        />
-        <span>{c.name}</span>
-      </div>
-    </Html>
-  ));
-}
-
-/* 🌊 FLOAT */
-function Floating({ children }) {
-  const ref = useRef();
-  useFrame(({ clock }) => {
-    ref.current.position.y = Math.sin(clock.elapsedTime) * 0.1;
-  });
-  return <group ref={ref}>{children}</group>;
-}
+/* ========================= */
+/* COMPONENT */
+/* ========================= */
 
 export default function GlobalCTA() {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(true);
-  }, []);
-
-  // Framer Motion variants
-  const sideVariant = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } },
-  };
-
   return (
-    <section className={styles.globalctcSection}>
-      {/* LEFT */}
-      <motion.div
-        className={`${styles.globalctcSide} ${styles.globalctcLeft}`}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sideVariant}
-      >
-        <h2>Go Global, Grow Faster</h2>
-        <p>
-          Expand your business across continents. We connect your brand to
-          global markets with seamless digital presence.
-        </p>
-      </motion.div>
+    <section className={styles.ctaSection}>
+      <div className={styles.ctaBox}>
+        {/* 🔥 ORBITS (FLOATING) */}
+        <div className={styles.orbitWrap}>
+          {[0, 1, 2, 3].map((i) => (
+            <motion.div
+              key={i}
+              className={`${styles.orbit} ${styles[`orbit${i + 1}`]}`}
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 4 + i,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            >
+              <img src={logos[i]} />
+            </motion.div>
+          ))}
+        </div>
 
-      {/* CENTER */}
-      <div className={styles.globalctcGlobeBox}>
-        {show && (
-          <Canvas camera={{ position: [0, 0, 6] }}>
-            <ambientLight intensity={0.5} />
-            <pointLight position={[5, 5, 5]} />
-            <Globe />
-            <Particles />
-            <Floating>
-              <Labels />
-            </Floating>
-            <OrbitControls enableZoom={false} />
-          </Canvas>
-        )}
+        {/* 🔥 CONTENT */}
+        <motion.div
+          className={styles.ctaContent}
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.h2 variants={textReveal}>
+            Bring clarity and confidence to
+            <br />
+            your IT environment
+          </motion.h2>
+
+          <motion.p variants={textReveal}>
+            Start a conversation to understand your current environment, risks,
+            and opportunities—and explore a clearer way forward.
+          </motion.p>
+
+          <motion.div variants={textReveal}>
+            <Link to="/contact">
+              <button className={styles.ctaBtn}>Get started today</button>
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
-
-      {/* RIGHT */}
-      <motion.div
-        className={`${styles.globalctcSide} ${styles.globalctcRight}`}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={{
-          hidden: { opacity: 0, x: -100 },
-          visible: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1, ease: 'easeOut' },
-          },
-        }}
-      >
-        <h2>Scale Without Limits</h2>
-        <p>
-          Whether entering new markets or growing globally, we help you scale
-          faster with powerful digital solutions.
-        </p>
-      </motion.div>
     </section>
   );
 }

@@ -1,26 +1,20 @@
 import React from 'react';
 import Hero from './sections/Hero';
 import Intro from './sections/Intro';
-import WhyIndustry from './sections/WhyIndustry';
+import WhyIndustry from './sections/Cta';
 import IndustriesGrid from './sections/IndustriesGrid';
 import Approach from './sections/Approach';
-// import CTA from './sections/CTA';
+import Cta from './sections/Cta';
 
 const Industries = () => {
   return (
     <div>
       <Hero />
       <Intro />
-      <WhyIndustry />
+      {/* <WhyIndustry /> */}
       <IndustriesGrid />
-      <Approach />
 
-      {/* <Intro />
-      <Intro />
-      <WhyIndustry />
-      <IndustriesGrid />
-      <Approach />
-      <CTA /> */}
+      <Cta />
     </div>
   );
 };

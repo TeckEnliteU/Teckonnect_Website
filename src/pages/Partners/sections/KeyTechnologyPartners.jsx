@@ -1,98 +1,275 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+// 'use client';
+
+// import { motion } from 'framer-motion';
+// import styles from '../Partners.module.css';
+
+// /* ========================= */
+// /* 🔥 PREMIUM TEXT ANIMATION */
+// /* ========================= */
+
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.15,
+//       delayChildren: 0.2,
+//     },
+//   },
+// };
+
+// const lineReveal = {
+//   hidden: {
+//     clipPath: 'inset(0 100% 0 0)',
+//     y: 40,
+//     opacity: 0,
+//   },
+//   show: {
+//     clipPath: 'inset(0 0% 0 0)',
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 1.2,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   },
+// };
+
+// const fadeUp = {
+//   hidden: { opacity: 0, y: 30 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.8,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   },
+// };
+
+// /* ========================= */
+// /* 🔥 ULTRA SMOOTH CARD ANIMATION */
+// /* ========================= */
+
+// const cardVariants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 80,
+//     scale: 0.9,
+//     rotateX: 20,
+//   },
+//   show: (i) => ({
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     rotateX: 0,
+//     transition: {
+//       delay: i * 0.15,
+//       duration: 0.9,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   }),
+// };
+
+// export default function KeyPartnership() {
+//   const logos = [
+//     '/icons/MicrosoftN.svg',
+//     '/icons/aws.svg',
+//     '/icons/ibm.svg',
+//     '/icons/adobeN.svg',
+//   ];
+
+//   return (
+//     <section className={styles.keyPartnerSection}>
+//       {/* ================= TEXT ================= */}
+//       <motion.div
+//         variants={container}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true, margin: '-100px' }}
+//       >
+//         <h2 className={styles.keypartnerh2}>
+//           <div className={styles.textMask}>
+//             <motion.div variants={lineReveal}>
+//               Our Stragetic Partners
+//             </motion.div>
+//           </div>
+//         </h2>
+
+//         <div className={styles.textMask}>
+//           <motion.p
+//             variants={fadeUp}
+//             className={styles.subText}
+//           >
+//             Global technology leaders forming the foundation of our platforms
+//             and services.
+//           </motion.p>
+//         </div>
+//       </motion.div>
+
+//       {/* ================= CARDS ================= */}
+//       <div className={styles.cardGrid}>
+//         {logos.map((logo, i) => (
+//           <motion.div
+//             key={i}
+//             custom={i}
+//             variants={cardVariants}
+//             initial="hidden"
+//             whileInView="show"
+//             viewport={{ once: true }}
+//             /* 🔥 HOVER MAGIC */
+//             whileHover={{
+//               scale: 1.08,
+//               rotateX: 5,
+//               rotateY: -5,
+//               transition: { duration: 0.4 },
+//             }}
+//             /* 🔥 TAP FEEDBACK */
+//             whileTap={{ scale: 0.96 }}
+//             className={styles.card}
+//           >
+//             <motion.div
+//               className={styles.cardInner}
+//               animate={{
+//                 y: [0, -6, 0], // subtle floating loop
+//               }}
+//               transition={{
+//                 duration: 4,
+//                 repeat: Infinity,
+//                 ease: 'easeInOut',
+//               }}
+//             >
+//               <img
+//                 src={logo}
+//                 alt="partner"
+//               />
+//             </motion.div>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from '../Partners.module.css';
 
+/* ========================= */
+/* 🔥 UNIFIED SYSTEM */
+/* ========================= */
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const textReveal = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    clipPath: 'inset(0 0 100% 0)',
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    clipPath: 'inset(0 0 0% 0)',
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const cardAnim = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+    scale: 0.94,
+    rotateX: 12,
+  },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    rotateX: 0,
+    transition: {
+      delay: i * 0.12,
+      duration: 0.85,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  }),
+};
+
 export default function KeyPartnership() {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start center', 'end center'],
-  });
-
-  // ✅ Controlled spread (not too wide)
-  const x1 = useTransform(scrollYProgress, [0, 0.4], [0, -380]);
-  const x2 = useTransform(scrollYProgress, [0, 0.4], [0, 0]);
-  const x3 = useTransform(scrollYProgress, [0, 0.4], [0, 380]);
-
-  // ✅ Smooth scale + opacity
-  const scale = useTransform(scrollYProgress, [0, 0.4], [0.85, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-
-  // ✅ Blur FIX (correct way)
-  const blur = useTransform(scrollYProgress, [0, 0.3], [10, 0]);
-  const blurValue = useTransform(blur, (b) => `blur(${b}px)`);
+  const logos = [
+    '/icons/MicrosoftN.svg',
+    '/icons/aws.svg',
+    '/icons/ibm.svg',
+    '/icons/adobeN.svg',
+  ];
 
   return (
-    <section
-      ref={ref}
-      className={styles.keyPartnerSection}
-    >
-      <h2 className={styles.keypartnerh2}>Key Technology Partners</h2>
-
-      <p className={styles.subText}>Driving Performance Across Platforms</p>
-
-      <div className={styles.stickyWrapper}>
-        {/* Microsoft */}
-        <motion.div
-          style={{ x: x1, scale, opacity, filter: blurValue }}
-          className={styles.card}
+    <section className={styles.keyPartnerSection}>
+      {/* 🔥 TEXT */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-100px' }}
+      >
+        <motion.h2
+          variants={textReveal}
+          className={styles.keypartnerh2}
         >
-          <img
-            src="/icons/microsoft.png"
-            alt="Microsoft"
-          />
-          <h3>Microsoft</h3>
-          <p>
-            As a trusted Microsoft partner, Teckonnect delivers modern workplace
-            solutions, Azure cloud services, security, business applications,
-            and data analytics. Our expertise ensures organizations fully
-            leverage Microsoft technologies to drive productivity and
-            innovation.
-          </p>
-          <span>Microsoft Gold Partner • MCSE • Azure Expert MSP</span>
-        </motion.div>
+          Our Strategic Partners
+        </motion.h2>
 
-        {/* AWS */}
-        <motion.div
-          style={{ x: x2, scale, opacity, filter: blurValue }}
-          className={styles.card}
+        <motion.p
+          variants={textReveal}
+          className={styles.subText}
         >
-          <img
-            src="/icons/amazon.png"
-            alt="AWS"
-          />
-          <h3>AWS</h3>
-          <p>
-            Through our AWS partnership, we provide scalable cloud solutions,
-            managed services, migration support, and cost-optimized
-            architectures. Our clients benefit from secure, flexible, and
-            high-performing cloud environments.
-          </p>
-          <span>
-            AWS Advanced Consulting Partner • Solutions Architect • MSP
-          </span>
-        </motion.div>
+          Global technology leaders forming the foundation of our platforms and
+          services.
+        </motion.p>
+      </motion.div>
 
-        {/* IBM */}
-        <motion.div
-          style={{ x: x3, scale, opacity, filter: blurValue }}
-          className={styles.card}
-        >
-          <img
-            src="/icons/ibm.png"
-            alt="IBM"
-          />
-          <h3>IBM</h3>
-          <p>
-            Partnering with IBM allows Teckonnect to support enterprise-grade
-            workloads, hybrid cloud strategies, and mission-critical
-            applications. Our services ensure performance, compliance, and
-            reliability for complex IT environments.
-          </p>
-          <span>IBM Gold Partner • Cloud Provider • Certified Specialist</span>
-        </motion.div>
-      </div>
+      {/* 🔥 CARDS */}
+      <motion.div
+        className={styles.cardGrid}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        {logos.map((logo, i) => (
+          <motion.div
+            key={i}
+            custom={i}
+            variants={cardAnim}
+            className={styles.card}
+            whileHover={{
+              y: -10,
+              scale: 1.05,
+              rotateX: 4,
+              rotateY: -4,
+            }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <img
+              src={logo}
+              alt="partner"
+            />
+
+            {/* 🔥 glow */}
+            <span className={styles.cardGlow}></span>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 }

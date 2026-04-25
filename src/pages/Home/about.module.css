@@ -1,0 +1,207 @@
+.wrapper {
+  padding: 100px 100px;
+  background: #f5f7f9;
+}
+
+/* MAIN GRID */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* LEFT STICKY */
+.left {
+  position: sticky;
+  top: 120px; /* 👈 key */
+
+  align-self: start;
+}
+
+.tag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  display: inline-block;
+}
+
+.left h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.left span {
+  color: #0aa3c2;
+}
+
+.desc {
+  font-size: 13px;
+  margin: 20px 0;
+  color: #6b7280;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background: linear-gradient(90deg, #0f3d3e, #7bb661);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  /* ❌ remove translateY */
+  transition: filter 0.2s ease;
+}
+
+/* 👉 Arrow (space reserved, no cut) */
+.btn::after {
+  content: '→';
+
+  opacity: 0;
+  transform: translateX(-4px); /* small safe shift */
+
+  display: inline-block;
+  width: 14px; /* 👈 reserve space */
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* 👉 Hover (smooth, no clipping) */
+.btn:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 👉 Hover feel (NO movement) */
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+/* 👉 Click feel (NO movement) */
+.btn:active {
+  filter: brightness(0.92);
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px;
+
+  border: 1px solid #e6edf2;
+  /* box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08); */
+  position: relative;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* TEXT */
+.cardTag {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  display: inline-block;
+}
+
+.card h4 {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cardDesc {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0f3d3e, #7bb661);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 13px;
+  margin-top: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* ✅ remove underline */
+}
+
+/* HOVER EFFECT 🔥 */
+.arrow:hover {
+  transform: translateX(4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.card {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+
+  display: block;
+}
+
+.right {
+  contain: layout paint;
+}
+/* GLOBAL SMOOTH FIX */
+.smooth {
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}

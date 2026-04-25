@@ -1,3 +1,38 @@
+/* Smooth scroll everywhere */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Better rendering */
+* {
+  box-sizing: border-box;
+}
+
+/* ========================= */
+/* 🔥 PAGE SMOOTH TRANSITION */
+/* ========================= */
+
+.page {
+  animation: fadePage 0.45s ease;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* COMMON PAGE CONTAINER */
 .container {
   max-width: 1200px; /* controls overall width */

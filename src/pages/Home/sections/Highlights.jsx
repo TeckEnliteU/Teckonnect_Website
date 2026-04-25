@@ -1,128 +1,296 @@
+// 'use client';
+
+// import styles from '../home.module.css';
+// import { Link } from 'react-router-dom';
+// import { motion } from 'framer-motion';
+
+// /* ========================= */
+// /* 🔥 ANIMATIONS */
+// /* ========================= */
+
+// // Heading / text reveal (stacked)
+// const textReveal = {
+//   hidden: { y: 80, opacity: 0 },
+//   show: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.9,
+//       ease: [0.22, 1, 0.36, 1],
+//     },
+//   },
+// };
+
+// // Container stagger
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.12,
+//     },
+//   },
+// };
+
+// // Cards animation
+// const cardAnim = {
+//   hidden: {
+//     opacity: 0,
+//     y: 70,
+//   },
+//   show: (i) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: i * 0.12,
+//       duration: 0.8,
+//       ease: [0.22, 1, 0.36, 1],
+//     },
+//   }),
+// };
+
+// /* ========================= */
+// /* DATA */
+// /* ========================= */
+
+// const services = [
+//   {
+//     title: 'Microsoft',
+//     icon: '/icons/microsoft.svg',
+//     desc: 'Expert Microsoft licensing with ongoing support to keep your environment secure, compliant, and optimised.',
+//   },
+//   {
+//     title: 'Amazon Web Services (AWS)',
+//     icon: '/icons/aws.svg',
+//     desc: 'Flexible AWS licensing with cost visibility and reliable operational support for scalable cloud environments.',
+//   },
+//   {
+//     title: 'IBM',
+//     icon: '/icons/ibm.svg',
+//     desc: 'Structured IBM licensing and support to simplify compliance and manage complex software portfolios.',
+//   },
+//   {
+//     title: 'Adobe',
+//     icon: '/icons/adobe.svg',
+//     desc: 'Adobe licensing with deployment guidance and support for seamless creative and document workflows.',
+//   },
+// ];
+
+// /* ========================= */
+// /* COMPONENT */
+// /* ========================= */
+
+// export default function ServicesSection() {
+//   return (
+//     <section className={styles.serviceSection}>
+//       {/* 🔥 HEADING (STACKED REVEAL) */}
+//       <motion.div
+//         className={styles.textMask}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//       >
+//         <motion.h3
+//           className={styles.serviceHeading}
+//           variants={textReveal}
+//         >
+//           OUR SERVICES
+//         </motion.h3>
+//       </motion.div>
+
+//       <div className={styles.serviceContainer}>
+//         {/* BACKGROUND */}
+//         <div className={styles.serviceBg}>
+//           <img
+//             src="/images/public.jpg"
+//             alt=""
+//           />
+//         </div>
+
+//         {/* 🔥 CARDS */}
+//         <motion.div
+//           className={styles.serviceBox}
+//           variants={container}
+//           initial="hidden"
+//           whileInView="show"
+//           viewport={{ once: true }}
+//         >
+//           {services.map((s, i) => (
+//             <motion.div
+//               key={i}
+//               className={styles.serviceItem}
+//               variants={cardAnim}
+//               custom={i}
+//             >
+//               <div className={styles.serviceIcon}>
+//                 <img
+//                   src={s.icon}
+//                   alt={s.title}
+//                 />
+//               </div>
+
+//               <div className={styles.serviceContent}>
+//                 <h4>{s.title}</h4>
+//                 <p>{s.desc}</p>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
 'use client';
 
-import { motion } from 'framer-motion';
-import { FaShieldAlt, FaSyncAlt } from 'react-icons/fa';
 import styles from '../home.module.css';
+import { motion } from 'framer-motion';
 
-const badges = [
-  { name: 'Microsoft', icon: '/icons/microsoft.png' },
-  { name: 'AWS', icon: '/icons/AWS.png' },
-  { name: 'IBM', icon: '/icons/ibm.png' },
-  { name: 'Cybersecurity', icon: <FaShieldAlt />, type: 'icon' },
-  { name: 'Migration', icon: <FaSyncAlt />, type: 'icon' },
-];
-const providers = [
+/* ========================= */
+/* 🔥 UNIFIED ANIMATION */
+/* ========================= */
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const textReveal = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    clipPath: 'inset(0 0 100% 0)',
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    clipPath: 'inset(0 0 0% 0)',
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const cardAnim = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+    scale: 0.94,
+    rotateX: 12,
+  },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    rotateX: 0,
+    transition: {
+      delay: i * 0.12,
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  }),
+};
+
+/* ========================= */
+/* DATA */
+/* ========================= */
+
+const services = [
   {
-    name: 'AWS',
-    type: 'image',
-    icon: '/icons/AWS.png',
-    radius: 120,
-    speed: 18,
+    title: 'Microsoft',
+    icon: '/icons/microsoft.svg',
+    desc: 'Expert Microsoft licensing with ongoing support to keep your environment secure, compliant, and optimised.',
   },
   {
-    name: 'Microsoft',
-    type: 'image',
-    icon: '/icons/microsoft.png',
-    radius: 170,
-    speed: 24,
+    title: 'Amazon Web Services (AWS)',
+    icon: '/icons/aws.svg',
+    desc: 'Flexible AWS licensing with cost visibility and reliable operational support for scalable cloud environments.',
   },
   {
-    name: 'IBM',
-    type: 'image',
-    icon: '/icons/IBM1.png',
-    radius: 220,
-    speed: 30,
+    title: 'IBM',
+    icon: '/icons/ibm.svg',
+    desc: 'Structured IBM licensing and support to simplify compliance and manage complex software portfolios.',
   },
   {
-    name: 'Cybersecurity',
-    type: 'icons',
-    icon: <FaShieldAlt />,
-    radius: 145,
-    speed: 22,
-  },
-  {
-    name: 'Migration',
-    type: 'icons',
-    icon: <FaSyncAlt />,
-    radius: 195,
-    speed: 26,
+    title: 'Adobe',
+    icon: '/icons/adobe.svg',
+    desc: 'Adobe licensing with deployment guidance and support for seamless creative and document workflows.',
   },
 ];
 
-export default function Highlight() {
+/* ========================= */
+/* COMPONENT */
+/* ========================= */
+
+export default function ServicesSection() {
   return (
-    <section className={styles.highlightSection}>
-      {/* CONTENT */}
-      <div className={styles.highlightContent}>
-        <h2 className={styles.highlightTitle}>Our Service</h2>
-        <p className={styles.highlightText}>
-          Our managed services combine cloud expertise, cybersecurity, and
-          proactive support to reduce risk and drive long-term growth.
-        </p>
-      </div>
-      {/* LEFT BADGES */}
+    <section className={styles.serviceSection}>
+      {/* 🔥 HEADING */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.h3
+          className={styles.serviceHeading}
+          variants={textReveal}
+        >
+          OUR SERVICES
+        </motion.h3>
+      </motion.div>
 
-      {/* ORBITS */}
-      <div className={styles.highlightOrbitWrapper}>
-        {/* <div className={styles.badgeContainer}>
-          {badges.map((b, i) => (
-            <div
-              key={i}
-              className={styles.badge}
-            >
-              {b.type === 'icon' ? (
-                <span className={styles.badgeIcon}>{b.icon}</span>
-              ) : (
-                <img
-                  src={b.icon}
-                  alt={b.name}
-                />
-              )}
-              <span>{b.name}</span>
-            </div>
-          ))}
-        </div> */}
-        {providers.map((p, index) => {
-          // 🔥 KEY FIX: distribute evenly
-          const angle = (index / providers.length) * 360;
+      <div className={styles.serviceContainer}>
+        {/* BACKGROUND */}
+        <div className={styles.serviceBg}>
+          <img
+            src="/images//homesections/services.jpeg"
+            alt=""
+          />
+        </div>
 
-          return (
+        {/* 🔥 CARDS */}
+        <motion.div
+          className={styles.serviceBox}
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          {services.map((s, i) => (
             <motion.div
-              key={index}
-              className={styles.highlightOrbit}
-              style={{
-                width: p.radius * 2,
-                height: p.radius * 2,
-              }}
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: p.speed,
-                ease: 'linear',
+              key={i}
+              className={styles.serviceItem}
+              variants={cardAnim}
+              custom={i}
+              whileHover={{
+                y: -10,
+                scale: 1.04,
+                rotateX: 4,
+                rotateY: -4,
               }}
             >
-              <div
-                className={styles.highlightOrbitItem}
-                style={{
-                  transform: `
-                    rotate(${angle}deg)
-                    translateY(-${p.radius}px)
-                    rotate(-${angle}deg)
-                  `,
-                }}
-              >
-                {p.type === 'image' ? (
-                  <img
-                    src={p.icon}
-                    alt={p.name}
-                  />
-                ) : (
-                  <div className={styles.orbitIcon}>{p.icon}</div>
-                )}
+              <div className={styles.serviceIcon}>
+                <img
+                  src={s.icon}
+                  alt={s.title}
+                />
               </div>
+
+              <div className={styles.serviceContent}>
+                <h4>{s.title}</h4>
+                <p>{s.desc}</p>
+              </div>
+
+              {/* 🔥 glow */}
+              <span className={styles.cardGlow}></span>
             </motion.div>
-          );
-        })}
+          ))}
+        </motion.div>
       </div>
     </section>
   );

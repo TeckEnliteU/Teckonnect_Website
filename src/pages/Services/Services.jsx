@@ -6,7 +6,7 @@ import ServicesIntro from './sections/ServicesIntro';
 import ServicesGrid from './sections/ServicesGrid';
 
 // COMMON
-// import GlobalCTA from './sections/GlobalCTA';
+import GlobalCTA from './sections/GlobalCTA';
 
 const Services = () => {
   return (
@@ -21,7 +21,7 @@ const Services = () => {
       <ServicesGrid />
 
       {/* CTA */}
-      {/* <GlobalCTA /> */}
+      <GlobalCTA />
     </div>
   );
 };

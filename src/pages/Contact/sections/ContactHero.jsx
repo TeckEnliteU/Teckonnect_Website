@@ -1,59 +1,52 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import styles from '../contact.module.css';
 
 export default function ContactHero() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/images/contact.jpg';
+    img.onload = () => setLoaded(true);
+  }, []);
+
   return (
-    <section className={styles.heroNew}>
-      <div className={styles.container}>
-        {/* LEFT SIDE */}
-        <motion.div
-          className={styles.left}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+    <section className={styles.heroFull}>
+      <div className={`${styles.bgLayer} ${loaded ? styles.show : ''}`} />
+      <div className={styles.overlay} />
+
+      <div className={styles.centerContent}>
+        <motion.span
+          className={styles.badge}
+          initial={{ opacity: 0, y: 20 }}
+          animate={loaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
         >
-          <div className={styles.badge}>Contact Us</div>
+          CONTACT US
+        </motion.span>
 
-          <h1 className={styles.title}>
-            Let’s Talk About Your <span>Technology Needs</span>
-          </h1>
-
-          <p className={styles.subtitle}>
-            Your business deserves IT solutions that are secure, scalable, and
-            aligned to your goals. Whether you’re looking for managed IT
-            services, cloud enablement, or cybersecurity solutions, our team of
-            experts is ready to guide you.
-          </p>
-
-          <p className={styles.trust}>
-            Partner with technology specialists who simplify IT, strengthen
-            security, and accelerate growth.
-          </p>
-
-          <div className={styles.actions}>
-            <button className={styles.primaryBtn}>Get in Touch →</button>
-            <button className={styles.secondaryBtn}>
-              Schedule Consultation
-            </button>
-          </div>
-        </motion.div>
-
-        {/* RIGHT SIDE CURVED IMAGE */}
-        <motion.div
-          className={styles.right}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+        <motion.h1
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          animate={loaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className={styles.curveBox}>
-            <img
-              src="/images/about1.jpg"
-              alt="contact"
-            />
-          </div>
-        </motion.div>
+          Let’s Solve Your <br /> IT Challenges Together
+        </motion.h1>
+
+        <motion.p
+          className={styles.subtitle}
+          initial={{ opacity: 0, y: 30 }}
+          animate={loaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          Whether you’re planning your next move or managing day-to-day IT
+          pressures, our experts are ready to help you make confident, informed
+          decisions—quickly and clearly.
+        </motion.p>
       </div>
     </section>
   );

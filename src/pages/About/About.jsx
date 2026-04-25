@@ -5,15 +5,20 @@ import MissionVision from '../About/sections/MissionVision';
 import PurposeSection from '../About/sections/PurposeSection';
 import TeamSection from './sections/TeamSection';
 import Partner from '../About/sections/Partner';
+
+import Journey from '../About/sections/Journey';
+import Cta from '../About/sections/Cta'
 const About = () => {
   return (
     <>
       <Hero />
       <MissionVision />
       <PurposeSection />
+        <TeamSection />
       <Partner />
-
-      <TeamSection />
+      <Journey />
+<Cta/>
+    
     </>
   );
 };

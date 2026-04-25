@@ -5,12 +5,13 @@ const Intro = () => {
   return (
     <section className={styles.partnersIntro}>
       <div className={styles.partnersIntroContainer}>
-        {/* LEFT */}
         <div className={styles.partnersIntroContent}>
           <div className={styles.partnersIntroBadge}>Strategic Alliances</div>
 
           <h2 className={styles.partnersIntroTitle}>
-            Powering Innovation Through Partnerships
+            Powering <span>Innovation</span>
+            <br />
+            Through <span>Partnerships</span>
           </h2>
 
           <p className={styles.partnersIntroText}>
@@ -19,16 +20,6 @@ const Intro = () => {
             industry-leading platforms that accelerate innovation, strengthen
             security, and drive long-term business success.
           </p>
-        </div>
-
-        {/* RIGHT */}
-        <div className={styles.partnersIntroVisual}>
-          <div className={styles.partnersIntroImageCard}>
-            <img
-              src="/images/partnership.jpg"
-              alt="Partnership"
-            />
-          </div>
         </div>
       </div>
     </section>

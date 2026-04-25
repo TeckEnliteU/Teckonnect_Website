@@ -1,94 +1,548 @@
+// 'use client';
+
+// import styles from '../about.module.css';
+// import { motion } from 'framer-motion';
+// import { Link } from 'react-router-dom';
+// const cards = [
+//   {
+//     title: 'WHAT WE STAND FOR',
+//     subtitle:
+//       'Clarity and accountability in an increasingly complex IT landscape',
+//     desc: 'Teckonnect is a Managed Service Provider supporting mid‑to‑large organisations across complex, multi‑platform IT environments. We deliver cloud‑led, secure, and governance‑driven managed services that strengthen resilience and compliance. Our approach goes beyond traditional support, focusing on accountability, optimisation, and risk reduction. This ensures IT environments remain stable, scalable, and aligned with long‑term business outcomes.',
+//     // img: '/public/images/homesections/who we are 1.jpg',
+//   },
+//   {
+//     title: 'OUR OPERATING MODEL',
+//     subtitle: 'A structured, governance-led approach to managed services',
+//     desc: 'We operate through clearly defined responsibilities, controls, and performance measures. By establishing governance upfront and managing environments proactively, we move beyond reactive support—delivering consistent oversight, measurable outcomes, and continuous improvement across cloud, hybrid, and enterprise IT environments.',
+//     // img: '/images/homesections/what we do.jpeg',
+//   },
+//   {
+//     title: 'WHAT SETS US APART',
+//     subtitle: 'Managed services built for confidence, not just coverage',
+//     desc: 'Unlike large, complex IT vendors or transactional break‑fix providers, Teckonnect operates in the space where enterprise capability meets hands‑on ownership. We take responsibility beyond deployment—actively managing technology, aligning it to business outcomes, and remaining accountable well after go‑live. Our teams lead with business understanding, take ownership of results, and stay engaged to ensure technology continues to deliver value—not just meet contractual metrics.',
+//     // img: '/images/homesections/how we work.jpg',
+//   },
+// ];
+
+// export default function AboutSection() {
+//   return (
+//     <section className={styles.wrapper}>
+//       <div className={styles.container}>
+//         {/* LEFT STICKY */}
+//         <div className={styles.left}>
+//           <p className={styles.tag}>ABOUT US</p>
+
+//           <h2>
+//             Bringing clarity, control, and confidence to <span>modern IT</span>{' '}
+//             environments
+//           </h2>
+
+//           <p className={styles.desc}>
+//             As IT environments grow more complex—with cloud adoption, security
+//             risks, and compliance demands increasing—we support organisations
+//             through governance led managed services that bring structure,
+//             accountability, and reliable outcomes across every layer of IT.
+//           </p>
+
+//           <Link
+//             to="/about"
+//             onClick={() => window.scrollTo(0, 0)}
+//             className={styles.btn}
+//           >
+//             About Us
+//           </Link>
+//         </div>
+
+//         {/* RIGHT SCROLL */}
+//         <div className={styles.right}>
+//           {cards.map((card, i) => (
+//             <motion.div
+//               key={i}
+//               className={styles.card}
+//               initial={{ opacity: 0, y: 60 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true, margin: '-100px' }}
+//               transition={{ duration: 0.6 }}
+//             >
+//               <img
+//                 src={card.img}
+//                 className={styles.image}
+//               />
+
+//               <p className={styles.cardTag}>{card.title}</p>
+//               <h4>{card.subtitle}</h4>
+
+//               <p className={styles.cardDesc}>{card.desc}</p>
+
+//               <div className={styles.arrow}>→</div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// 'use client';
+
+// import styles from '../about.module.css';
+// import { motion } from 'framer-motion';
+// import { Link } from 'react-router-dom';
+
+// /* ========================= */
+// /* 🔥 UNIFIED ANIMATION */
+// /* ========================= */
+
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.18,
+//       delayChildren: 0.2,
+//     },
+//   },
+// };
+
+// const textReveal = {
+//   hidden: {
+//     opacity: 0,
+//     y: 40,
+//     clipPath: 'inset(0 0 100% 0)',
+//   },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     clipPath: 'inset(0 0 0% 0)',
+//     transition: {
+//       duration: 1,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   },
+// };
+
+// const cardAnim = {
+//   hidden: {
+//     opacity: 0,
+//     y: 80,
+//     scale: 0.94,
+//     rotateX: 12,
+//   },
+//   show: (i) => ({
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     rotateX: 0,
+//     transition: {
+//       delay: i * 0.12,
+//       duration: 0.85,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   }),
+// };
+
+// /* ========================= */
+// /* DATA */
+// /* ========================= */
+
+// const cards = [
+//   {
+//     title: 'WHAT WE STAND FOR',
+//     subtitle:
+//       'Clarity and accountability in an increasingly complex IT landscape',
+//     desc: 'Teckonnect is a Managed Service Provider supporting mid‑to‑large organisations across complex, multi‑platform IT environments. We deliver cloud‑led, secure, and governance‑driven managed services that strengthen resilience and compliance. Our approach goes beyond traditional support, focusing on accountability, optimisation, and risk reduction. This ensures IT environments remain stable, scalable, and aligned with long‑term business outcomes.',
+//     img: '/public/images/homesections/who we are 1.jpg',
+//   },
+//   {
+//     title: 'OUR OPERATING MODEL',
+//     subtitle: 'A structured, governance-led approach to managed services',
+//     desc: 'We operate through clearly defined responsibilities, controls, and performance measures. By establishing governance upfront and managing environments proactively, we move beyond reactive support—delivering consistent oversight, measurable outcomes, and continuous improvement across cloud, hybrid, and enterprise IT environments.',
+//     img: '/images/homesections/what we do.jpeg',
+//   },
+//   {
+//     title: 'WHAT SETS US APART',
+//     subtitle: 'Managed services built for confidence, not just coverage',
+//     desc: 'Unlike large, complex IT vendors or transactional break‑fix providers, Teckonnect operates in the space where enterprise capability meets hands‑on ownership. We take responsibility beyond deployment—actively managing technology, aligning it to business outcomes, and remaining accountable well after go‑live. Our teams lead with business understanding, take ownership of results, and stay engaged to ensure technology continues to deliver value—not just meet contractual metrics.',
+//     img: '/images/homesections/how we work.jpg',
+//   },
+// ];
+
+// /* ========================= */
+// /* COMPONENT */
+// /* ========================= */
+
+// export default function AboutSection() {
+//   return (
+//     <section className={styles.wrapper}>
+//       <div className={styles.container}>
+//         {/* 🔥 LEFT SIDE (FIXED) */}
+//         <motion.div
+//           className={styles.left}
+//           variants={container}
+//           initial="hidden"
+//           whileInView="show"
+//           viewport={{ once: true, margin: '-100px' }}
+//         >
+//           <motion.p
+//             variants={textReveal}
+//             className={styles.tag}
+//           >
+//             ABOUT US
+//           </motion.p>
+
+//           <motion.h2 variants={textReveal}>
+//             Bringing clarity, control, and confidence to <span>modern IT</span>{' '}
+//             environments
+//           </motion.h2>
+
+//           <motion.p
+//             variants={textReveal}
+//             className={styles.desc}
+//           >
+//             As IT environments grow more complex—with cloud adoption, security
+//             risks, and compliance demands increasing—we support organisations
+//             through governance led managed services...
+//           </motion.p>
+
+//           <motion.div variants={textReveal}>
+//             <Link
+//               to="/about"
+//               className={styles.btn}
+//             >
+//               About Us
+//             </Link>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* 🔥 RIGHT SIDE */}
+//         <div className={styles.right}>
+//           {cards.map((card, i) => (
+//             <motion.div
+//               key={i}
+//               className={styles.card}
+//               variants={cardAnim}
+//               initial="hidden"
+//               whileInView="show"
+//               custom={i}
+//               viewport={{ once: true }}
+//               whileHover={{
+//                 y: -12,
+//                 scale: 1.04,
+//                 rotateX: 4,
+//                 rotateY: -4,
+//               }}
+//             >
+//               <img
+//                 src={card.img}
+//                 className={styles.image}
+//               />
+
+//               <p className={styles.cardTag}>{card.title}</p>
+//               <h4>{card.subtitle}</h4>
+
+//               <p className={styles.cardDesc}>{card.desc}</p>
+
+//               <Link
+//                 to="/about"
+//                 className={styles.arrow}
+//               >
+//                 →
+//               </Link>
+//               {/* <div className={styles.arrow}>→</div> */}
+
+//               {/* 🔥 glow */}
+//               <span className={styles.cardGlow}></span>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// 'use client';
+
+// import styles from '../about.module.css';
+// import { motion } from 'framer-motion';
+// import { Link } from 'react-router-dom';
+
+// /* ========================= */
+// /* 🔥 KEEP TEXT ANIMATION */
+// /* ========================= */
+
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.15,
+//       delayChildren: 0.15,
+//     },
+//   },
+// };
+
+// const textReveal = {
+//   hidden: {
+//     opacity: 0,
+//     y: 30,
+//     clipPath: 'inset(0 0 100% 0)',
+//   },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     clipPath: 'inset(0 0 0% 0)',
+//     transition: {
+//       duration: 0.7,
+//       ease: [0.16, 1, 0.3, 1],
+//     },
+//   },
+// };
+
+// /* ========================= */
+// /* DATA (UNCHANGED) */
+// /* ========================= */
+
+// const cards = [
+//   {
+//     title: 'WHAT WE STAND FOR',
+//     subtitle:
+//       'Clarity and accountability in an increasingly complex IT landscape',
+//     desc: 'Teckonnect is a Managed Service Provider supporting mid-to-large organisations across complex, multi-platform IT environments. We deliver cloud-led, secure, and governance-driven managed services that strengthen resilience and compliance. Our approach goes beyond traditional support, focusing on accountability, optimisation, and risk reduction. This ensures IT environments remain stable, scalable, and aligned with long-term business outcomes.',
+//     img: '/images//homesections/Who We are.jpg',
+//   },
+//   {
+//     title: 'OUR OPERATING MODEL',
+//     subtitle: 'A structured, governance-led approach to managed services',
+//     desc: 'We operate through clearly defined responsibilities, controls, and performance measures. By establishing governance upfront and managing environments proactively, we move beyond reactive support—delivering consistent oversight, measurable outcomes, and continuous improvement across cloud, hybrid, and enterprise IT environments.',
+//     img: '/images/homesections/what we do.jpeg',
+//   },
+//   {
+//     title: 'WHAT SETS US APART',
+//     subtitle: 'Managed services built for confidence, not just coverage',
+//     desc: 'Unlike large, complex IT vendors or transactional break-fix providers, Teckonnect operates in the space where enterprise capability meets hands-on ownership. We take responsibility beyond deployment—actively managing technology, aligning it to business outcomes, and remaining accountable well after go-live. Our teams lead with business understanding, take ownership of results, and stay engaged to ensure technology continues to deliver value—not just meet contractual metrics.',
+//     img: '/images/homesections/how we work.jpg',
+//   },
+// ];
+
+// /* ========================= */
+// /* COMPONENT */
+// /* ========================= */
+
+// export default function AboutSection() {
+//   return (
+//     <section className={styles.wrapper}>
+//       <div className={styles.container}>
+//         {/* LEFT (UNCHANGED) */}
+//         <motion.div
+//           className={styles.left}
+//           variants={container}
+//           initial="hidden"
+//           whileInView="show"
+//           viewport={{ once: true, margin: '-100px' }}
+//         >
+//           <motion.p
+//             variants={textReveal}
+//             className={styles.tag}
+//           >
+//             ABOUT US
+//           </motion.p>
+
+//           <motion.h2 variants={textReveal}>
+//             Bringing clarity, control, and confidence to <span>modern IT</span>{' '}
+//             environments
+//           </motion.h2>
+
+//           <motion.p
+//             variants={textReveal}
+//             className={styles.desc}
+//           >
+//             As IT environments grow more complex—with cloud adoption, security
+//             risks, and compliance demands increasing—we support organisations
+//             through governance led managed services...
+//           </motion.p>
+
+//           <motion.div variants={textReveal}>
+//             <Link
+//               to="/about"
+//               className={styles.btn}
+//             >
+//               About Us
+//             </Link>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* RIGHT (ANIMATION REMOVED HERE) */}
+//         <div className={styles.right}>
+//           {cards.map((card, i) => (
+//             <div
+//               key={i}
+//               className={styles.card}
+//             >
+//               <img
+//                 src={card.img}
+//                 className={styles.image}
+//                 loading="lazy"
+//                 decoding="async"
+//                 alt={card.title}
+//               />
+
+//               <p className={styles.cardTag}>{card.title}</p>
+//               <h4>{card.subtitle}</h4>
+
+//               <p className={styles.cardDesc}>{card.desc}</p>
+
+//               <Link
+//                 to="/about"
+//                 className={styles.arrow}
+//               >
+//                 ›
+//               </Link>
+
+//               <span className={styles.cardGlow}></span>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 'use client';
 
-import { useEffect, useState } from 'react';
-import styles from '../home.module.css';
+import styles from '../about.module.css';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
+/* ========================= */
+/* 🔥 ULTRA SMOOTH SYSTEM */
+/* ========================= */
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08, // 🔥 low = smooth
+    },
+  },
+};
+
+const textReveal = {
+  hidden: {
+    opacity: 0,
+    y: 25,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.55,
+      ease: [0.22, 1, 0.36, 1], // 🔥 premium smooth easing
+    },
+  },
+};
+
+/* ========================= */
+/* DATA */
+/* ========================= */
+
 const cards = [
   {
-    title: 'About Teckonnect',
-    content: `Your Managed Services Partner for Modern Cloud & IT Operations.
-
-Teckonnect is a Managed Service Provider delivering reliable, secure, and scalable IT services across cloud, infrastructure, and data protection. We partner with organizations to manage, optimize, and modernize their IT environments, enabling them to focus on what matters most—business growth.`,
+    title: 'WHAT WE STAND FOR',
+    subtitle:
+      'Clarity and accountability in an increasingly complex IT landscape',
+    desc: 'Teckonnect is a Managed Service Provider supporting mid-to-large organisations across complex, multi-platform IT environments. We deliver cloud-led, secure, and governance-driven managed services that strengthen resilience and compliance. Our approach goes beyond traditional support, focusing on accountability, optimisation, and risk reduction. This ensures IT environments remain stable, scalable, and aligned with long-term business outcomes.',
+    img: '/images//homesections/Who We are.jpg',
   },
   {
-    title: 'Who We Are',
-    content: `Teckonnect is a Managed Service Provider delivering reliable, secure, and scalable IT services across cloud, infrastructure, and data protection. We partner with organizations to manage, optimize, and modernize their IT environments, enabling them to focus on what matters most—business growth.
-
-We operate as an extension of your IT team, providing proactive monitoring, performance optimization, and continuous improvement—ensuring your systems are always available, secure, and ready to perform.`,
+    title: 'OUR OPERATING MODEL',
+    subtitle: 'A structured, governance-led approach to managed services',
+    desc: 'We operate through clearly defined responsibilities, controls, and performance measures. By establishing governance upfront and managing environments proactively, we move beyond reactive support—delivering consistent oversight, measurable outcomes, and continuous improvement across cloud, hybrid, and enterprise IT environments.',
+    img: '/images/homesections/what we do.jpeg',
   },
   {
-    title: 'Why Choose Us',
-    content: `Technology Should Make Life Easier, Not Harder.
-
-Too often, IT becomes a source of complexity instead of clarity. Systems fail, security risks increase, and teams are forced to manage technology rather than focus on their real work. That’s where we step in.
-
-Our approach is simple and proven: combine the right technology with the right people to deliver secure, reliable outcomes that truly support your business.`,
+    title: 'WHAT SETS US APART',
+    subtitle: 'Managed services built for confidence, not just coverage',
+    desc: 'Unlike large, complex IT vendors or transactional break-fix providers, Teckonnect operates in the space where enterprise capability meets hands-on ownership. We take responsibility beyond deployment—actively managing technology, aligning it to business outcomes, and remaining accountable well after go-live. Our teams lead with business understanding, take ownership of results, and stay engaged to ensure technology continues to deliver value—not just meet contractual metrics.',
+    img: '/images/homesections/how we work.jpg',
   },
 ];
 
-const AboutSection = () => {
-  const [active, setActive] = useState(1);
-  const [paused, setPaused] = useState(false);
+/* ========================= */
+/* COMPONENT */
+/* ========================= */
 
-  /* 🔥 AUTO SLIDE */
-  useEffect(() => {
-    if (paused) return;
-
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % cards.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [paused]);
-
-  /* 🔥 POSITION LOGIC */
-  const getClass = (index) => {
-    if (index === active) return styles.center;
-    if (index === (active - 1 + cards.length) % cards.length)
-      return styles.left;
-    return styles.right;
-  };
-
+export default function AboutSection() {
   return (
-    <section className={styles.aboutSection}>
-      {/* 🔥 HEADER */}
-      <div className={styles.aboutHeader}>
-        <h2>
-          Welcome to <span>Teckonnect</span>
-        </h2>
-        <p>Your Managed Services Partner for Modern Cloud & IT Operations</p>
-      </div>
-
-      {/* 🔥 CAROUSEL */}
-      <div
-        className={styles.carousel}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
-        {cards.map((card, i) => (
-          <div
-            key={i}
-            className={`${styles.card} ${getClass(i)}`}
+    <section className={styles.wrapper}>
+      <div className={styles.container}>
+        {/* LEFT */}
+        <motion.div
+          className={`${styles.left} smooth`} // 🔥 add smooth class
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-50px' }}
+        >
+          <motion.p
+            variants={textReveal}
+            className={styles.tag}
           >
-            <h3>{card.title}</h3>
+            ABOUT US
+          </motion.p>
 
-            {/* 🔥 MULTI-LINE CONTENT FIX */}
-            <p style={{ whiteSpace: 'pre-line' }}>{card.content}</p>
+          <motion.h2 variants={textReveal}>
+            Bringing clarity, control, and confidence to <span>modern IT</span>{' '}
+            environments
+          </motion.h2>
 
-            {/* CTA ONLY IN LAST CARD */}
-            {i === 0 && (
+          <motion.p
+            variants={textReveal}
+            className={styles.desc}
+          >
+            As IT environments grow more complex—with cloud adoption, security
+            risks, and compliance demands increasing—we support organisations
+            through governance led managed services...
+          </motion.p>
+
+          <motion.div variants={textReveal}>
+            <Link
+              to="/about"
+              className={styles.btn}
+            >
+              About Us
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT (NO ANIMATION = GOOD for performance) */}
+        <div className={styles.right}>
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className={styles.card}
+            >
+              <img
+                src={card.img}
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
+                alt={card.title}
+              />
+
+              <p className={styles.cardTag}>{card.title}</p>
+              <h4>{card.subtitle}</h4>
+              <p className={styles.cardDesc}>{card.desc}</p>
+
               <Link
                 to="/about"
-                className={styles.btn}
+                className={styles.arrow}
               >
-                About Us
+                ›
               </Link>
-            )}
-          </div>
-        ))}
+
+              <span className={styles.cardGlow}></span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default AboutSection;
+}

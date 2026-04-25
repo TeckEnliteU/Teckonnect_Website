@@ -1,237 +1,426 @@
-// import React from 'react';
+// 'use client';
+
+// import styles from '../Services.module.css';
+// import { motion } from 'framer-motion';
+// import { FaCloud } from 'react-icons/fa';
+// import {
+//   FaSyncAlt,
+//   FaCloudUploadAlt,
+//   FaUsers,
+//   FaServer,
+//   FaShieldAlt,
+//   FaChartLine,
+//   FaFileAlt,
+//   FaDraftingCompass,
+//   FaHeadset,
+// } from 'react-icons/fa';
+// /* ANIMATIONS */
+// /* ========================= */
+// /* 🔥 PREMIUM ANIMATIONS */
+// /* ========================= */
+
+// // Container stagger
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.15,
+//       delayChildren: 0.2,
+//     },
+//   },
+// };
+
+// // Card animation (depth feel)
+// const card = {
+//   hidden: { opacity: 0, y: 80, scale: 0.96 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 0.9,
+//       ease: [0.22, 1, 0.36, 1], // smooth cubic
+//     },
+//   },
+// };
+
+// // ICON animation (separate = premium feel)
+// const iconAnim = {
+//   hidden: { scale: 0.6, opacity: 0 },
+//   show: {
+//     scale: 1,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.6,
+//       ease: 'easeOut',
+//     },
+//   },
+// };
+
+// // TEXT container
+// const textContainer = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.05,
+//     },
+//   },
+// };
+
+// // WORD animation (blur + lift 🔥)
+// const word = {
+//   hidden: {
+//     opacity: 0,
+//     y: 30,
+//     filter: 'blur(8px)',
+//   },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     filter: 'blur(0px)',
+//     transition: {
+//       duration: 0.6,
+//       ease: 'easeOut',
+//     },
+//   },
+// };
+
+// const services = [
+//   {
+//     title: 'Licensing & Renewals',
+//     desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+//     icon: FaSyncAlt,
+//   },
+//   {
+//     title: 'Cloud Migration',
+//     desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+//     icon: FaCloudUploadAlt,
+//   },
+//   {
+//     title: 'Workplace & Collaboration',
+//     desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+//     icon: FaUsers,
+//   },
+//   {
+//     title: 'Managed Cloud Services',
+//     desc: 'Ongoing monitoring, optimisation, and operational support for cloud environments.',
+//     icon: FaServer,
+//   },
+//   {
+//     title: 'Security & Governance',
+//     desc: 'Identity management, data protection, and compliance across platforms and environments.',
+//     icon: FaShieldAlt,
+//   },
+//   {
+//     title: 'Data, Analytics & AI',
+//     desc: 'Insights, automation, and responsible AI adoption using platform-native AI services.',
+//     icon: FaChartLine,
+//   },
+//   {
+//     title: 'Content & Digital Workflows',
+//     desc: 'Document, content, and creative workflows powered by Adobe and IBM FileNet.',
+//     icon: FaFileAlt,
+//   },
+//   {
+//     title: 'Advisory & Architecture',
+//     desc: 'Strategic guidance, best-practice reviews, and platform alignment for long-term success.',
+//     icon: FaDraftingCompass,
+//   },
+//   {
+//     title: '24×7 Managed Support',
+//     desc: 'A single point of accountability delivering continuous support across all platforms.',
+//     icon: FaHeadset,
+//   },
+// ];
+
+// export default function ServicesGrid() {
+//   return (
+//     <section className={styles.keySection}>
+//       {/* HEADING */}
+//       <motion.h2
+//         className={styles.keyh2}
+//         variants={textContainer}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//       >
+//         {'Our Key Services'.split(' ').map((w, i) => (
+//           <motion.span
+//             key={i}
+//             variants={word}
+//           >
+//             {w}&nbsp;
+//           </motion.span>
+//         ))}
+//       </motion.h2>
+
+//       {/* GRID */}
+//       <motion.div
+//         className={styles.keyGrid}
+//         variants={container}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//       >
+//         {services.map((item, i) => {
+//           const Icon = item.icon;
+
+//           return (
+//             <motion.div
+//               key={i}
+//               className={styles.keyCard}
+//               variants={card}
+//               whileHover={{
+//                 y: -10,
+//                 transition: { duration: 0.3 },
+//               }}
+//             >
+//               <div className={styles.keyIcon}>
+//                 <Icon />
+//               </div>
+
+//               <h3 className={styles.keyh3}>{item.title}</h3>
+//               <p className={styles.keyp}>{item.desc}</p>
+//             </motion.div>
+//           );
+//         })}
+//       </motion.div>
+
+//       {/* CERTIFICATION SECTION */}
+//       <section className={styles.certSection}>
+//         <h3 className={styles.certTitle}>
+//           Certified expertise for secure and dependable delivery.
+//         </h3>
+
+//         <div className={styles.certRow}>
+//           <div className={styles.certItem}>
+//             <img
+//               src="/logos/Microsoftcert.svg"
+//               alt="Microsoft"
+//             />
+//           </div>
+
+//           <div className={styles.certItem}>
+//             <img
+//               src="/logos/awscert.svg"
+//               alt="AWS"
+//             />
+//           </div>
+
+//           <div className={styles.certItem}>
+//             <img
+//               src="/logos/IBMcert.svg"
+//               alt="IBM"
+//             />
+//           </div>
+//         </div>
+//       </section>
+//     </section>
+//   );
+// }
+'use client';
+
 import styles from '../Services.module.css';
-import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import {
-  FaShieldAlt,
   FaSyncAlt,
-  FaLock,
-  FaCloud,
-  FaDatabase,
+  FaCloudUploadAlt,
+  FaUsers,
+  FaServer,
+  FaShieldAlt,
+  FaChartLine,
+  FaFileAlt,
+  FaDraftingCompass,
+  FaHeadset,
 } from 'react-icons/fa';
 
-import msLogo from '/icons/microsoft.png';
-import awsLogo from '/icons/AWS.png';
-import ibmLogo from '/icons/ibm.png';
+/* ========================= */
+/* 🔥 UNIFIED ANIMATION */
+/* ========================= */
 
-const ServicesPage = () => {
-  return (
-    <div className={styles.servicesMain}>
-      {/* MICROSOFT */}
-
-      <section className={styles.servicesCard}>
-        <div className={styles.cardLeft}>
-          <img
-            src={msLogo}
-            className={styles.logo}
-          />
-        </div>
-
-        <div className={styles.cardRight}>
-          <h2>Microsoft Services</h2>
-
-          <p>
-            Microsoft technologies form the foundation of modern digital
-            workplaces and cloud platforms. We help organizations adopt, manage,
-            and optimize Microsoft solutions to improve productivity, security,
-            and innovation.
-          </p>
-
-          <div className={styles.contentBlock}>
-            <h4>Modern Workplace</h4>
-            <p>
-              Enable secure and connected workplaces using Microsoft 365,
-              collaboration tools, endpoint management, and identity services.
-            </p>
-
-            <h4>Infrastructure</h4>
-            <p>
-              Design and manage Azure infrastructure that is scalable,
-              resilient, and cost-efficient across cloud environments.
-            </p>
-
-            <h4>Data & AI</h4>
-            <p>
-              Unlock insights using analytics, reporting, governance, and
-              AI-driven decision-making capabilities.
-            </p>
-
-            <h4>Security</h4>
-            <p>
-              Protect identities, devices, and applications through Microsoft
-              security and compliance frameworks.
-            </p>
-
-            <h4>Business Applications</h4>
-            <p>
-              Improve operations and customer engagement through integrated
-              business applications.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* AWS */}
-      <section className={`${styles.servicesCard} ${styles.reverse}`}>
-        <div className={styles.cardLeft}>
-          <img
-            src={awsLogo}
-            className={styles.logo}
-          />
-        </div>
-
-        <div className={styles.cardRight}>
-          <h2>AWS Cloud Services</h2>
-
-          <p>
-            End-to-end AWS services designed to help organizations migrate,
-            manage, and optimize cloud environments with scalability, security,
-            and performance.
-          </p>
-
-          <div className={styles.contentBlock}>
-            <h4>Cloud Migration & Deployment</h4>
-            <p>
-              Plan and execute seamless migration strategies with minimal
-              disruption and optimized performance.
-            </p>
-
-            <h4>Managed Cloud Services</h4>
-            <p>
-              Continuous monitoring, patching, and optimization for reliable AWS
-              environments.
-            </p>
-
-            <h4>Security & Compliance</h4>
-            <p>
-              Implement IAM, encryption, and network protection aligned with
-              compliance standards.
-            </p>
-
-            <h4>Disaster Recovery</h4>
-            <p>
-              Ensure high availability and rapid recovery to maintain business
-              continuity.
-            </p>
-
-            <h4>Data & Analytics</h4>
-            <p>
-              Transform data into insights using analytics platforms and
-              pipelines.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* IBM */}
-      <section className={styles.servicesCard}>
-        <div className={styles.cardLeft}>
-          <img
-            src={ibmLogo}
-            className={styles.logo}
-          />
-        </div>
-
-        <div className={styles.cardRight}>
-          <h2>IBM Cloud Services</h2>
-
-          <p>
-            Enterprise-grade hybrid cloud solutions designed for complex,
-            regulated, and mission-critical workloads.
-          </p>
-
-          <div className={styles.contentBlock}>
-            <h4>Hybrid Cloud Architecture</h4>
-            <p>
-              Integrate legacy and modern systems into secure and scalable
-              hybrid environments.
-            </p>
-
-            <h4>Managed Services</h4>
-            <p>24/7 monitoring and optimization for consistent performance.</p>
-
-            <h4>Security & Compliance</h4>
-            <p>
-              Protect workloads using enterprise-grade encryption and governance
-              frameworks.
-            </p>
-
-            <h4>Business Continuity</h4>
-            <p>Design systems for high availability and disaster recovery.</p>
-
-            <h4>Data & Analytics</h4>
-            <p>Enable reporting and analytics for better decision-making.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CYBERSECURITY */}
-      <section className={`${styles.servicesCard} ${styles.reverse}`}>
-        <div className={styles.cardLeft}>
-          <FaShieldAlt className={styles.bigIcon} />
-        </div>
-
-        <div className={styles.cardRight}>
-          <h2>Cybersecurity & Data Protection</h2>
-
-          <p>
-            Protect data, applications, and infrastructure across cloud,
-            on-premises, and hybrid environments using advanced security
-            strategies.
-          </p>
-
-          <div className={styles.contentBlock}>
-            <h4>Secure Backup & Data Protection</h4>
-            <p>
-              Automated and reliable backup ensures data is always protected and
-              recoverable.
-            </p>
-
-            <h4>Disaster Recovery</h4>
-            <p>Rapid restoration of systems to ensure business continuity.</p>
-
-            <h4>Ransomware Protection</h4>
-            <p>Detect and prevent threats using proactive monitoring.</p>
-
-            <h4>Cloud & Hybrid Security</h4>
-            <p>Centralized protection across multi-cloud environments.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* EA TO CSP */}
-      <section className={styles.servicesCard}>
-        <div className={styles.cardLeft}>
-          <FaSyncAlt className={styles.bigIcon} />
-        </div>
-
-        <div className={styles.cardRight}>
-          <h2>EA to CSP Migration</h2>
-
-          <p>
-            Transition from rigid enterprise agreements to flexible,
-            consumption-based licensing aligned with business needs.
-          </p>
-
-          <div className={styles.contentBlock}>
-            <h4>Assessment & Readiness</h4>
-            <p>Analyze current licensing and workloads for migration.</p>
-
-            <h4>Migration Planning</h4>
-            <p>Define roadmap ensuring smooth transition.</p>
-
-            <h4>License Transition</h4>
-            <p>Move to CSP model with continuity and compliance.</p>
-
-            <h4>Cost Optimization</h4>
-            <p>Reduce unused licenses and improve cost control.</p>
-
-            <h4>Ongoing Management</h4>
-            <p>Continuous monitoring and optimization post migration.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.07,
+      delayChildren: 0.1,
+    },
+  },
 };
 
-export default ServicesPage;
+const textReveal = {
+  hidden: {
+    opacity: 0,
+    y: 40, // 👈 visible movement
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1], // 👈 smooth premium easing
+    },
+  },
+};
+
+const cardAnim = {
+  hidden: {
+    opacity: 0,
+    y: 50, // 👈 clear bottom-up
+  },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.1,
+      ease: [0.22, 1, 0.25, 1],
+    },
+  }),
+};
+/* ========================= */
+/* DATA */
+/* ========================= */
+
+const services = [
+  {
+    title: 'Licensing & Renewals',
+    desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+    icon: '/images/services/icons/Licensing & Renewals 2.svg',
+  },
+  {
+    title: 'Cloud Migration',
+    desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+    icon: '/images/services/icons/cloud-migration 1.svg',
+  },
+  {
+    title: 'Workplace & Collaboration',
+    desc: 'Flexible Microsoft licensing with clear guidance, cost control, and lifecycle management.',
+    icon: '/images/services/icons/Workplace & Collaboration.svg',
+  },
+  {
+    title: 'Managed Cloud Services',
+    desc: 'Ongoing monitoring, optimisation, and operational support for cloud environments.',
+    icon: '/images/services/icons/Managed Cloud Services 1.svg',
+  },
+  {
+    title: 'Security & Governance',
+    desc: 'Identity management, data protection, and compliance across platforms and environments.',
+    icon: '/images/homesections/icons/Built‑In IT Governance 1.svg',
+  },
+  {
+    title: 'Data, Analytics & AI',
+    desc: 'Insights, automation, and responsible AI adoption using platform-native AI services.',
+    icon: '/images/services/icons/artificial-intelligence-ai-icon 1.svg',
+  },
+  {
+    title: 'Content & Digital Workflows',
+    desc: 'Document, content, and creative workflows powered by Adobe and IBM FileNet.',
+    icon: '/images/services/icons/Content & Digital Workflows 1.svg',
+  },
+  {
+    title: 'Advisory & Architecture',
+    desc: 'Strategic guidance, best-practice reviews, and platform alignment for long-term success.',
+    icon: '/images/services/icons/Advisory & Architecture 1.svg',
+  },
+  {
+    title: '24×7 Managed Support',
+    desc: 'A single point of accountability delivering continuous support across all platforms.',
+    icon: '/images/services/icons/24×7 Managed Support 1.svg',
+  },
+];
+
+/* ========================= */
+/* COMPONENT */
+/* ========================= */
+
+export default function ServicesGrid() {
+  return (
+    <section className={styles.keySection}>
+      {/* 🔥 HEADING */}
+      <motion.h2
+        className={styles.keyh2}
+        variants={textReveal}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        Our Key Services
+      </motion.h2>
+
+      {/* 🔥 GRID */}
+      <motion.div
+        className={styles.keyGrid}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        {services.map((item, i) => {
+          // const Icon = item.icon;
+
+          return (
+            <motion.div
+              key={i}
+              className={styles.keyCard}
+              variants={cardAnim}
+              custom={i}
+              whileHover={{
+                y: -12,
+                scale: 1.04,
+                rotateX: 4,
+                rotateY: -4,
+              }}
+            >
+              {/* <div className={styles.keyIcon}>
+                <Icon />
+              </div> */}
+              <div className={styles.keyIcon}>
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                />
+              </div>
+              <h3 className={styles.keyh3}>{item.title}</h3>
+              <p className={styles.keyp}>{item.desc}</p>
+
+              {/* 🔥 glow */}
+              <span className={styles.cardGlow}></span>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+
+      {/* 🔥 CERTIFICATIONS */}
+      <motion.div
+        className={styles.certSection}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.h3
+          variants={textReveal}
+          className={styles.certTitle}
+        >
+          Certified expertise for secure and dependable delivery.
+        </motion.h3>
+
+        <div className={styles.certRow}>
+          {['Microsoftcert.svg', 'awscert.svg', 'IBMcert.svg'].map(
+            (logo, i) => (
+              <motion.div
+                key={i}
+                className={styles.certItem}
+                variants={cardAnim}
+                custom={i}
+              >
+                <img src={`/logos/${logo}`} />
+              </motion.div>
+            ),
+          )}
+        </div>
+      </motion.div>
+    </section>
+  );
+}

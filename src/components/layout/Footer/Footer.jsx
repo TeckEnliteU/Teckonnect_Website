@@ -1,113 +1,107 @@
-import React, { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
+} from 'react-icons/fa';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import styles from '../Footer/Footer.module.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Footer = () => {
-  const footerRef = useRef(null);
-  const location = useLocation(); // ✅ detect route change
-
-  useEffect(() => {
-    const el = footerRef.current;
-
-    const ctx = gsap.context(() => {
-      gsap.from(el.querySelectorAll(`.${styles.footer_fade}`), {
-        opacity: 0,
-        y: 40,
-        stagger: 0.08,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 90%',
-        },
-      });
-    }, el);
-
-    // ✅ refresh scroll after route change
-    ScrollTrigger.refresh();
-
-    return () => ctx.revert(); // cleanup
-  }, [location.pathname]); // 🔥 KEY FIX
-
   return (
-    <footer
-      ref={footerRef}
-      className={styles.footer}
-    >
-      {/* CTA */}
-      <div className={`${styles.footer_ctaRow} ${styles.footer_fade}`}>
-        <div className={styles.footer_ctaInput}>
-          <input placeholder="Enter your email" />
-          <button>Send Now</button>
-        </div>
-      </div>
+    <footer className={styles.footer}>
+      {/* BACKGROUND LOGO */}
+      <img
+        src="/images/footer icon (1).svg" // 👈 your SVG
+        alt="bg"
+        className={styles.footer_bg}
+      />
 
-      <div className={styles.footer_divider}></div>
+      <div className={styles.footer_container}>
+        {/* BRAND */}
+        <div className={styles.footer_col}>
+          <img
+            src="/images/logo-white.png"
+            alt="Teckonnect Logo"
+            className={styles.footer_logo}
+          />
 
-      {/* GRID */}
-      <div className={styles.footer_grid}>
-        <div className={`${styles.footer_col} ${styles.footer_fade}`}>
-          <h3 className={styles.footer_brand}>TECKONNECT</h3>
+          <p>
+            Delivering secure, governed technology outcomes with clarity and
+            accountability. A trusted Managed Service Provider supporting
+            organisations with reliable, outcome driven IT services.
+          </p>
 
           <div className={styles.footer_socials}>
-            <FaInstagram />
-            <FaTwitter />
-            <FaLinkedin />
-            <FaYoutube />
+            <a
+              href="https://www.linkedin.com/company/teckonnect/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            {/* <FaInstagram />
+            <FaTwitter /> */}
+
+            {/* <FaYoutube /> */}
+          </div>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div className={styles.footer_col}>
+          <h4>Quick Links</h4>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">Company</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/industries">Industries</NavLink>
+          <NavLink to="/partners">Partners</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </div>
+
+        {/* SERVICES */}
+        <div className={styles.footer_col}>
+          <h4>Our Services</h4>
+          <NavLink to="/services#microsoft">Microsoft</NavLink>
+          <NavLink to="/services#aws">AWS</NavLink>
+          <NavLink to="/services#ibm">IBM</NavLink>
+          <NavLink to="/services#cybersecurity">Cybersecurity</NavLink>
+        </div>
+
+        {/* CONTACT */}
+        <div className={styles.footer_col}>
+          <h4>Contact Us</h4>
+
+          <div className={styles.footer_contactItem}>
+            <FaMapMarkerAlt />
+            <span>1 Denison St, North Sydney NSW 2060, Australia</span>
           </div>
 
-          <a className={styles.footer_email}>info@teckonnect.com</a>
-        </div>
+          <div className={styles.footer_contactItem}>
+            <FaEnvelope />
+            <span>info@teckonnect.com</span>
+          </div>
 
-        <div className={`${styles.footer_col} ${styles.footer_fade}`}>
-          <h4>Pages</h4>
-          <a>Home</a>
-          <a>Company</a>
-          <a>Resources</a>
-          <a>Pricing</a>
-          <a>Careers</a>
-        </div>
-
-        <div className={`${styles.footer_col} ${styles.footer_fade}`}>
-          <h4>Services</h4>
-          <a>Microsoft</a>
-          <a>AWS</a>
-          <a>IBM</a>
-          <a>Cybersecurity</a>
-        </div>
-
-        <div className={`${styles.footer_col} ${styles.footer_fade}`}>
-          <h4>Company</h4>
-          <a>Industries</a>
-          <a>Partners</a>
-          <a>Insights</a>
-          <a>About</a>
-        </div>
-
-        <div className={`${styles.footer_col} ${styles.footer_fade}`}>
-          <h4>Legal</h4>
-          <a>Privacy Policy</a>
-          <a>Terms</a>
-          <a>Cookies</a>
+          <div className={styles.footer_contactItem}>
+            <FaPhone />
+            <span>1800549639</span>
+          </div>
         </div>
       </div>
 
-      <div className={styles.footer_divider}></div>
-
       {/* BOTTOM */}
-      <div className={`${styles.footer_bottom} ${styles.footer_fade}`}>
-        <p>© 2025 Teckonnect. All rights reserved.</p>
+      <div className={styles.footer_bottom}>
+        <p>© 2026 Teckonnect. All rights reserved.</p>
 
         <div>
-          <a>Terms & Condition</a>
-          <a>Privacy Policy</a>
+          <NavLink>Terms</NavLink>
+          <NavLink>Privacy</NavLink>
+          <NavLink>Cookies</NavLink>
         </div>
       </div>
     </footer>

@@ -1,156 +1,344 @@
-import React, { useEffect, useRef } from 'react';
+'use client';
+
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import styles from '../Partners.module.css';
+
+/* ========================= */
+/* 🔥 PREMIUM ANIMATION */
+/* ========================= */
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.22,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const textReveal = {
+  hidden: {
+    y: 100,
+    opacity: 0,
+    filter: 'blur(10px)',
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: {
+      duration: 1.3,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const cardAnim = {
+  hidden: {
+    y: 120,
+    opacity: 0,
+    scale: 0.92,
+    filter: 'blur(8px)',
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    filter: 'blur(0px)',
+    transition: {
+      duration: 1.1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+const Card = ({ item }) => {
+  const ref = useRef(null);
+
+  const handleMove = (e) => {
+    const rect = ref.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateX = (y / rect.height - 0.5) * -5;
+    const rotateY = (x / rect.width - 0.5) * 5;
+
+    ref.current.style.transform = `
+      perspective(900px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      scale(1.02)
+    `;
+  };
+
+  const reset = () => {
+    ref.current.style.transform =
+      'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      className={styles.partnersListCard}
+      variants={cardAnim}
+      onMouseMove={handleMove}
+      onMouseLeave={reset}
+      whileHover={{
+        y: -10,
+        scale: 1.03,
+      }}
+    >
+      <div className={styles.partnersListImgWrap}>
+        <img
+          src={item.img}
+          alt={item.name}
+          className={styles.partnersListImg}
+        />
+      </div>
+
+      <h4 className={styles.partnersListTitle}>{item.name}</h4>
+
+      <p className={styles.partnersListDesc}>{item.desc}</p>
+
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.partnersListLink}
+      >
+        Visit Website →
+      </a>
+    </motion.div>
+  );
+};
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
 
 export default function PartnersList() {
   const ref = useRef(null);
-  useEffect(() => {
-    const items = ref.current.querySelectorAll(`.${styles.partnersListReveal}`);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
+  const partners = [
+    {
+      name: 'Crayon',
+      img: '/partners/crayon.svg',
+      link: 'https://www.crayon.com',
+      desc: 'A strategic partner helping us simplify software licensing and cloud economics. Together, we enable smarter decisions across cloud, cost optimisation, and governance.',
+    },
+    {
+      name: 'TechData',
+      img: '/partners/TechData.svg',
+      link: 'https://www.tdsyndicate.com',
+      desc: 'Our distribution partner supporting scalable technology delivery and reach. They help strengthen our ability to deliver cloud and software solutions efficiently.',
+    },
+    {
+      name: 'Redington',
+      img: '/partners/Redington.svg',
+      link: 'https://www.redingtongroup.com',
+      desc: 'A key ecosystem partner extending access to global technology platforms. Redington supports our ability to serve diverse markets with speed and scale.',
+    },
+    {
+      name: 'Ingram Micro',
+      img: '/partners/Ingram MIcro.svg',
+      link: 'https://www.ingrammicro.com',
+      desc: 'A global partner supporting software distribution and lifecycle management. Ingram Micro enables us to simplify licensing and subscription experiences.',
+    },
+    {
+      name: 'Acronis',
+      img: '/partners/acronis.svg',
+      link: 'https://www.acronis.com',
+      desc: 'A technology partner strengthening cyber protection and data resilience. We work together to help organisations protect, recover, and stay secure.',
+    },
+    {
+      name: 'Meier Business Systems',
+      img: '/partners/mbs.svg',
+      link: 'https://www.meier.com',
+      desc: 'Our IBM-focused partner supporting enterprise-grade platforms and solutions. Together, we deliver trusted IBM software and data-driven capabilities.',
+    },
+    {
+      name: 'Briskinfosec',
+      img: '/partners/BriskInfosec.svg',
+      link: 'https://www.briskinfosec.com',
+      desc: 'A cybersecurity partner enhancing our security and risk management capabilities. Together, we help organisations strengthen their cyber resilience.',
+    },
+    {
+      name: 'Future',
+      img: '/partners/FCC.svg',
+      link: 'https://www.futureplc.com',
+      desc: 'An innovation-focused partner supporting digital transformation initiatives. They complement our services with forward-looking, technology-driven solutions.',
+    },
+    {
+      name: 'Pax8',
+      img: '/partners/pax8.svg',
+      link: 'https://www.pax8.com',
+      desc: 'A specialist partner supporting complementary technology services. Together, we extend our capabilities to deliver complete, integrated outcomes.',
+    },
+  ];
 
-            el.style.transitionDelay = `${i * 0.1}s`;
-            el.classList.add(styles.partnersListShow);
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    items.forEach((el) => observer.observe(el));
-  }, []);
-
+  const implementationPartners = [
+    {
+      name: 'SigniFlow',
+      img: '/partners/SigniFlow.svg',
+      link: 'https://www.signiflow.com',
+      desc: 'A digital signing and workflow partner enabling secure, compliant document processes. Together, we help organisations simplify approvals, reduce manual effort, and maintain trust.',
+    },
+    {
+      name: 'Kissflow',
+      img: '/partners/kissflow.svg',
+      link: 'https://kissflow.com',
+      desc: 'A low-code automation partner helping streamline workflows and processes. Together, we enable faster digital transformation with flexibility and control.',
+    },
+    {
+      name: 'Corporater',
+      img: '/partners/corporater.svg',
+      link: 'https://corporater.com',
+      desc: 'A governance and performance management partner supporting better decisions. Corporater helps bring strategy, risk, and execution together.',
+    },
+    {
+      name: 'Employment Hero',
+      img: '/partners/employeement hero.svg',
+      link: 'https://employmenthero.com',
+      desc: 'A people and payroll technology partner supporting workforce management. We simplify HR processes and enhance employee experiences.',
+    },
+    {
+      name: 'Salesforce',
+      img: '/partners/salesforce.svg',
+      link: 'https://salesforce.com',
+      desc: 'A CRM partner supporting customer engagement and data-driven growth. Together, we help organisations connect customers, data, and processes.',
+    },
+    {
+      name: 'Volody',
+      img: '/partners/volody.svg',
+      link: 'https://volody.com',
+      desc: 'A contract lifecycle and legal tech partner improving compliance and visibility. They help strengthen governance and efficiency across agreements.',
+    },
+  ];
   return (
     <section
-      className={styles.partnersList}
+      className={styles.partnersListSection}
       ref={ref}
     >
-      {/* HERO */}
-      <div
-        className={`${styles.partnersListHero} ${styles.partnersListReveal}`}
+      {/* HEADER */}
+      <motion.div
+        className={styles.partnersListHeader}
+        variants={container}
+        initial="hidden"
+        animate={isInView ? 'show' : 'hidden'}
       >
-        <h2>Extending Partners</h2>
-        <h3>Enhancing Reach, Expertise, and Value</h3>
-        <p>
-          Collaboration with leading technology and cybersecurity partners
-          allows organisations to access a broader range of services, advanced
-          solutions, and cost-effective platforms. This Trusted Partner Network
-          ensures businesses can adopt modern IT, cloud, and security solutions
-          with confidence, backed by industry-leading expertise.
-        </p>
-      </div>
+        {/* <motion.h2 variants={textReveal}>Extending Partners</motion.h2>
 
-      {/* TECHNOLOGY PARTNERS */}
-      <div className={styles.partnersListSection}>
-        <h3 className={styles.partnersListTitle}>Our Technology Partners</h3>
+        <motion.p variants={textReveal}>
+          Trusted specialists who enhance our core services with complementary
+          expertise and proven capability.
+        </motion.p> */}
+        <motion.h2
+          variants={textReveal}
+          className={styles.partnersListH3}
+        >
+          Extending Partners
+        </motion.h2>
 
-        <div className={styles.partnersListCards}>
-          {[
-            {
-              name: 'Crayon',
-              img: '/logos/crayon.png',
-              sub: 'Licensing, Software Management & Cloud Expertise',
-              desc: `Crayon is a global leader in software asset management, licensing optimisation, and cloud solutions. Their expertise ensures organisations maximise technology investments, simplify software procurement, and implement cloud strategies efficiently.`,
-            },
-            {
-              name: 'Techdata',
-              img: '/logos/TechData.png',
-              sub: 'Technology Distribution & Cloud Solutions',
-              desc: `Techdata provides a broad portfolio of technology and cloud solutions, enabling flexible IT deployment and streamlined service delivery. Their distribution capabilities help organisations access the latest hardware, software, and cloud innovations.`,
-            },
-            {
-              name: 'Redington',
-              img: '/logos/Redington.png',
-              sub: 'Strategic IT Distribution & Service Enablement',
-              desc: `Redington supports IT distribution and service enablement with a focus on driving operational efficiency. Their solutions facilitate seamless delivery of hardware, software, and cloud services across multiple industries.`,
-            },
-            {
-              name: 'Ingram',
-              img: '/logos/Ingram MIcro.png',
-              sub: 'End-to-End Technology Distribution & Partner Services',
-              desc: `Ingram offers end-to-end technology distribution services, including cloud enablement and managed services support. Their expertise ensures reliable supply chains and access to modern IT platforms for organisations of all sizes.`,
-            },
-            {
-              name: 'Pax8',
-              img: '/logos/pax8.png',
-              sub: 'Cloud Marketplace & Cloud Services',
-              desc: `Pax8 provides a cloud marketplace and managed cloud solutions that simplify the adoption, billing, and management of cloud services. Their platform empowers organisations to deploy scalable cloud infrastructure with ease.`,
-            },
-          ].map((item, i) => (
-            <div
+        <motion.p
+          variants={textReveal}
+          className={styles.partnersListSubText}
+        >
+          Trusted specialists who enhance our core services with complementary
+          expertise and proven capability.
+        </motion.p>
+      </motion.div>
+
+      {/* GRID */}
+      <motion.div
+        className={styles.partnersListGrid}
+        variants={container}
+        initial="hidden"
+        animate={isInView ? 'show' : 'hidden'}
+      >
+        {partners.map((item, i) => (
+          <Card
+            key={i}
+            item={item}
+          />
+        ))}
+      </motion.div>
+
+      {/* IMPLEMENTATION */}
+
+      <motion.div
+        className={styles.implSection}
+        variants={container}
+      >
+        {/* HEADER */}
+        <motion.div
+          className={styles.implHeader}
+          variants={container}
+          initial="hidden"
+          animate={isInView ? 'show' : 'hidden'}
+        >
+          <motion.h3
+            variants={textReveal}
+            className={styles.implH3}
+          >
+            Our Implementation Partners
+          </motion.h3>
+
+          <motion.p
+            variants={textReveal}
+            className={styles.implSubText}
+          >
+            Trusted specialists who enhance our core services with complementary
+            expertise.
+          </motion.p>
+        </motion.div>
+
+        {/* GRID */}
+        <motion.div
+          className={styles.implGrid}
+          variants={container}
+          initial="hidden"
+          animate={isInView ? 'show' : 'hidden'}
+        >
+          {implementationPartners.map((item, i) => (
+            <motion.div
               key={i}
-              className={`${styles.partnersListCard} ${styles.partnersListReveal}`}
+              className={styles.implCard}
+              variants={cardAnim}
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
             >
-              {/* LOGO */}
-              <div className={styles.partnersListLogo}>
+              <div className={styles.implImgWrap}>
                 <img
                   src={item.img}
                   alt={item.name}
+                  className={styles.implImg}
                 />
               </div>
 
-              {/* CONTENT */}
-              <h4>{item.name}</h4>
-              <span>{item.sub}</span>
-              <p>{item.desc}</p>
-            </div>
+              <h4 className={styles.implTitle}>{item.name}</h4>
+
+              <p className={styles.implDesc}>{item.desc}</p>
+
+              <a
+                href={item.link}
+                className={styles.implLink}
+                target="_blank"
+              >
+                Visit Website →
+              </a>
+            </motion.div>
           ))}
-        </div>
-      </div>
-
-      {/* CYBER SECTION */}
-      <div
-        className={`${styles.partnersListCyber} ${styles.partnersListReveal}`}
-      >
-        <div className={styles.partnersListCyberContent}>
-          <h3>Briskinfosec</h3>
-          <span>Cybersecurity Expertise</span>
-          <p>
-            Briskinfosec delivers advanced cybersecurity services, including
-            vulnerability assessments, penetration testing, and risk management.
-            Partnering with them strengthens organisations’ cybersecurity
-            posture and protects against evolving threats.
-          </p>
-        </div>
-
-        <div className={styles.partnersListCyberImage}>
-          <img
-            src="/logos/BriskInfosec.png"
-            alt="Briskinfosec"
-          />
-        </div>
-      </div>
-
-      {/* FINAL TEXT */}
-      <div
-        className={`${styles.partnersListFooter} ${styles.partnersListReveal}`}
-      >
-        <p>
-          These partnerships amplify the ability to deliver secure, scalable,
-          and innovative IT and cybersecurity solutions across industries,
-          helping organisations achieve operational efficiency, regulatory
-          compliance, and technology-driven growth.
-        </p>
-      </div>
-
-      {/* CTA */}
-      <div className={styles.partnersListActions}>
-        <a
-          href="/services"
-          className={styles.partnersListPrimary}
-        >
-          Explore Our Services →
-        </a>
-        <a
-          href="/contact"
-          className={styles.partnersListSecondary}
-        >
-          Contact Us →
-        </a>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
