@@ -222,32 +222,32 @@ const specialties = [
   {
     title: 'Cloud & Security Expertise',
     desc: 'Deep experience supporting modern cloud and security environments with a strong focus on risk reduction, resilience, and operational confidence.',
-    icon: '/images/homesections/icons/Cloud & Security.svg',
+    icon: `${import.meta.env.BASE_URL}images/homesections/icons/Cloud & Security.svg`,
   },
   {
     title: 'Managed Services with Accountability',
     desc: 'End-to-end managed services delivered with clear ownership, defined responsibilities, and consistent service governance',
-    icon: '/images/homesections/icons/Managed Services with Accountability 1.svg',
+    icon: `${import.meta.env.BASE_URL}images/homesections/icons/Managed Services with Accountability 1.svg`,
   },
   {
     title: 'Proactive, Outcome-Driven Support',
     desc: 'Continuous monitoring and active management aligned to performance, compliance, and measurable operational outcomes.',
-    icon: '/images/homesections/icons/Proactive, Outcome‑Driven Support 1.svg',
+    icon: `${import.meta.env.BASE_URL}images/homesections/icons/Proactive Outcome Driven Support 1.svg`,
   },
   {
     title: 'Built-In IT Governance',
     desc: 'Governance frameworks embedded into everyday operations to maintain control, visibility, and audit readiness over time.',
-    icon: '/images/homesections/icons/Built‑In IT Governance 1.svg',
+    icon: '/images/homesections/icons/Built In IT Governance 1.svg',
   },
   {
     title: 'Risk & Compliance Focus',
     desc: 'Ongoing oversight designed to reduce operational risk and support regulatory and internal compliance requirements.',
-    icon: '/images/homesections/icons/Group 117828.svg',
+    icon: `${import.meta.env.BASE_URL}images/homesections/icons/Group 117828.svg`,
   },
   {
     title: 'Structured Engagements from Day One',
     desc: 'A clearly governed onboarding approach that establishes visibility, accountability, and a strong operational baseline from the start.',
-    icon: '/images/homesections/icons/Structured Engagements from Day One 1.svg',
+    icon: `${import.meta.env.BASE_URL}images/homesections/icons/Structured Engagements from Day One 1.svg`,
   },
 ];
 

@@ -129,55 +129,73 @@ export default function PartnersList() {
   const partners = [
     {
       name: 'Crayon',
-      img: '/partners/crayon.svg',
+      // img: '/partners/crayon.svg',
+      img: `${import.meta.env.BASE_URL}partners/crayon.svg`,
+
       link: 'https://www.crayon.com',
       desc: 'A strategic partner helping us simplify software licensing and cloud economics. Together, we enable smarter decisions across cloud, cost optimisation, and governance.',
     },
     {
       name: 'TechData',
-      img: '/partners/TechData.svg',
-      link: 'https://www.tdsyndicate.com',
+      // img: '/partners/TechData.svg',
+      img: `${import.meta.env.BASE_URL}partners/TechData.svg`,
+
+      link: 'https://www.techdata.com/in',
       desc: 'Our distribution partner supporting scalable technology delivery and reach. They help strengthen our ability to deliver cloud and software solutions efficiently.',
     },
     {
       name: 'Redington',
-      img: '/partners/Redington.svg',
+      // img: '/partners/Redington.svg',
+      img: `${import.meta.env.BASE_URL}partners/Redington.svg`,
+
       link: 'https://www.redingtongroup.com',
       desc: 'A key ecosystem partner extending access to global technology platforms. Redington supports our ability to serve diverse markets with speed and scale.',
     },
     {
       name: 'Ingram Micro',
-      img: '/partners/Ingram MIcro.svg',
+      // img: '/partners/Ingram MIcro.svg',
+      img: `${import.meta.env.BASE_URL}partners/Ingram MIcro.svg`,
+
       link: 'https://www.ingrammicro.com',
       desc: 'A global partner supporting software distribution and lifecycle management. Ingram Micro enables us to simplify licensing and subscription experiences.',
     },
     {
       name: 'Acronis',
-      img: '/partners/acronis.svg',
+      // img: '/partners/acronis.svg',
+      img: `${import.meta.env.BASE_URL}partners/acronis.svg`,
+
       link: 'https://www.acronis.com',
       desc: 'A technology partner strengthening cyber protection and data resilience. We work together to help organisations protect, recover, and stay secure.',
     },
     {
       name: 'Meier Business Systems',
-      img: '/partners/mbs.svg',
-      link: 'https://www.meier.com',
+      // img: '/partners/mbs.svg',
+      img: `${import.meta.env.BASE_URL}partners/mbs.svg`,
+
+      link: 'https://mbs.net.au',
       desc: 'Our IBM-focused partner supporting enterprise-grade platforms and solutions. Together, we deliver trusted IBM software and data-driven capabilities.',
     },
     {
       name: 'Briskinfosec',
-      img: '/partners/BriskInfosec.svg',
+      // img: '/partners/BriskInfosec.svg',
+      img: `${import.meta.env.BASE_URL}partners/BriskInfosec.svg`,
+
       link: 'https://www.briskinfosec.com',
       desc: 'A cybersecurity partner enhancing our security and risk management capabilities. Together, we help organisations strengthen their cyber resilience.',
     },
     {
       name: 'Future',
-      img: '/partners/FCC.svg',
-      link: 'https://www.futureplc.com',
+      // img: '/partners/FCC.svg',
+      img: `${import.meta.env.BASE_URL}partners/FCC.svg`,
+
+      link: 'https://www.fcc-kuwait.com/',
       desc: 'An innovation-focused partner supporting digital transformation initiatives. They complement our services with forward-looking, technology-driven solutions.',
     },
     {
       name: 'Pax8',
-      img: '/partners/pax8.svg',
+      // img: '/partners/pax8.svg',
+      img: `${import.meta.env.BASE_URL}partners/pax8.svg`,
+
       link: 'https://www.pax8.com',
       desc: 'A specialist partner supporting complementary technology services. Together, we extend our capabilities to deliver complete, integrated outcomes.',
     },
@@ -186,37 +204,49 @@ export default function PartnersList() {
   const implementationPartners = [
     {
       name: 'SigniFlow',
-      img: '/partners/SigniFlow.svg',
+      // img: '/partners/SigniFlow.svg',
+      img: `${import.meta.env.BASE_URL}partners/SigniFlow.svg`,
+
       link: 'https://www.signiflow.com',
       desc: 'A digital signing and workflow partner enabling secure, compliant document processes. Together, we help organisations simplify approvals, reduce manual effort, and maintain trust.',
     },
     {
       name: 'Kissflow',
-      img: '/partners/kissflow.svg',
+      // img: '/partners/kissflow.svg',
+      img: `${import.meta.env.BASE_URL}partners/kissflow.svg`,
+
       link: 'https://kissflow.com',
       desc: 'A low-code automation partner helping streamline workflows and processes. Together, we enable faster digital transformation with flexibility and control.',
     },
     {
       name: 'Corporater',
-      img: '/partners/corporater.svg',
+      // img: '/partners/corporater.svg',
+      img: `${import.meta.env.BASE_URL}partners/corporater.svg`,
+
       link: 'https://corporater.com',
       desc: 'A governance and performance management partner supporting better decisions. Corporater helps bring strategy, risk, and execution together.',
     },
     {
       name: 'Employment Hero',
-      img: '/partners/employeement hero.svg',
+      // img: '/partners/employeement hero.svg',
+      img: `${import.meta.env.BASE_URL}partners/employeement hero.svg`,
+
       link: 'https://employmenthero.com',
       desc: 'A people and payroll technology partner supporting workforce management. We simplify HR processes and enhance employee experiences.',
     },
     {
       name: 'Salesforce',
-      img: '/partners/salesforce.svg',
+      // img: '/partners/salesforce.svg',
+      img: `${import.meta.env.BASE_URL}partners/salesforce.svg`,
+
       link: 'https://salesforce.com',
       desc: 'A CRM partner supporting customer engagement and data-driven growth. Together, we help organisations connect customers, data, and processes.',
     },
     {
       name: 'Volody',
-      img: '/partners/volody.svg',
+      // img: '/partners/volody.svg',
+      img: `${import.meta.env.BASE_URL}partners/volody.svg`,
+
       link: 'https://volody.com',
       desc: 'A contract lifecycle and legal tech partner improving compliance and visibility. They help strengthen governance and efficiency across agreements.',
     },
@@ -243,7 +273,7 @@ export default function PartnersList() {
           variants={textReveal}
           className={styles.partnersListH3}
         >
-          Extending Partners
+          Our Distributors Networks
         </motion.h2>
 
         <motion.p
@@ -287,7 +317,7 @@ export default function PartnersList() {
             variants={textReveal}
             className={styles.implH3}
           >
-            Our Implementation Partners
+            Our Extending Partners
           </motion.h3>
 
           <motion.p

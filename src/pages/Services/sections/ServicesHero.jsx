@@ -1,107 +1,6 @@
-// 'use client';
-
-// import { motion } from 'framer-motion';
-// import styles from '../Services.module.css';
-
-// /* ========================= */
-// /* 🔥 ANIMATIONS */
-// /* ========================= */
-
-// const container = {
-//   hidden: {},
-//   show: {
-//     transition: {
-//       staggerChildren: 0.12,
-//       delayChildren: 0.25,
-//     },
-//   },
-// };
-
-// const lineReveal = {
-//   hidden: {
-//     clipPath: 'inset(0 100% 0 0)', // hide right
-//   },
-//   show: {
-//     clipPath: 'inset(0 0% 0 0)', // reveal
-//     transition: {
-//       duration: 1.2,
-//       ease: [0.22, 1, 0.36, 1],
-//     },
-//   },
-// };
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   show: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       duration: 0.8,
-//       ease: [0.22, 1, 0.36, 1],
-//     },
-//   },
-// };
-
-// /* ========================= */
-// /* COMPONENT */
-// /* ========================= */
-
-// export default function ServicesPage() {
-//   return (
-//     <section className={styles.hero}>
-//       <motion.div
-//         className={styles.heroContent}
-//         variants={container}
-//         initial="hidden"
-//         animate="show"
-//       >
-//         {/* BADGE */}
-//         <motion.div variants={fadeUp}>
-//           <span className={styles.herobadge}>OUR SERVICES</span>
-//         </motion.div>
-
-//         {/* 🔥 TITLE (MASKED LINES) */}
-//         <h1 className={styles.title}>
-//           {/* LINE 1 */}
-//           <div className={styles.textMask}>
-//             <motion.div
-//               variants={lineReveal}
-//               className={styles.lineWrap}
-//             >
-//               One Connected Solution
-//             </motion.div>
-//           </div>
-
-//           {/* LINE 2 */}
-//           <div className={styles.textMask}>
-//             <motion.div
-//               variants={lineReveal}
-//               className={styles.lineWrap}
-//             >
-//               for All Your <span className={styles.highlight}>IT Needs</span>
-//             </motion.div>
-//           </div>
-//         </h1>
-
-//         {/* DESCRIPTION */}
-//         <motion.p
-//           className={styles.desc}
-//           variants={fadeUp}
-//         >
-//           Teckonnect is a trusted Managed Service Provider bringing together
-//           global technology partners to manage licensing, cloud, AI, security,
-//           and ongoing support, so organisations and government agencies operate
-//           with confidence.
-//         </motion.p>
-//       </motion.div>
-//     </section>
-//   );
-// }
-'use client';
-
 import { motion } from 'framer-motion';
 import styles from '../Services.module.css';
-
+import { Helmet } from 'react-helmet-async';
 /* ========================= */
 /* 🔥 UNIFIED ANIMATION */
 /* ========================= */
@@ -140,6 +39,32 @@ const textReveal = {
 export default function ServicesPage() {
   return (
     <section className={styles.hero}>
+      <Helmet>
+        <meta
+          name="description"
+          content="Explore Teckonnect’s managed IT, cloud, and AI services across Microsoft, AWS, and IBM platforms to modernize and grow your business."
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Managed IT & Cloud Services | Teckonnect"
+        />
+        <meta
+          property="og:description"
+          content="Managed IT, cloud, AI, and security services across Microsoft, AWS, and IBM platforms."
+        />
+        <meta
+          property="og:type"
+          content="website"
+        />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://teckonnect.com/services"
+        />
+      </Helmet>
       <motion.div
         className={styles.heroContent}
         variants={container}
@@ -156,9 +81,9 @@ export default function ServicesPage() {
           variants={textReveal}
           className={styles.title}
         >
-          One Connected Solution
+          Managed IT Services Across
           <br />
-          for All Your <span className={styles.highlight}>IT Needs</span>
+          <span className={styles.highlight}>Microsoft, AWS, IBM & Adobe</span>
         </motion.h1>
 
         {/* 🔥 DESCRIPTION */}

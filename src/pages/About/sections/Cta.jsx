@@ -1,5 +1,3 @@
-'use client';
-
 import styles from '../about.module.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -39,11 +37,17 @@ const textReveal = {
 /* DATA */
 /* ========================= */
 
+// const logos = [
+//   '/icons/aws white.svg',
+//   '/icons/microsoft white.svg',
+//   '/icons/ibm white.svg',
+//   '/icons/adobe white.svg',
+// ];
 const logos = [
-  '/icons/aws white.svg',
-  '/icons/microsoft white.svg',
-  '/icons/ibm white.svg',
-  '/icons/adobe white.svg',
+  `${import.meta.env.BASE_URL}icons/aws white.svg`,
+  `${import.meta.env.BASE_URL}icons/microsoft white.svg`,
+  `${import.meta.env.BASE_URL}icons/ibm white.svg`,
+  `${import.meta.env.BASE_URL}icons/adobe white.svg`,
 ];
 
 /* ========================= */

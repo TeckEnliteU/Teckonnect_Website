@@ -9,7 +9,8 @@ export default function ContactHero() {
 
   useEffect(() => {
     const img = new Image();
-    img.src = '/images/contact.jpg';
+    // img.src = '/images/contact.jpg';
+    img.src = `${import.meta.env.BASE_URL}images/contact.jpg`;
     img.onload = () => setLoaded(true);
   }, []);
 

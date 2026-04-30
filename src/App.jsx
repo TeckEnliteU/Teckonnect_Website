@@ -294,7 +294,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/layout/ScrollToTop';
-
 // Layout
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer/Footer';
@@ -311,7 +310,8 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Navbar />
 

@@ -2,23 +2,38 @@
 
 import styles from '../home.module.css';
 
+// const logos = [
+//   '/partners/pax8.svg',
+//   '/partners/TechData.svg',
+
+//   '/partners/Redington.svg',
+//   '/partners/Ingram MIcro.svg',
+//   '/partners/BriskInfosec.svg',
+//   '/partners/crayon.svg',
+//   '/partners/FCC.svg',
+//   '/partners/kissflow.svg',
+//   '/partners/mbs.svg',
+//   '/partners/salesforce.svg',
+//   '/partners/acronis.svg',
+//   '/partners/volody.svg',
+//   '/partners/SigniFlow.svg',
+// ];
+
 const logos = [
-  '/partners/pax8.svg',
-  '/partners/TechData.svg',
-
-  '/partners/Redington.svg',
-  '/partners/Ingram MIcro.svg',
-  '/partners/BriskInfosec.svg',
-  '/partners/crayon.svg',
-  '/partners/FCC.svg',
-  '/partners/kissflow.svg',
-  '/partners/mbs.svg',
-  '/partners/salesforce.svg',
-  '/partners/acronis.svg',
-  '/partners/volody.svg',
-  '/partners/SigniFlow.svg',
+  `${import.meta.env.BASE_URL}partners/pax8.svg`,
+  `${import.meta.env.BASE_URL}partners/TechData.svg`,
+  `${import.meta.env.BASE_URL}partners/Redington.svg`,
+  `${import.meta.env.BASE_URL}partners/Ingram MIcro.svg`,
+  `${import.meta.env.BASE_URL}partners/BriskInfosec.svg`,
+  `${import.meta.env.BASE_URL}partners/crayon.svg`,
+  `${import.meta.env.BASE_URL}partners/FCC.svg`,
+  `${import.meta.env.BASE_URL}partners/kissflow.svg`,
+  `${import.meta.env.BASE_URL}partners/mbs.svg`,
+  `${import.meta.env.BASE_URL}partners/salesforce.svg`,
+  `${import.meta.env.BASE_URL}partners/acronis.svg`,
+  `${import.meta.env.BASE_URL}partners/volody.svg`,
+  `${import.meta.env.BASE_URL}partners/SigniFlow.svg`,
 ];
-
 const LogoStrip = () => {
   return (
     <section className={styles.logoSection}>

@@ -205,3 +205,107 @@
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
+/* =========================
+   📱 MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 80px 40px;
+  }
+
+  .container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 60px 20px;
+  }
+
+  /* 🔥 STACK LAYOUT */
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* ❌ REMOVE STICKY ON MOBILE */
+  .left {
+    position: relative;
+    top: 0;
+  }
+
+  .left h2 {
+    font-size: 22px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .right {
+    gap: 30px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h4 {
+    font-size: 15px;
+  }
+
+  .cardDesc {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 50px 16px;
+  }
+
+  .left h2 {
+    font-size: 20px;
+  }
+
+  .tag {
+    font-size: 11px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .image {
+    height: 160px;
+  }
+
+  .arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    bottom: 14px;
+    right: 14px;
+  }
+}

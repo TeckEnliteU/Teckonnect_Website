@@ -89,16 +89,35 @@ function Navbar() {
       <motion.div
         className="nav-container"
         initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 10 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.1 }}
       >
         {/* LEFT */}
         <div className="nav-left">
-          <NavLink to="/">
+          <NavLink
+            to="/"
+            onClick={(e) => {
+              if (location.pathname === '/') {
+                // already on home → just scroll top
+                e.preventDefault();
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }
+
+              setMenuOpen(false);
+              setOpenSearch(false);
+              setQuery('');
+            }}
+          >
             <img
               className="logo-img"
               src={
-                scrolled ? '/images/logo-dark.svg' : '/images/logo-white.png'
+                scrolled
+                  ? `${import.meta.env.BASE_URL}images/logo-dark.svg`
+                  : `${import.meta.env.BASE_URL}images/logo-white.png`
               }
               alt="logo"
             />

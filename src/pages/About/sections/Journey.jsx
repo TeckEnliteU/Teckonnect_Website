@@ -9,41 +9,79 @@ import { Link } from 'react-router-dom';
 /* ✅ FINAL CONTENT */
 /* ========================= */
 
+// const data = [
+//   {
+//     title: 'Year 1 – Foundation',
+//     text: 'Established with a clear focus on simplifying technology delivery, building structured processes, and ensuring accountability from day one.',
+//     img: '/images/aboutus/foundation.jpg',
+//   },
+//   {
+//     title: 'Year 2 – Building Capability',
+//     text: 'Expanded core capabilities across cloud, security, and managed services through consistent, hands-on project delivery.',
+//     img: '/images/aboutus/Building Capability.jpg',
+//   },
+//   {
+//     title: 'Year 3 – Process & Governance',
+//     text: 'Introduced structured delivery frameworks to improve consistency, strengthen security practices, and ensure operational control.',
+//     img: '/images/aboutus/modern-equipped-computer-lab.jpg',
+//   },
+//   {
+//     title: 'Year 4 – Industry Expansion',
+//     text: 'Scaled across multiple industries, adapting solutions to meet diverse operational, compliance, and regulatory requirements.',
+//     img: '/images/aboutus/Indusry Expansion.jpg',
+//   },
+//   {
+//     title: 'Year 5 – Maturing Service Model',
+//     text: 'Refined a unified service approach focused on governance, long-term value creation, and reducing operational complexity.',
+//     img: '/images/aboutus/Maturing Service Model.jpg',
+//   },
+//   {
+//     title: 'Year 6 – Platform & Partnership',
+//     text: 'Strengthened platform expertise while building a reliable partner ecosystem to enhance solution delivery and scale.',
+//     img: '/images/aboutus/Platform & Partnership.jpg',
+//   },
+//   {
+//     title: 'Year 7 – Built for the Long Term',
+//     text: 'Operating today as a mature, trusted technology partner focused on sustainable growth, reliability, and long-term client success.',
+//     img: '/images/aboutus/final.jpg',
+//   },
+// ];
+
 const data = [
   {
     title: 'Year 1 – Foundation',
     text: 'Established with a clear focus on simplifying technology delivery, building structured processes, and ensuring accountability from day one.',
-    img: '/images/aboutus/foundation.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/foundation.jpg`,
   },
   {
     title: 'Year 2 – Building Capability',
     text: 'Expanded core capabilities across cloud, security, and managed services through consistent, hands-on project delivery.',
-    img: '/images/aboutus/Building Capability.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/Building Capability.jpg`,
   },
   {
     title: 'Year 3 – Process & Governance',
     text: 'Introduced structured delivery frameworks to improve consistency, strengthen security practices, and ensure operational control.',
-    img: '/images/aboutus/modern-equipped-computer-lab.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/modern-equipped-computer-lab.jpg`,
   },
   {
     title: 'Year 4 – Industry Expansion',
     text: 'Scaled across multiple industries, adapting solutions to meet diverse operational, compliance, and regulatory requirements.',
-    img: '/images/aboutus/Indusry Expansion.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/Indusry Expansion.jpg`,
   },
   {
     title: 'Year 5 – Maturing Service Model',
     text: 'Refined a unified service approach focused on governance, long-term value creation, and reducing operational complexity.',
-    img: '/images/aboutus/Maturing Service Model.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/Maturing Service Model.jpg`,
   },
   {
     title: 'Year 6 – Platform & Partnership',
     text: 'Strengthened platform expertise while building a reliable partner ecosystem to enhance solution delivery and scale.',
-    img: '/images/aboutus/Platform & Partnership.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/Platform & Partnership.jpg`,
   },
   {
     title: 'Year 7 – Built for the Long Term',
     text: 'Operating today as a mature, trusted technology partner focused on sustainable growth, reliability, and long-term client success.',
-    img: '/images/aboutus/final.jpg',
+    img: `${import.meta.env.BASE_URL}images/aboutus/final.jpg`,
   },
 ];
 
@@ -122,7 +160,7 @@ export default function Journey() {
       <div className={styles.journeyHeader}>
         <span className={styles.badge}>OUR 7-YEAR JOURNEY</span>
 
-        <h2>Experience Built Through Delivery, Not Hype</h2>
+        <h2>7 Years of Real-World IT Delivery</h2>
 
         <p>
           Teckonnect’s seven-year journey has been shaped by consistent,

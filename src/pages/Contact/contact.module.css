@@ -298,21 +298,105 @@ textarea:focus {
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
-@media (max-width: 768px) {
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 992px) {
+  .contactSection {
+    padding: 100px 0 40px;
+    transform: translateY(-100px); /* reduce overlap */
+    margin-bottom: -80px;
+  }
+
   .formBox {
-    padding: 30px 20px;
+    padding: 40px 30px;
   }
 
   .grid {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 80px 0 30px;
+    transform: translateY(-60px); /* 🔥 FIX overlap */
+    margin-bottom: -40px;
+  }
+
+  .formContainer {
+    padding: 0 15px;
+  }
+
+  .formBox {
+    padding: 25px 18px;
+    border-radius: 16px;
+  }
+
+  /* ✅ single column */
+  .grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .full {
     grid-column: span 1;
+    margin-top: 0;
   }
 
+  /* ✅ inputs */
+  input,
+  textarea {
+    height: 42px;
+    font-size: 13.5px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  /* ✅ checkbox stack */
+  .checkboxRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checkboxRow label {
+    font-size: 13px;
+  }
+
+  /* ✅ button full width */
+  .submitBtn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+  }
+}
+
+/* ========================= */
+/* SMALL DEVICES */
+/* ========================= */
+@media (max-width: 480px) {
   .contactSection {
-    transform: translateY(-80px);
+    transform: translateY(-40px);
+  }
+
+  .formBox {
+    padding: 20px 15px;
+  }
+
+  label {
+    font-size: 12.5px;
+  }
+
+  input,
+  textarea {
+    font-size: 13px;
   }
 }
 /* contact info */

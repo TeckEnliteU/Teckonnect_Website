@@ -39,11 +39,17 @@ const textReveal = {
 /* DATA */
 /* ========================= */
 
+// const logos = [
+//   '/public/icons/aws white.svg',
+//   '/public/icons/microsoft white.svg',
+//   '/public/icons/ibm white.svg',
+//   '/public/icons/adobe white.svg',
+// ];
 const logos = [
-  '/public/icons/aws white.svg',
-  '/public/icons/microsoft white.svg',
-  '/public/icons/ibm white.svg',
-  '/public/icons/adobe white.svg',
+  `${import.meta.env.BASE_URL}icons/aws white.svg`,
+  `${import.meta.env.BASE_URL}icons/microsoft white.svg`,
+  `${import.meta.env.BASE_URL}icons/ibm white.svg`,
+  `${import.meta.env.BASE_URL}icons/adobe white.svg`,
 ];
 
 /* ========================= */

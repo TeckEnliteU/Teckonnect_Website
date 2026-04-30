@@ -3,30 +3,38 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Favicon -->
     <link
       rel="icon"
-      type="image/png"
+      type="image/svg+xml"
       href="/icons/log.svg"
     />
+
     <link
       rel="apple-touch-icon"
       href="/icons/log.svg"
     />
 
+    <!-- Viewport -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Teckonnect | Digital Transformation Company</title>
+
+    <!-- SEO -->
+    <title>Teckonnect - Connecting Technologies</title>
 
     <meta
       name="description"
       content="Teckonnect provides digital transformation, cloud, cybersecurity, AI, and enterprise solutions."
     />
+
+    <!-- Google Font -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
     />
+
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -37,14 +45,24 @@
       href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Teckonnect</title>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Teckonnect",
+        "alternateName": [
+          "Analytec Konnect Private Limited",
+          "Teckonnect Pty Ltd"
+        ],
+        "url": "https://teckonnect.com"
+      }
+    </script>
+
     <script
       type="module"
       src="/src/main.jsx"

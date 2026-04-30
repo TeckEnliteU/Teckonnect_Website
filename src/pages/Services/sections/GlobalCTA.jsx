@@ -1,56 +1,3 @@
-// 'use client';
-
-// import styles from '../Services.module.css';
-// import { Link } from 'react-router-dom';
-// const logos = ['/icons/aws.svg', '/icons/microsoft.svg', '/icons/ibm.svg'];
-
-// export default function Cta() {
-//   return (
-//     <section className={styles.ctaSection}>
-//       <div className={styles.ctaBox}>
-//         {/* ORBITS */}
-//         <div className={styles.orbitWrap}>
-//           <div className={`${styles.orbit} ${styles.orbit1}`}>
-//             <img src={logos[0]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit2}`}>
-//             <img src={logos[1]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit3}`}>
-//             <img src={logos[2]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit4}`}>
-//             <img src={logos[3]} />
-//           </div>
-//         </div>
-
-//         {/* CONTENT */}
-//         <div className={styles.ctaContent}>
-//           {/* <span>GET ORGANIZED, STAY AHEAD</span> */}
-
-//           <h2>One partner to simplify and manage your technology</h2>
-
-//           <p>
-//             Talk to our experts about your Microsoft, AWS, IBM, and Adobe
-//             environments-and
-//             <br />
-//             see how a unified managed services approach reduces complexity and
-//             risk
-//           </p>
-
-//           <Link to="/contact">
-//             <button>Get started today</button>
-//           </Link>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-'use client';
-
 import styles from '../Services.module.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -90,11 +37,17 @@ const textReveal = {
 /* DATA */
 /* ========================= */
 
+// const logos = [
+//   '/icons/aws white.svg',
+//   '/icons/microsoft white.svg',
+//   '/icons/ibm white.svg',
+//   '/icons/adobe white.svg',
+// ];
 const logos = [
-  '/icons/aws white.svg',
-  '/icons/microsoft white.svg',
-  '/icons/ibm white.svg',
-  '/icons/adobe white.svg',
+  `${import.meta.env.BASE_URL}icons/aws white.svg`,
+  `${import.meta.env.BASE_URL}icons/microsoft white.svg`,
+  `${import.meta.env.BASE_URL}icons/ibm white.svg`,
+  `${import.meta.env.BASE_URL}icons/adobe white.svg`,
 ];
 
 /* ========================= */

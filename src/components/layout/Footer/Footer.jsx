@@ -17,7 +17,8 @@ const Footer = () => {
     <footer className={styles.footer}>
       {/* BACKGROUND LOGO */}
       <img
-        src="/images/footer icon (1).svg" // 👈 your SVG
+        // src="/images/footer icon (1).svg" // 👈 your SVG
+        src={`${import.meta.env.BASE_URL}images/footer icon (1).svg`}
         alt="bg"
         className={styles.footer_bg}
       />
@@ -26,7 +27,8 @@ const Footer = () => {
         {/* BRAND */}
         <div className={styles.footer_col}>
           <img
-            src="/images/logo-white.png"
+            // src="/images/logo-white.png"
+            src={`${import.meta.env.BASE_URL}images/logo-white.png`}
             alt="Teckonnect Logo"
             className={styles.footer_logo}
           />
@@ -57,7 +59,7 @@ const Footer = () => {
         <div className={styles.footer_col}>
           <h4>Quick Links</h4>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">Company</NavLink>
+          <NavLink to="/about">About Us</NavLink>
           <NavLink to="/services">Services</NavLink>
           <NavLink to="/industries">Industries</NavLink>
           <NavLink to="/partners">Partners</NavLink>

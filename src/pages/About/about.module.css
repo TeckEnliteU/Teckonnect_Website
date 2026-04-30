@@ -176,34 +176,50 @@ section {
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
-@media (max-width: 1100px) {
-  .cardsRow {
-    width: 90%;
-    gap: 20px;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 768px) {
+  /* IMAGE */
   .imageWrap {
-    width: 90%;
+    width: 92%;
+    margin-top: -40px;
+    border-radius: 14px;
   }
 
+  .imageWrap img {
+    height: 240px; /* 🔥 reduce height */
+  }
+
+  /* CARD ROW */
   .cardsRow {
+    width: 100%;
+    margin: -60px auto 0; /* 🔥 reduce overlap */
     flex-direction: column;
     align-items: center;
-    margin-top: -80px;
+    gap: 20px;
   }
 
+  /* CARD */
   .aboutCard {
-    width: 100%;
-    max-width: 380px;
+    width: 90%;
+    max-width: 360px;
+    padding: 22px;
+    margin-bottom: 10;
   }
 
+  /* REMOVE TRANSFORMS (important) */
   .visionCard,
   .purposeCard,
   .missionCard {
     transform: none;
+  }
+
+  /* TEXT */
+  .aboutCard h3 {
+    font-size: 13px;
+  }
+
+  .aboutCard p {
+    font-size: 12px;
+    line-height: 1.6;
   }
 }
 /* Purpose section */
@@ -324,18 +340,69 @@ section {
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 900px) {
+  .servicesSection {
+    padding: 60px 30px;
+  }
+
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  .serviceCard p {
+    max-width: 100%;
   }
 }
 
+/* ============================= */
+/* MOBILE */
+/* ============================= */
 @media (max-width: 600px) {
-  .servicesGrid {
-    grid-template-columns: 1fr;
+  .servicesSection {
+    padding: 50px 16px;
+  }
+
+  .servicesHeader {
+    margin-bottom: 40px;
   }
 
   .servicesHeader h2 {
-    font-size: 28px;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .servicesHeader p {
+    font-size: 13px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .serviceCard {
+    align-items: center;
+    text-align: center;
+  }
+
+  .picon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .picon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .serviceCard h3 {
+    font-size: 14px;
+  }
+
+  .serviceCard p {
+    font-size: 13px;
+    max-width: 90%;
   }
 }
 
@@ -565,7 +632,7 @@ section {
   position: relative;
   overflow: hidden;
   min-width: 100%;
-  min-height: 220px; /* ✅ control height here */
+  min-height: 220px;
 
   background: url('/images/our partner 4.png');
 
@@ -588,83 +655,6 @@ section {
   font-size: 14px;
   opacity: 0.9;
 }
-
-/* ============================= */
-/* VISUAL */
-/* ============================= */
-.partnerVisual {
-  position: relative;
-  height: 320px;
-}
-
-/* CENTER */
-.partnerCenter {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 30px;
-  border-radius: 30%;
-  background: #ffffff59;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.partnerCenter img {
-  width: 70px;
-}
-
-/* LOGOS */
-.partnerLogo {
-  position: absolute;
-  width: 90px;
-}
-
-/* ARC POSITIONS */
-.left {
-  left: 10%;
-  top: 60%;
-}
-.topLeft {
-  left: 30%;
-  top: 10%;
-}
-.topRight {
-  right: 30%;
-  top: 10%;
-}
-.right {
-  right: 10%;
-  top: 60%;
-}
-
-/* ============================= */
-/* ARC LINES */
-/* ============================= */
-/* .arc1,
-.arc2 {
-  position: absolute;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-} */
-/* 
-.arc1 {
-  width: 400px;
-  height: 200px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -30%);
-}
-
-.arc2 {
-  width: 550px;
-  height: 260px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -20%);
-} */
 
 /* ============================= */
 /* BUTTON */
@@ -738,15 +728,6 @@ section {
   width: 45px;
 }
 
-/* ARC WRAP */
-
-/* ===================== */
-/* ARC LINES */
-/* ===================== */
-
-/* ============================= */
-/* REVEAL */
-/* ============================= */
 .reveal {
   display: block;
 }
@@ -754,9 +735,59 @@ section {
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
 @media (max-width: 768px) {
+  .partnerSection {
+    padding: 60px 20px; /* ✅ reduce side spacing */
+  }
+
+  .partnerHeader h2 {
+    font-size: 22px;
+  }
+
+  .partnerHeader p {
+    font-size: 14px;
+  }
+
+  /* CARD */
+  .partnerCard {
+    padding: 40px 20px;
+    min-height: 60px; /* ✅ remove fixed height */
+    border-radius: 16px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardSub {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  /* BUTTON (IMPORTANT FIX) */
+  .partnerBtn {
+    margin-top: 20px; /* ❌ remove 290px */
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  /* VISUAL SECTION */
   .partnerVisual {
-    height: 260px;
+    height: 200px; /* ✅ smaller height */
+  }
+
+  /* CENTER ICON */
+  .partnerCenter {
+    width: 65px;
+    height: 95px;
+    top: 60%;
+  }
+
+  .partnerCenter img {
+    width: 35px;
   }
 }
 /* journey  */
@@ -948,35 +979,98 @@ section {
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px) {
-  .row {
-    grid-template-columns: 1fr;
-    margin-bottom: 80px;
+  /* SECTION */
+  .journeySection {
+    padding: 40px 16px;
+    margin-bottom: 60px;
   }
 
-  .line,
-  .progress {
-    left: 20px;
-  }
-
-  .center {
-    position: absolute;
-    left: 20px;
-    top: 0;
-  }
-
-  .col {
-    padding-left: 50px;
-  }
-
-  .image {
-    max-width: 100%;
+  /* HEADER */
+  .journeyHeader {
+    margin-bottom: 60px;
   }
 
   .journeyHeader h2 {
     font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .journeyHeader p {
+    font-size: 13px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 40px; /* space for line + dot */
+  }
+
+  /* LINE */
+  .line,
+  .progress {
+    left: 16px; /* 🔥 center reference */
+  }
+
+  /* ROW */
+  .row {
+    grid-template-columns: 1fr;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  /* DOT (PERFECT ALIGNMENT) */
+  .center {
+    position: absolute;
+    left: -23px; /* 🔥 same as line */
+    top: 6px;
+    transform: translateX(-50%);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .activeDot {
+    transform: scale(1.4);
+  }
+
+  /* CONTENT */
+  .col {
+    padding-left: 30px;
+    gap: 16px;
+  }
+
+  /* IMAGE */
+  .image {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* TEXT */
+  .text {
+    max-width: 100%;
+  }
+
+  .text h3 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .year {
+    font-size: 11px;
+  }
+
+  /* CTA */
+  .cta {
+    font-size: 13px;
+    padding: 10px 16px;
   }
 }
-
 /* cta */
 /* cta animation */
 /* ============================= */
@@ -992,7 +1086,7 @@ section {
 .ctaBox {
   position: relative;
 
-  /* 🔥 SPACE FIX */
+  /* SPACE FIX */
   padding: 70px 70px;
   border-radius: 24px;
   overflow: hidden;
@@ -1002,10 +1096,10 @@ section {
   text-align: center;
   color: white;
 
-  /* 🔥 CENTER + WIDTH CONTROL */
+  /* CENTER + WIDTH CONTROL */
   max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
 }
-
 /* ============================= */
 /* ORBIT WRAPPER */
 /* ============================= */
@@ -1123,4 +1217,65 @@ section {
 
 .ctaContent button:hover {
   transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
 }

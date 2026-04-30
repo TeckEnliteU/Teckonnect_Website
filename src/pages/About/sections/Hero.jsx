@@ -1,65 +1,9 @@
-// 'use client';
-
-// import { useEffect, useRef } from 'react';
-// import styles from '../about.module.css';
-// import { gsap } from 'gsap';
-// import { FaBolt } from 'react-icons/fa';
-
-// const Hero = () => {
-//   const heroRef = useRef(null);
-
-//   useEffect(() => {
-//     const ctx = gsap.context(() => {
-//       // TEXT REVEAL (APPLE STYLE)
-//       gsap.from(`.${styles.reveal}`, {
-//         y: 30,
-//         opacity: 0,
-//         duration: 1,
-//         stagger: 0.12,
-//         ease: 'power3.out',
-//       });
-//     }, heroRef);
-
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <section
-//       className={styles.hero}
-//       ref={heroRef}
-//     >
-//       <div className={styles.centerWrap}>
-//         {/* BADGE */}
-//         <div className={`${styles.badge} ${styles.reveal}`}>
-//           <span>ABOUT TECKONNECT</span>
-//         </div>
-
-//         {/* TITLE */}
-//         <h1 className={`${styles.title} ${styles.reveal}`}>
-//           Built with Purpose. <br />
-//           Proven Through Practice.
-//         </h1>
-
-//         {/* DESCRIPTION */}
-//         <p className={`${styles.subtitle} ${styles.reveal}`}>
-//           Teckonnect is a technology services and managed services provider
-//           focused on creating clarity, structure, and confidence in complex IT
-//           environments. For over seven years, we have worked alongside
-//           organisations navigating regulatory pressure, operational risk, and
-//           evolving technology landscapes.
-//         </p>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
 'use client';
 
 import { useEffect, useRef } from 'react';
 import styles from '../about.module.css';
 import { gsap } from 'gsap';
-
+import { Helmet } from 'react-helmet-async';
 const Hero = () => {
   const heroRef = useRef(null);
 
@@ -106,6 +50,18 @@ const Hero = () => {
       className={styles.hero}
       ref={heroRef}
     >
+      <Helmet>
+        <meta
+          name="description"
+          content="Learn about Teckonnect, a trusted Microsoft, AWS & IBM partner delivering cloud, AI, and IT solutions that help businesses scale securely."
+        />
+
+        <link
+          rel="canonical"
+          href="https://teckonnect.com/about"
+        />
+      </Helmet>
+
       <div className={styles.centerWrap}>
         {/* BADGE */}
         <div className={`${styles.badge} ${styles.reveal}`}>

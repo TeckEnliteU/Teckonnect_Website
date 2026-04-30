@@ -1,65 +1,3 @@
-// 'use client';
-
-// import styles from '../home.module.css';
-// import { Link } from 'react-router-dom';
-// const logos = [
-//   '/icons/aws.svg',
-//   '/icons/microsoft.svg',
-//   '/icons/ibm.svg',
-//   '/logos/google.png',
-//   '/logos/oracle.png',
-// ];
-
-// export default function GlobalCTA() {
-//   return (
-//     <section className={styles.ctaSection}>
-//       <div className={styles.ctaBox}>
-//         {/* ORBITS */}
-//         <div className={styles.orbitWrap}>
-//           <div className={`${styles.orbit} ${styles.orbit1}`}>
-//             <img src={logos[0]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit2}`}>
-//             <img src={logos[1]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit3}`}>
-//             <img src={logos[2]} />
-//           </div>
-
-//           <div className={`${styles.orbit} ${styles.orbit4}`}>
-//             <img src={logos[3]} />
-//           </div>
-//         </div>
-
-//         {/* CONTENT */}
-//         <div className={styles.ctaContent}>
-//           {/* <span>GET ORGANIZED, STAY AHEAD</span> */}
-
-//           <h2>
-//             Bring clarity and confidence to
-//             <br />
-//             your IT environment
-//           </h2>
-
-//           <p>
-//             Start a conversation to understand your current
-//             environment,risks,and
-//             <br />
-//             opportunities—and explore a clearer way forward.
-//           </p>
-
-//           <Link to="/contact">
-//             <button>Get started today</button>
-//           </Link>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-'use client';
-
 import styles from '../home.module.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -100,10 +38,10 @@ const textReveal = {
 /* ========================= */
 
 const logos = [
-  '/icons/aws white.svg',
-  '/icons/microsoft white.svg',
-  '/icons/ibm white.svg',
-  '/icons/adobe white.svg',
+  `${import.meta.env.BASE_URL}icons/aws white.svg`,
+  `${import.meta.env.BASE_URL}icons/microsoft white.svg`,
+  `${import.meta.env.BASE_URL}icons/ibm white.svg`,
+  `${import.meta.env.BASE_URL}icons/adobe white.svg`,
 ];
 
 /* ========================= */
@@ -153,7 +91,7 @@ export default function GlobalCTA() {
 
           <motion.div variants={textReveal}>
             <Link to="/contact">
-              <button className={styles.ctaBtn}>Get started today</button>
+              <button className={styles.ctaBtn}>Talk to our experts</button>
             </Link>
           </motion.div>
         </motion.div>

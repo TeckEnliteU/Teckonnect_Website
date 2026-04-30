@@ -100,19 +100,19 @@ const Intro = () => {
           >
             {[
               {
-                icon: '/public/images/industries/compliant 1.svg',
+                icon: `${import.meta.env.BASE_URL}images/industries/compliant 1.svg`,
                 text: 'Secure and compliant IT foundations',
               },
               {
-                icon: '/public/images/industries/cloud-computing-icon 1.svg',
+                icon: `${import.meta.env.BASE_URL}images/industries/cloud-computing-icon 1.svg`,
                 text: 'Scalable cloud and hybrid infrastructure',
               },
               {
-                icon: '/public/images/industries/Clip path group.svg',
+                icon: `${import.meta.env.BASE_URL}images/industries/Clip path group.svg`,
                 text: 'Proactive cybersecurity and risk management',
               },
               {
-                icon: '/public/images/industries/performance optimisation 1.svg',
+                icon: `${import.meta.env.BASE_URL}images/industries/performance optimisation 1.svg`,
                 text: 'Operational reliability and performance optimisation',
               },
             ].map((item, i) => (
@@ -159,9 +159,21 @@ const Intro = () => {
               requirements evolve.
             </p>
 
+            {/* <motion.button
+              variants={fadeUp}
+              className={styles.mainBtn}
+            >
+              Industries we focus
+            </motion.button> */}
+
             <motion.button
               variants={fadeUp}
               className={styles.mainBtn}
+              onClick={() =>
+                document
+                  .getElementById('industries-section')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               Industries we focus
             </motion.button>

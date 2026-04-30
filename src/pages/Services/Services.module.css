@@ -292,11 +292,143 @@
 .logo:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
+/* ========================= */
+/* MOBILE LAYOUT */
+/* ========================= */
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+    padding: 30px 0;
+  }
+
+  /* ========================= */
+  /* VERTICAL CONNECTING LINE */
+  /* ========================= */
+  .container::before {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 2px;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(42, 167, 223, 0.1),
+      #2aa7df,
+      rgba(42, 167, 223, 0.1)
+    );
+
+    z-index: 0;
+  }
+
+  /* ❌ remove desktop lines */
+  .lineWrapper {
+    display: none;
+  }
+
+  /* ========================= */
+  /* CENTER BOX */
+  /* ========================= */
+  .center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none !important;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2; /* above line */
+  }
+
+  .center img {
+    width: 35px;
+  }
+
+  /* ========================= */
+  /* LOGOS */
+  /* ========================= */
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    transform: none !important;
+    opacity: 1 !important;
+
+    height: 22px;
+
+    z-index: 2; /* above line */
+  }
+
+  /* ORDER (TOP → CENTER → BOTTOM) */
+  .l1 {
+    order: 1;
+  }
+  .l2 {
+    order: 2;
+  }
+  .center {
+    order: 3;
+  }
+  .l3 {
+    order: 4;
+  }
+  .l4 {
+    order: 5;
+  }
+
+  /* spacing */
+  .l1,
+  .l2,
+  .l3,
+  .l4 {
+    margin: 4px 0;
+  }
+}
+
+/* ========================= */
+/* EXTRA SMALL DEVICES */
+/* ========================= */
+@media (max-width: 480px) {
+  .container {
+    gap: 18px;
+  }
+
+  .logo {
+    height: 18px;
+  }
+
+  .center {
+    width: 60px;
+    height: 60px;
+  }
+
+  .center img {
+    width: 30px;
+  }
+}
 /* key services */
-/* ============================= */
-/* SECTION */
-/* ============================= */
+
 /* ============================= */
 /* SECTION */
 /* ============================= */
@@ -455,54 +587,81 @@
 }
 
 /* ============================= */
-/* 📱 RESPONSIVE */
+/* MOBILE & TABLET */
 /* ============================= */
-
-@media (max-width: 1024px) {
-  .keyGrid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 992px) {
+  .keySection {
+    padding: 70px 40px;
   }
 
+  .keyh2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  /* ✅ 2 COLUMN GRID */
+  .keyGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+  }
+
+  /* ✅ FIX GRID LINES (2 columns) */
   .keyGrid::before {
     background-image:
-      repeating-linear-gradient(
-        to bottom,
-        #cbd5e1 0px,
-        #cbd5e1 2px,
-        transparent 2px,
-        transparent 6px
-      ),
-      repeating-linear-gradient(
-        to right,
-        #cbd5e1 0px,
-        #cbd5e1 2px,
-        transparent 2px,
-        transparent 6px
-      );
+      repeating-linear-gradient(to bottom, #1b1c1c 0 2px, transparent 2px 6px),
+      repeating-linear-gradient(to right, #1b1c1c 0 2px, transparent 2px 6px),
+      repeating-linear-gradient(to right, #1b1c1c 0 2px, transparent 2px 6px);
 
     background-size:
       1px 100%,
+      100% 1px,
       100% 1px;
 
     background-position:
       50% 0,
-      0 50%;
+      /* vertical center */ 0 33%,
+      /* horizontal 1 */ 0 66%; /* horizontal 2 */
+
+    background-repeat: no-repeat;
   }
 }
 
-@media (max-width: 600px) {
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 576px) {
+  .keySection {
+    padding: 50px 20px;
+  }
+
+  .keyh2 {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  /* ✅ SINGLE COLUMN */
   .keyGrid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 30px;
   }
 
-  .keySection {
-    padding: 60px 20px;
-  }
-
-  /* remove lines in mobile */
+  /* ❌ REMOVE LINES FOR CLEAN UI */
   .keyGrid::before {
     display: none;
+  }
+
+  /* ✅ CENTER CONTENT */
+  .keyCard {
+    text-align: center;
+  }
+
+  .keyp {
+    max-width: 100%;
+  }
+
+  .keyIcon {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* certficate */
@@ -617,7 +776,42 @@
 .certItem:nth-child(2)::after {
   right: -1%;
 }
+@media (max-width: 900px) {
+  /* SECTION */
+  .certSection {
+    margin-top: 80px;
+    padding: 60px 20px;
+  }
 
+  /* TITLE */
+  .certTitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* GRID → 2 COLUMN */
+  .certRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* REMOVE DESKTOP LINES */
+  .certRow::before,
+  .certRow::after {
+    display: none;
+  }
+
+  /* REMOVE CENTER DOTS */
+  .certItem:nth-child(2)::before,
+  .certItem:nth-child(2)::after {
+    display: none;
+  }
+
+  /* LOGO SIZE */
+  .certItem img {
+    height: 70px;
+  }
+}
 /* service cta  */
 
 /* cta animation */
@@ -634,7 +828,7 @@
 .ctaBox {
   position: relative;
 
-  /* 🔥 SPACE FIX */
+  /* SPACE FIX */
   padding: 70px 70px;
   border-radius: 24px;
   overflow: hidden;
@@ -644,10 +838,10 @@
   text-align: center;
   color: white;
 
-  /* 🔥 CENTER + WIDTH CONTROL */
+  /* CENTER + WIDTH CONTROL */
   max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
 }
-
 /* ============================= */
 /* ORBIT WRAPPER */
 /* ============================= */
@@ -765,4 +959,65 @@
 
 .ctaContent button:hover {
   transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
 }

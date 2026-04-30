@@ -77,6 +77,50 @@
   color: #e5e7eb;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  /* HERO */
+  .hero {
+    min-height: 80vh; /* 🔥 reduce height */
+    height: auto;
+    padding: 60px 16px 40px;
+  }
+
+  /* BACKGROUND */
+  .heroBg {
+    background-position: center top; /* 🔥 better framing */
+  }
+
+  /* OVERLAY BLEND */
+  .hero::after {
+    height: 100px;
+  }
+
+  /* CONTAINER */
+  .heroContainer {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* BADGE */
+  .heroBadge {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  /* TITLE */
+  .heroTitle {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  /* DESC */
+  .heroDesc {
+    font-size: 13px;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+}
 /* intro section */
 /* ================= INTRO ================= */
 .intro {
@@ -319,13 +363,199 @@
 }
 
 /* RESPONSIVE */
+/* ============================= */
+/* TABLET (≤ 900px) */
+/* ============================= */
 @media (max-width: 900px) {
+  /* ================= INTRO ================= */
+  .intro {
+    padding: 50px 24px;
+  }
+
+  .introTop {
+    margin-bottom: 50px;
+  }
+
+  .mainTitle {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .mainDesc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .mainBtn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  /* GRID → STACK */
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* CARD GRID */
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .featureCard {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .cardIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* RIGHT */
+  .rightTitle {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .rightDesc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ================= WHY SECTION ================= */
+  .whyWrap {
+    padding: 70px 20px;
+  }
+
+  .whyBox {
+    padding: 40px 24px;
+    border-radius: 22px;
+  }
+
   .whyTop {
     flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .whyLeft {
+    max-width: 100%;
+  }
+
+  .whyTitle {
+    font-size: 2rem;
+  }
+
+  .whyRightText {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* GRID → 1 COLUMN */
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .whyItem {
+    padding-left: 16px;
+  }
+
+  .whyItem h4 {
+    font-size: 14px;
+  }
+
+  .whyItem p {
+    font-size: 13px;
+  }
+}
+
+/* ============================= */
+/* MOBILE (≤ 600px) */
+/* ============================= */
+@media (max-width: 600px) {
+  /* ================= INTRO ================= */
+  .intro {
+    padding: 40px 16px;
+  }
+
+  .introTop {
+    margin-bottom: 40px;
+  }
+
+  .mainTitle {
+    font-size: 20px;
+  }
+
+  .mainDesc {
+    font-size: 13px;
+  }
+
+  /* CARDS → SINGLE COLUMN */
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .featureCard {
+    padding: 18px;
+    text-align: center;
+  }
+
+  .cardIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mainBtn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  /* RIGHT */
+  .rightTitle {
+    font-size: 20px;
+  }
+
+  .rightDesc {
+    font-size: 13px;
+  }
+
+  /* ================= WHY SECTION ================= */
+  .whyWrap {
+    padding: 60px 16px;
+  }
+
+  .whyBox {
+    padding: 28px 18px;
+    border-radius: 18px;
+  }
+
+  .whyTitle {
+    font-size: 1.6rem;
+  }
+
+  .whyRightText {
+    font-size: 13px;
   }
 
   .whyGrid {
-    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .whyItem {
+    padding-left: 14px;
+  }
+
+  .whyItem h4 {
+    font-size: 13px;
+  }
+
+  .whyItem p {
+    font-size: 13px;
   }
 }
 /* industries grid */
@@ -386,11 +616,9 @@
 .hTrack {
   display: flex;
   gap: 24px;
-
-  align-items: flex-start; /* 🔥 prevents stretch */
-  padding-right: 390px; /* 🔥 FIX last card */
+  align-items: flex-start;
+  padding-right: 180px;
   will-change: transform;
-  /* transform: translate3d(0, 0, 0); */
 }
 
 /* ========================= */
@@ -483,18 +711,19 @@
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
-@media (max-width: 1024px) {
-  .hSticky {
-    padding: 0 40px;
-  }
-
-  .hCard {
-    width: 300px;
-    flex: 0 0 300px;
-  }
-}
-
 @media (max-width: 768px) {
+  /* 🔥 REDUCE SCROLL AREA */
+  .hSection {
+    /* height: auto; 🔥 remove fixed huge height */
+    min-height: 140vh; /* keep some scroll feel */
+  }
+
+  /* OPTIONAL: adjust spacing */
+  .hSticky {
+    padding: 40px 16px;
+  }
+
+  /* KEEP YOUR CARD STYLE SAME */
   .hCard {
     width: 85vw;
     flex: 0 0 85vw;
@@ -518,7 +747,7 @@
 .ctaBox {
   position: relative;
 
-  /* 🔥 SPACE FIX */
+  /* SPACE FIX */
   padding: 70px 70px;
   border-radius: 24px;
   overflow: hidden;
@@ -528,8 +757,9 @@
   text-align: center;
   color: white;
 
-  /* 🔥 CENTER + WIDTH CONTROL */
+  /* CENTER + WIDTH CONTROL */
   max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
 }
 
 /* ============================= */
@@ -649,4 +879,65 @@
 
 .ctaContent button:hover {
   transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
 }

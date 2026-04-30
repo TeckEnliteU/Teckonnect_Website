@@ -63,8 +63,12 @@ export default function CommonAbout() {
     >
       {/* IMAGE */}
       <div className={styles.imageWrap}>
-        <img
+        {/* <img
           src="/images/aboutus/missionhero.jpeg"
+          alt="team"
+        /> */}
+        <img
+          src={`${import.meta.env.BASE_URL}images/aboutus/missionhero.jpeg`}
           alt="team"
         />
       </div>
