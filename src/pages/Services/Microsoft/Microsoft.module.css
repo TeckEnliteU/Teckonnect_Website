@@ -1,0 +1,1172 @@
+.microsoftHero {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 110px 110px;
+  min-height: 100vh;
+}
+
+.microsoftContainer {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* BACKGROUND */
+
+/* LEFT */
+
+.heroContent {
+  max-width: 650px;
+}
+
+.partnerBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.partnerBadge span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a3cf5d;
+}
+
+.heroContent h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #053a51;
+  max-width: 980px;
+  margin-bottom: 10px;
+}
+
+.heroContent h1 span {
+  color: #008abd;
+}
+
+.heroContent p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 28px;
+  max-width: 640px;
+}
+
+.heroButtons {
+  margin-top: 45px;
+}
+
+.primaryBtn {
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none !important;
+}
+
+/* HOVER */
+.primaryBtn:hover {
+  filter: brightness(1.08);
+}
+
+/* 🔥 CLICK FEEL (STRONG) */
+.primaryBtn:active {
+  transform: scale(0.98); /* 👈 slight press */
+  filter: brightness(0.92); /* 👈 darker = pressed */
+}
+
+/* RIGHT */
+
+/* RIGHT */
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.partnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD */
+
+.microsoftPartnerCard {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+
+  padding: 55px 45px;
+
+  border-radius: 38px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  overflow: hidden;
+
+  transition: 0.45s ease;
+
+  box-shadow:
+    0 15px 40px rgba(5, 58, 81, 0.05),
+    0 30px 80px rgba(0, 138, 189, 0.08);
+}
+
+/* SOFT BACKGROUND EFFECT */
+
+.microsoftPartnerCard::before {
+  content: '';
+
+  position: absolute;
+  top: -140px;
+  right: -140px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(163, 207, 93, 0.22),
+    transparent 70%
+  );
+}
+
+.microsoftPartnerCard::after {
+  content: '';
+
+  position: absolute;
+  bottom: -160px;
+  left: -160px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.12), transparent 70%);
+}
+
+/* HOVER */
+
+.microsoftPartnerCard:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 138, 189, 0.14),
+    0 20px 50px rgba(5, 58, 81, 0.08);
+}
+
+/* TOP LIGHT */
+
+/* LOGO WRAP */
+
+.microsoftLogoWrap {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  padding: 45px 35px;
+
+  border: 1px solid rgba(5, 58, 81, 0.06);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 10px 30px rgba(5, 58, 81, 0.04);
+}
+
+/* IMAGE */
+
+.microsoftLogoWrap img {
+  width: 100%;
+  max-width: 360px;
+
+  object-fit: contain;
+
+  transition: 0.4s ease;
+}
+
+.microsoftPartnerCard:hover .microsoftLogoWrap img {
+  transform: scale(1.03);
+}
+
+/* BOTTOM TEXT */
+
+.partnerBottom {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  color: #5f6b76;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .microsoftPartnerCard {
+    padding: 32px 20px;
+    border-radius: 28px;
+  }
+
+  .microsoftLogoWrap {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .partnerBottom {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .microsoftLogoWrap img {
+    max-width: 100%;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 64px;
+  }
+
+  .microsoftContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .certificationWrapper {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .microsoftHero {
+    padding: 90px 24px;
+  }
+
+  .heroContent h1 {
+    font-size: 48px;
+  }
+
+  .heroContent p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .certificationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* overview section */
+
+.microsoftOverviewSection {
+  padding: 70px 120px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.microsoftOverviewContainer {
+  max-width: 1450px;
+  margin: auto;
+}
+
+/* TOP */
+
+.microsoftOverviewTop {
+  margin-bottom: 50px;
+}
+
+.microsoftOverviewBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.microsoftOverviewBadge span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a3cf5d;
+}
+
+.microsoftOverviewTop h2 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #053a51;
+  margin-bottom: 10px;
+}
+
+.microsoftOverviewTop h2 span {
+  color: #008abd;
+}
+
+.microsoftOverviewTop p {
+  max-width: 580px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+/* LIST */
+
+.microsoftOverviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* CARD */
+
+.microsoftOverviewCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid rgba(5, 58, 81, 0.08);
+  border-radius: 30px;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 30px rgba(5, 58, 81, 0.04);
+}
+
+.microsoftOverviewCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 138, 189, 0.18);
+  box-shadow: 0 24px 50px rgba(0, 138, 189, 0.12);
+}
+
+.microsoftOverviewLeft {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+}
+
+.microsoftOverviewIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 26px;
+}
+
+.microsoftOverviewLine {
+  width: 2px;
+  height: 82px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #008abd, rgba(163, 207, 93, 0.7));
+}
+
+.microsoftOverviewLeft h4 {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #053a51;
+  font-weight: 700;
+  max-width: 860px;
+}
+
+.microsoftOverviewNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+.microsoftOverviewContent p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+  font-weight: 500;
+  max-width: 760px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .microsoftOverviewTop h2 {
+    font-size: 58px;
+  }
+
+  .microsoftOverviewLeft h4 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .microsoftOverviewSection {
+    padding: 90px 24px;
+  }
+
+  .microsoftOverviewTop h2 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .microsoftOverviewTop p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .microsoftOverviewCard {
+    padding: 26px;
+    align-items: flex-start;
+  }
+
+  .microsoftOverviewLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .microsoftOverviewLine {
+    display: none;
+  }
+
+  .microsoftOverviewIcon {
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+    font-size: 28px;
+  }
+
+  .microsoftOverviewLeft h4 {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+
+  .microsoftOverviewNumber {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    font-size: 22px;
+  }
+}
+/* features section */
+
+.microsoftFeaturesSection {
+  position: relative;
+  padding: 70px 120px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.microsoftFeaturesContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 88%;
+  max-width: 1420px;
+
+  margin: 0 auto;
+}
+
+/* BACKGROUND GLOW */
+
+.microsoftFeaturesGlowOne {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(0, 138, 189, 0.08);
+  filter: blur(120px);
+  top: -120px;
+  left: -120px;
+}
+
+.microsoftFeaturesGlowTwo {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(163, 207, 93, 0.08);
+  filter: blur(120px);
+  right: -100px;
+  bottom: -100px;
+}
+
+/* =========================
+   TOP WRAPPER
+========================= */
+
+/* TOP WRAPPER */
+
+.microsoftFeaturesTopWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* CENTER */
+  justify-content: center;
+  text-align: center; /* CENTER TEXT */
+  gap: 60px;
+  margin-bottom: 90px;
+}
+
+/* TOP CONTENT */
+
+.microsoftFeaturesTop {
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+/* BADGE */
+
+.microsoftFeaturesBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* HEADING */
+
+.microsoftFeaturesTopWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 26px;
+  margin-bottom: 45px; /* REMOVE EXTRA WHITE SPACE */
+}
+
+/* TOP CONTENT */
+
+.microsoftFeaturesTop {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BADGE */
+
+.microsoftFeaturesBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.microsoftFeaturesTop h2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+
+  color: #053a51;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.microsoftFeaturesTop h2 span {
+  display: inline; /* SINGLE LINE FIX */
+  color: #008abd;
+}
+
+/* PARAGRAPH */
+
+.microsoftFeaturesTop p {
+  max-width: 580px;
+  margin: 0 auto;
+
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+
+  border-left: none;
+  margin-bottom: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .microsoftFeaturesTop h2 {
+    font-size: 64px;
+    line-height: 1.08;
+  }
+
+  .microsoftFeaturesTop p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .microsoftFeaturesTop h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .microsoftFeaturesTop p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .microsoftFeaturesBadge {
+    font-size: 11px;
+    padding: 10px 20px;
+  }
+}
+/* =========================
+   LOGOS SECTION
+========================= */
+
+.microsoftFeaturesLogos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* MICROSOFT PARTNER CARD */
+
+/* .microsoftLogoCard {
+  position: relative;
+  width: 70%;
+  height: 140px;
+  background: #ffffff;
+  border: 1px solid rgba(5, 58, 81, 0.08);
+  border-radius: 36px;
+  overflow: hidden;
+  transition: 0.35s ease;
+  box-shadow: 0 14px 40px rgba(5, 58, 81, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+} */
+
+/* TOP BORDER */
+
+/* .microsoftLogoCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #008abd);
+} */
+
+/* SOFT GLOW */
+
+/* .microsoftLogoCard::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(0, 138, 189, 0.05);
+  top: -120px;
+  right: -120px;
+} */
+
+/* IMAGE */
+
+.microsoftLogoCard img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: 0.35s ease;
+}
+
+.microsoftLogoCard:hover {
+  transform: translateY(-8px);
+  /* border-color: rgba(0, 138, 189, 0.18); */
+  /* box-shadow: 0 26px 60px rgba(0, 138, 189, 0.14); */
+}
+
+.microsoftLogoCard:hover img {
+  transform: scale(1.02);
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.microsoftFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* FEATURE CARD */
+
+.microsoftFeaturesCard {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 34px;
+  border: 1px solid rgba(5, 58, 81, 0.08);
+  transition: 0.35s ease;
+  box-shadow: 0 14px 40px rgba(5, 58, 81, 0.05);
+}
+
+.microsoftFeaturesCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 138, 189, 0.16);
+  box-shadow: 0 28px 60px rgba(0, 138, 189, 0.12);
+}
+
+/* NUMBER */
+
+.microsoftFeaturesNumber {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #008abd;
+  margin-bottom: 24px;
+}
+
+/* CARD TOP */
+
+.microsoftFeaturesCardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+/* FEATURE ICON */
+
+.microsoftFeaturesLogoWrap {
+  width: 92px;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.08),
+    rgba(163, 207, 93, 0.08)
+  );
+  border: 1px solid rgba(0, 138, 189, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .microsoftFeaturesLogoWrap img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+} */
+
+/* CONTENT */
+
+.microsoftFeaturesContent h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #053a51;
+  font-weight: 700;
+}
+
+.microsoftFeaturesContent h3 span {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #008abd;
+  font-weight: 700;
+}
+
+.microsoftFeaturesDescription {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.microsoftFeaturesBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #008abd;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none !important;
+}
+
+.microsoftFeaturesBtn span {
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+
+.microsoftFeaturesBtn:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .microsoftFeaturesTop h2 {
+    font-size: 58px;
+  }
+
+  .microsoftFeaturesLogos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .microsoftFeaturesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .microsoftFeaturesSection {
+    padding: 90px 24px;
+  }
+
+  .microsoftFeaturesTop h2 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .microsoftFeaturesTop p {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 18px;
+  }
+
+  .microsoftFeaturesLogos {
+    grid-template-columns: 1fr;
+  }
+
+  .microsoftLogoCard {
+    height: 160px;
+    border-radius: 28px;
+  }
+
+  .microsoftFeaturesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .microsoftFeaturesCard {
+    padding: 28px;
+  }
+
+  .microsoftFeaturesContent h3 {
+    font-size: 24px;
+  }
+
+  .microsoftFeaturesContent h3 span {
+    font-size: 16px;
+  }
+
+  .microsoftFeaturesDescription {
+    font-size: 15px;
+  }
+}
+/* cta section */
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #ffffff;
+}
+
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 30px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* .ctaContent button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+
+  color: #111;
+} */
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

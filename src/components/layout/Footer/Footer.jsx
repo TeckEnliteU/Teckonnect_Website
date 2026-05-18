@@ -69,10 +69,11 @@ const Footer = () => {
         {/* SERVICES */}
         <div className={styles.footer_col}>
           <h4>Our Services</h4>
-          <NavLink to="/services#microsoft">Microsoft</NavLink>
-          <NavLink to="/services#aws">AWS</NavLink>
-          <NavLink to="/services#ibm">IBM</NavLink>
-          <NavLink to="/services#cybersecurity">Cybersecurity</NavLink>
+          <NavLink to="/services/microsoft">Microsoft</NavLink>
+          <NavLink to="/services/aws">AWS</NavLink>
+          <NavLink to="/services/adobe">Adobe</NavLink>
+          <NavLink to="/services/ibm">IBM</NavLink>
+          <NavLink to="/services/cybersecurity">Cybersecurity</NavLink>
         </div>
 
         {/* CONTACT */}

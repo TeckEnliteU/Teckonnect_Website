@@ -1,6 +1,7 @@
 import styles from '../Services.module.css';
 import { motion } from 'framer-motion';
 
+import { Link } from 'react-router-dom';
 /* ========================= */
 /* 🔥 UNIFIED ANIMATION */
 /* ========================= */
@@ -174,22 +175,41 @@ export default function ServicesGrid() {
         </motion.h3>
 
         <div className={styles.certRow}>
-          {['Microsoftcert.svg', 'awscert.svg', 'IBMcert.svg'].map(
-            (logo, i) => (
-              <motion.div
-                key={i}
-                className={styles.certItem}
-                variants={cardAnim}
-                custom={i}
-              >
-                {/* <img src={`/logos/${logo}`} /> */}
+          {[
+            {
+              logo: 'Microsoftcert.svg',
+              link: '/services/microsoft',
+            },
+
+            {
+              logo: 'awscert.svg',
+              link: '/services/aws',
+            },
+
+            {
+              logo: 'IBMcert.svg',
+              link: '/services/ibm',
+            },
+
+            {
+              logo: 'adobe certified reseller.png',
+              link: '/services/adobe',
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className={styles.certItem}
+              variants={cardAnim}
+              custom={i}
+            >
+              <Link to={item.link}>
                 <img
-                  src={`${import.meta.env.BASE_URL}logos/${logo}`}
-                  alt={logo}
+                  src={`${import.meta.env.BASE_URL}logos/${item.logo}`}
+                  alt={item.logo}
                 />
-              </motion.div>
-            ),
-          )}
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

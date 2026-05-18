@@ -1,0 +1,2388 @@
+/* ====================================
+   MICROSOFT HERO SECTION
+==================================== */
+
+.microsoftHero {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: linear-gradient(to right, #ffffff 0%, #eef7ff 100%);
+
+  padding: 120px 100px;
+}
+
+/* ====================================
+   WRAPPER
+==================================== */
+
+.heroWrapper {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+/* ====================================
+   LEFT CONTENT
+==================================== */
+
+.heroContent {
+  flex: 1;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* ====================================
+   BADGE
+==================================== */
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+/* DOT */
+
+/* ====================================
+   TITLE
+==================================== */
+
+.heroTitle {
+  font-size: 52px;
+
+  font-weight: 800;
+
+  line-height: 1.18;
+
+  color: #000000;
+
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #008abd;
+}
+
+/* ====================================
+   SUBTITLE
+==================================== */
+
+.heroSubtitle {
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #66737c;
+
+  max-width: 620px;
+
+  margin-bottom: 45px;
+
+  font-weight: 500;
+}
+
+/* ====================================
+   BUTTONS
+==================================== */
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+/* ====================================
+   PRIMARY BUTTON
+==================================== */
+
+.primaryBtn {
+  padding: 14px 30px;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  color: white;
+
+  border-radius: 999px;
+
+  text-decoration: none !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 15px 35px rgba(5, 58, 81, 0.12);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.05);
+}
+
+/* ====================================
+   SECONDARY BUTTON
+==================================== */
+
+.secondaryBtn {
+  padding: 14px 30px;
+
+  background: white;
+
+  border: 1px solid #dbe4ea;
+
+  color: #0f172a;
+
+  border-radius: 999px;
+
+  text-decoration: none !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+
+  border-color: #008abd;
+}
+
+/* ====================================
+   RIGHT SIDE
+==================================== */
+
+.heroRight {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* ====================================
+   GLOW
+==================================== */
+
+.microsoftGlow {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+  background: linear-gradient(
+    5deg,
+    rgba(0, 138, 189, 0.03),
+    rgba(163, 207, 93, 0.04)
+  );
+  border-radius: 50%;
+
+  filter: blur(10px);
+
+  animation: glowFloat 6s ease-in-out infinite;
+}
+
+/* ====================================
+   CARD
+==================================== */
+
+.microsoftCard {
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 38px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
+
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+
+.microsoftImage {
+  width: 280px;
+
+  object-fit: contain;
+}
+
+/* ====================================
+   FLOATING TAG
+==================================== */
+
+.microsoftTag {
+  position: absolute;
+
+  bottom: 24px;
+  right: -18px;
+
+  background: white;
+
+  padding: 12px 18px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #053a51;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* ====================================
+   ANIMATION
+==================================== */
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media (max-width: 1024px) {
+  .heroWrapper {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .heroContent {
+    text-align: center;
+  }
+
+  .heroSubtitle {
+    margin: 0 auto 40px;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media (max-width: 768px) {
+  .microsoftHero {
+    padding: 90px 22px 70px;
+  }
+
+  .heroWrapper {
+    flex-direction: column;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .heroSubtitle {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .microsoftCard {
+    width: 260px;
+    height: 260px;
+  }
+
+  .microsoftImage {
+    width: 120px;
+  }
+
+  .microsoftTag {
+    display: none;
+  }
+}
+
+/* ====================================
+   SMALL MOBILE
+==================================== */
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+  }
+}
+/* overviw section  */
+
+/* ===================================
+   OVERVIEW SECTION
+=================================== */
+
+.overviewSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  padding: 70px 30px;
+}
+
+/* SOFT BACKGROUND EFFECT */
+
+.overviewSection::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 138, 189, 0.05),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(163, 207, 93, 0.08),
+      transparent 28%
+    );
+
+  pointer-events: none;
+}
+
+/* ===================================
+   CONTAINER
+=================================== */
+
+.overviewContainer {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+  padding: 0px 110px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 110px;
+
+  align-items: flex-start;
+}
+
+/* ===================================
+   LEFT CONTENT
+=================================== */
+
+.overviewLeft {
+  width: 100%;
+
+  animation: fadeUp 1s ease;
+}
+
+/* LABEL */
+
+.overviewLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.overviewTitle {
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #053a51;
+
+  margin-bottom: 20px;
+
+  max-width: 700px;
+
+  font-family: 'Poppins', sans-serif;
+
+  animation: fadeUp 1.1s ease;
+}
+
+/* HIGHLIGHT */
+
+.overviewTitle span {
+  color: #008abd;
+}
+
+/* DESCRIPTION */
+
+.overviewDescription {
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 20px;
+
+  max-width: 840px;
+
+  animation: fadeUp 1.2s ease;
+}
+
+/* ===================================
+   RIGHT CONTENT
+=================================== */
+
+.overviewRight {
+  width: 100%;
+
+  animation: fadeUp 1.3s ease;
+}
+
+/* TOP TEXT */
+
+.overviewTopText {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.overviewCard {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 22px 24px;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow: 0 10px 25px rgba(5, 58, 81, 0.04);
+
+  animation: fadeUp 1.4s ease;
+}
+
+/* LEFT BORDER */
+
+.overviewCard::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: #008abd;
+}
+
+/* CARD HOVER */
+
+.overviewCard:hover {
+  transform: translateY(-8px);
+
+  border: 1px solid rgba(0, 138, 189, 0.18);
+
+  box-shadow: 0 18px 35px rgba(0, 138, 189, 0.12);
+}
+
+/* ICON */
+
+.overviewIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+/* ICON HOVER */
+
+/* CARD TEXT */
+
+.overviewCard p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #6b7280;
+
+  font-weight: 500;
+}
+
+/* ===================================
+   ANIMATION
+=================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   LAPTOP
+=================================== */
+
+@media (max-width: 1200px) {
+  .overviewTitle {
+    font-size: 4.4rem;
+  }
+
+  .overviewContainer {
+    gap: 80px;
+  }
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 992px) {
+  .overviewContainer {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .overviewTitle {
+    font-size: 3.5rem;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+  .overviewSection {
+    padding: 90px 0;
+  }
+
+  .overviewContainer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .overviewTitle {
+    font-size: 2.7rem;
+
+    line-height: 1.08;
+
+    margin-bottom: 24px;
+  }
+
+  .overviewDescription {
+    font-size: 1rem;
+
+    line-height: 1.9;
+  }
+
+  .overviewCard {
+    padding: 18px;
+
+    gap: 14px;
+  }
+
+  .overviewIcon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    font-size: 16px;
+  }
+
+  .overviewCard p {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+}
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media (max-width: 480px) {
+  .overviewTitle {
+    font-size: 2.2rem;
+  }
+}
+/* features sections  */
+
+/* =========================================
+   CORE SERVICES SECTION
+========================================= */
+
+.servicesSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  padding: 20px 30px;
+}
+
+/* SOFT BACKGROUND GLOW */
+
+.servicesSection::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 138, 189, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(163, 207, 93, 0.1),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.servicesContainer {
+  width: 100%;
+  max-width: 1480px;
+
+  margin: 0 auto;
+
+  padding: 80px 120px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.servicesHeader {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 80px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* LABEL */
+
+.servicesLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.servicesTitle {
+  font-size: 26px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  max-width: 920px;
+  line-height: 1.3;
+
+  color: #053a51;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* HIGHLIGHT */
+
+.servicesTitle span {
+  color: #008abd;
+}
+
+/* DESCRIPTION */
+
+.servicesDescription {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #6b7280;
+
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.servicesGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 28px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.serviceCard {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 26px;
+
+  padding: 34px 28px;
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border 0.4s ease;
+
+  box-shadow: 0 10px 25px rgba(5, 58, 81, 0.05);
+
+  animation: fadeUp 1s ease;
+}
+
+/* TOP GLOW */
+
+.serviceCard::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  /* background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d); */
+}
+
+/* SHINE EFFECT */
+
+/* HOVER */
+
+.serviceCard:hover {
+  transform: translateY(-14px);
+
+  border: 1px solid rgba(0, 138, 189, 0.14);
+
+  box-shadow: 0 24px 50px rgba(0, 138, 189, 0.12);
+}
+
+.serviceCard:hover::after {
+  left: 140%;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+/* ICON HOVER */
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.serviceTitle {
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  color: #053a51;
+
+  margin-bottom: 16px;
+}
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.serviceText {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LARGE LAPTOP
+========================================= */
+
+@media (max-width: 1400px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .servicesContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesTitle {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 90px 0;
+  }
+
+  .servicesContainer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .servicesHeader {
+    margin-bottom: 60px;
+  }
+
+  .servicesTitle {
+    font-size: 2.8rem;
+
+    line-height: 1.08;
+  }
+
+  .servicesDescription {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 28px 22px;
+
+    border-radius: 22px;
+  }
+
+  .serviceIcon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    font-size: 20px;
+  }
+
+  .serviceTitle {
+    font-size: 1.15rem;
+  }
+
+  .serviceText {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .servicesTitle {
+    font-size: 2.2rem;
+  }
+}
+
+/* benefits section */
+
+/* =========================================
+   BENEFITS SECTION
+========================================= */
+
+.benefitsSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 0px;
+  overflow: hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.benefitsContainer {
+  width: 100%;
+  max-width: 2450px;
+
+  margin: 0 auto;
+
+  padding: 0px 120px;
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.benefitsLeft {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* LABEL */
+
+.benefitsLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* LINE */
+
+/* TITLE */
+
+.benefitsTitle {
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #053a51;
+
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+
+.benefitsDescription {
+  font-size: 13px;
+  line-height: 1.3;
+
+  color: #6b7280;
+
+  max-width: 520px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.benefitsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 50px 34px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.benefitCard {
+  animation: fadeUp 1s ease;
+
+  transition: transform 0.4s ease;
+}
+
+/* HOVER */
+
+.benefitCard:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.benefitIcon {
+  font-size: 38px;
+
+  color: #008bbd;
+
+  margin-bottom: 26px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+/* ICON HOVER */
+
+.benefitCard:hover .benefitIcon {
+  transform: translateY(-5px);
+
+  color: #a3cf5d;
+}
+
+/* =========================================
+   CARD LINE
+========================================= */
+
+.benefitCard::after {
+  content: '';
+
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  background: #cfd7e3;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.benefitCard h3 {
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  color: #053a51;
+
+  margin-bottom: 14px;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.benefitCard p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #667085;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px 34px;
+  }
+
+  .benefitsTitle {
+    font-size: 3rem;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+  .benefitsContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .benefitsSection {
+    padding: 85px 0;
+  }
+
+  .benefitsContainer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .benefitsLeft {
+    margin-bottom: 60px;
+  }
+
+  .benefitsTitle {
+    font-size: 2.3rem;
+
+    line-height: 1.2;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .benefitIcon {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+  }
+
+  .benefitCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefitCard p {
+    font-size: 14px;
+
+    line-height: 1.9;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .benefitsTitle {
+    font-size: 1.9rem;
+  }
+}
+/* solutions  */
+
+/* =========================================
+   WHY TECKONNECT SECTION
+========================================= */
+
+.whyTeckSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 70px 0;
+
+  background: #ffffff;
+}
+
+/* BACKGROUND EFFECT */
+
+.whyTeckSection::before {
+  content: '';
+
+  position: absolute;
+  top: -300px;
+  right: -300px;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.08), transparent 70%);
+
+  pointer-events: none;
+}
+
+.whyTeckSection::after {
+  content: '';
+
+  position: absolute;
+  bottom: -250px;
+  left: -250px;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(163, 207, 93, 0.1), transparent 70%);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.whyTeckContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 0px 120px;
+}
+
+/* =========================================
+   TOP CONTENT
+========================================= */
+
+.whyTeckLeft {
+  text-align: center;
+
+  max-width: 980px;
+
+  margin: 0 auto 110px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* LABEL */
+
+.whyTeckLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.whyTeckTitle {
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  color: #053a51;
+
+  margin-bottom: 34px;
+}
+
+/* HIGHLIGHT */
+
+.whyTeckTitle span {
+  color: #008abd;
+}
+
+/* DESCRIPTION */
+
+.whyTeckDescription {
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #667085;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* =========================================
+   STATS GRID
+========================================= */
+
+.statsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 50px;
+
+  margin-bottom: 110px;
+}
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.statCard {
+  position: relative;
+
+  text-align: center;
+
+  animation: fadeUp 1s ease;
+
+  transition: transform 0.5s ease;
+}
+
+/* HOVER */
+
+.statCard:hover {
+  transform: translateY(-10px);
+}
+
+/* NUMBER */
+
+.statCard h3 {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 36px;
+  line-height: 1;
+
+  font-weight: 900;
+
+  margin-bottom: 18px;
+
+  background: linear-gradient(180deg, #053a51, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: 'Poppins', sans-serif;
+
+  animation: numberFloat 2s ease-in-out infinite;
+}
+
+/* NUMBER SHADOW */
+
+.statCard h3::after {
+  content: '';
+
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+
+  transform: translateX(-50%);
+
+  width: 80px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(ellipse, rgba(0, 138, 189, 0.2), transparent 70%);
+}
+
+/* TEXT */
+
+.statCard p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #667085;
+}
+
+/* VERTICAL DIVIDER */
+
+.statCard::before {
+  content: '';
+
+  position: absolute;
+  top: 10px;
+  right: -25px;
+
+  width: 1px;
+  height: 120px;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0, 138, 189, 0.2),
+    transparent
+  );
+}
+
+/* REMOVE LAST DIVIDER */
+
+.statCard:last-child::before {
+  display: none;
+}
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.whyTeckRight {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 70px 60px;
+}
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.featureBox {
+  position: relative;
+
+  padding-left: 95px;
+
+  animation: fadeUp 1s ease;
+
+  transition: transform 0.5s ease;
+}
+
+/* HOVER */
+
+.featureBox:hover {
+  transform: translateY(-8px);
+}
+
+/* ICON */
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ICON HOVER */
+
+.featureBox:hover .featureIcon {
+  transform: rotate(-10deg) scale(1.08);
+
+  color: #053a51;
+}
+
+/* TITLE */
+
+.featureBox h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+
+  color: #053a51;
+
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+
+.featureBox p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 380px;
+  color: #667085;
+}
+
+/* SMALL LINE */
+
+.featureBox::after {
+  content: '';
+
+  position: absolute;
+  left: 95px;
+  bottom: -30px;
+
+  width: 70px;
+  height: 3px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #008abd, #a3cf5d);
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes numberFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 60px 40px;
+  }
+
+  .statCard:nth-child(2)::before {
+    display: none;
+  }
+
+  .whyTeckRight {
+    grid-template-columns: 1fr;
+  }
+
+  .whyTeckTitle {
+    font-size: 4.2rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .whyTeckSection {
+    padding: 95px 0;
+  }
+
+  .whyTeckContainer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .whyTeckTitle {
+    font-size: 3rem;
+
+    line-height: 1.05;
+  }
+
+  .whyTeckDescription {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .statCard::before {
+    display: none;
+  }
+
+  .whyTeckRight {
+    gap: 55px;
+  }
+
+  .featureBox {
+    padding-left: 90px;
+  }
+
+  .statCard h3 {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .whyTeckTitle {
+    font-size: 2.4rem;
+  }
+
+  .featureBox {
+    padding-left: 0;
+    padding-top: 95px;
+  }
+
+  .featureBox::after {
+    left: 0;
+  }
+}
+
+/* business aspects */
+/* ==============================6===========
+   BUSINESS SECTION
+========================================= */
+
+.businessSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 60px 80px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+}
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.businessSection::before {
+  content: '';
+
+  position: absolute;
+  top: -320px;
+  left: -320px;
+
+  width: 750px;
+  height: 750px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.08), transparent 70%);
+
+  pointer-events: none;
+}
+
+.businessSection::after {
+  content: '';
+
+  position: absolute;
+  bottom: -320px;
+  right: -320px;
+
+  width: 750px;
+  height: 750px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(163, 207, 93, 0.1), transparent 70%);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.businessContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* =========================================
+   TOP CONTENT
+========================================= */
+
+.businessLeft {
+  text-align: center;
+
+  max-width: 980px;
+
+  margin: 0 auto 130px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* LABEL */
+
+.businessLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.businessTitle {
+  font-size: 26px;
+  line-height: 1.7;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 900;
+
+  color: #053a51;
+
+  margin-bottom: 16px;
+}
+
+/* HIGHLIGHT */
+
+.businessTitle span {
+  color: #008abd;
+}
+
+/* GLOW */
+
+/* DESCRIPTION */
+
+.businessDescription {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 2;
+
+  color: #667085;
+}
+
+/* =========================================
+   MODERN GRID
+========================================= */
+
+.businessRight {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 70px 55px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.businessCard {
+  position: relative;
+
+  padding-top: 80px;
+
+  animation: fadeUp 1s ease;
+
+  transition: transform 0.5s ease;
+}
+
+/* HOVER */
+
+.businessCard:hover {
+  transform: translateY(-10px);
+}
+
+/* NUMBER */
+
+.businessNumber {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: 46px;
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: rgba(5, 58, 81, 0.07);
+
+  letter-spacing: -3px;
+
+  transition: 0.5s ease;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* NUMBER HOVER */
+
+.businessCard:hover .businessNumber {
+  color: rgba(0, 138, 189, 0.14);
+
+  transform: translateY(-6px);
+}
+
+/* TITLE */
+
+.businessCard h3 {
+  position: relative;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #053a51;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 18px;
+}
+
+/* LINE */
+
+.businessCard h3::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 70px;
+  height: 3px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #008abd, #a3cf5d);
+
+  transition: 0.5s ease;
+}
+
+/* LINE HOVER */
+
+.businessCard:hover h3::after {
+  width: 120px;
+}
+
+/* TEXT */
+
+.businessCard p {
+  font-size: 13px;
+  line-height: 2;
+
+  color: #667085;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+  .businessRight {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .businessTitle {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .businessSection {
+    padding: 100px 0;
+  }
+
+  .businessContainer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .businessTitle {
+    font-size: 2.9rem;
+
+    line-height: 1.05;
+  }
+
+  .businessDescription {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+  .businessRight {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .businessCard {
+    padding-top: 65px;
+  }
+
+  .businessNumber {
+    font-size: 4rem;
+  }
+
+  .businessCard h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .businessTitle {
+    font-size: 2.3rem;
+  }
+}
+/* cta  */
+
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

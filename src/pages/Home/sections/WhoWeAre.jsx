@@ -48,7 +48,7 @@ const cards = [
     subtitle: 'A structured, governance-led approach to managed services',
     desc: 'We operate through clearly defined responsibilities, controls, and performance measures. By establishing governance upfront and managing environments proactively, we move beyond reactive support—delivering consistent oversight, measurable outcomes, and continuous improvement across cloud, hybrid, and enterprise IT environments.',
     // img: '/images/homesections/what we do.jpeg',
-    img: `${import.meta.env.BASE_URL}images/homesections/what we do.jpeg`,
+    img: '/images/homesections/what we do.jpg',
   },
   {
     title: 'WHAT SETS US APART',

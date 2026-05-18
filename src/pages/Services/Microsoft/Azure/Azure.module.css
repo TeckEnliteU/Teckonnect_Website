@@ -1,0 +1,2733 @@
+/* =========================================================
+   AZURE HERO
+========================================================= */
+
+.azureHero {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  padding: 100px 70px;
+}
+
+/* =========================================================
+   WRAPPER
+========================================================= */
+
+.heroWrapper {
+  width: 90%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.heroContainer {
+  flex: 1;
+
+  animation: heroFadeUp 1s ease;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.heroBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+
+  display: inline-block;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.heroTitle {
+  margin-top: 10px;
+
+  font-size: 46px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: #111111;
+
+  animation: heroFadeUp 1.2s ease;
+}
+
+.heroTitle span {
+  color: #008abd;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.heroDescription {
+  margin-top: 10px;
+
+  max-width: 580px;
+
+  color: #66737c;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  animation: heroFadeUp 1.4s ease;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.heroButtons {
+  margin-top: 60px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
+
+  animation: heroFadeUp 1.6s ease;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primaryBtn {
+  padding: 12px 26px;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 999px;
+
+  border: none;
+  outline: none;
+
+  text-decoration: none !important;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.primaryBtn:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+}
+
+/* CLICK */
+
+.primaryBtn:active {
+  transform: scale(0.98);
+
+  filter: brightness(0.92);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.secondaryBtn {
+  padding: 12px 26px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 999px;
+
+  text-decoration: none !important;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.secondaryBtn:hover {
+  filter: brightness(0.98);
+
+  transform: translateY(-2px);
+}
+
+/* CLICK */
+
+.secondaryBtn:active {
+  transform: scale(0.98);
+
+  filter: brightness(0.94);
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.heroRight {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.azureGlow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    5deg,
+    rgba(0, 138, 189, 0.03),
+    rgba(163, 207, 93, 0.04)
+  );
+
+  filter: blur(10px);
+
+  animation: glowFloat 6s ease-in-out infinite;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.azureCard {
+  position: relative;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 36px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 30px 60px rgba(5, 58, 81, 0.12);
+
+  animation: floatCard 5s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   AZURE IMAGE
+========================================================= */
+
+.azureImage {
+  width: 160px;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   FLOAT TAG
+========================================================= */
+
+.azureTag {
+  position: absolute;
+
+  bottom: 25px;
+  right: -20px;
+
+  background: white;
+
+  padding: 12px 18px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #053a51;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.azureTag span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #a3cf5d;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .heroWrapper {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+  }
+
+  .heroDescription {
+    font-size: 1.08rem;
+
+    margin: 0 auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .azureHero {
+    padding: 110px 20px 90px;
+  }
+
+  .heroWrapper {
+    flex-direction: column;
+  }
+
+  .heroContainer {
+    width: 100%;
+  }
+
+  .heroBadge {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .heroTitle {
+    margin-top: 24px;
+
+    font-size: 3rem;
+
+    line-height: 1.08;
+  }
+
+  .heroDescription {
+    margin-top: 28px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .heroButtons {
+    margin-top: 42px;
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .azureCard {
+    width: 260px;
+    height: 260px;
+  }
+
+  .azureImage {
+    width: 120px;
+  }
+
+  .azureTag {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 0.95rem;
+  }
+}
+/* overview */
+/* =========================================================
+   AZURE OVERVIEW
+========================================================= */
+
+.azureOverview {
+  position: relative;
+  overflow: hidden;
+
+  padding: 90px 70px;
+
+  background: linear-gradient(90deg, #f7f9fb 0%, #ffffff 35%, #f5fbff 100%);
+}
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.overviewGlowOne,
+.overviewGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.overviewGlowOne {
+  width: 520px;
+  height: 520px;
+
+  top: -220px;
+  right: -180px;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(100px);
+
+  animation: floatGlow 14s ease-in-out infinite;
+}
+
+.overviewGlowTwo {
+  width: 420px;
+  height: 420px;
+
+  bottom: -180px;
+  left: -140px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  filter: blur(100px);
+
+  animation: floatGlow 18s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.overviewContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 88%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 0;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  border: none;
+
+  backdrop-filter: none;
+
+  box-shadow: none;
+
+  animation: smoothReveal 1s ease;
+}
+
+/* =========================================================
+   TOP CONTENT
+========================================================= */
+
+.overviewTop {
+  margin-bottom: 70px;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.overviewBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  display: inline-block;
+
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.overviewTitle {
+  margin-top: 0;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  color: #053a51;
+
+  line-height: 1.5;
+
+  letter-spacing: 1px;
+
+  max-width: 950px;
+}
+
+.overviewTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.overviewDescription {
+  margin-top: 10px;
+
+  max-width: 980px;
+
+  color: #66737c;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.overviewGrid {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.serviceCard {
+  position: relative;
+
+  padding: 42px;
+
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  overflow: hidden;
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 138, 189, 0.14);
+
+  box-shadow: 0 24px 60px rgba(0, 138, 189, 0.08);
+}
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.cardGradient,
+.cardGradientGreen,
+.cardGradientBlue,
+.cardGradientOrange {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+}
+
+.cardGradient {
+  background: linear-gradient(90deg, #053a51, #008abd);
+}
+
+.cardGradientGreen {
+  background: linear-gradient(90deg, #6b9c24, #a3cf5d);
+}
+
+.cardGradientBlue {
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+}
+
+.cardGradientOrange {
+  background: linear-gradient(90deg, #d97706, #ffb547);
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.serviceCard h3 {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #6e6e6e;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tagsWrap,
+.tagsWrapGreen,
+.tagsWrapBlue,
+.tagsWrapOrange {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.tagsWrap span,
+.tagsWrapGreen span,
+.tagsWrapBlue span,
+.tagsWrapOrange span {
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tagsWrap span {
+  background: rgba(0, 138, 189, 0.08);
+
+  color: #008abd;
+}
+
+.tagsWrapGreen span {
+  background: rgba(163, 207, 93, 0.14);
+
+  color: #5f8e18;
+}
+
+.tagsWrapBlue span {
+  background: rgba(99, 102, 241, 0.12);
+
+  color: #5b56e8;
+}
+
+.tagsWrapOrange span {
+  background: rgba(255, 187, 71, 0.16);
+
+  color: #d88a08;
+}
+
+.tagsWrap span:hover,
+.tagsWrapGreen span:hover,
+.tagsWrapBlue span:hover,
+.tagsWrapOrange span:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   BOTTOM STATS
+========================================================= */
+
+.bottomStats {
+  margin-top: 34px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.statCard {
+  padding: 36px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 32px rgba(0, 138, 189, 0.08);
+}
+
+.statCard span {
+  color: #7b7b7b;
+
+  font-size: 14px;
+}
+
+.statCard h2 {
+  margin-top: 14px;
+
+  font-size: 24px;
+
+  color: #008abd;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .overviewTitle {
+    font-size: 52px;
+  }
+
+  .overviewDescription {
+    font-size: 18px;
+  }
+
+  .serviceCard h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .azureOverview {
+    padding: 70px 0;
+  }
+
+  .overviewContainer {
+    width: 92%;
+  }
+
+  .overviewTop {
+    margin-bottom: 50px;
+  }
+
+  .overviewBadge {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+  }
+
+  .overviewTitle {
+    font-size: 38px;
+
+    line-height: 1.2;
+  }
+
+  .overviewDescription {
+    margin-top: 24px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+  .overviewGrid {
+    gap: 22px;
+  }
+
+  .serviceCard {
+    padding: 28px;
+
+    border-radius: 24px;
+  }
+
+  .serviceCard h3 {
+    font-size: 20px;
+
+    margin-bottom: 24px;
+  }
+
+  .tagsWrap span,
+  .tagsWrapGreen span,
+  .tagsWrapBlue span,
+  .tagsWrapOrange span {
+    padding: 12px 18px;
+
+    font-size: 13px;
+  }
+
+  .bottomStats {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .statCard {
+    padding: 28px;
+  }
+
+  .statCard h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .overviewTitle {
+    font-size: 32px;
+  }
+
+  .overviewDescription {
+    font-size: 15px;
+  }
+
+  .serviceCard {
+    padding: 24px;
+  }
+
+  .serviceCard h3 {
+    font-size: 18px;
+  }
+
+  .tagsWrap,
+  .tagsWrapGreen,
+  .tagsWrapBlue,
+  .tagsWrapOrange {
+    gap: 12px;
+  }
+
+  .tagsWrap span,
+  .tagsWrapGreen span,
+  .tagsWrapBlue span,
+  .tagsWrapOrange span {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+/* features section*/
+
+/* =========================================================
+   AZURE FEATURES
+========================================================= */
+
+.azureFeatures {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.featuresGlowOne,
+.featuresGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.featuresGlowOne {
+  width: 520px;
+  height: 520px;
+
+  top: -240px;
+  right: -160px;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(100px);
+
+  animation: floatGlow 15s ease-in-out infinite;
+}
+
+.featuresGlowTwo {
+  width: 420px;
+  height: 420px;
+
+  bottom: -180px;
+  left: -120px;
+
+  background: rgba(163, 207, 93, 0.16);
+
+  filter: blur(90px);
+
+  animation: floatGlow 18s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.featuresContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.featuresTop {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: smoothReveal 1s ease forwards;
+}
+
+/* BADGE */
+
+.featuresBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.featuresTitle {
+  margin-top: 10px;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  color: #053a51;
+
+  line-height: 1;
+
+  letter-spacing: 0.2px;
+}
+
+.featuresTitle span {
+  margin-top: 10px;
+
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 28px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.featureCard {
+  position: relative;
+
+  padding: 42px 34px;
+
+  min-height: 360px;
+
+  border-radius: 34px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 20px 50px rgba(5, 58, 81, 0.05);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  animation: smoothReveal 0.8s ease forwards;
+}
+
+/* TOP LINE */
+
+.featureCard::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  /* background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d); */
+}
+
+/* HOVER */
+
+.featureCard:hover {
+  transform: translateY(-12px);
+
+  border-color: rgba(0, 138, 189, 0.16);
+
+  box-shadow: 0 30px 70px rgba(0, 138, 189, 0.12);
+}
+
+/* LIGHT EFFECT */
+
+.featureCard::after {
+  content: '';
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.06);
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.featureCard:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: rotate(-8deg) scale(1.06);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: white;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.featureCard h3 {
+  margin-top: 15px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  color: #053a51;
+}
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.cardLine {
+  width: 60px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  margin: 28px 0;
+
+  background: linear-gradient(90deg, #008abd, #a3cf5d);
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.featureCard p {
+  color: #66737c;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .azureFeatures {
+    padding: 100px 0;
+  }
+
+  .featuresContainer {
+    width: 92%;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuresTitle {
+    font-size: 2.8rem;
+
+    line-height: 1.08;
+  }
+
+  .featureCard {
+    min-height: auto;
+
+    padding: 30px;
+
+    border-radius: 26px;
+  }
+
+  .featureCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .featureCard p {
+    font-size: 0.95rem;
+  }
+
+  .featureIcon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 22px;
+
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .featuresTitle {
+    font-size: 2.2rem;
+  }
+
+  .featuresBadge {
+    font-size: 11px;
+
+    padding: 12px 18px;
+  }
+}
+/* benefits */
+
+/* =========================================================
+   AZURE BENEFITS SECTION
+========================================================= */
+
+.azureBenefits {
+  position: relative;
+  padding: 70px 110px;
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.benefitsGlowOne,
+.benefitsGlowTwo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.12;
+}
+
+.benefitsGlowOne {
+  width: 420px;
+  height: 420px;
+  background: #008abd;
+  top: -120px;
+  left: -100px;
+}
+
+.benefitsGlowTwo {
+  width: 380px;
+  height: 380px;
+  background: #a3cf5d;
+  bottom: -120px;
+  right: -80px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.benefitsContainer {
+  max-width: 1450px;
+  margin: auto;
+}
+
+/* =========================================================
+   TOP CONTENT
+========================================================= */
+
+.benefitsTop {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.benefitsBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.benefitsTitle {
+  margin-top: 10px;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #053a51;
+}
+
+.benefitsTitle span {
+  color: #008abd;
+}
+
+.benefitsDescription {
+  max-width: 560px;
+  margin: 22px auto 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4d6672;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.benefitCard,
+.benefitCardGreen,
+.benefitCardBlue,
+.benefitCardOrange {
+  position: relative;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 32px;
+  padding: 42px;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  border: 1px solid rgba(5, 58, 81, 0.08);
+  box-shadow:
+    0 10px 35px rgba(5, 58, 81, 0.06),
+    0 2px 8px rgba(5, 58, 81, 0.04);
+  backdrop-filter: blur(14px);
+}
+
+.benefitCard:hover,
+.benefitCardGreen:hover,
+.benefitCardBlue:hover,
+.benefitCardOrange:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 25px 60px rgba(0, 138, 189, 0.15),
+    0 10px 30px rgba(5, 58, 81, 0.08);
+}
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.cardTopLine,
+.cardTopLineGreen,
+.cardTopLineBlue,
+.cardTopLineOrange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+/* .cardTopLine {
+  background: linear-gradient(to right, #008abd, #053a51);
+}
+
+.cardTopLineGreen {
+  background: linear-gradient(to right, #a3cf5d, #008abd);
+}
+
+.cardTopLineBlue {
+  background: linear-gradient(to right, #053a51, #008abd);
+}
+
+.cardTopLineOrange {
+  background: linear-gradient(to right, #008abd, #a3cf5d);
+} */
+
+/* =========================================================
+   ICONS
+========================================================= */
+
+.benefitIcon,
+.benefitIconGreen,
+.benefitIconBlue,
+.benefitIconOrange {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.benefitCard:hover .benefitIcon,
+.benefitCardGreen:hover .benefitIconGreen,
+.benefitCardBlue:hover .benefitIconBlue,
+.benefitCardOrange:hover .benefitIconOrange {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.cardNumber {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #008abd;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.benefitCard h3,
+.benefitCardGreen h3,
+.benefitCardBlue h3,
+.benefitCardOrange h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 800;
+  color: #053a51;
+  margin-bottom: 20px;
+}
+
+.benefitCard p,
+.benefitCardGreen p,
+.benefitCardBlue p,
+.benefitCardOrange p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #5d7480;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.cardDivider {
+  width: 100%;
+  height: 1px;
+  background: rgba(5, 58, 81, 0.08);
+  margin: 30px 0;
+}
+
+/* =========================================================
+   LIST TITLE
+========================================================= */
+
+.benefitCard h4,
+.benefitCardGreen h4,
+.benefitCardBlue h4,
+.benefitCardOrange h4 {
+  margin-bottom: 18px;
+  font-size: 14px;
+
+  font-weight: 700;
+  color: #008abd;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+.benefitCard ul,
+.benefitCardGreen ul,
+.benefitCardBlue ul,
+.benefitCardOrange ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitCard li,
+.benefitCardGreen li,
+.benefitCardBlue li,
+.benefitCardOrange li {
+  list-style: none;
+  position: relative;
+  padding-left: 28px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4f6772;
+}
+
+/* PERFECT DOT ALIGN */
+
+.benefitCard li::before,
+.benefitCardGreen li::before,
+.benefitCardBlue li::before,
+.benefitCardOrange li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a3cf5d;
+  box-shadow: 0 0 10px rgba(163, 207, 93, 0.35);
+}
+/* =========================================================
+   HOVER LIGHT EFFECT
+========================================================= */
+
+.benefitCard::after,
+.benefitCardGreen::after,
+.benefitCardBlue::after,
+.benefitCardOrange::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.benefitCard:hover::after,
+.benefitCardGreen:hover::after,
+.benefitCardBlue:hover::after,
+.benefitCardOrange:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsTitle {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .azureBenefits {
+    padding: 90px 20px;
+  }
+
+  .benefitsTitle {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .benefitsDescription {
+    font-size: 16px;
+  }
+
+  .benefitCard,
+  .benefitCardGreen,
+  .benefitCardBlue,
+  .benefitCardOrange {
+    padding: 32px 24px;
+    border-radius: 26px;
+  }
+
+  .benefitCard h3,
+  .benefitCardGreen h3,
+  .benefitCardBlue h3,
+  .benefitCardOrange h3 {
+    font-size: 25px;
+  }
+
+  .benefitIcon,
+  .benefitIconGreen,
+  .benefitIconBlue,
+  .benefitIconOrange {
+    width: 68px;
+    height: 68px;
+    font-size: 28px;
+  }
+}
+/* solution section */
+/* =========================================================
+   AZURE SOLUTIONS SECTION
+========================================================= */
+
+.azureSolutions {
+  position: relative;
+  padding: 70px 130px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* SOFT BACKGROUND LIGHT */
+
+.azureSolutions::before {
+  content: '';
+  position: absolute;
+  top: -180px;
+  left: -180px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(0, 138, 189, 0.06);
+  filter: blur(120px);
+}
+
+.azureSolutions::after {
+  content: '';
+  position: absolute;
+  bottom: -160px;
+  right: -160px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(163, 207, 93, 0.12);
+  filter: blur(120px);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.solutionsContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 1450px;
+  margin: auto;
+}
+
+/* =========================================================
+   TOP SECTION
+========================================================= */
+
+.solutionsTop {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.solutionsBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.solutionsTitle {
+  margin-top: 0;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  color: #053a51;
+
+  line-height: 1.5;
+
+  letter-spacing: 1px;
+
+  max-width: 1150px;
+}
+
+.solutionsTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solutionsDescription {
+  max-width: 560px;
+
+  margin: 28px auto 0;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #617785;
+}
+
+/* =========================================================
+   FLOW GRID
+========================================================= */
+
+.solutionsFlow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.solutionCard {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 38px;
+
+  padding: 42px 34px;
+
+  border: 1px solid rgba(0, 138, 189, 0.1);
+
+  overflow: hidden;
+
+  transition: all 0.45s ease;
+
+  min-height: 370px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 8px 25px rgba(5, 58, 81, 0.04),
+    0 20px 60px rgba(5, 58, 81, 0.05);
+}
+
+/* TOP LINE */
+
+.solutionCard::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 34px;
+
+  width: 90px;
+  height: 4px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(to right, #008abd, #a3cf5d);
+}
+
+/* HOVER */
+
+.solutionCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 30px 70px rgba(0, 138, 189, 0.1),
+    0 18px 45px rgba(5, 58, 81, 0.08);
+}
+
+/* =========================================================
+   NUMBER BOX
+========================================================= */
+
+.solutionNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+}
+
+.solutionCard:hover .solutionNumber {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.solutionCard h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 800;
+
+  color: #053a51;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.solutionCard p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #667c89;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.solutionTag {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 12px 22px;
+
+  border-radius: 100px;
+
+  background: rgba(163, 207, 93, 0.1);
+
+  border: 1px solid rgba(163, 207, 93, 0.18);
+
+  color: #759c2f;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  transition: all 0.35s ease;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1400px) {
+  .solutionsFlow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .solutionsFlow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solutionsTitle {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 768px) {
+  .azureSolutions {
+    padding: 95px 20px;
+  }
+
+  .solutionsTop {
+    margin-bottom: 60px;
+  }
+
+  .solutionsFlow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .solutionCard {
+    min-height: auto;
+    padding: 34px 24px;
+    border-radius: 28px;
+  }
+
+  .solutionNumber {
+    width: 74px;
+    height: 74px;
+    border-radius: 24px;
+    font-size: 25px;
+    margin-bottom: 28px;
+  }
+
+  .solutionCard h3 {
+    font-size: 30px;
+  }
+
+  .solutionCard p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .solutionsTitle {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .solutionsDescription {
+    font-size: 16px;
+  }
+}
+/* business section */
+/* =========================================================
+   AZURE BUSINESS
+========================================================= */
+
+.azureBusiness {
+  position: relative;
+  overflow: hidden;
+
+  padding: 100px 60px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 138, 189, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(163, 207, 93, 0.12),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.azureBusiness::before {
+  content: '';
+
+  position: absolute;
+
+  top: -260px;
+  right: -160px;
+
+  width: 620px;
+  height: 620px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(120px);
+
+  animation: glowFloat 18s ease-in-out infinite;
+}
+
+.azureBusiness::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: -220px;
+  left: -120px;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  filter: blur(100px);
+
+  animation: glowFloat 16s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.businessContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP SECTION
+========================================================= */
+
+.businessTop {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* BADGE */
+
+.businessBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.businessBadge::before {
+  content: '';
+
+  width: 40px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+}
+
+/* TITLE */
+
+.businessTitle {
+  margin-top: 10px;
+
+  font-size: 26px;
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2;
+
+  color: #053a51;
+}
+
+.businessTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+
+.businessDescription {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  color: #66737c;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FAQ WRAPPER
+========================================================= */
+
+.faqWrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.faqItem {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 18px 50px rgba(5, 58, 81, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  animation: fadeUp 1s ease;
+}
+
+/* HOVER */
+
+.faqItem:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(0, 138, 189, 0.16);
+
+  box-shadow:
+    0 30px 80px rgba(0, 138, 189, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 34px 40px;
+
+  cursor: pointer;
+}
+
+.faqQuestion h3 {
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #053a51;
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.faqArrow {
+  flex-shrink: 0;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  color: #008abd;
+
+  font-size: 1.2rem;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.faqAnswer {
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  padding: 0 40px;
+
+  transition:
+    max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease,
+    padding 0.4s ease;
+}
+
+/* OPEN */
+
+.faqItem:hover .faqAnswer {
+  max-height: 220px;
+
+  opacity: 1;
+
+  padding: 0 40px 24px;
+}
+
+/* ANSWER TEXT */
+
+.faqAnswer p {
+  margin-top: -4px;
+
+  color: #66737c;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  transform: translateY(-6px);
+
+  opacity: 0;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
+
+/* SHOW */
+
+.faqItem:hover .faqAnswer p {
+  transform: translateY(0);
+
+  opacity: 1;
+}
+/* =========================================================
+   ARROW ROTATE
+========================================================= */
+
+.faqItem:hover .faqArrow {
+  transform: rotate(45deg);
+
+  background: rgba(163, 207, 93, 0.18);
+
+  color: #053a51;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(22px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .businessTitle {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .azureBusiness {
+    padding: 100px 0;
+  }
+
+  .businessContainer {
+    width: 92%;
+  }
+
+  .businessTop {
+    margin-bottom: 60px;
+  }
+
+  .businessTitle {
+    font-size: 2.7rem;
+
+    line-height: 1.08;
+  }
+
+  .businessDescription {
+    font-size: 1rem;
+
+    line-height: 1.9;
+  }
+
+  .faqWrapper {
+    gap: 18px;
+  }
+
+  .faqItem {
+    border-radius: 26px;
+  }
+
+  .faqQuestion {
+    padding: 24px;
+  }
+
+  .faqQuestion h3 {
+    font-size: 1rem;
+
+    line-height: 1.5;
+  }
+
+  .faqArrow {
+    width: 46px;
+    height: 46px;
+
+    font-size: 1rem;
+  }
+
+  .faqAnswer {
+    padding: 0 24px;
+  }
+
+  .faqItem:hover .faqAnswer {
+    padding: 0 24px 24px;
+  }
+
+  .faqAnswer p {
+    font-size: 0.95rem;
+
+    line-height: 1.9;
+  }
+}
+/* cta  */
+
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

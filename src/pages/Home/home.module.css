@@ -42,8 +42,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background: url('/public/images/homesections/hero.jpeg') center/cover
-    no-repeat;
+  background: url('/images/homesections/hero.jpg') center/cover no-repeat;
 
   filter: grayscale(100%); /* optional like your screenshot */
   z-index: 0;

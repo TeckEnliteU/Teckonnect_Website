@@ -68,7 +68,7 @@ export default function CommonAbout() {
           alt="team"
         /> */}
         <img
-          src={`${import.meta.env.BASE_URL}images/aboutus/missionhero.jpeg`}
+          src={'/images/aboutus/missionhero.jpg'}
           alt="team"
         />
       </div>

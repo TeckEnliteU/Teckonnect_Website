@@ -5,18 +5,33 @@ import styles from '../contact.module.css';
 
 export default function ContactFormSimple() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    // just fake success message
-    setSubmitted(true);
+    try {
+      const res = await fetch('https://teckonnect.com/contact.php', {
+        method: 'POST',
+        body: new FormData(e.target),
+      });
 
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
+      const result = await res.text();
 
-    e.target.reset();
+      if (result === 'success') {
+        setSubmitted(true);
+        e.target.reset();
+
+        setTimeout(() => setSubmitted(false), 2500);
+      } else {
+        alert('Submission failed');
+      }
+    } catch (err) {
+      alert('Server error');
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -31,6 +46,7 @@ export default function ContactFormSimple() {
               <div>
                 <label>First name</label>
                 <input
+                  name="firstName"
                   placeholder="Enter your first name*"
                   required
                 />
@@ -39,6 +55,7 @@ export default function ContactFormSimple() {
               <div>
                 <label>Last name</label>
                 <input
+                  name="lastName"
                   placeholder="Enter your last name*"
                   required
                 />
@@ -47,6 +64,7 @@ export default function ContactFormSimple() {
               <div>
                 <label>Phone number</label>
                 <input
+                  name="phone"
                   placeholder="Phone number*"
                   required
                 />
@@ -55,6 +73,7 @@ export default function ContactFormSimple() {
               <div>
                 <label>Email address</label>
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email address*"
                   required
@@ -65,6 +84,7 @@ export default function ContactFormSimple() {
             <div className={styles.full}>
               <label>Your message</label>
               <textarea
+                name="message"
                 placeholder="Your message"
                 required
               />
@@ -73,14 +93,15 @@ export default function ContactFormSimple() {
             <button
               type="submit"
               className={styles.submitBtn}
+              disabled={loading || submitted}
             >
-              Submit Here
+              {loading ? 'Sending...' : submitted ? 'Sent ✓' : 'Submit Here'}
             </button>
 
             {submitted && (
-              <p style={{ color: 'green', marginTop: '15px' }}>
-                Form submitted successfully!
-              </p>
+              <div className={styles.successBox}>
+                Message sent successfully!
+              </div>
             )}
           </form>
         </div>

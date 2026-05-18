@@ -1,0 +1,929 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.publicHero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  /* min-height: 780px; */
+  overflow: hidden;
+  padding: 120px 20px;
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/images/mining.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   LEFT DARK GRADIENT
+========================================================= */
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 58, 81, 1) 0%,
+    rgba(5, 58, 81, 0.95) 20%,
+    rgba(5, 58, 81, 0.82) 38%,
+    rgba(5, 58, 81, 0.45) 55%,
+    rgba(5, 58, 81, 0) 75%
+  );
+
+  z-index: 2;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.heroContainer {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.heroTag {
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 92px;
+  text-transform: uppercase;
+
+  padding: auto;
+  display: inline-block;
+}
+
+.heroTag::after {
+  content: '';
+
+  width: 60px;
+  height: 2px;
+
+  background: #a3cf5d;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heroContent h1 {
+  color: #ffffff;
+
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.heroContent h1 span {
+  display: block;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 46px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: auto;
+  display: inline-block;
+}
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.heroContent p {
+  color: #e6e6e6;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  max-width: 580px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .publicHero {
+    min-height: auto;
+    padding: 140px 0 100px;
+  }
+
+  .heroOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 58, 81, 0.96) 0%,
+      rgba(5, 58, 81, 0.88) 45%,
+      rgba(5, 58, 81, 0.7) 100%
+    );
+  }
+
+  .heroContainer {
+    padding: 0 30px;
+  }
+
+  .heroContent h1 {
+    font-size: 46px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .heroContent p {
+    line-height: 1.8;
+  }
+}
+/* overview section */
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 110px;
+  background: #ffffff;
+}
+
+/* BACKGROUND EFFECT */
+
+.overviewContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.overviewLeft {
+  animation: slideLeft 1s ease;
+}
+
+.overviewTag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  padding: auto;
+  display: inline-block;
+}
+
+.overviewLeft h2 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.overviewLeft h2 span {
+  display: block;
+}
+
+.overviewLeft h2 strong {
+  display: block;
+
+  color: #008abd;
+  font-weight: 800;
+}
+
+.headingLine {
+  width: 150px;
+  height: 7px;
+
+  margin-top: 25px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+}
+
+/* =========================================================
+   RIGHT SIDE CONTENT
+========================================================= */
+
+.overviewRight {
+  position: relative;
+
+  animation: fadeUp 1s ease;
+}
+
+.overviewRight::before {
+  content: '';
+
+  position: absolute;
+  left: -45px;
+  top: 0;
+
+  width: 5px;
+  height: 100%;
+
+  border-radius: 30px;
+
+  background: linear-gradient(180deg, #053a51, #008abd, #a3cf5d);
+}
+
+.overviewRight p {
+  color: #6a7784;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.leadText {
+  color: #6a7784 !important;
+  font-weight: 500;
+}
+
+.overviewRight p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .overviewContainer {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .overviewLeft h2 {
+    font-size: 54px;
+  }
+
+  .overviewRight::before {
+    left: -20px;
+  }
+
+  .overviewRight p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview {
+    padding: 100px 20px;
+  }
+
+  .overviewLeft h2 {
+    font-size: 40px;
+  }
+
+  .overviewRight p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+}
+/* challenges */
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.challenges {
+  padding: 70px 120px;
+  background: #fff;
+}
+
+.challengesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* TOP */
+
+.challengeTop,
+.solutionHeader {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 70px;
+}
+
+.challengeTop span,
+.solutionHeader span {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.challengeTop h2,
+.solutionHeader h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: #053a51;
+
+  margin: 20px 0;
+}
+
+.challengeTop h2 strong,
+.solutionHeader h2 strong {
+  color: #008abd;
+}
+
+.challengeTop p,
+.solutionHeader p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+/* CHALLENGE GRID */
+
+.challengeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+
+  margin-bottom: 140px;
+}
+
+.challengeCard {
+  position: relative;
+
+  padding: 45px;
+  border-radius: 34px;
+
+  background: #fff;
+
+  border: 1px solid rgba(0, 138, 189, 0.12);
+
+  transition: 0.4s ease;
+
+  overflow: hidden;
+}
+
+.challengeCard:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 25px 50px rgba(5, 58, 81, 0.08);
+}
+
+.challengeCard::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+}
+
+.cardNumber {
+  font-size: 42px;
+  font-weight: 800;
+
+  color: rgba(0, 138, 189, 0.15);
+
+  margin-bottom: 25px;
+}
+
+.challengeCard h3 {
+  font-size: 14px;
+  color: #053a51;
+  margin-bottom: 20px;
+}
+
+.challengeCard p {
+  color: #6b7280;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+/* SOLUTIONS */
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.solutionCard {
+  padding: 45px;
+
+  border-left: 5px solid #008abd;
+
+  background: #f8fbfc;
+
+  border-radius: 28px;
+
+  transition: 0.4s ease;
+}
+
+.solutionCard:hover {
+  transform: translateY(-8px);
+}
+
+.solutionCard h3 {
+  color: #053a51;
+  font-size: 14px;
+
+  margin-bottom: 18px;
+}
+
+.solutionCard p {
+  color: #6b7280;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .challengeGrid,
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .challengeTop h2,
+  .solutionHeader h2 {
+    font-size: 42px;
+  }
+}
+/* solution  */
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 120px;
+  background: #ffffff;
+}
+
+.benefitsContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* TOP */
+
+.benefitsTop {
+  text-align: center;
+  max-width: 850px;
+
+  margin: 0 auto 90px;
+}
+
+.benefitsTag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.benefitsTop h2 {
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+}
+
+.benefitsTop h2 span {
+  color: #008abd;
+}
+
+.benefitsTop p {
+  color: #6a7884;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* GRID */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.benefitCard {
+  position: relative;
+
+  padding: 20px 10px 0;
+
+  transition: all 0.45s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-12px);
+}
+
+/* ICON */
+
+.iconWrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.iconWrap svg {
+  font-size: 24px;
+  color: #008abd;
+
+  transition: 0.4s ease;
+}
+
+.benefitCard:hover .iconWrap {
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  transform: translateY(-6px);
+}
+
+.benefitCard:hover .iconWrap svg {
+  color: #ffffff;
+}
+
+/* LINE */
+
+.cardLine {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(0, 138, 189, 0.2);
+
+  margin-bottom: 30px;
+}
+
+/* CONTENT */
+
+.benefitCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  margin-bottom: 18px;
+}
+
+.benefitCard p {
+  color: #667784;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    padding: 100px 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsTop h2 {
+    font-size: 42px;
+  }
+}
+/* cta section */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,1110 @@
+/* =========================================================
+   HEALTHCARE HERO
+========================================================= */
+
+.healthcareHero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  overflow: hidden;
+
+  padding: 120px 20px;
+
+  display: flex;
+  align-items: center;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/images/healthcare.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  z-index: -2;
+}
+
+/* =========================================================
+   LEFT HEALTHCARE OVERLAY
+========================================================= */
+
+.healthcareHero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 58, 81, 0.98) 0%,
+    rgba(5, 58, 81, 0.95) 22%,
+    rgba(5, 58, 81, 0.88) 38%,
+    rgba(5, 58, 81, 0.62) 55%,
+    rgba(5, 58, 81, 0.2) 70%,
+    rgba(5, 58, 81, 0) 82%
+  );
+
+  z-index: -1;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.heroContainer {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  max-width: 780px;
+
+  animation: fadeLeft 1s ease;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.heroTag {
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding: auto;
+  display: inline-block;
+}
+
+.heroTag::after {
+  content: '';
+
+  width: 70px;
+  height: 3px;
+
+  border-radius: 30px;
+
+  background: #a3cf5d;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heroContent h1 {
+  color: #ffffff;
+
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin-bottom: 34px;
+}
+
+.heroContent h1 span {
+  display: block;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 46px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: auto;
+  display: inline-block;
+}
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.heroContent p {
+  max-width: 580px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 62px;
+  }
+
+  .heroContent p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 992px) {
+  .healthcareHero {
+    min-height: auto;
+    height: auto;
+
+    padding: 150px 20px 100px;
+  }
+
+  .healthcareHero::after {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 58, 81, 0.96) 0%,
+      rgba(5, 58, 81, 0.88) 45%,
+      rgba(5, 58, 81, 0.68) 100%
+    );
+  }
+
+  .heroContainer {
+    padding: 0 20px;
+  }
+
+  .heroContent h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .heroContent p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroContent h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+/* overview section  */
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 120px;
+  background: #ffffff;
+}
+
+/* BACKGROUND EFFECT */
+
+.overview::before {
+  content: '';
+
+  position: absolute;
+  top: -200px;
+  right: -180px;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.07), transparent 70%);
+}
+
+.overviewContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.overviewLeft {
+  animation: slideLeft 1s ease;
+}
+
+.overviewTag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  padding: auto;
+  display: inline-block;
+}
+
+.overviewLeft h2 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.overviewLeft h2 span {
+  display: block;
+}
+
+.overviewLeft h2 strong {
+  display: block;
+
+  color: #008abd;
+  font-weight: 800;
+}
+
+.headingLine {
+  width: 150px;
+  height: 6px;
+
+  margin-top: 45px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.overviewRight {
+  position: relative;
+
+  animation: fadeUp 1s ease;
+}
+
+.overviewRight::before {
+  content: '';
+
+  position: absolute;
+  left: -45px;
+  top: 0;
+
+  width: 5px;
+  height: 100%;
+
+  border-radius: 30px;
+
+  background: linear-gradient(180deg, #053a51, #008abd, #a3cf5d);
+}
+
+.overviewRight p {
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.leadText {
+  color: #6b7280 !important;
+  font-weight: 500;
+}
+
+.overviewRight p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .overviewContainer {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .overviewLeft h2 {
+    font-size: 54px;
+  }
+
+  .overviewRight::before {
+    left: -20px;
+  }
+
+  .overviewRight p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview {
+    padding: 100px 20px;
+  }
+
+  .overviewLeft h2 {
+    font-size: 40px;
+  }
+
+  .overviewRight p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+}
+/* challenges section */
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.challenges {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 120px;
+  background: #ffffff;
+}
+
+.challenges::before {
+  content: '';
+
+  position: absolute;
+  top: -200px;
+  right: -120px;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.06), transparent 70%);
+}
+
+.challengesContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.challengeTop,
+.solutionHeader {
+  text-align: center;
+
+  max-width: 900px;
+  margin: 0 auto 80px;
+
+  animation: fadeUp 0.8s ease;
+}
+
+.challengeTop span,
+.solutionHeader span {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.challengeTop h2,
+.solutionHeader h2 {
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-bottom: 22px;
+}
+
+.challengeTop h2 strong,
+.solutionHeader h2 strong {
+  color: #008abd;
+}
+
+.challengeTop p {
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CHALLENGE GRID
+========================================================= */
+
+.challengeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+
+  margin-bottom: 140px;
+}
+
+.challengeCard {
+  position: relative;
+
+  padding: 50px 40px;
+
+  border-radius: 34px;
+
+  background: #fff;
+
+  border: 1px solid rgba(0, 138, 189, 0.1);
+
+  transition: all 0.45s ease;
+
+  overflow: hidden;
+}
+
+.challengeCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 30px 70px rgba(5, 58, 81, 0.08);
+}
+
+.challengeCard::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+}
+
+.cardNumber {
+  font-size: 50px;
+  font-weight: 800;
+
+  color: rgba(0, 138, 189, 0.15);
+
+  margin-bottom: 24px;
+}
+
+.challengeCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.3;
+
+  margin-bottom: 20px;
+}
+
+.challengeCard p {
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* =========================================================
+   SOLUTIONS
+========================================================= */
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+
+.solutionCard {
+  position: relative;
+
+  padding: 45px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(248, 252, 255, 1),
+    rgba(255, 255, 255, 1)
+  );
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  transition: 0.45s ease;
+
+  overflow: hidden;
+}
+
+.solutionCard:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 25px 60px rgba(5, 58, 81, 0.08);
+}
+
+.solutionCard::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: linear-gradient(180deg, #008abd);
+}
+
+/* .solutionNumber {
+  font-size: 52px;
+  font-weight: 800;
+
+  color: rgba(0, 138, 189, 0.12);
+
+  margin-bottom: 20px;
+} */
+
+.solutionCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.solutionCard p {
+  color: #667784;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .challengeGrid,
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .challengeTop h2,
+  .solutionHeader h2 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenges {
+    padding: 100px 20px;
+  }
+
+  .challengeCard,
+  .solutionCard {
+    padding: 35px 28px;
+  }
+
+  .challengeCard h3,
+  .solutionCard h3 {
+    font-size: 24px;
+  }
+
+  .challengeCard p,
+  .solutionCard p {
+    font-size: 16px;
+  }
+}
+/* solution section */
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 120px;
+  background: #ffffff;
+}
+
+.benefits::before {
+  content: '';
+
+  position: absolute;
+  top: -180px;
+  right: -120px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(0, 138, 189, 0.06), transparent 70%);
+}
+
+.benefitsContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.benefitsTop {
+  text-align: center;
+
+  max-width: 850px;
+  margin: 0 auto 90px;
+}
+
+.benefitsTag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  padding: auto;
+  display: inline-block;
+}
+
+.benefitsTop h2 {
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  margin-bottom: 24px;
+}
+
+.benefitsTop h2 span {
+  color: #008abd;
+}
+
+.benefitsTop p {
+  color: #6a7884;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.benefitCard {
+  position: relative;
+
+  padding: 20px 10px 0;
+
+  transition: all 0.45s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-12px);
+}
+
+/* ICON */
+
+.iconWrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.iconWrap svg {
+  font-size: 26px;
+  color: #008abd;
+
+  transition: 0.45s ease;
+}
+
+.benefitCard:hover .iconWrap {
+  transform: translateY(-8px);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+}
+
+.benefitCard:hover .iconWrap svg {
+  color: #ffffff;
+}
+
+/* LINE */
+
+.cardLine {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(0, 138, 189, 0.18);
+
+  margin-bottom: 30px;
+}
+
+/* CONTENT */
+
+.benefitCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  margin-bottom: 18px;
+}
+
+.benefitCard p {
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefitsTop h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    padding: 100px 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitCard h3 {
+    font-size: 24px;
+  }
+
+  .benefitCard p {
+    font-size: 16px;
+  }
+}
+/* cta section */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

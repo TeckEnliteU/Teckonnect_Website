@@ -132,7 +132,7 @@ export default function ServicesSection() {
             alt=""
           /> */}
           <img
-            src={`${import.meta.env.BASE_URL}images/homesections/services.jpeg`}
+            src={'/images/homesections/services.jpg'}
             alt=""
           />
         </div>

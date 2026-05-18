@@ -11,16 +11,12 @@ import GlobalCTA from './sections/GlobalCTA';
 const Services = () => {
   return (
     <div>
-      {/* HERO */}
       <ServicesHero />
 
-      {/* INTRO */}
       <ServicesIntro />
 
-      {/* SERVICES (ALL IN ONE) */}
       <ServicesGrid />
 
-      {/* CTA */}
       <GlobalCTA />
     </div>
   );

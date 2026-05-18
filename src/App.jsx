@@ -306,8 +306,31 @@ import Partners from './pages/Partners/Partners';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 
-import './App.css';
+//inner pages
+import Microsoft from './pages/Services/Microsoft/Microsoft';
 
+// import Microsoft from './pages/Services/Microsoft/Microsoft';
+
+import Azure from './pages/Services/Microsoft/Azure/Azure';
+
+import Dynamics365 from './pages/Services/Microsoft/Dynamics365/Dynamics365';
+
+import Microsoft365 from './pages/Services/Microsoft/Microsoft365/Microsoft365';
+import './App.css';
+import Aws from './pages/Services/Aws/Aws';
+import Adobe from './pages/Services/Adobe/Adobe';
+import IBM from './pages/Services/Ibm/ibm';
+import CyberSecurity from './pages/Services/CyberSecurity/Cybersecurity';
+import PublicSector from './pages/Industries/PublicSector/PublicSector';
+import Healthcare from './pages/Industries/Healthcare/Healthcare';
+import Manufacturing from './pages/Industries/Manufacturing/Manufacturing';
+import NonProfit from './pages/Industries/NonProfit/NonProfit';
+import Retail from './pages/Industries/Retail/Retail';
+import OilGas from './pages/Industries/OilGas/OilGas';
+import Mining from './pages/Industries/Mining/Mining';
+import Logistics from './pages/Industries/Logistics/Logistics';
+import SmallEnterpriseBusiness from './pages/Industries/SmallEnterpriseBusiness/SmallEnterpriseBusiness';
+import Education from './pages/Industries/Education/Education';
 function App() {
   return (
     // <BrowserRouter>
@@ -325,6 +348,49 @@ function App() {
             path="/services"
             element={<Services />}
           />
+
+          {/* INNER PAGES */}
+
+          <Route
+            path="/services/microsoft"
+            element={<Microsoft />}
+          />
+
+          {/* NestedINNER PAGES */}
+
+          <Route
+            path="/services/microsoft/dynamics-365"
+            element={<Dynamics365 />}
+          />
+          <Route
+            path="/services/microsoft/azure"
+            element={<Azure />}
+          />
+
+          <Route
+            path="/services/microsoft/microsoft-365"
+            element={<Microsoft365 />}
+          />
+
+          <Route
+            path="/services/aws"
+            element={<Aws />}
+          />
+          <Route
+            path="/services/ibm"
+            element={<IBM />}
+          />
+
+          <Route
+            path="/services/adobe"
+            element={<Adobe />}
+          />
+          <Route
+            path="/services/cybersecurity"
+            element={<CyberSecurity />}
+          />
+
+          {/* inner pages end  */}
           <Route
             path="/partners"
             element={<Partners />}
@@ -340,6 +406,52 @@ function App() {
           <Route
             path="/industries"
             element={<Industries />}
+          />
+
+          {/* {inner page of INdustries} */}
+          <Route
+            path="/Industries/publicSector"
+            element={<PublicSector />}
+          />
+          <Route
+            path="/Industries/healthcare"
+            element={<Healthcare />}
+          />
+          <Route
+            path="/Industries/manufacturing"
+            element={<Manufacturing />}
+          />
+
+          <Route
+            path="/Industries/nonprofit"
+            element={<NonProfit />}
+          />
+
+          <Route
+            path="/Industries/retail"
+            element={<Retail />}
+          />
+          <Route
+            path="/Industries/oilgas"
+            element={<OilGas />}
+          />
+          <Route
+            path="/Industries/Mining"
+            element={<Mining />}
+          />
+
+          <Route
+            path="/Industries/Logistics"
+            element={<Logistics />}
+          />
+          <Route
+            path="/Industries/SmallEnterpriseBusiness"
+            element={<SmallEnterpriseBusiness />}
+          />
+
+          <Route
+            path="/Industries/Education"
+            element={<Education />}
           />
         </Routes>
       </div>

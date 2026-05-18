@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef } from 'react';
 import styles from '../contact.module.css';
 
@@ -15,14 +13,14 @@ export default function ContactInfo() {
           address: '1 Denison St, North Sydney NSW 2060, Australia',
           map: 'https://www.google.com/maps/place/1+Denison+St,+North+Sydney+NSW+2060,+Australia/@-33.8380959,151.2055504,17z/data=!3m2!4b1!5s0x6b12af179a6885e1:0x446947b8c3e5c0e7!4m6!3m5!1s0x6b12aef29b26a2c1:0x2362e906542ac705!8m2!3d-33.8380959!4d151.2081307!16s%2Fg%2F11ywpcnzk7?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
           // image: '/images/country/sydney.jpeg',
-          image: `${import.meta.env.BASE_URL}images/country/sydney.jpeg`,
+          image: '/images/country/sydney.webp',
         },
         {
           name: 'Queensland',
           address: 'Level 1, 470 St Pauls Terrace, QLD 4006',
           map: 'https://www.google.com/maps/place/Lvl+1%2F470+St+Pauls+Ter,+Fortitude+Valley+QLD+4006,+Australia/@-27.4536523,153.0310444,17z/data=!3m1!4b1!4m6!3m5!1s0x6b9159edec6d7e99:0x2d86180db355853f!8m2!3d-27.4536523!4d153.0336247!16s%2Fg%2F11m6cdqx8r?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
           // image: '/images/country/queensland.jpeg',
-          image: `${import.meta.env.BASE_URL}images/country/queensland.jpeg`,
+          image: '/images/country/queensland.webp',
         },
         {
           name: 'Western Australia',
@@ -32,14 +30,14 @@ export default function ContactInfo() {
           x: '68%',
           y: '72%',
           // image: '/images/country/western australia.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/western australia.jpg`,
+          image: '/images/country/western australia.webp',
         },
         {
           name: 'NT',
           address: 'Level 1, 1 Palmerston Circuit, Palmerston City NT 0830',
           map: 'https://www.google.com/maps/place/Shop+1%2F1+Palmerston+Cct,+Palmerston+City+NT+0830,+Australia/@-12.4784536,130.982467,17z/data=!3m1!4b1!4m6!3m5!1s0x2cc0bd313f84a779:0x31933815014ab5fd!8m2!3d-12.4784536!4d130.9850473!16s%2Fg%2F11kqwx1054?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
           // image: '/images/country/nt.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/NT.jpg`,
+          image: '/images/country/NT.webp',
         },
         {
           name: 'Melbourne',
@@ -48,7 +46,7 @@ export default function ContactInfo() {
           x: '80%',
           y: '75%',
           // image: '/images/country/Victoria.jpeg',
-          image: `${import.meta.env.BASE_URL}images/country/Victoria.jpeg`,
+          image: '/images/country/Victoria.webp',
         },
         {
           name: 'Ballarat',
@@ -56,7 +54,7 @@ export default function ContactInfo() {
             'Unit 82, Level 1, 17 Armstrong Street South, Ballarat Central, 3350 Victoria',
           map: 'https://www.google.com/maps/place/Armstrong+House,+Unit+82,+Level+1%2F17+Armstrong+St+S,+Ballarat+Central+VIC+3350,+Australia/@-37.5628743,143.8537409,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad144f7627f7ed7:0x41b26c29c1e8936d!8m2!3d-37.5628743!4d143.8563212?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
           // image: '/images/country/ballartat.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/ballartat.jpg`,
+          image: '/images/country/ballartat.webp',
         },
         {
           name: 'ACT',
@@ -65,7 +63,7 @@ export default function ContactInfo() {
           x: '81%',
           y: '73%',
           // image: '/images/country/canberra.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/canberra.jpg`,
+          image: '/images/country/canberra.webp',
         },
         {
           name: 'Adelaide',
@@ -74,7 +72,7 @@ export default function ContactInfo() {
           x: '77%',
           y: '74%',
           // image: '/images/country/Adelaide.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/Adelaide.jpg`,
+          image: '/images/country/Adelaide.webp',
         },
 
         {
@@ -83,7 +81,7 @@ export default function ContactInfo() {
           map: 'https://www.google.com/maps/place/Suite+78%2F14+Edgewater+Ct,+Robina+QLD+4226,+Australia/@-28.0768356,153.3784452,17z/data=!3m1!4b1!4m6!3m5!1s0x6b911cb771a52819:0x3cdb2b74aee7c16!8m2!3d-28.0768404!4d153.3810201!16s%2Fg%2F11xflp1m_q?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D',
 
           // image: '/images/country/Gold coast.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/Gold coast.jpg`,
+          image: '/images/country/Gold coast.webp',
         },
       ],
     },
@@ -95,7 +93,7 @@ export default function ContactInfo() {
           address: '167-169 Great Portland Street, London W1W 5PF',
           map: 'https://www.google.com/maps/place/167+169+Great+Portland+St,+London+W1W+5PF,+UK/@51.5215551,-0.1462164,17z/data=!3m1!4b1!4m6!3m5!1s0x48761ad65de83cb7:0x654d1aa971b4d814!8m2!3d51.5215551!4d-0.1436361!16s%2Fg%2F11x68xxwq_?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
           // image: '/images/country/UK.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/UK.jpg`,
+          image: '/images/country/UK.webp',
         },
       ],
     },
@@ -110,7 +108,7 @@ export default function ContactInfo() {
           x: '62%',
           y: '50%',
           // image: '/images/country/india.jpg',
-          image: `${import.meta.env.BASE_URL}images/country/india.jpg`,
+          image: '/images/country/india.webp',
         },
       ],
     },
@@ -163,8 +161,9 @@ export default function ContactInfo() {
                 <img
                   src={loc.image}
                   alt={loc.name}
-                  loading="lazy"
+                  // loading="lazy"
                   decoding="async"
+                  fetchPriority="high"
                 />
               </div>
 
@@ -193,8 +192,9 @@ export default function ContactInfo() {
               <img
                 src={loc.image}
                 alt={loc.name}
-                loading="lazy"
+                // loading="lazy"
                 decoding="async"
+                fetchPriority="high"
               />
             </div>
 
@@ -220,8 +220,9 @@ export default function ContactInfo() {
               <img
                 src={loc.image}
                 alt={loc.name}
-                loading="lazy"
+                // loading="lazy"
                 decoding="async"
+                fetchPriority="high"
               />
             </div>
 

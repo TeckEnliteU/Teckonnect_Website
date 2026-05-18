@@ -114,7 +114,7 @@ export default function WorkSection() {
             alt="work"
           /> */}
           <img
-            src={`${import.meta.env.BASE_URL}images/aboutus/svv.JPG`}
+            src={'/images/aboutus/svv.jpg'}
             alt="work"
           />
         </motion.div>

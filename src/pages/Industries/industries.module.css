@@ -13,7 +13,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: url('/images/industrieshero.jpeg') center/cover no-repeat;
+  background: url('/images/industrieshero.jpg') center/cover no-repeat;
   filter: grayscale(100%);
   z-index: 1;
   will-change: transform;
@@ -559,86 +559,98 @@
   }
 }
 /* industries grid */
-/* ========================= */
-/* SECTION */
-/* ========================= */
+/* =========================================================
+SECTION
+========================================================= */
+
 .hSection {
   position: relative;
-  height: 340vh;
+  padding: 100px 0;
   background: #f5f7f6;
-}
-
-/* ========================= */
-/* STICKY */
-/* ========================= */
-.hSticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
   overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 0 80px;
-
-  /* 🔥 keeps layout centered */
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
-/* ========================= */
-/* HEADER */
-/* ========================= */
+/* =========================================================
+HEADER
+========================================================= */
+
 .hHeader {
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 55px;
+  padding: 0 20px;
 }
 
 .hHeader span {
+  display: inline-block;
+
   background: linear-gradient(90deg, #053a51, #a3cf5d);
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  font-weight: 900;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding: auto;
-  display: inline-block;
+
+  margin-bottom: 14px;
 }
 
-/* ========================= */
-/* TRACK */
-/* ========================= */
+/* =========================================================
+SLIDER
+========================================================= */
+
+.hSlider {
+  position: relative;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+TRACK
+========================================================= */
+
 .hTrack {
   display: flex;
   gap: 24px;
-  align-items: flex-start;
-  padding-right: 180px;
-  will-change: transform;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  padding: 0 80px 20px;
+
+  scrollbar-width: none;
 }
 
-/* ========================= */
-/* CARD (FINAL FIX) */
-/* ========================= */
+.hTrack::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
 .hCard {
-  width: 360px; /* 🔥 fixed width */
-  flex: 0 0 360px; /* 🔥 no flex grow/shrink */
-  overflow: hidden; /* 🔥 prevents expansion */
+  width: 360px;
+  flex: 0 0 360px;
+
+  overflow: hidden;
 }
 
-/* ========================= */
-/* IMAGE */
-/* ========================= */
+/* =========================================================
+IMAGE
+========================================================= */
+
 .hImage {
   height: 240px;
-  border-radius: 14px;
+
+  border-radius: 16px;
+
   overflow: hidden;
   position: relative;
 }
+
 .hImageInner {
   width: 100%;
   height: 100%;
@@ -647,90 +659,206 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
 
   will-change: transform;
 }
-/* ========================= */
-/* OVERLAY */
-/* ========================= */
+
+.hCard:hover .hImageInner {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+OVERLAY
+========================================================= */
+
 .hGradient {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.18),
+    transparent
+  );
 }
 
-/* ========================= */
-/* TITLE */
-/* ========================= */
+/* =========================================================
+TITLE
+========================================================= */
+
 .hImageTitle {
   position: absolute;
-  bottom: 14px;
-  left: 16px;
+  bottom: 18px;
+  left: 18px;
 
   color: #fff;
+
   font-size: 14px;
-  font-weight: 600;
+  line-height: 1.2;
+  font-weight: 700;
+
+  max-width: 85%;
 }
 
-/* ========================= */
-/* DESCRIPTION */
-/* ========================= */
-.hDesc {
-  margin-top: 25px;
+/* =========================================================
+CONTENT
+========================================================= */
 
+.hContent {
+  padding-top: 24px;
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.hDesc {
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #6b7280;
 
   max-width: 95%;
 
-  /* 🔥 CRITICAL FIX */
   word-break: break-word;
   overflow-wrap: break-word;
 
+  margin-bottom: 25px;
+
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 🔥 keeps uniform height */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+
   overflow: hidden;
 
-  min-height: 78px; /* 🔥 equal card height */
+  min-height: 48px;
 }
 
-/* ========================= */
-/* HOVER */
-/* ========================= */
-/* .hCard:hover .hImage {
-  transform: scale(1.03);
-  transition: 0.4s ease;
-} */
-.hCard:hover .hImageInner {
-  transform: scale(1.05);
+/* =========================================================
+READ MORE
+========================================================= */
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #008abd;
+
+  transition: 0.3s ease;
 }
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
+
+.readMore span {
+  transition: 0.3s ease;
+}
+
+.readMore:hover {
+  color: #053a51;
+}
+
+.readMore:hover span {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+ARROWS
+========================================================= */
+
+.arrow {
+  position: absolute;
+
+  top: 120px;
+
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 60%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  font-size: 24px;
+  color: #053a51;
+
+  cursor: pointer;
+
+  z-index: 80;
+
+  transition: 0.3s ease;
+}
+
+.arrow:hover {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: #fff;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* LEFT */
+
+.left {
+  left: 5px;
+}
+
+/* RIGHT */
+
+.right {
+  right: 5px;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
 @media (max-width: 768px) {
-  /* 🔥 REDUCE SCROLL AREA */
   .hSection {
-    /* height: auto; 🔥 remove fixed huge height */
-    min-height: 140vh; /* keep some scroll feel */
+    padding: 70px 0;
   }
 
-  /* OPTIONAL: adjust spacing */
-  .hSticky {
-    padding: 40px 16px;
+  .hHeader {
+    margin-bottom: 40px;
   }
 
-  /* KEEP YOUR CARD STYLE SAME */
+  .hTrack {
+    padding: 0 20px 20px;
+    gap: 20px;
+  }
+
   .hCard {
-    width: 85vw;
-    flex: 0 0 85vw;
+    width: 88%;
+    flex: 0 0 88%;
   }
 
   .hImage {
-    height: 170px;
+    height: 220px;
+  }
+
+  .hImageTitle {
+    font-size: 24px;
+  }
+
+  .hDesc {
+    font-size: 14px;
+    line-height: 1.7;
+
+    min-height: auto;
+  }
+
+  .readMore {
+    font-size: 15px;
+  }
+
+  .arrow {
+    display: none;
   }
 }
 

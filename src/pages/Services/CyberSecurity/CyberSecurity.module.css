@@ -1,0 +1,3438 @@
+/* =========================================================
+   CYBER HERO SECTION
+========================================================= */
+
+.cyberHero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 110px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID BACKGROUND
+========================================================= */
+
+.cyberGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.cyberGlowOne,
+.cyberGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.cyberGlowOne {
+  top: -180px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(0, 138, 189, 0.12);
+}
+
+.cyberGlowTwo {
+  bottom: -180px;
+  left: -120px;
+
+  width: 380px;
+  height: 380px;
+
+  background: rgba(163, 207, 93, 0.14);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1450px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.cyberContent {
+  position: relative;
+}
+
+/* LABEL */
+
+.cyberLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.cyberLabel span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #a3cf5d;
+
+  box-shadow: 0 0 12px rgba(163, 207, 93, 0.8);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cyberTitle {
+  color: #053a51;
+
+  font-size: 46px;
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  margin-bottom: 34px;
+}
+
+.cyberTitle span {
+  color: #008abd;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cyberDescription {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+
+  max-width: 850px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.cyberButtons {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 40px;
+}
+
+/* PRIMARY BUTTON */
+
+.primaryBtn {
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none !important;
+}
+
+/* HOVER */
+.primaryBtn:hover {
+  filter: brightness(1.08);
+}
+
+/* 🔥 CLICK FEEL (STRONG) */
+.primaryBtn:active {
+  transform: scale(0.98); /* 👈 slight press */
+  filter: brightness(0.92); /* 👈 darker = pressed */
+}
+
+/* ============================= */
+/* SECONDARY BUTTON */
+/* ============================= */
+.secondaryBtn {
+  padding: 12px 26px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 999px;
+  text-decoration: none !important;
+}
+
+/* HOVER */
+.secondaryBtn:hover {
+  filter: brightness(0.98);
+}
+
+/* 🔥 CLICK FEEL */
+.secondaryBtn:active {
+  transform: scale(0.98);
+  filter: brightness(0.94);
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.cyberStats {
+  display: flex;
+  align-items: center;
+
+  gap: 26px;
+
+  margin-top: 60px;
+}
+
+.statItem {
+  flex: 1;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border: 1px solid rgba(5, 58, 81, 0.06);
+
+  box-shadow:
+    0 12px 24px rgba(5, 58, 81, 0.04),
+    0 4px 10px rgba(5, 58, 81, 0.03);
+}
+
+.statItem h3 {
+  color: #008abd;
+
+  font-size: 24px;
+  font-weight: 900;
+
+  margin-bottom: 8px;
+}
+
+.statItem p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.cyberVisual {
+  position: relative;
+}
+
+/* MAIN CARD */
+
+.visualCard {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 42px;
+
+  border-radius: 38px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  box-shadow:
+    0 24px 60px rgba(0, 138, 189, 0.12),
+    0 12px 28px rgba(5, 58, 81, 0.06);
+}
+
+/* TOP */
+
+.visualTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+}
+
+/* ICON */
+
+.visualIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* LIVE BADGE */
+
+.liveBadge {
+  padding: 12px 18px;
+
+  border-radius: 50px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* TITLE */
+
+.visualCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+/* DESCRIPTION */
+
+.visualCard p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 34px;
+}
+
+/* MINI GRID */
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+}
+
+.visualMini {
+  padding: 20px;
+
+  border-radius: 22px;
+
+  background: rgba(0, 138, 189, 0.06);
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #053a51;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.visualMini svg {
+  color: #008abd;
+}
+
+/* SECURITY BAR */
+
+.securityBar {
+  width: 100%;
+  height: 14px;
+
+  border-radius: 50px;
+
+  background: rgba(5, 58, 81, 0.06);
+
+  overflow: hidden;
+
+  margin-bottom: 16px;
+}
+
+.securityFill {
+  width: 98%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+}
+
+/* INFO */
+
+.securityInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #607480;
+
+  font-size: 14px;
+}
+
+.securityInfo strong {
+  color: #053a51;
+
+  font-size: 14px;
+}
+
+/* FLOATING CARD */
+
+.floatingCard {
+  position: absolute;
+
+  right: -40px;
+  bottom: -40px;
+
+  padding: 26px 30px;
+
+  border-radius: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  box-shadow:
+    0 20px 44px rgba(0, 138, 189, 0.12),
+    0 10px 24px rgba(5, 58, 81, 0.06);
+}
+
+.pulse {
+  width: 14px;
+  height: 14px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #a3cf5d;
+
+  box-shadow: 0 0 12px rgba(163, 207, 93, 0.8);
+}
+
+.floatingCard h4 {
+  color: #607480;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.floatingCard strong {
+  display: block;
+
+  color: #053a51;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  margin-bottom: 8px;
+}
+
+.floatingCard p {
+  color: #607480;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* animation */
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatingMove {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(163, 207, 93, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 26px rgba(163, 207, 93, 0.9);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(163, 207, 93, 0.6);
+  }
+}
+
+@keyframes barLoad {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 98%;
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   HERO ANIMATION
+========================================================= */
+
+.cyberContent {
+  animation: fadeLeft 1s ease forwards;
+}
+
+.cyberVisual {
+  animation: fadeRight 1s ease forwards;
+}
+
+.cyberLabel {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.cyberTitle {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.cyberDescription {
+  animation: fadeUp 1.1s ease forwards;
+}
+
+.cyberButtons {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.cyberStats {
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* =========================================================
+   GRID BACKGROUND ANIMATION
+========================================================= */
+
+.cyberGrid {
+  animation: fadeUp 1.4s ease;
+}
+
+/* =========================================================
+   GLOWS
+========================================================= */
+
+.cyberGlowOne {
+  animation:
+    floatingMove 8s ease-in-out infinite,
+    fadeUp 1s ease;
+}
+
+.cyberGlowTwo {
+  animation:
+    floatingMove 10s ease-in-out infinite,
+    fadeUp 1.2s ease;
+}
+
+/* =========================================================
+   BUTTON ANIMATION
+========================================================= */
+
+.primaryBtn,
+.secondaryBtn {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.statItem {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 24px 44px rgba(0, 138, 189, 0.12),
+    0 10px 20px rgba(5, 58, 81, 0.06);
+}
+
+/* =========================================================
+   VISUAL CARD
+========================================================= */
+
+.visualCard {
+  animation:
+    fadeUp 1.1s ease,
+    floatingMove 7s ease-in-out infinite;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.visualCard:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 34px 70px rgba(0, 138, 189, 0.18),
+    0 14px 28px rgba(5, 58, 81, 0.08);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.visualIcon {
+  animation: glowPulse 3s infinite ease-in-out;
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease;
+}
+
+.visualCard:hover .visualIcon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* =========================================================
+   MINI BOXES
+========================================================= */
+
+.visualMini {
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.visualMini:hover {
+  transform: translateY(-6px);
+
+  background: rgba(0, 138, 189, 0.1);
+}
+
+/* =========================================================
+   SECURITY BAR
+========================================================= */
+
+.securityFill {
+  animation: barLoad 2s ease forwards;
+}
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.floatingCard {
+  animation:
+    floatingMove 5s ease-in-out infinite,
+    fadeUp 1.5s ease;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.floatingCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 28px 60px rgba(0, 138, 189, 0.16),
+    0 10px 22px rgba(5, 58, 81, 0.06);
+}
+
+/* =========================================================
+   PULSE DOT
+========================================================= */
+
+.pulse {
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* =========================================================
+   LIVE BADGE
+========================================================= */
+
+.liveBadge {
+  animation: fadeUp 1.4s ease;
+}
+
+/* =========================================================
+   CARD HOVER EFFECT
+========================================================= */
+
+.visualCard::before {
+  content: '';
+
+  position: absolute;
+
+  top: -120px;
+  right: -120px;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(50px);
+
+  transition: 0.5s ease;
+}
+
+.visualCard:hover::before {
+  transform: scale(1.3);
+}
+
+/* =========================================================
+   SLOW ROTATE EFFECT
+========================================================= */
+
+.cyberGlowOne::before,
+.cyberGlowTwo::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  animation: rotateSlow 18s linear infinite;
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .cyberContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .cyberTitle {
+    font-size: 64px;
+  }
+
+  .floatingCard {
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberHero {
+    padding: 120px 0 90px;
+  }
+
+  .cyberTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberDescription {
+    font-size: 16px;
+  }
+
+  .cyberButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cyberStats {
+    flex-direction: column;
+  }
+
+  .visualCard {
+    padding: 32px 24px;
+  }
+
+  .visualCard h3 {
+    font-size: 28px;
+  }
+
+  .visualGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .floatingCard {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberTitle {
+    font-size: 34px;
+  }
+
+  .visualIcon {
+    width: 74px;
+    height: 74px;
+
+    font-size: 30px;
+  }
+
+  .statItem h3 {
+    font-size: 28px;
+  }
+}
+/* overview section */
+/* =========================================================
+   CYBER OVERVIEW
+========================================================= */
+
+.cyberOverview {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cyberOverviewGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   GLOWS
+========================================================= */
+
+.cyberOverviewGlowOne,
+.cyberOverviewGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.cyberOverviewGlowOne {
+  top: -180px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(0, 138, 189, 0.12);
+
+  animation: cyberFloat 10s ease-in-out infinite;
+}
+
+.cyberOverviewGlowTwo {
+  bottom: -180px;
+  left: -120px;
+
+  width: 380px;
+  height: 380px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  animation: cyberFloat 12s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberOverviewContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.cyberOverviewTop {
+  text-align: center;
+
+  margin-bottom: 80px;
+
+  animation: cyberFadeUp 1s ease;
+}
+
+/* LABEL */
+
+.cyberOverviewLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.cyberOverviewTitle {
+  color: #053a51;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 900;
+
+  margin-bottom: 20px;
+}
+
+.cyberOverviewTitle span {
+  color: #008abd;
+}
+
+/* TEXT */
+
+.cyberOverviewText {
+  max-width: 660px;
+
+  margin: auto;
+
+  color: #607480;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.cyberOverviewCard {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 50px;
+
+  padding: 60px;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 138, 189, 0.12),
+    0 12px 30px rgba(5, 58, 81, 0.06);
+
+  animation: cyberFadeUp 1.2s ease;
+}
+
+/* LEFT */
+
+.cyberOverviewContent {
+  position: relative;
+  z-index: 2;
+}
+
+/* BADGE */
+
+.cyberOverviewBadge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 22px;
+
+  border-radius: 50px;
+
+  background: rgba(163, 207, 93, 0.12);
+
+  color: #6d9826;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.cyberOverviewBadge svg {
+  color: #008abd;
+}
+
+/* SUB TITLE */
+
+.cyberOverviewContent h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+/* PARAGRAPH */
+
+.cyberOverviewContent p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 40px;
+}
+
+/* =========================================================
+   RISK GRID
+========================================================= */
+
+.cyberRiskGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+/* RISK ITEM */
+
+.cyberRiskItem {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 22px;
+
+  border-radius: 24px;
+
+  background: rgba(0, 138, 189, 0.05);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  transition: 0.45s ease;
+}
+
+.cyberRiskItem:hover {
+  transform: translateY(-8px);
+
+  background: rgba(163, 207, 93, 0.12);
+
+  border-color: rgba(163, 207, 93, 0.2);
+
+  box-shadow:
+    0 20px 40px rgba(0, 138, 189, 0.12),
+    0 8px 20px rgba(5, 58, 81, 0.05);
+}
+
+/* ICON */
+
+.cyberRiskIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+  transition: 0.4s ease;
+}
+
+.cyberRiskItem:hover .cyberRiskIcon {
+  transform: rotate(-8deg) scale(1.08);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: #ffffff;
+}
+
+/* TEXT */
+
+.cyberRiskItem span {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   BOTTOM INFO
+========================================================= */
+
+.cyberBottomInfo {
+  padding: 24px 28px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.08),
+    rgba(163, 207, 93, 0.1)
+  );
+
+  color: #053a51;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.cyberOverviewVisual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VISUAL CARD */
+
+.cyberVisualCard {
+  width: 100%;
+
+  padding: 50px 40px;
+
+  border-radius: 36px;
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: #ffffff;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  animation: cyberFloat 6s ease-in-out infinite;
+}
+
+/* ICON */
+
+.cyberVisualCircle {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  margin: 0 auto 28px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  backdrop-filter: blur(10px);
+}
+
+/* TEXT */
+
+.cyberVisualCard h4 {
+  font-size: 14px;
+  font-weight: 800;
+
+  margin-bottom: 16px;
+}
+
+.cyberVisualCard strong {
+  display: block;
+
+  font-size: 26px;
+  font-weight: 900;
+
+  margin-bottom: 12px;
+}
+
+.cyberVisualCard p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  opacity: 0.9;
+
+  margin-bottom: 34px;
+}
+
+/* BAR */
+
+.cyberBar {
+  width: 100%;
+  height: 14px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  overflow: hidden;
+}
+
+.cyberBarFill {
+  width: 98%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+
+  animation: cyberBarLoad 2s ease;
+}
+
+/* =========================================================
+   FLOAT CARD
+========================================================= */
+
+.cyberMiniFloat {
+  position: absolute;
+
+  right: -20px;
+  bottom: -20px;
+
+  padding: 24px 26px;
+
+  border-radius: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  box-shadow:
+    0 24px 50px rgba(0, 138, 189, 0.14),
+    0 10px 24px rgba(5, 58, 81, 0.06);
+
+  animation: cyberFloat 5s ease-in-out infinite;
+}
+
+.cyberMiniFloat span {
+  width: 14px;
+  height: 14px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #a3cf5d;
+
+  margin-bottom: 14px;
+
+  box-shadow: 0 0 16px rgba(163, 207, 93, 0.8);
+}
+
+.cyberMiniFloat h5 {
+  color: #053a51;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  margin-bottom: 8px;
+}
+
+.cyberMiniFloat p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cyberFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cyberFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cyberBarLoad {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 98%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .cyberOverviewCard {
+    grid-template-columns: 1fr;
+  }
+
+  .cyberOverviewTitle {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberOverview {
+    padding: 90px 0;
+  }
+
+  .cyberOverviewTop {
+    margin-bottom: 60px;
+  }
+
+  .cyberOverviewTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberOverviewText {
+    font-size: 16px;
+  }
+
+  .cyberOverviewCard {
+    padding: 34px 24px;
+
+    border-radius: 28px;
+  }
+
+  .cyberOverviewContent h3 {
+    font-size: 30px;
+  }
+
+  .cyberRiskGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cyberVisualCard {
+    padding: 40px 24px;
+  }
+
+  .cyberVisualCard strong {
+    font-size: 60px;
+  }
+
+  .cyberMiniFloat {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberOverviewTitle {
+    font-size: 34px;
+  }
+
+  .cyberOverviewContent h3 {
+    font-size: 24px;
+  }
+
+  .cyberRiskItem {
+    padding: 18px;
+  }
+
+  .cyberRiskIcon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+}
+/* Features section */
+/* =========================================================
+   CYBER FEATURE SECTION
+========================================================= */
+
+.cyberFeature {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cyberFeatureGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.cyberFeatureGlowOne,
+.cyberFeatureGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.cyberFeatureGlowOne {
+  top: -180px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(0, 138, 189, 0.12);
+
+  animation: cyberFeatureFloat 10s ease-in-out infinite;
+}
+
+.cyberFeatureGlowTwo {
+  bottom: -180px;
+  left: -120px;
+
+  width: 360px;
+  height: 360px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  animation: cyberFeatureFloat 12s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberFeatureContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.cyberFeatureTop {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: cyberFeatureFade 1s ease;
+}
+
+/* LABEL */
+
+.cyberFeatureLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.cyberFeatureTitle {
+  color: #053a51;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.cyberFeatureTitle span {
+  color: #008abd;
+}
+
+/* TEXT */
+
+.cyberFeatureText {
+  max-width: 580px;
+
+  margin: auto;
+
+  color: #607480;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GRID BOX
+========================================================= */
+
+.cyberFeatureGridBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 32px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cyberFeatureCard {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 40px 34px;
+
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  box-shadow:
+    0 20px 50px rgba(5, 58, 81, 0.05),
+    0 8px 20px rgba(5, 58, 81, 0.03);
+
+  animation: cyberFeatureFade 1.2s ease;
+}
+
+.cyberFeatureCard:hover {
+  transform: translateY(-14px);
+
+  border-color: rgba(0, 138, 189, 0.18);
+
+  box-shadow:
+    0 35px 80px rgba(0, 138, 189, 0.14),
+    0 12px 28px rgba(5, 58, 81, 0.06);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.cyberFeatureNumber {
+  position: absolute;
+
+  top: 24px;
+  right: 28px;
+
+  color: rgba(0, 138, 189, 0.12);
+
+  font-size: 48px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.cyberFeatureIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+  transition: 0.45s ease;
+}
+
+.cyberFeatureCard:hover .cyberFeatureIcon {
+  transform: rotate(-8deg) scale(1.08);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cyberFeatureCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cyberFeatureCard p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.cyberFeaturePoints {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* ITEM */
+
+.cyberFeatureItem {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #053a51;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  transition: 0.35s ease;
+}
+
+.cyberFeatureItem span {
+  color: #008abd;
+
+  font-size: 22px;
+
+  font-weight: 900;
+}
+
+.cyberFeatureItem:hover {
+  transform: translateX(6px);
+
+  color: #008abd;
+}
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.cyberFeatureCardGlow {
+  position: absolute;
+
+  top: -80px;
+  right: -80px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(70px);
+
+  transition: 0.45s ease;
+}
+
+.cyberFeatureCard:hover .cyberFeatureCardGlow {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cyberFeatureFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cyberFeatureFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .cyberFeatureGridBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cyberFeatureTitle {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberFeature {
+    padding: 90px 0;
+  }
+
+  .cyberFeatureTop {
+    margin-bottom: 60px;
+  }
+
+  .cyberFeatureTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberFeatureText {
+    font-size: 16px;
+  }
+
+  .cyberFeatureGridBox {
+    grid-template-columns: 1fr;
+
+    gap: 26px;
+  }
+
+  .cyberFeatureCard {
+    padding: 34px 24px;
+
+    border-radius: 28px;
+  }
+
+  .cyberFeatureCard h3 {
+    font-size: 24px;
+  }
+
+  .cyberFeatureIcon {
+    width: 74px;
+    height: 74px;
+
+    font-size: 28px;
+  }
+
+  .cyberFeatureNumber {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberFeatureTitle {
+    font-size: 34px;
+  }
+
+  .cyberFeatureCard p {
+    font-size: 14px;
+  }
+
+  .cyberFeatureItem {
+    font-size: 14px;
+  }
+}
+/* partner section */
+
+/* =========================================================
+   CYBER PARTNER SECTION
+========================================================= */
+
+.cyberPartner {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cyberPartnerGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.cyberPartnerGlowOne,
+.cyberPartnerGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.cyberPartnerGlowOne {
+  top: -180px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(0, 138, 189, 0.12);
+
+  animation: cyberPartnerFloat 10s ease-in-out infinite;
+}
+
+.cyberPartnerGlowTwo {
+  bottom: -180px;
+  left: -120px;
+
+  width: 360px;
+  height: 360px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  animation: cyberPartnerFloat 12s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberPartnerContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.cyberPartnerTop {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: cyberPartnerFade 1s ease;
+}
+
+/* LABEL */
+
+.cyberPartnerLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.cyberPartnerTitle {
+  color: #053a51;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.cyberPartnerTitle span {
+  color: #008abd;
+}
+
+/* TEXT */
+
+.cyberPartnerText {
+  max-width: 560px;
+
+  margin: auto;
+
+  color: #607480;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GRID BOX
+========================================================= */
+
+.cyberPartnerGridBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 36px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cyberPartnerCard {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 38px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  box-shadow:
+    0 24px 60px rgba(5, 58, 81, 0.05),
+    0 10px 24px rgba(5, 58, 81, 0.03);
+
+  animation: cyberPartnerFade 1.2s ease;
+}
+
+.cyberPartnerCard:hover {
+  transform: translateY(-14px);
+
+  border-color: rgba(0, 138, 189, 0.18);
+
+  box-shadow:
+    0 36px 80px rgba(0, 138, 189, 0.14),
+    0 12px 28px rgba(5, 58, 81, 0.06);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.cyberPartnerHeader {
+  position: relative;
+
+  padding: 34px 34px 20px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.cyberPartnerLogo {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 14px 30px rgba(5, 58, 81, 0.04),
+    0 4px 10px rgba(5, 58, 81, 0.03);
+
+  transition: 0.45s ease;
+}
+
+.cyberPartnerCard:hover .cyberPartnerLogo {
+  transform: scale(1.05);
+}
+
+.cyberPartnerLogo img {
+  width: 75%;
+  object-fit: contain;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.cyberPartnerBadge {
+  padding: 12px 18px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.12),
+    rgba(163, 207, 93, 0.16)
+  );
+
+  color: #053a51;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.cyberPartnerContent {
+  padding: 0 34px 36px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* ICON */
+
+.cyberPartnerIcon {
+  width: 74px;
+  height: 74px;
+
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 26px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.12),
+    rgba(163, 207, 93, 0.14)
+  );
+
+  color: #008abd;
+
+  font-size: 30px;
+
+  transition: 0.45s ease;
+}
+
+.cyberPartnerCard:hover .cyberPartnerIcon {
+  transform: rotate(-8deg) scale(1.08);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: #ffffff;
+}
+
+/* TITLE */
+
+.cyberPartnerContent h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+
+.cyberPartnerContent p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.cyberPartnerPoints {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+}
+
+/* ITEM */
+
+.cyberPartnerItem {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color: #053a51;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  transition: 0.35s ease;
+}
+
+.cyberPartnerItem svg {
+  color: #008abd;
+
+  font-size: 15px;
+}
+
+.cyberPartnerItem:hover {
+  transform: translateX(6px);
+
+  color: #008abd;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.cyberPartnerButton {
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+
+  transform: scale(0.98); /* 👈 slight press */
+  filter: brightness(0.92); /* 👈 darker = pressed */
+  text-decoration: none !important;
+}
+
+.cyberPartnerButton:hover {
+  filter: brightness(1.08);
+}
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.cyberPartnerCardGlow {
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(80px);
+
+  transition: 0.45s ease;
+}
+
+.cyberPartnerCard:hover .cyberPartnerCardGlow {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cyberPartnerFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cyberPartnerFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .cyberPartnerGridBox {
+    grid-template-columns: 1fr;
+  }
+
+  .cyberPartnerTitle {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberPartner {
+    padding: 90px 0;
+  }
+
+  .cyberPartnerTop {
+    margin-bottom: 60px;
+  }
+
+  .cyberPartnerTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberPartnerText {
+    font-size: 16px;
+  }
+
+  .cyberPartnerCard {
+    border-radius: 28px;
+  }
+
+  .cyberPartnerHeader {
+    flex-direction: column;
+  }
+
+  .cyberPartnerLogo {
+    width: 100%;
+  }
+
+  .cyberPartnerContent {
+    padding: 0 24px 30px;
+  }
+
+  .cyberPartnerContent h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberPartnerTitle {
+    font-size: 34px;
+  }
+
+  .cyberPartnerContent p {
+    font-size: 14px;
+  }
+
+  .cyberPartnerItem {
+    font-size: 14px;
+  }
+}
+/* solutions  */
+
+/* =========================================================
+   CYBER SOLUTION SECTION
+========================================================= */
+
+.cyberSolution {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 70px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cyberSolutionGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.cyberSolutionGlowOne,
+.cyberSolutionGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.cyberSolutionGlowOne {
+  top: -180px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(0, 138, 189, 0.12);
+
+  animation: cyberSolutionFloat 10s ease-in-out infinite;
+}
+
+.cyberSolutionGlowTwo {
+  bottom: -180px;
+  left: -120px;
+
+  width: 360px;
+  height: 360px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  animation: cyberSolutionFloat 12s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberSolutionContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1350px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.cyberSolutionTop {
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  animation: cyberSolutionFade 1s ease;
+}
+
+/* LABEL */
+
+.cyberSolutionLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.cyberSolutionTitle {
+  color: #053a51;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.cyberSolutionTitle span {
+  color: #008abd;
+}
+
+/* TEXT */
+
+.cyberSolutionText {
+  max-width: 580px;
+
+  margin: auto;
+
+  color: #607480;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.cyberTimeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 42px;
+}
+
+/* LINE */
+
+.cyberTimelineLine {
+  position: absolute;
+
+  top: 0;
+  left: 64px;
+
+  width: 3px;
+  height: 100%;
+
+  border-radius: 50px;
+
+  background: linear-gradient(to bottom, #008abd, #a3cf5d);
+}
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.cyberTimelineItem {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 40px;
+
+  position: relative;
+
+  animation: cyberSolutionFade 1s ease;
+}
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.cyberTimelineLeft {
+  position: relative;
+  z-index: 2;
+}
+
+/* CIRCLE */
+
+.cyberTimelineCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  animation: cyberPulse 4s infinite ease-in-out;
+}
+
+.cyberTimelineCircle:hover {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+/* NUMBER */
+
+.cyberTimelineCircle span {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* ICON */
+
+.cyberTimelineIcon {
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.cyberTimelineContent {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  padding: 40px;
+
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(5, 58, 81, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  box-shadow:
+    0 24px 60px rgba(5, 58, 81, 0.05),
+    0 10px 24px rgba(5, 58, 81, 0.03);
+}
+
+.cyberTimelineContent:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(0, 138, 189, 0.16);
+
+  box-shadow:
+    0 34px 70px rgba(0, 138, 189, 0.14),
+    0 12px 28px rgba(5, 58, 81, 0.06);
+}
+
+/* STEP BADGE */
+
+.cyberStepBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: rgba(163, 207, 93, 0.12);
+
+  color: #6f9b28;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+
+.cyberTimelineContent h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 1px;
+}
+
+/* TEXT */
+
+.cyberTimelineContent p {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.cyberTimelineGlow {
+  position: absolute;
+
+  top: -80px;
+  right: -80px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(70px);
+
+  transition: 0.45s ease;
+}
+
+.cyberTimelineContent:hover .cyberTimelineGlow {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cyberSolutionFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cyberSolutionFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cyberPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .cyberSolutionTitle {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberSolution {
+    padding: 90px 0;
+  }
+
+  .cyberSolutionTop {
+    margin-bottom: 60px;
+  }
+
+  .cyberSolutionTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberSolutionText {
+    font-size: 16px;
+  }
+
+  .cyberTimelineLine {
+    left: 38px;
+  }
+
+  .cyberTimelineItem {
+    gap: 20px;
+  }
+
+  .cyberTimelineCircle {
+    width: 78px;
+    height: 78px;
+  }
+
+  .cyberTimelineCircle span {
+    font-size: 28px;
+  }
+
+  .cyberTimelineIcon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+  }
+
+  .cyberTimelineContent {
+    padding: 28px 22px;
+
+    border-radius: 24px;
+  }
+
+  .cyberTimelineContent h3 {
+    font-size: 26px;
+  }
+
+  .cyberTimelineContent p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberSolutionTitle {
+    font-size: 34px;
+  }
+
+  .cyberTimelineItem {
+    align-items: flex-start;
+  }
+
+  .cyberTimelineCircle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cyberTimelineLine {
+    left: 30px;
+  }
+
+  .cyberTimelineContent h3 {
+    font-size: 22px;
+  }
+}
+/* Industries*/
+
+/* =========================================================
+   CYBER INDUSTRY
+========================================================= */
+
+.cyberIndustry {
+  position: relative;
+
+  padding: 70px 70px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cyberIndustryGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cyberIndustryContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.cyberIndustryTop {
+  margin-bottom: 70px;
+
+  animation: cyberIndustryFade 1s ease;
+}
+
+/* LABEL */
+
+.cyberIndustryLabel {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.cyberIndustryTitle {
+  color: #053a51;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+
+.cyberIndustryText {
+  color: #607480;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 520px;
+  letter-spacing: 1;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.cyberIndustryList {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cyberIndustryCard {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 26px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 138, 189, 0.14);
+
+  color: #053a51;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow:
+    0 10px 24px rgba(5, 58, 81, 0.04),
+    0 4px 12px rgba(5, 58, 81, 0.03);
+
+  animation: cyberIndustryFade 1s ease;
+}
+
+.cyberIndustryCard:hover {
+  transform: translateY(-6px);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  border-color: transparent;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 20px 44px rgba(0, 138, 189, 0.18),
+    0 8px 18px rgba(5, 58, 81, 0.06);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.cyberIndustryIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.cyberIndustryCard:hover .cyberIndustryIcon {
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #a3cf5d;
+
+  transform: rotate(-8deg);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cyberIndustryFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .cyberIndustry {
+    padding: 90px 0;
+  }
+
+  .cyberIndustryTop {
+    margin-bottom: 50px;
+  }
+
+  .cyberIndustryTitle {
+    font-size: 42px;
+
+    line-height: 1.15;
+  }
+
+  .cyberIndustryText {
+    font-size: 16px;
+  }
+
+  .cyberIndustryList {
+    gap: 14px;
+  }
+
+  .cyberIndustryCard {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    font-size: 15px;
+
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyberIndustryTitle {
+    font-size: 34px;
+  }
+
+  .cyberIndustryText {
+    font-size: 15px;
+  }
+}
+/* cta  */
+
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

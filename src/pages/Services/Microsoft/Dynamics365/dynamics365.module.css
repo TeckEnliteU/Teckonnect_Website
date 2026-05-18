@@ -1,0 +1,2933 @@
+/* =========================================
+   DYNAMICS HERO
+========================================= */
+
+.dynamicsHero {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  padding: 130px 0 120px;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.heroWrapper {
+  width: 90%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.heroContainer {
+  flex: 1;
+
+  padding: 0px 40px;
+
+  animation: heroFadeUp 1.2s ease;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.heroBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+/* DOT */
+
+/* =========================================
+   TITLE
+========================================= */
+
+.heroTitle {
+  margin-top: 10px;
+
+  font-size: 46px;
+
+  font-weight: 900;
+
+  line-height: 1.3;
+
+  color: #111111;
+
+  animation: heroFadeUp 1.2s ease;
+}
+
+.heroTitle span {
+  color: #008abd;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.heroDescription {
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  animation: heroFadeUp 1.4s ease;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.heroButtons {
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+
+  animation: heroFadeUp 1.6s ease;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primaryBtn {
+  padding: 12px 26px;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+
+  border-radius: 999px;
+
+  text-decoration: none !important;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.primaryBtn:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+}
+
+/* CLICK */
+
+.primaryBtn:active {
+  transform: scale(0.98);
+
+  filter: brightness(0.92);
+}
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.secondaryBtn {
+  padding: 12px 26px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 999px;
+
+  text-decoration: none !important;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.secondaryBtn:hover {
+  filter: brightness(0.98);
+
+  transform: translateY(-2px);
+}
+
+/* CLICK */
+
+.secondaryBtn:active {
+  transform: scale(0.98);
+
+  filter: brightness(0.94);
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.heroRight {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* =========================================
+   GLOW
+========================================= */
+
+.dynamicsGlow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    5deg,
+    rgba(0, 138, 189, 0.03),
+    rgba(163, 207, 93, 0.04)
+  );
+
+  filter: blur(10px);
+
+  animation: glowFloat 6s ease-in-out infinite;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.dynamicsCard {
+  position: relative;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 36px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* box-shadow: 0 30px 60px rgba(5, 58, 81, 0.12); */
+
+  animation: floatCard 5s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.dynamicsImage {
+  width: 260px;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   TAG
+========================================= */
+
+.dynamicsTag {
+  position: absolute;
+
+  bottom: 25px;
+  right: -20px;
+
+  background: white;
+
+  padding: 12px 18px;
+
+  border-radius: 16px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #053a51;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.dynamicsTag span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #a3cf5d;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .heroWrapper {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+  }
+
+  .heroDescription {
+    font-size: 1.05rem;
+
+    margin: 0 auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .dynamicsHero {
+    padding: 110px 20px 90px;
+  }
+
+  .heroWrapper {
+    flex-direction: column;
+  }
+
+  .heroContainer {
+    width: 100%;
+
+    padding: 0;
+  }
+
+  .heroBadge {
+    font-size: 13px;
+  }
+
+  .heroTitle {
+    margin-top: 28px;
+
+    font-size: 3rem;
+
+    line-height: 1.08;
+  }
+
+  .heroDescription {
+    margin-top: 28px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .heroDescription br {
+    display: none;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 58px;
+
+    font-size: 1rem;
+  }
+
+  .dynamicsCard {
+    width: 260px;
+    height: 260px;
+  }
+
+  .dynamicsImage {
+    width: 120px;
+  }
+
+  .dynamicsTag {
+    display: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 0.95rem;
+  }
+}
+/* overview */
+
+/* =========================================
+   PREMIUM OVERVIEW SECTION
+========================================= */
+
+.overviewSection {
+  position: relative;
+  overflow: hidden;
+
+  background: #ffffff;
+  padding: 70px 45px;
+}
+
+/* BACKGROUND GLOW */
+
+.overviewGlowOne {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  top: -180px;
+  right: -100px;
+
+  filter: blur(100px);
+
+  animation: floatGlow 10s ease-in-out infinite;
+}
+
+.overviewGlowTwo {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+
+  background: rgba(163, 207, 93, 0.15);
+
+  bottom: -160px;
+  left: -120px;
+
+  filter: blur(100px);
+
+  animation: floatGlow 12s ease-in-out infinite;
+}
+
+/* CONTAINER */
+
+.overviewContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   TOP CONTENT
+========================================= */
+
+.overviewTop {
+  text-align: center;
+  margin-bottom: 80px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* BADGE */
+
+.overviewBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.overviewTitle {
+  margin-top: 20px;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  line-height: 1.5;
+
+  color: #053a51;
+}
+
+.overviewTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+
+.overviewDescription {
+  max-width: 600px;
+
+  margin: 35px auto 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.overviewCard {
+  position: relative;
+
+  padding: 42px;
+
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  transition: all 0.45s ease;
+
+  box-shadow: 0 20px 50px rgba(5, 58, 81, 0.05);
+
+  animation: fadeUp 1s ease;
+}
+
+.overviewCard:hover {
+  transform: translateY(-15px);
+
+  box-shadow: 0 35px 70px rgba(0, 138, 189, 0.12);
+}
+
+/* CARD GLOW */
+
+.cardGlow {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  top: -120px;
+  right: -80px;
+
+  filter: blur(60px);
+
+  opacity: 0;
+
+  transition: 0.5s ease;
+}
+
+.overviewCard:hover .cardGlow {
+  opacity: 1;
+}
+
+/* CARD TOP */
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+/* ICONS */
+
+.cardIconBlue,
+.cardIconGreen,
+.cardIconOrange {
+  width: 62px;
+  height: 62px;
+
+  border-radius: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+.cardIconBlue {
+  background: rgba(0, 138, 189, 0.1);
+  color: #008abd;
+}
+
+.cardIconGreen {
+  background: rgba(163, 207, 93, 0.16);
+  color: #6e992b;
+}
+
+.cardIconOrange {
+  background: rgba(0, 138, 189, 0.1);
+  color: #0079a7;
+}
+
+/* ARROW */
+
+.cardArrow {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 138, 189, 0.06);
+
+  color: #053a51;
+
+  transition: 0.4s ease;
+}
+
+.overviewCard:hover .cardArrow {
+  transform: rotate(-45deg);
+  background: #008abd;
+  color: white;
+}
+
+/* TITLES */
+
+.overviewCard h3 {
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #053a51;
+
+  margin-bottom: 18px;
+}
+
+/* TEXT */
+
+.overviewCard p {
+  color: #66737c;
+
+  line-height: 1.5;
+  font-size: 13px;
+
+  margin-bottom: 28px;
+}
+
+/* TAGS */
+
+.tagsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.blueTag,
+.greenTag,
+.orangeTag,
+.blueLightTag {
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.35s ease;
+}
+
+.blueTag {
+  background: rgba(0, 138, 189, 0.08);
+  color: #008abd;
+}
+
+.greenTag {
+  background: rgba(163, 207, 93, 0.18);
+  color: #5f8d15;
+}
+
+.orangeTag {
+  background: rgba(0, 138, 189, 0.12);
+  color: #0079a7;
+}
+
+.blueLightTag {
+  background: rgba(0, 138, 189, 0.12);
+  color: #0079a7;
+}
+
+.blueTag:hover,
+.greenTag:hover,
+.orangeTag:hover,
+.blueLightTag:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* =========================================
+   BOTTOM CARDS
+========================================= */
+
+.bottomCards {
+  margin-top: 38px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.bottomCard {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 42px;
+
+  border-radius: 34px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.05),
+    rgba(163, 207, 93, 0.08)
+  );
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  transition: all 0.45s ease;
+
+  animation: fadeUp 1s ease;
+}
+
+.bottomCard:hover {
+  transform: translateY(-12px);
+}
+
+/* GLOW */
+
+.bottomCardGlow {
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 138, 189, 0.1);
+
+  top: -140px;
+  right: -120px;
+
+  filter: blur(70px);
+}
+
+/* ICON */
+
+.bottomIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+
+.bottomCard span {
+  color: #008abd;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.bottomCard h3 {
+  margin-top: 14px;
+
+  font-size: 14px;
+  color: #053a51;
+}
+
+.bottomCard p {
+  margin-top: 18px;
+
+  max-width: 480px;
+  font-size: 13px;
+
+  color: #66737c;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomCards {
+    grid-template-columns: 1fr;
+  }
+
+  .overviewTitle {
+    font-size: 3.8rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .overviewSection {
+    padding: 100px 0;
+  }
+
+  .overviewContainer {
+    width: 92%;
+  }
+
+  .overviewTitle {
+    font-size: 2.7rem;
+    line-height: 1.1;
+  }
+
+  .overviewDescription {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .overviewCard {
+    padding: 30px;
+    border-radius: 28px;
+  }
+
+  .bottomCard {
+    padding: 30px;
+    border-radius: 28px;
+  }
+
+  .bottomCard h3 {
+    font-size: 2.2rem;
+  }
+
+  .cardIconBlue,
+  .cardIconGreen,
+  .cardIconOrange {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 22px;
+
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .overviewTitle {
+    font-size: 2.2rem;
+  }
+
+  .overviewBadge {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
+
+  .overviewCard,
+  .bottomCard {
+    padding: 24px;
+  }
+
+  .tagsWrap {
+    gap: 10px;
+  }
+
+  .blueTag,
+  .greenTag,
+  .orangeTag,
+  .blueLightTag {
+    font-size: 0.82rem;
+    padding: 12px 16px;
+  }
+}
+/* features section */
+
+/* =========================================================
+   DYNAMICS 365 FEATURES — PREMIUM SMOOTH VERSION
+========================================================= */
+
+.d365FeaturesSection {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 60px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.gridGlowOne,
+.gridGlowTwo {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.gridGlowOne {
+  width: 420px;
+  height: 420px;
+
+  top: -180px;
+  right: -80px;
+
+  background: rgba(0, 138, 189, 0.07);
+
+  filter: blur(80px);
+
+  animation: smoothFloat 14s ease-in-out infinite;
+}
+
+.gridGlowTwo {
+  width: 360px;
+  height: 360px;
+
+  bottom: -120px;
+  left: -60px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  filter: blur(80px);
+
+  animation: smoothFloat 16s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.d365FeaturesContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.d365FeaturesTop {
+  text-align: center;
+  margin-bottom: 90px;
+
+  animation: smoothReveal 1s ease forwards;
+}
+
+/* BADGE */
+
+.d365MiniBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+
+  font-weight: 700;
+  letter-spacing: 0.25;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.d365FeaturesTitle {
+  margin-top: 10px;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.d365FeaturesTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+
+.d365FeaturesText {
+  max-width: 590px;
+
+  margin: 30px auto 0;
+  margin-top: 10px;
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FEATURE ROWS
+========================================================= */
+
+.featureRows {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* =========================================================
+   FEATURE ROW
+========================================================= */
+
+.featureRow {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 360px 1fr;
+
+  gap: 42px;
+
+  padding: 42px;
+
+  border-radius: 36px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  overflow: hidden;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 14px 40px rgba(5, 58, 81, 0.05);
+
+  will-change: transform;
+  transform: translateZ(0);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  opacity: 0;
+
+  animation: smoothReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.featureRow:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.featureRow:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.featureRow:hover {
+  transform: translate3d(0, -8px, 0);
+
+  box-shadow: 0 24px 55px rgba(0, 138, 189, 0.1);
+}
+
+/* SIDE GRADIENT */
+
+.featureRow::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 6px;
+  height: 100%;
+
+  background: linear-gradient(180deg, #053a51, #008abd, #a3cf5d);
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.featureLeft {
+  position: relative;
+}
+
+/* TOP */
+
+.leftTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+}
+
+/* ICON */
+
+.featureIconBlue {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 138, 189, 0.1);
+
+  color: #008abd;
+
+  font-size: 26px;
+
+  will-change: transform;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.35s ease;
+}
+
+.featureRow:hover .featureIconBlue {
+  transform: rotate(-4deg) scale(1.04);
+}
+
+/* GREEN */
+
+.greenIcon {
+  background: rgba(163, 207, 93, 0.18);
+
+  color: #5d8f13;
+}
+
+/* ORANGE */
+
+.orangeIcon {
+  background: rgba(0, 138, 189, 0.1);
+
+  color: #008abd;
+}
+
+/* NUMBER */
+
+.featureNumber {
+  font-size: 36px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: rgba(5, 58, 81, 0.08);
+}
+
+/* TITLE */
+
+.featureLeft h3 {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #053a51;
+
+  margin-bottom: 14px;
+}
+
+/* DESCRIPTION */
+
+.featureLeft p {
+  color: #7b8790;
+
+  line-height: 1.9;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.featureRight {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* FEATURE ITEM */
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background: rgba(0, 138, 189, 0.03);
+
+  border: 1px solid rgba(0, 138, 189, 0.06);
+
+  will-change: transform;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.featureItem:hover {
+  transform: translate3d(0, -4px, 0);
+
+  background: rgba(0, 138, 189, 0.06);
+}
+
+/* ICON */
+
+.featureItem svg {
+  min-width: 18px;
+
+  margin-top: 4px;
+
+  color: #008abd;
+}
+
+/* TEXT */
+
+.featureItem span {
+  color: #55626b;
+
+  line-height: 1.8;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smoothFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .featureRow {
+    grid-template-columns: 1fr;
+  }
+
+  .featureRight {
+    grid-template-columns: 1fr;
+  }
+
+  .d365FeaturesTitle {
+    font-size: 3.8rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .d365FeaturesSection {
+    padding: 100px 0;
+  }
+
+  .d365FeaturesContainer {
+    width: 92%;
+  }
+
+  .d365FeaturesTitle {
+    font-size: 2.7rem;
+    line-height: 1.1;
+  }
+
+  .d365FeaturesText {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .featureRow {
+    padding: 28px;
+
+    border-radius: 28px;
+
+    gap: 28px;
+  }
+
+  .featureLeft h3 {
+    font-size: 1.5rem;
+  }
+
+  .featureIconBlue {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 22px;
+
+    font-size: 1.5rem;
+  }
+
+  .featureNumber {
+    font-size: 3rem;
+  }
+
+  .featureItem {
+    padding: 18px;
+
+    border-radius: 20px;
+  }
+
+  .featureItem:hover,
+  .featureRow:hover {
+    transform: none;
+  }
+
+  .gridGlowOne,
+  .gridGlowTwo {
+    filter: blur(60px);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .d365FeaturesTitle {
+    font-size: 2.2rem;
+  }
+
+  .d365MiniBadge {
+    font-size: 12px;
+
+    padding: 12px 18px;
+  }
+
+  .featureRow {
+    padding: 22px;
+  }
+
+  .featureItem span {
+    font-size: 0.9rem;
+  }
+
+  .featureIconBlue {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 20px;
+
+    font-size: 1.3rem;
+  }
+}
+/* solution section */
+
+/* =========================================================
+   DYNAMICS SOLUTIONS — NEW PREMIUM DESIGN
+========================================================= */
+
+.solutionsSection {
+  position: relative;
+  overflow: hidden;
+
+  padding: 60px 60px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.solutionGlowOne,
+.solutionGlowTwo {
+  position: absolute;
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+.solutionGlowOne {
+  width: 460px;
+  height: 460px;
+
+  top: -180px;
+  right: -100px;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(90px);
+
+  animation: smoothFloat 14s ease-in-out infinite;
+}
+
+.solutionGlowTwo {
+  width: 380px;
+  height: 380px;
+
+  bottom: -140px;
+  left: -100px;
+
+  background: rgba(163, 207, 93, 0.16);
+
+  filter: blur(90px);
+
+  animation: smoothFloat 16s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.solutionsContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP CONTENT
+========================================================= */
+
+.solutionsContent {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 90px;
+
+  animation: smoothReveal 1s ease forwards;
+}
+
+/* BADGE */
+
+.solutionsBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+
+  font-weight: 700;
+  letter-spacing: 0.95;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.solutionsTitle {
+  margin-top: 10px;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.solutionsTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+
+.solutionsDescription {
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.solutionCard {
+  position: relative;
+
+  padding: 34px 28px;
+
+  border-top: 1px solid rgba(0, 138, 189, 0.18);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+
+  opacity: 0;
+
+  animation: smoothReveal 0.9s ease forwards;
+}
+
+.solutionCard:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.solutionCard:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.solutionCard:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.solutionCard:hover {
+  transform: translateY(-8px);
+
+  border-color: #008abd;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.solutionIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.solutionCard:hover .solutionIcon {
+  transform: rotate(-8deg) scale(1.05);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: white;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.solutionCard h3 {
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #053a51;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.solutionCard p {
+  color: #66737c;
+
+  line-height: 1.5;
+  font-weight: 500;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smoothFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solutionsTitle {
+    font-size: 3.8rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .solutionsSection {
+    padding: 100px 0;
+  }
+
+  .solutionsContainer {
+    width: 92%;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutionsTitle {
+    font-size: 2.7rem;
+    line-height: 1.1;
+  }
+
+  .solutionsDescription {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .solutionCard {
+    padding: 28px 0;
+  }
+
+  .solutionCard:hover {
+    transform: none;
+  }
+
+  .solutionIcon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 22px;
+
+    font-size: 1.5rem;
+  }
+
+  .solutionGlowOne,
+  .solutionGlowTwo {
+    filter: blur(60px);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .solutionsTitle {
+    font-size: 2.2rem;
+  }
+
+  .solutionsBadge {
+    font-size: 12px;
+
+    padding: 12px 18px;
+  }
+
+  .solutionCard h3 {
+    font-size: 1.25rem;
+  }
+
+  .solutionCard p {
+    font-size: 0.92rem;
+  }
+}
+/* benefits section */
+/* =========================================================
+   MINIMAL PREMIUM BENEFITS SECTION
+========================================================= */
+
+.benefitsSection {
+  position: relative;
+  overflow: hidden;
+
+  padding: 60px 60px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.benefitsGlowOne,
+.benefitsGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.benefitsGlowOne {
+  width: 480px;
+  height: 480px;
+
+  top: -220px;
+  right: -120px;
+
+  background: rgba(0, 138, 189, 0.07);
+
+  filter: blur(90px);
+
+  animation: floatGlow 14s ease-in-out infinite;
+}
+
+.benefitsGlowTwo {
+  width: 420px;
+  height: 420px;
+
+  bottom: -180px;
+  left: -100px;
+
+  background: rgba(163, 207, 93, 0.14);
+
+  filter: blur(90px);
+
+  animation: floatGlow 16s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.benefitsContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.benefitsTop {
+  text-align: center;
+
+  max-width: 860px;
+
+  margin: 0 auto 100px;
+
+  animation: smoothReveal 1s ease forwards;
+}
+
+/* BADGE */
+
+.benefitsBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 0.95px;
+  font-weight: 800;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.benefitsTitle {
+  margin-top: 10px;
+
+  font-size: 26px;
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.benefitsTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+
+.benefitsDescription {
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 40px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.timelineCard {
+  position: relative;
+
+  padding-left: 26px;
+
+  border-left: 1px dashed rgba(0, 138, 189, 0.35);
+
+  transition: transform 0.4s ease;
+
+  opacity: 0;
+
+  animation: smoothReveal 0.9s ease forwards;
+}
+
+.timelineCard:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.timelineCard:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.timelineCard:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.timelineCard:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.timelineCard:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.phaseNumber {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 26px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.timelineCard:hover .phaseNumber {
+  transform: rotate(-8deg) scale(1.05);
+
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  color: white;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.timelineCard h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500px;
+  color: #053a51;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.timelineCard p {
+  color: #6b7280;
+
+  line-height: 1.5;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.phaseTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+
+  margin-top: 26px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 138, 189, 0.05);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  color: #008abd;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  transition: all 0.35s ease;
+}
+
+.timelineCard:hover .phaseTag {
+  background: rgba(0, 138, 189, 0.1);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+  .timelineGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefitsTitle {
+    font-size: 3.8rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .benefitsSection {
+    padding: 100px 0;
+  }
+
+  .benefitsContainer {
+    width: 92%;
+  }
+
+  .timelineGrid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .benefitsTitle {
+    font-size: 2.7rem;
+    line-height: 1.1;
+  }
+
+  .benefitsDescription {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .timelineCard {
+    padding-left: 22px;
+  }
+
+  .phaseNumber {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 20px;
+
+    font-size: 1.3rem;
+  }
+
+  .timelineCard h3 {
+    font-size: 1.4rem;
+  }
+
+  .timelineCard p {
+    font-size: 0.95rem;
+  }
+
+  .benefitsGlowOne,
+  .benefitsGlowTwo {
+    filter: blur(60px);
+  }
+
+  .timelineCard:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .benefitsTitle {
+    font-size: 2.2rem;
+  }
+
+  .benefitsBadge {
+    font-size: 12px;
+
+    padding: 12px 18px;
+  }
+
+  .timelineCard p {
+    font-size: 0.92rem;
+  }
+
+  .phaseTag {
+    font-size: 11px;
+  }
+}
+/* business question */
+
+/* =========================================================
+   DYNAMICS FAQ SECTION
+========================================================= */
+
+.businessFaqSection {
+  position: relative;
+  overflow: hidden;
+
+  padding: 60px 60px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.faqGlowOne,
+.faqGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.faqGlowOne {
+  width: 520px;
+  height: 520px;
+
+  top: -220px;
+  right: -140px;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  filter: blur(100px);
+
+  animation: floatGlow 14s ease-in-out infinite;
+}
+
+.faqGlowTwo {
+  width: 420px;
+  height: 420px;
+
+  bottom: -180px;
+  left: -120px;
+
+  background: rgba(163, 207, 93, 0.15);
+
+  filter: blur(100px);
+
+  animation: floatGlow 16s ease-in-out infinite;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.businessFaqContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP CONTENT
+========================================================= */
+
+.faqTop {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 90px;
+
+  animation: smoothReveal 1s ease forwards;
+}
+
+/* BADGE */
+
+.faqBadge {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 0.95px;
+  font-weight: 800;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.faqTitle {
+  font-size: 26px;
+
+  line-height: 1.5;
+
+  font-weight: 800;
+
+  color: #053a51;
+}
+
+.faqTitle span {
+  background: linear-gradient(90deg, #008abd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+
+.faqDescription {
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500px;
+}
+
+/* =========================================================
+   FAQ WRAPPER
+========================================================= */
+
+.faqWrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.faqItem {
+  position: relative;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 138, 189, 0.08);
+
+  overflow: hidden;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 18px 45px rgba(5, 58, 81, 0.05);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease,
+    background 0.45s ease;
+
+  animation: smoothReveal 0.8s ease forwards;
+}
+
+.faqItem:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 138, 189, 0.18);
+
+  box-shadow: 0 28px 65px rgba(0, 138, 189, 0.12);
+}
+
+/* ACTIVE */
+
+.activeFaq {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 138, 189, 0.03),
+    rgba(255, 255, 255, 0.98)
+  );
+
+  border-color: rgba(0, 138, 189, 0.18);
+}
+
+/* TOP BORDER */
+
+.faqItem::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.activeFaq::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  /* REDUCED */
+  padding: 28px 38px 18px;
+}
+
+.faqQuestion span {
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  color: #053a51;
+
+  transition: color 0.35s ease;
+}
+
+.activeFaq .faqQuestion span {
+  color: #008abd;
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.faqArrow {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+
+  border-right: 2px solid #008abd;
+  border-bottom: 2px solid #008abd;
+
+  transform: rotate(45deg);
+
+  transition: transform 0.35s ease;
+}
+
+.activeFaq .faqArrow {
+  transform: rotate(-135deg);
+}
+
+/* =========================================================
+   ANSWER WRAPPER
+========================================================= */
+
+.faqAnswerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.45s ease,
+    opacity 0.4s ease;
+}
+
+.openAnswer {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.faqAnswer {
+  overflow: hidden;
+}
+
+.faqAnswer p {
+  padding: 0px 38px 38px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .faqTitle {
+    font-size: 3.8rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .businessFaqSection {
+    padding: 100px 0;
+  }
+
+  .businessFaqContainer {
+    width: 92%;
+  }
+
+  .faqTitle {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .faqDescription {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .faqQuestion {
+    padding: 26px 24px;
+  }
+
+  .faqQuestion span {
+    font-size: 1.08rem;
+  }
+
+  .faqAnswer p {
+    padding: 0 24px 26px;
+
+    font-size: 0.95rem;
+  }
+
+  .faqGlowOne,
+  .faqGlowTwo {
+    filter: blur(60px);
+  }
+
+  .faqItem:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .faqTitle {
+    font-size: 2.2rem;
+  }
+
+  .faqBadge {
+    font-size: 12px;
+
+    padding: 12px 18px;
+  }
+
+  .faqQuestion {
+    padding: 22px 20px;
+  }
+
+  .faqQuestion span {
+    font-size: 1rem;
+  }
+
+  .faqAnswer p {
+    padding: 0 20px 24px;
+
+    font-size: 0.92rem;
+  }
+}
+/* cta  */
+
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 40px 8%; /* 🔥 controls top & bottom space */
+  margin: 0; /* 🔥 removes unwanted extra gap */
+  background: #f8fafc;
+}
+.ctaBox {
+  position: relative;
+
+  /* SPACE FIX */
+  padding: 70px 70px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+
+  /* CENTER + WIDTH CONTROL */
+  max-width: 1100px;
+  margin: 0 auto; /* ✅ centers the box */
+}
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 40px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 👉 arrow using CSS (no icon needed) */
+.ctaContent button::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+/* 👉 hover OR click feel */
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaContent button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}
