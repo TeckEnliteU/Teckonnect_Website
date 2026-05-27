@@ -9,51 +9,7 @@
 
   padding: 70px 80px;
 
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 45%, #f4fbff 100%);
-}
-
-/* =========================================================
-   BACKGROUND GLOWS
-========================================================= */
-
-.adobeHero::before {
-  content: '';
-
-  position: absolute;
-
-  top: -220px;
-  right: -180px;
-
-  width: 520px;
-  height: 520px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.08);
-
-  filter: blur(120px);
-
-  animation: floatGlow 14s ease-in-out infinite;
-}
-
-.adobeHero::after {
-  content: '';
-
-  position: absolute;
-
-  bottom: -180px;
-  left: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  filter: blur(120px);
-
-  animation: floatGlow 18s ease-in-out infinite;
+  background: #ffffff;
 }
 
 /* =========================================================
@@ -662,47 +618,7 @@
 
   overflow: hidden;
 
-  background: #ffffff;
-}
-
-/* =========================================================
-   SOFT BACKGROUND GLOW
-========================================================= */
-
-.adobeFeatures::before {
-  content: '';
-
-  position: absolute;
-
-  top: -180px;
-  right: -140px;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.06);
-
-  filter: blur(120px);
-}
-
-.adobeFeatures::after {
-  content: '';
-
-  position: absolute;
-
-  bottom: -180px;
-  left: -120px;
-
-  width: 360px;
-  height: 360px;
-
-  border-radius: 50%;
-
-  background: rgba(163, 207, 93, 0.08);
-
-  filter: blur(120px);
+  background: #f8f8f8;
 }
 
 /* =========================================================
@@ -767,7 +683,7 @@
   margin-top: 10px;
   font-size: 26px;
 
-  line-height: 1.08;
+  line-height: 1.5;
 
   font-weight: 700;
 }
@@ -825,7 +741,7 @@
 
   color: rgba(0, 138, 189, 0.12);
 
-  font-size: 68px;
+  font-size: 48px;
 
   line-height: 1;
 
@@ -865,26 +781,6 @@
 /* =========================================================
    BOTTOM LINE
 ========================================================= */
-
-.featureLine {
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 4px;
-
-  border-radius: 0 0 28px 28px;
-
-  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
-
-  transform: scaleX(0);
-
-  transform-origin: left;
-
-  transition: transform 0.4s ease;
-}
 
 .featureCard:hover .featureLine {
   transform: scaleX(1);
@@ -982,42 +878,6 @@
 /* =========================================================
    BACKGROUND GLOW
 ========================================================= */
-
-.adobeSolutions::before {
-  content: '';
-
-  position: absolute;
-
-  top: -220px;
-  right: -180px;
-
-  width: 500px;
-  height: 500px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.06);
-
-  filter: blur(120px);
-}
-
-.adobeSolutions::after {
-  content: '';
-
-  position: absolute;
-
-  bottom: -180px;
-  left: -140px;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(163, 207, 93, 0.1);
-
-  filter: blur(120px);
-}
 
 /* =========================================================
    CONTAINER
@@ -1439,7 +1299,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 90px 80px;
+  padding: 70px 80px;
 
   background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
 }
@@ -1830,30 +1690,14 @@
 
   overflow: hidden;
 
-  padding: 90px 90px;
+  padding: 70px 90px;
 
-  background: linear-gradient(135deg, #f8fcff 0%, #ffffff 48%, #f3fbff 100%);
+  background: #f8f8f8;
 }
 
 /* =========================================================
    SOFT GLOW
 ========================================================= */
-
-.faqGlow {
-  position: absolute;
-
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.06);
-
-  filter: blur(120px);
-}
 
 /* =========================================================
    CONTAINER
@@ -2028,7 +1872,7 @@
   width: 100%;
   height: 4px;
 
-  background: linear-gradient(90deg, #053a51, #008abd, #a3cf5d);
+  background: linear-gradient(90deg, #008abd);
 
   transform: scaleX(0);
 
@@ -2137,46 +1981,6 @@
   padding: 80px 90px;
 
   background: linear-gradient(135deg, #f7fcff 0%, #ffffff 48%, #f3fbff 100%);
-}
-
-/* =========================================================
-   BACKGROUND GLOW
-========================================================= */
-
-.adobeQuestion::before {
-  content: '';
-
-  position: absolute;
-
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.06);
-
-  filter: blur(120px);
-}
-
-.adobeQuestion::after {
-  content: '';
-
-  position: absolute;
-
-  bottom: -180px;
-  left: -120px;
-
-  width: 360px;
-  height: 360px;
-
-  border-radius: 50%;
-
-  background: rgba(163, 207, 93, 0.1);
-
-  filter: blur(120px);
 }
 
 /* =========================================================

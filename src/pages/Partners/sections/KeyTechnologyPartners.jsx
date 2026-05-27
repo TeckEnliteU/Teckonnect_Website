@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styles from '../Partners.module.css';
 
 /* ========================= */
@@ -53,21 +54,28 @@ const cardAnim = {
 };
 
 export default function KeyPartnership() {
-  // const logos = [
-  //   '/icons/MicrosoftN.svg',
-  //   '/icons/aws.svg',
-  //   '/icons/ibm.svg',
-  //   '/icons/adobeN.svg',
-  // ];
-  const logos = [
-    `${import.meta.env.BASE_URL}icons/MicrosoftN.svg`,
-    `${import.meta.env.BASE_URL}icons/aws.svg`,
-    `${import.meta.env.BASE_URL}icons/ibm.svg`,
-    `${import.meta.env.BASE_URL}icons/adobeN.svg`,
+  const partners = [
+    {
+      logo: `${import.meta.env.BASE_URL}icons/MicrosoftN.svg`,
+      link: '/partners/microsoft',
+    },
+    {
+      logo: `${import.meta.env.BASE_URL}icons/aws.svg`,
+      link: '/partners/aws',
+    },
+    {
+      logo: `${import.meta.env.BASE_URL}icons/ibm.svg`,
+      link: '/partners/ibm',
+    },
+    {
+      logo: `${import.meta.env.BASE_URL}icons/adobeN.svg`,
+      link: '/partners/adobe',
+    },
   ];
+
   return (
     <section className={styles.keyPartnerSection}>
-      {/* 🔥 TEXT */}
+      {/* TEXT */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -90,7 +98,7 @@ export default function KeyPartnership() {
         </motion.p>
       </motion.div>
 
-      {/* 🔥 CARDS */}
+      {/* CARDS */}
       <motion.div
         className={styles.cardGrid}
         variants={container}
@@ -98,28 +106,32 @@ export default function KeyPartnership() {
         whileInView="show"
         viewport={{ once: true }}
       >
-        {logos.map((logo, i) => (
-          <motion.div
+        {partners.map((partner, i) => (
+          <Link
+            to={partner.link}
             key={i}
-            custom={i}
-            variants={cardAnim}
-            className={styles.card}
-            whileHover={{
-              y: -10,
-              scale: 1.05,
-              rotateX: 4,
-              rotateY: -4,
-            }}
-            whileTap={{ scale: 0.97 }}
+            className={styles.partnerLink}
           >
-            <img
-              src={logo}
-              alt="partner"
-            />
+            <motion.div
+              custom={i}
+              variants={cardAnim}
+              className={styles.card}
+              whileHover={{
+                y: -10,
+                scale: 1.05,
+                rotateX: 4,
+                rotateY: -4,
+              }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <img
+                src={partner.logo}
+                alt="partner"
+              />
 
-            {/* 🔥 glow */}
-            <span className={styles.cardGlow}></span>
-          </motion.div>
+              <span className={styles.cardGlow}></span>
+            </motion.div>
+          </Link>
         ))}
       </motion.div>
     </section>

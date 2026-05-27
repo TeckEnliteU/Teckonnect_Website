@@ -12,25 +12,19 @@ const Hero = () => {
 
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>OIL & GAS</span>
+          <span className={styles.heroTag}> Utilities Industry Solutions</span>
 
           <h1>
-            Oil & Gas IT Solutions for
-            <span> Secure, Efficient</span>
-            <span> & Resilient Energy Operations</span>
+            Powering Reliable, Secure
+            {/* <span> ,</span> */}
+            <span> and Always-On Utility Operations</span>
           </h1>
 
           <p>
-            Teckonnect partners with oil and gas organisations to deliver
-            secure, scalable, and high-performance IT solutions that support
-            exploration, production, and distribution operations.
-          </p>
-
-          <p>
-            From cloud infrastructure to industrial cybersecurity and digital
-            transformation, we help energy companies modernise critical systems
-            while maintaining operational continuity, compliance, and data
-            integrity.
+            Utility organizations operate in environments where failure is not
+            an option. Whether it’s electricity, water, gas, or environmental
+            services—every system must remain secure, available, and responsive
+            at all times.
           </p>
         </div>
       </div>

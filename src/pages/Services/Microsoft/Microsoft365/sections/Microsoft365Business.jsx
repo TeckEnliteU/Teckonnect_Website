@@ -12,9 +12,7 @@ const BusinessAspects = () => {
           <div className={styles.businessLine}></div>
 
           <h2 className={styles.businessTitle}>
-            Digital Transformation &
-            <br />
-            <span>IT Consulting Services</span>
+            Digital Transformation &<span> IT Consulting Services</span>
           </h2>
 
           <p className={styles.businessDescription}>

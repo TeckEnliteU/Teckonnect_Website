@@ -11,7 +11,7 @@ const MicrosoftOverview = () => {
         'Microsoft 365 rollout aligned to your org structure and compliance needs',
       description:
         'Structured implementation designed around governance, security, and scalable collaboration.',
-      number: '01',
+      // number: '01',
     },
     {
       icon: <FaShieldAlt />,
@@ -19,7 +19,7 @@ const MicrosoftOverview = () => {
         'Secure-by-design configuration across identity, email, devices, and data',
       description:
         'Advanced protection and compliance-first setup for modern Microsoft environments.',
-      number: '02',
+      // number: '02',
     },
     {
       icon: <FaCog />,
@@ -27,7 +27,7 @@ const MicrosoftOverview = () => {
         'Dynamics 365 consulting that maps business processes into scalable systems',
       description:
         'Connected CRM and ERP workflows that improve operational efficiency and visibility.',
-      number: '03',
+      // number: '03',
     },
     {
       icon: <FaClipboardCheck />,
@@ -35,7 +35,7 @@ const MicrosoftOverview = () => {
         'Clear project execution with documentation, training, and ongoing support',
       description:
         'End-to-end delivery with onboarding, optimization, and long-term support services.',
-      number: '04',
+      // number: '04',
     },
   ];
 
@@ -81,9 +81,9 @@ const MicrosoftOverview = () => {
                 </div>
               </div>
 
-              <div className={styles.microsoftOverviewNumber}>
+              {/* <div className={styles.microsoftOverviewNumber}>
                 {item.number}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

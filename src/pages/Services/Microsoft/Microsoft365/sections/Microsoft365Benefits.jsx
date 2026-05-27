@@ -20,10 +20,8 @@ const BenefitsSection = () => {
 
           <div className={styles.benefitsLine}></div>
 
-          <h2 className={styles.benefitsTitle}>
-            Key Benefits of Microsoft Modern
-            <br />
-            Workplace
+          <h2 className={styles.overviewTitle}>
+            Key Benefits of <span>Microsoft Modern Workplace</span>
           </h2>
 
           <p className={styles.benefitsDescription}>

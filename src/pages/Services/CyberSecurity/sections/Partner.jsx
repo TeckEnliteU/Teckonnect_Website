@@ -65,9 +65,7 @@ const Partner = () => {
 
           <h2 className={styles.cyberPartnerTitle}>
             Strategic
-            <span> Cybersecurity</span>
-            <br />
-            Partnerships
+            <span> Cybersecurity </span> Partnerships
           </h2>
 
           <p className={styles.cyberPartnerText}>

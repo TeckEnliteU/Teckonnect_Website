@@ -292,7 +292,7 @@ const industries = [
     title: 'Public Sector (Government & Public Services)',
     desc: 'Supporting secure, compliant, and citizen-centric digital services. Technology environments are designed to meet governance requirements while enabling modern service delivery.',
     img: `${import.meta.env.BASE_URL}images/public.jpg`,
-    link: '/industries/public-sector',
+    link: '/industries/publicsector',
   },
   {
     title: 'Manufacturing',
@@ -328,7 +328,7 @@ const industries = [
     title: 'Oil & Gas',
     desc: 'Enabling resilient and secure operations across remote and regulated environments where uptime is critical.',
     img: `${import.meta.env.BASE_URL}images/oil.jpg`,
-    link: '/industries/oil-gas',
+    link: '/industries/oilgas',
   },
   {
     title: 'Mining',

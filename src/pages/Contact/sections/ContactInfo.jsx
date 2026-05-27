@@ -162,8 +162,8 @@ export default function ContactInfo() {
                   src={loc.image}
                   alt={loc.name}
                   // loading="lazy"
-                  decoding="async"
-                  fetchPriority="high"
+                  // decoding="async"
+                  // fetchPriority="high"
                 />
               </div>
 
@@ -193,8 +193,8 @@ export default function ContactInfo() {
                 src={loc.image}
                 alt={loc.name}
                 // loading="lazy"
-                decoding="async"
-                fetchPriority="high"
+                // decoding="async"
+                // fetchPriority="high"
               />
             </div>
 
@@ -221,8 +221,8 @@ export default function ContactInfo() {
                 src={loc.image}
                 alt={loc.name}
                 // loading="lazy"
-                decoding="async"
-                fetchPriority="high"
+                // decoding="async"
+                // fetchPriority="high"
               />
             </div>
 

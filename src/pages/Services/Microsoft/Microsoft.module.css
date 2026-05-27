@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background: #ffffff;
-  padding: 110px 110px;
+  padding: 90px 100px;
   min-height: 100vh;
 }
 
@@ -20,7 +20,7 @@
 /* LEFT */
 
 .heroContent {
-  max-width: 650px;
+  max-width: 850px;
 }
 
 .partnerBadge {
@@ -33,16 +33,9 @@
   -webkit-text-fill-color: transparent;
 
   text-transform: uppercase;
-  margin-bottom: 10px;
+
   padding: auto;
   display: inline-block;
-}
-
-.partnerBadge span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #a3cf5d;
 }
 
 .heroContent h1 {
@@ -50,7 +43,7 @@
   line-height: 1.2;
   font-weight: 700;
   color: #053a51;
-  max-width: 980px;
+  max-width: 1180px;
   margin-bottom: 10px;
 }
 
@@ -100,146 +93,108 @@
    RIGHT SIDE
 ========================================================= */
 
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
 .partnerWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* MAIN CARD */
+/* MAIN CLEAN CARD */
 
 .microsoftPartnerCard {
-  position: relative;
-
   width: 100%;
-  max-width: 560px;
+  max-width: 340px;
 
-  padding: 55px 45px;
+  padding: 20px;
 
   border-radius: 38px;
 
-  background: rgba(255, 255, 255, 0.82);
+  background: #ffffff;
 
-  border: 1px solid rgba(0, 138, 189, 0.08);
-
-  backdrop-filter: blur(14px);
-
-  overflow: hidden;
-
-  transition: 0.45s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   box-shadow:
-    0 15px 40px rgba(5, 58, 81, 0.05),
-    0 30px 80px rgba(0, 138, 189, 0.08);
+    0 20px 50px rgba(5, 58, 81, 0.05),
+    0 60px 120px rgba(5, 58, 81, 0.04);
+
+  transition: 0.35s ease;
 }
-
-/* SOFT BACKGROUND EFFECT */
-
-.microsoftPartnerCard::before {
-  content: '';
-
-  position: absolute;
-  top: -140px;
-  right: -140px;
-
-  width: 220px;
-  height: 220px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(
-    circle,
-    rgba(163, 207, 93, 0.22),
-    transparent 70%
-  );
-}
-
-.microsoftPartnerCard::after {
-  content: '';
-
-  position: absolute;
-  bottom: -160px;
-  left: -160px;
-
-  width: 220px;
-  height: 220px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(0, 138, 189, 0.12), transparent 70%);
-}
-
-/* HOVER */
 
 .microsoftPartnerCard:hover {
-  transform: translateY(-10px);
-
-  box-shadow:
-    0 30px 80px rgba(0, 138, 189, 0.14),
-    0 20px 50px rgba(5, 58, 81, 0.08);
+  transform: translateY(-4px);
 }
 
-/* TOP LIGHT */
-
-/* LOGO WRAP */
+/* LOGO BOX */
 
 .microsoftLogoWrap {
-  position: relative;
-  z-index: 2;
-
   width: 100%;
+  max-width: 290px;
+  height: 290px;
+
+  border-radius: 34px;
 
   background: #ffffff;
 
-  border-radius: 28px;
-
-  padding: 45px 35px;
-
-  border: 1px solid rgba(5, 58, 81, 0.06);
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 10px 30px rgba(5, 58, 81, 0.04);
+    0 25px 50px rgba(5, 58, 81, 0.04);
 }
 
 /* IMAGE */
 
 .microsoftLogoWrap img {
   width: 100%;
-  max-width: 360px;
-
+  max-width: 220px;
   object-fit: contain;
-
-  transition: 0.4s ease;
+  transition: 0.3s ease;
 }
 
 .microsoftPartnerCard:hover .microsoftLogoWrap img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* BOTTOM TEXT */
 
 .partnerBottom {
-  position: relative;
-  z-index: 2;
+  background: linear-gradient(90deg, #131414);
+  font-size: 12px;
 
-  margin-top: 26px;
+  font-weight: 900;
+  margin-top: 10px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  padding: auto;
+  display: inline-block;
+}
 
-  font-size: 13px;
-  font-weight: 600;
+/* MOBILE */
 
-  letter-spacing: 0.4px;
+@media (max-width: 768px) {
+  .microsoftPartnerCard {
+    max-width: 280px;
+    padding: 16px;
+  }
 
-  color: #5f6b76;
+  .microsoftLogoWrap {
+    height: 240px;
+    border-radius: 28px;
+  }
+
+  .microsoftLogoWrap img {
+    max-width: 180px;
+  }
 }
 
 /* =========================================================
@@ -310,7 +265,7 @@
 
 .microsoftOverviewSection {
   padding: 70px 120px;
-  background: #ffffff;
+  background: #f8f8f8;
   position: relative;
   overflow: hidden;
 }
@@ -404,22 +359,22 @@
 }
 
 .microsoftOverviewIcon {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0b7fab;
-  font-size: 26px;
+  font-size: 16px;
 }
 
 .microsoftOverviewLine {
   width: 2px;
   height: 82px;
   border-radius: 30px;
-  background: linear-gradient(to bottom, #008abd, rgba(163, 207, 93, 0.7));
+  background: linear-gradient(to bottom, #008abd);
 }
 
 .microsoftOverviewLeft h4 {
@@ -532,28 +487,6 @@
 }
 
 /* BACKGROUND GLOW */
-
-.microsoftFeaturesGlowOne {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: rgba(0, 138, 189, 0.08);
-  filter: blur(120px);
-  top: -120px;
-  left: -120px;
-}
-
-.microsoftFeaturesGlowTwo {
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: rgba(163, 207, 93, 0.08);
-  filter: blur(120px);
-  right: -100px;
-  bottom: -100px;
-}
 
 /* =========================
    TOP WRAPPER

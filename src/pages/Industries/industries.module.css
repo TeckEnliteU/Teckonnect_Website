@@ -606,6 +606,49 @@ SLIDER
   max-width: 1380px;
   margin: 0 auto;
 }
+.hSlider::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 100%;
+
+  z-index: 50;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    #f5f7f6 5%,
+    rgba(245, 247, 246, 0.95) 10%,
+    rgba(245, 247, 246, 0) 100%
+  );
+}
+
+/* RIGHT BLUR */
+
+.hSlider::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 80px;
+  height: 100%;
+
+  z-index: 20;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    #f5f7f6 5%,
+    rgba(245, 247, 246, 0.95) 10%,
+    rgba(245, 247, 246, 0) 100%
+  );
+}
 
 /* =========================================================
 TRACK

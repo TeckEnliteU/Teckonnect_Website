@@ -13,7 +13,7 @@ function Navbar() {
   const [openSearch, setOpenSearch] = useState(false);
 
   const [query, setQuery] = useState('');
-  const [showAnnouncement, setShowAnnouncement] = useState(true);
+  // const [showAnnouncement, setShowAnnouncement] = useState(true);
   /* 🔥 SEPARATE STATES */
 
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -24,7 +24,9 @@ function Navbar() {
   const [industriesOpen, setIndustriesOpen] = useState(false);
 
   const [activeIndustry, setActiveIndustry] = useState('healthcare');
+  const [partnersOpen, setPartnersOpen] = useState(false);
 
+  const [activePartner, setActivePartner] = useState('microsoft');
   /* REFS */
 
   const searchRef = useRef(null);
@@ -121,11 +123,16 @@ function Navbar() {
     handleNavigate(path);
     setIndustriesOpen(false);
   };
+  // partner
 
+  const handlePartnerNavigate = (path) => {
+    navigate(path);
+    setPartnersOpen(false);
+  };
   return (
     <>
       <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        {showAnnouncement && (
+        {/* {showAnnouncement && (
           <div className="announcement-bar">
             <div className="announcement-content">
               Our website is currently under development; certain features may
@@ -150,7 +157,7 @@ function Navbar() {
               ✕
             </button>
           </div>
-        )}
+        )} */}
         <motion.div
           className="nav-container"
           initial={{ y: -30, opacity: 0 }}
@@ -348,6 +355,13 @@ function Navbar() {
                           >
                             Dynamics 365 & Power Platform
                           </NavLink>
+
+                          <div className="microsoftLogo">
+                            <img
+                              src="/logos/Microsoftcert.svg"
+                              alt="Microsoft Partner"
+                            />
+                          </div>
                         </div>
 
                         {/* RIGHT CONTENT */}
@@ -372,8 +386,8 @@ function Navbar() {
                           </p>
 
                           <img
-                            src="/logos/Microsoftcert.svg"
-                            alt="Microsoft Partner"
+                          // src="/logos/Microsoftcert.svg"
+                          // alt="Microsoft Partner"
                           />
 
                           <div
@@ -409,10 +423,12 @@ function Navbar() {
                           organisations
                         </p>
 
-                        <img
-                          src="/logos/awscert.svg"
-                          alt=""
-                        />
+                        <div className="awsLogo">
+                          <img
+                            src="/logos/awscert.svg"
+                            alt=""
+                          />
+                        </div>
 
                         <div
                           className="bottomExplore"
@@ -578,21 +594,6 @@ function Navbar() {
                     <div className="industries-grid">
                       <button
                         className={
-                          activeIndustry === 'healthcare'
-                            ? 'active-industry'
-                            : ''
-                        }
-                        onMouseEnter={() => setActiveIndustry('healthcare')}
-                        onClick={() =>
-                          handleIndustryNavigate('/industries/healthcare')
-                        }
-                      >
-                        <span>Healthcare</span>
-                        <span>›</span>
-                      </button>
-
-                      <button
-                        className={
                           activeIndustry === 'public-sector'
                             ? 'active-industry'
                             : ''
@@ -603,6 +604,21 @@ function Navbar() {
                         }
                       >
                         <span>Public Sector</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activeIndustry === 'healthcare'
+                            ? 'active-industry'
+                            : ''
+                        }
+                        onMouseEnter={() => setActiveIndustry('healthcare')}
+                        onClick={() =>
+                          handleIndustryNavigate('/industries/healthcare')
+                        }
+                      >
+                        <span>Healthcare</span>
                         <span>›</span>
                       </button>
 
@@ -636,6 +652,20 @@ function Navbar() {
 
                       <button
                         className={
+                          activeIndustry === 'Utilities'
+                            ? 'active-industry'
+                            : ''
+                        }
+                        onMouseEnter={() => setActiveIndustry('Utilities')}
+                        onClick={() =>
+                          handleIndustryNavigate('/industries/utilities')
+                        }
+                      >
+                        <span>Utilities</span>
+                        <span>›</span>
+                      </button>
+                      <button
+                        className={
                           activeIndustry === 'education'
                             ? 'active-industry'
                             : ''
@@ -661,19 +691,6 @@ function Navbar() {
                         }
                       >
                         <span>Logistics</span>
-                        <span>›</span>
-                      </button>
-
-                      <button
-                        className={
-                          activeIndustry === 'oil-gas' ? 'active-industry' : ''
-                        }
-                        onMouseEnter={() => setActiveIndustry('oil-gas')}
-                        onClick={() =>
-                          handleIndustryNavigate('/industries/oilgas')
-                        }
-                      >
-                        <span>Oil & Gas</span>
                         <span>›</span>
                       </button>
 
@@ -744,8 +761,124 @@ function Navbar() {
                 </div>
               )}
             </div>
+            {/* partner inner page  */}
+            {/* <NavLink to="/partners">Partners</NavLink> */}
 
-            <NavLink to="/partners">Partners</NavLink>
+            <div
+              className="partners-dropdown"
+              onMouseLeave={() => setPartnersOpen(false)}
+            >
+              {/* BUTTON */}
+
+              <button
+                className="partners-trigger"
+                onMouseEnter={() => setPartnersOpen(true)}
+              >
+                <NavLink
+                  to="/partners"
+                  onClick={() => {
+                    setPartnersOpen(false);
+                  }}
+                >
+                  Partners
+                </NavLink>
+
+                <svg
+                  className="partners-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              {/* MENU */}
+
+              {partnersOpen && (
+                <div className="partners-menu">
+                  {/* LEFT */}
+
+                  <div className="partners-sidebar">
+                    <p>PARTNERS</p>
+
+                    <div className="partners-grid">
+                      <button
+                        className={
+                          activePartner === 'microsoft' ? 'active-partner' : ''
+                        }
+                        onMouseEnter={() => setActivePartner('microsoft')}
+                        onClick={() =>
+                          handlePartnerNavigate('/partners/microsoft')
+                        }
+                      >
+                        <span>Microsoft</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activePartner === 'aws' ? 'active-partner' : ''
+                        }
+                        onMouseEnter={() => setActivePartner('aws')}
+                        onClick={() => handlePartnerNavigate('/partners/aws')}
+                      >
+                        <span>AWS</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activePartner === 'ibm' ? 'active-partner' : ''
+                        }
+                        onMouseEnter={() => setActivePartner('ibm')}
+                        onClick={() => handlePartnerNavigate('/partners/ibm')}
+                      >
+                        <span>IBM</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activePartner === 'adobe' ? 'active-partner' : ''
+                        }
+                        onMouseEnter={() => setActivePartner('adobe')}
+                        onClick={() => handlePartnerNavigate('/partners/adobe')}
+                      >
+                        <span>Adobe</span>
+                        <span>›</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* RIGHT */}
+
+                  <div className="partners-content">
+                    <h2>Explore Technology Partners</h2>
+
+                    <p>
+                      Teckonnect collaborates with industry-leading technology
+                      partners to deliver scalable, secure, and future-ready
+                      business solutions.
+                    </p>
+
+                    <div
+                      className="partnerExplore"
+                      onClick={() => handlePartnerNavigate('/partners')}
+                    >
+                      Explore All Partners →
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <NavLink to="/about">About Us</NavLink>
           </nav>

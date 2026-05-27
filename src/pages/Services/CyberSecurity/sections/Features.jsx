@@ -127,9 +127,7 @@ const Features = () => {
           <span className={styles.cyberFeatureLabel}>WHAT WE OFFER</span>
 
           <h2 className={styles.cyberFeatureTitle}>
-            Our <span>Cybersecurity</span>
-            <br />
-            Solutions
+            Our <span>Cybersecurity</span> Solutions
           </h2>
 
           <p className={styles.cyberFeatureText}>

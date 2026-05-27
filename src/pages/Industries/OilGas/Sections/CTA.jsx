@@ -87,12 +87,12 @@ export default function Cta() {
           viewport={{ once: true }}
         >
           <motion.h2 variants={textReveal}>
-            Ready to modernise your energy operations
+            Build a Stronger, Safer Utility Environment
           </motion.h2>
 
           <motion.p variants={textReveal}>
-            Discover how Teckonnect can support your cloud, cybersecurity, and
-            digital transformation journey.
+            Technology should not slow you down it should give you confidence to
+            operate without disruption.
           </motion.p>
 
           <motion.div variants={textReveal}>

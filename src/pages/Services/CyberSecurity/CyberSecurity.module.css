@@ -15,7 +15,7 @@
    GRID BACKGROUND
 ========================================================= */
 
-.cyberGrid {
+/* .cyberGrid {
   position: absolute;
   inset: 0;
 
@@ -26,42 +26,7 @@
   background-size: 70px 70px;
 
   z-index: 0;
-}
-
-/* =========================================================
-   GLOW EFFECTS
-========================================================= */
-
-.cyberGlowOne,
-.cyberGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.cyberGlowOne {
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(0, 138, 189, 0.12);
-}
-
-.cyberGlowTwo {
-  bottom: -180px;
-  left: -120px;
-
-  width: 380px;
-  height: 380px;
-
-  background: rgba(163, 207, 93, 0.14);
-}
+} */
 
 /* =========================================================
    CONTAINER
@@ -238,10 +203,6 @@
   background: rgba(255, 255, 255, 0.8);
 
   border: 1px solid rgba(5, 58, 81, 0.06);
-
-  box-shadow:
-    0 12px 24px rgba(5, 58, 81, 0.04),
-    0 4px 10px rgba(5, 58, 81, 0.03);
 }
 
 .statItem h3 {
@@ -283,10 +244,6 @@
   background: rgba(255, 255, 255, 0.92);
 
   border: 1px solid rgba(5, 58, 81, 0.08);
-
-  box-shadow:
-    0 24px 60px rgba(0, 138, 189, 0.12),
-    0 12px 28px rgba(5, 58, 81, 0.06);
 }
 
 /* TOP */
@@ -321,10 +278,10 @@
 
   border-radius: 50px;
 
-  background: rgba(163, 207, 93, 0.14);
+  background: rgba(93, 156, 207, 0.12);
 
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* TITLE */
@@ -440,23 +397,6 @@
   background: #ffffff;
 
   border: 1px solid rgba(5, 58, 81, 0.08);
-
-  box-shadow:
-    0 20px 44px rgba(0, 138, 189, 0.12),
-    0 10px 24px rgba(5, 58, 81, 0.06);
-}
-
-.pulse {
-  width: 14px;
-  height: 14px;
-
-  display: inline-block;
-
-  border-radius: 50%;
-
-  background: #a3cf5d;
-
-  box-shadow: 0 0 12px rgba(163, 207, 93, 0.8);
 }
 
 .floatingCard h4 {
@@ -542,7 +482,7 @@
   }
 }
 
-@keyframes glowPulse {
+/* @keyframes glowPulse {
   0% {
     box-shadow: 0 0 0 rgba(163, 207, 93, 0.6);
   }
@@ -554,7 +494,7 @@
   100% {
     box-shadow: 0 0 0 rgba(163, 207, 93, 0.6);
   }
-}
+} */
 
 @keyframes barLoad {
   from {
@@ -784,8 +724,6 @@
 
   border-radius: 50%;
 
-  background: rgba(0, 138, 189, 0.08);
-
   filter: blur(50px);
 
   transition: 0.5s ease;
@@ -799,19 +737,6 @@
    SLOW ROTATE EFFECT
 ========================================================= */
 
-.cyberGlowOne::before,
-.cyberGlowTwo::before {
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  border-radius: inherit;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  animation: rotateSlow 18s linear infinite;
-}
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -903,14 +828,14 @@
 
   padding: 70px 70px;
 
-  background: #ffffff;
+  background: #f8f8f8;
 }
 
 /* =========================================================
    GRID
 ========================================================= */
 
-.cyberOverviewGrid {
+/* .cyberOverviewGrid {
   position: absolute;
   inset: 0;
 
@@ -921,46 +846,7 @@
   background-size: 70px 70px;
 
   z-index: 0;
-}
-
-/* =========================================================
-   GLOWS
-========================================================= */
-
-.cyberOverviewGlowOne,
-.cyberOverviewGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.cyberOverviewGlowOne {
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(0, 138, 189, 0.12);
-
-  animation: cyberFloat 10s ease-in-out infinite;
-}
-
-.cyberOverviewGlowTwo {
-  bottom: -180px;
-  left: -120px;
-
-  width: 380px;
-  height: 380px;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  animation: cyberFloat 12s ease-in-out infinite;
-}
+} */
 
 /* =========================================================
    CONTAINER
@@ -983,7 +869,7 @@
 .cyberOverviewTop {
   text-align: center;
 
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 
   animation: cyberFadeUp 1s ease;
 }
@@ -1029,7 +915,7 @@
 
   margin: auto;
 
-  color: #607480;
+  color: #66737c;
 
   font-size: 14px;
   line-height: 1.5;
@@ -1059,10 +945,6 @@
 
   backdrop-filter: blur(12px);
 
-  box-shadow:
-    0 30px 80px rgba(0, 138, 189, 0.12),
-    0 12px 30px rgba(5, 58, 81, 0.06);
-
   animation: cyberFadeUp 1.2s ease;
 }
 
@@ -1085,9 +967,9 @@
 
   border-radius: 50px;
 
-  background: rgba(163, 207, 93, 0.12);
+  background: rgba(93, 156, 207, 0.12);
 
-  color: #6d9826;
+  color: #008abd;
 
   font-size: 13px;
   font-weight: 700;
@@ -1115,7 +997,7 @@
 /* PARAGRAPH */
 
 .cyberOverviewContent p {
-  color: #607480;
+  color: #66737c;
 
   font-size: 13px;
   line-height: 1.5;
@@ -1180,7 +1062,7 @@
   color: #0b7fab;
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-
+  flex-shrink: 0;
   transition: 0.4s ease;
 }
 
@@ -1197,7 +1079,7 @@
 .cyberRiskItem span {
   color: #053a51;
 
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
 
   font-weight: 700;
@@ -1214,8 +1096,8 @@
 
   background: linear-gradient(
     135deg,
-    rgba(0, 138, 189, 0.08),
-    rgba(163, 207, 93, 0.1)
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.1)
   );
 
   color: #053a51;
@@ -1355,21 +1237,6 @@
     0 10px 24px rgba(5, 58, 81, 0.06);
 
   animation: cyberFloat 5s ease-in-out infinite;
-}
-
-.cyberMiniFloat span {
-  width: 14px;
-  height: 14px;
-
-  display: inline-block;
-
-  border-radius: 50%;
-
-  background: #a3cf5d;
-
-  margin-bottom: 14px;
-
-  box-shadow: 0 0 16px rgba(163, 207, 93, 0.8);
 }
 
 .cyberMiniFloat h5 {
@@ -1531,7 +1398,7 @@
    GRID
 ========================================================= */
 
-.cyberFeatureGrid {
+/* .cyberFeatureGrid {
   position: absolute;
   inset: 0;
 
@@ -1542,46 +1409,11 @@
   background-size: 70px 70px;
 
   z-index: 0;
-}
+} */
 
 /* =========================================================
    GLOW
 ========================================================= */
-
-.cyberFeatureGlowOne,
-.cyberFeatureGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.cyberFeatureGlowOne {
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(0, 138, 189, 0.12);
-
-  animation: cyberFeatureFloat 10s ease-in-out infinite;
-}
-
-.cyberFeatureGlowTwo {
-  bottom: -180px;
-  left: -120px;
-
-  width: 360px;
-  height: 360px;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  animation: cyberFeatureFloat 12s ease-in-out infinite;
-}
 
 /* =========================================================
    CONTAINER
@@ -1604,7 +1436,7 @@
 .cyberFeatureTop {
   text-align: center;
 
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 
   animation: cyberFeatureFade 1s ease;
 }
@@ -1664,7 +1496,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 32px;
+  gap: 42px;
 }
 
 /* =========================================================
@@ -1690,10 +1522,6 @@
     transform 0.45s ease,
     box-shadow 0.45s ease,
     border-color 0.45s ease;
-
-  box-shadow:
-    0 20px 50px rgba(5, 58, 81, 0.05),
-    0 8px 20px rgba(5, 58, 81, 0.03);
 
   animation: cyberFeatureFade 1.2s ease;
 }
@@ -1731,15 +1559,15 @@
 ========================================================= */
 
 .cyberFeatureIcon {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0b7fab;
-  font-size: 16px;
+  font-size: 22px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 
   transition: 0.45s ease;
@@ -1776,7 +1604,7 @@
 ========================================================= */
 
 .cyberFeatureCard p {
-  color: #607480;
+  color: #66737c;
 
   font-size: 13px;
   line-height: 1.5;
@@ -1795,10 +1623,10 @@
   display: flex;
   flex-direction: column;
 
-  gap: 16px;
+  gap: 10px;
 
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* ITEM */
@@ -1807,14 +1635,14 @@
   display: flex;
   align-items: center;
 
-  gap: 12px;
+  gap: 8px;
 
-  color: #053a51;
+  color: #66737c;
 
   font-size: 13px;
   line-height: 1.5;
 
-  font-weight: 500;
+  font-weight: 700;
 
   transition: 0.35s ease;
 }
@@ -1975,63 +1803,7 @@
 
   padding: 70px 70px;
 
-  background: #ffffff;
-}
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.cyberPartnerGrid {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
-
-  background-size: 70px 70px;
-
-  z-index: 0;
-}
-
-/* =========================================================
-   GLOW
-========================================================= */
-
-.cyberPartnerGlowOne,
-.cyberPartnerGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.cyberPartnerGlowOne {
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(0, 138, 189, 0.12);
-
-  animation: cyberPartnerFloat 10s ease-in-out infinite;
-}
-
-.cyberPartnerGlowTwo {
-  bottom: -180px;
-  left: -120px;
-
-  width: 360px;
-  height: 360px;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  animation: cyberPartnerFloat 12s ease-in-out infinite;
+  background: #f8f8f8;
 }
 
 /* =========================================================
@@ -2055,7 +1827,7 @@
 .cyberPartnerTop {
   text-align: center;
 
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 
   animation: cyberPartnerFade 1s ease;
 }
@@ -2218,12 +1990,7 @@
 
   border-radius: 50px;
 
-  background: linear-gradient(
-    135deg,
-    rgba(0, 138, 189, 0.12),
-    rgba(163, 207, 93, 0.16)
-  );
-
+  background: rgba(93, 156, 207, 0.12);
   color: #053a51;
 
   font-size: 11px;
@@ -2380,8 +2147,6 @@
 
   border-radius: 50%;
 
-  background: rgba(0, 138, 189, 0.08);
-
   filter: blur(80px);
 
   transition: 0.45s ease;
@@ -2497,66 +2262,8 @@
 .cyberSolution {
   position: relative;
   overflow: hidden;
-
   padding: 70px 70px;
-
   background: #ffffff;
-}
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.cyberSolutionGrid {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
-
-  background-size: 70px 70px;
-
-  z-index: 0;
-}
-
-/* =========================================================
-   GLOW
-========================================================= */
-
-.cyberSolutionGlowOne,
-.cyberSolutionGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.cyberSolutionGlowOne {
-  top: -180px;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(0, 138, 189, 0.12);
-
-  animation: cyberSolutionFloat 10s ease-in-out infinite;
-}
-
-.cyberSolutionGlowTwo {
-  bottom: -180px;
-  left: -120px;
-
-  width: 360px;
-  height: 360px;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  animation: cyberSolutionFloat 12s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -2564,25 +2271,25 @@
 ========================================================= */
 
 .cyberSolutionContainer {
-  position: relative;
-  z-index: 2;
-
   width: 92%;
   max-width: 1350px;
-
   margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================================================
-   TOP
+   TOP SECTION
+========================================================= */
+
+/* =========================================================
+   TOP SECTION
 ========================================================= */
 
 .cyberSolutionTop {
   text-align: center;
-
-  margin-bottom: 90px;
-
-  animation: cyberSolutionFade 1s ease;
+  max-width: 1100px;
+  margin: 0 auto 70px;
 }
 
 /* LABEL */
@@ -2606,13 +2313,10 @@
 
 .cyberSolutionTitle {
   color: #053a51;
-
   font-size: 26px;
-  line-height: 1.5;
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 26px;
 }
 
 .cyberSolutionTitle span {
@@ -2622,43 +2326,51 @@
 /* TEXT */
 
 .cyberSolutionText {
-  max-width: 580px;
-
+  max-width: 680px;
   margin: auto;
-
-  color: #607480;
-
+  color: #66737c;
   font-size: 14px;
   line-height: 1.5;
 }
 
 /* =========================================================
-   TIMELINE
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .cyberSolutionTop {
+    margin-bottom: 50px;
+  }
+
+  .cyberSolutionTitle {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .cyberSolutionText {
+    font-size: 14px;
+  }
+
+  .cyberSolutionLabel {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+}
+/* =========================================================
+   GRID
 ========================================================= */
 
 .cyberTimeline {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px dashed rgba(5, 58, 81, 0.12);
+  border-left: 1px dashed rgba(5, 58, 81, 0.12);
 }
 
-/* LINE */
+/* REMOVE OLD TIMELINE */
 
 .cyberTimelineLine {
-  position: absolute;
-
-  top: 0;
-  left: 64px;
-
-  width: 3px;
-  height: 100%;
-
-  border-radius: 50px;
-
-  background: linear-gradient(to bottom, #008abd, #a3cf5d);
+  display: none;
 }
 
 /* =========================================================
@@ -2666,26 +2378,25 @@
 ========================================================= */
 
 .cyberTimelineItem {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 40px;
-
   position: relative;
+  padding: 38px 28px;
+  border-right: 1px dashed rgba(5, 58, 81, 0.12);
+  border-bottom: 1px dashed rgba(5, 58, 81, 0.12);
+  background: #ffffff;
+  transition: all 0.35s ease;
+}
 
-  animation: cyberSolutionFade 1s ease;
+.cyberTimelineItem:hover {
+  background: rgba(0, 138, 189, 0.02);
 }
 
 /* =========================================================
-   LEFT
+   ICON
 ========================================================= */
 
 .cyberTimelineLeft {
-  position: relative;
-  z-index: 2;
+  margin-bottom: 24px;
 }
-
-/* CIRCLE */
 
 .cyberTimelineCircle {
   width: 48px;
@@ -2698,38 +2409,23 @@
   color: #0b7fab;
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  animation: cyberPulse 4s infinite ease-in-out;
+  margin-bottom: 10px;
 }
 
-.cyberTimelineCircle:hover {
-  transform: scale(1.08) rotate(-6deg);
+.cyberTimelineItem:hover .cyberTimelineCircle {
+  transform: translateY(-4px);
 }
-
-/* NUMBER */
 
 .cyberTimelineCircle span {
-  color: rgba(255, 255, 255, 0.2);
-
-  font-size: 24px;
-  font-weight: 400;
+  display: none;
 }
 
-/* ICON */
-
 .cyberTimelineIcon {
-  position: absolute;
-
-  width: 24px;
-  height: 24px;
-
-  border-radius: 20px;
-
-  backdrop-filter: blur(10px);
-
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b7fab;
+  font-size: 22px;
+  color: #008abd;
 }
 
 /* =========================================================
@@ -2737,62 +2433,28 @@
 ========================================================= */
 
 .cyberTimelineContent {
-  position: relative;
-
-  flex: 1;
-
-  overflow: hidden;
-
-  padding: 40px;
-
-  border-radius: 34px;
-
-  background: rgba(255, 255, 255, 0.92);
-
-  border: 1px solid rgba(5, 58, 81, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease,
-    border-color 0.45s ease;
-
-  box-shadow:
-    0 24px 60px rgba(5, 58, 81, 0.05),
-    0 10px 24px rgba(5, 58, 81, 0.03);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
 .cyberTimelineContent:hover {
-  transform: translateY(-10px);
-
-  border-color: rgba(0, 138, 189, 0.16);
-
-  box-shadow:
-    0 34px 70px rgba(0, 138, 189, 0.14),
-    0 12px 28px rgba(5, 58, 81, 0.06);
+  transform: none;
+  box-shadow: none;
 }
-
-/* STEP BADGE */
 
 .cyberStepBadge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  padding: 10px 18px;
-
+  padding: 7px 14px;
   border-radius: 50px;
-
-  background: rgba(163, 207, 93, 0.12);
-
-  color: #6f9b28;
-
+  background: rgba(0, 138, 189, 0.08);
+  color: #008abd;
   font-size: 11px;
-  font-weight: 800;
-
+  font-weight: 700;
   letter-spacing: 1px;
-
   margin-bottom: 10px;
 }
 
@@ -2800,184 +2462,92 @@
 
 .cyberTimelineContent h3 {
   color: #053a51;
-
   font-size: 14px;
-  line-height: 1.5;
-
-  font-weight: 800;
-
-  margin-bottom: 1px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 /* TEXT */
 
 .cyberTimelineContent p {
-  color: #607480;
-
+  color: #66737c;
   font-size: 13px;
   line-height: 1.5;
+  margin: 0;
 }
 
-/* =========================================================
-   GLOW
-========================================================= */
+/* REMOVE UNUSED */
 
-.cyberTimelineGlow {
-  position: absolute;
-
-  top: -80px;
-  right: -80px;
-
-  width: 220px;
-  height: 220px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.08);
-
-  filter: blur(70px);
-
-  transition: 0.45s ease;
-}
-
-.cyberTimelineContent:hover .cyberTimelineGlow {
-  transform: scale(1.2);
-}
-
-/* =========================================================
-   ANIMATION
-========================================================= */
-
-@keyframes cyberSolutionFade {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes cyberSolutionFloat {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-16px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes cyberPulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.04);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.cyberTimelineGlow,
+.cyberSolutionGlowOne,
+.cyberSolutionGlowTwo,
+.cyberSolutionGrid {
+  display: none;
 }
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
+  .cyberTimeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cyberSolutionTop {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+
   .cyberSolutionTitle {
-    font-size: 58px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 768px) {
   .cyberSolution {
-    padding: 90px 0;
+    padding: 70px 20px;
   }
 
-  .cyberSolutionTop {
-    margin-bottom: 60px;
+  .cyberTimeline {
+    grid-template-columns: 1fr;
   }
 
   .cyberSolutionTitle {
-    font-size: 42px;
-
-    line-height: 1.15;
+    font-size: 32px;
   }
 
   .cyberSolutionText {
-    font-size: 16px;
-  }
-
-  .cyberTimelineLine {
-    left: 38px;
+    font-size: 14px;
   }
 
   .cyberTimelineItem {
-    gap: 20px;
+    padding: 28px 22px;
   }
 
   .cyberTimelineCircle {
-    width: 78px;
-    height: 78px;
-  }
-
-  .cyberTimelineCircle span {
-    font-size: 28px;
+    width: 56px;
+    height: 56px;
   }
 
   .cyberTimelineIcon {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 14px;
-
-    font-size: 16px;
-  }
-
-  .cyberTimelineContent {
-    padding: 28px 22px;
-
-    border-radius: 24px;
+    font-size: 20px;
   }
 
   .cyberTimelineContent h3 {
-    font-size: 26px;
+    font-size: 18px;
   }
 
   .cyberTimelineContent p {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .cyberSolutionTitle {
-    font-size: 34px;
-  }
-
-  .cyberTimelineItem {
-    align-items: flex-start;
-  }
-
-  .cyberTimelineCircle {
-    width: 64px;
-    height: 64px;
-  }
-
-  .cyberTimelineLine {
-    left: 30px;
-  }
-
-  .cyberTimelineContent h3 {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 /* Industries*/
@@ -3000,19 +2570,6 @@
    GRID
 ========================================================= */
 
-.cyberIndustryGrid {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(0, 138, 189, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 138, 189, 0.05) 1px, transparent 1px);
-
-  background-size: 70px 70px;
-
-  z-index: 0;
-}
-
 /* =========================================================
    CONTAINER
 ========================================================= */
@@ -3032,7 +2589,7 @@
 ========================================================= */
 
 .cyberIndustryTop {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 
   animation: cyberIndustryFade 1s ease;
 }
@@ -3049,7 +2606,7 @@
   -webkit-text-fill-color: transparent;
 
   text-transform: uppercase;
-  margin-bottom: 10px;
+
   padding: auto;
   display: inline-block;
 }
@@ -3087,7 +2644,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  gap: 18px;
+  gap: 9px;
 }
 
 /* =========================================================

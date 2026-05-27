@@ -7,13 +7,18 @@ import Benefits from './Sections/Benefits';
 // import FAQ from './Sections/FAQ';
 import CTA from './Sections/CTA';
 import IndustriesNavigation from '../IndustriesNavigation';
-const OilGas = () => {
+import Solution from './Sections/Solution';
+import Explore from './Sections/Explore';
+
+const Utilities = () => {
   return (
     <>
       <Hero />
       <Overview />
       <Challenges />
       <Benefits />
+      <Solution />
+      <Explore />
       <IndustriesNavigation />
       <CTA />
       {/* <FAQ />
@@ -22,4 +27,4 @@ const OilGas = () => {
   );
 };
 
-export default OilGas;
+export default Utilities;

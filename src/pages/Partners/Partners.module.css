@@ -445,6 +445,11 @@
   text-decoration: none;
 }
 
+.partnerLink {
+  text-decoration: none;
+  display: block;
+}
+
 /* IMPLEMENTATION */
 
 /* =========================
@@ -781,6 +786,362 @@
 
   .implLink {
     justify-content: center;
+    font-size: 13px;
+  }
+}
+
+/* pop up  */
+
+/* =========================
+   PARTNER MODAL OVERLAY
+========================= */
+
+.partnerModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  background: rgba(5, 58, 81, 0.42);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  overflow-y: auto;
+}
+
+/* =========================
+   MODAL BOX
+========================= */
+
+.partnerModal {
+  position: relative;
+
+  width: 100%;
+  max-width: 860px;
+
+  background: #ffffff;
+  border-radius: 28px;
+
+  padding: 34px 42px 32px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(5, 58, 81, 0.16),
+    0 8px 22px rgba(0, 0, 0, 0.06);
+
+  animation: modalFade 0.35s ease;
+}
+
+/* TOP PREMIUM BAR */
+
+.partnerModal::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  /* background: linear-gradient(90deg, #053a51 0%, #008abd 55%, #a3cf5d 100%); */
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.modalClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 90%;
+
+  background: rgba(0, 138, 189, 0.08);
+
+  color: #053a51;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.modalClose:hover {
+  background: #053a51;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.modalLogo {
+  width: 180px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.modalTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #053a51;
+
+  margin-bottom: 14px;
+  line-height: 1.05;
+}
+
+/* DESIGN LINE */
+
+/* =========================
+   CONTENT
+========================= */
+
+/* .modalText {
+  max-width: 720px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #66737c;
+
+  margin-top: 18px;
+  margin-bottom: 24px;
+} */
+
+.modalText {
+  max-width: 720px;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  color: #66737c;
+
+  margin-top: 18px;
+  margin-bottom: 24px;
+
+  white-space: pre-line;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.visitWebsiteBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  text-decoration: none;
+
+  color: #053a51;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.visitWebsiteBtn:hover {
+  color: #053a51;
+  transform: none;
+}
+.partnersListLink,
+.implLink {
+  display: inline-flex;
+  align-items: center;
+
+  background: transparent !important;
+  border: none !important;
+  outline: none;
+
+  padding: 0;
+  margin-top: 18px;
+
+  color: #008abd;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.partnersListLink:hover,
+.implLink:hover {
+  color: #053a51;
+  transform: translateX(3px);
+}
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .partnerModalOverlay {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .partnerModal {
+    width: 100%;
+    max-width: 95%;
+    padding: 28px 24px;
+    border-radius: 24px;
+  }
+
+  .modalLogo {
+    width: 140px;
+    margin-bottom: 12px;
+  }
+
+  .modalTitle {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .modalText {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 14px;
+    margin-bottom: 20px;
+  }
+
+  .modalClose {
+    width: 36px;
+    height: 36px;
+    top: 14px;
+    right: 14px;
+    font-size: 15px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+  .partnerModalOverlay {
+    padding: 14px;
+    align-items: flex-end;
+  }
+
+  .partnerModal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 24px 24px 0 0;
+    padding: 24px 18px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modalLogo {
+    width: 110px;
+    margin-bottom: 10px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .modalText {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  .modalClose {
+    width: 34px;
+    height: 34px;
+    top: 12px;
+    right: 12px;
+    font-size: 14px;
+  }
+
+  .visitWebsiteBtn,
+  .partnersListLink,
+  .implLink {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+}
+
+/* =====================================
+   EXTRA SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+  .partnerModal {
+    padding: 22px 16px;
+  }
+
+  .modalLogo {
+    width: 90px;
+  }
+
+  .modalTitle {
+    font-size: 18px;
+  }
+
+  .modalText {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .modalClose {
+    width: 32px;
+    height: 32px;
     font-size: 13px;
   }
 }

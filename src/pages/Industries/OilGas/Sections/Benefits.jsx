@@ -1,33 +1,65 @@
 import React from 'react';
 import styles from '../OilGas.module.css';
 
-import {
-  FaIndustry,
-  FaShieldAlt,
-  FaNetworkWired,
-  FaChartLine,
-} from 'react-icons/fa';
+import { FaShieldAlt, FaCloud, FaEye, FaCogs } from 'react-icons/fa';
 
 const benefits = [
   {
-    icon: <FaIndustry />,
-    title: 'Greater Operational Visibility',
-    desc: 'Gain real-time insights and control across assets, systems, and distributed energy operations.',
-  },
-  {
     icon: <FaShieldAlt />,
-    title: 'Reduced Downtime & Cyber Risks',
-    desc: 'Protect critical infrastructure and minimise operational disruptions with secure, resilient systems.',
+    title: 'Secure and Controlled Infrastructure',
+    desc: 'We establish a strong foundation where every system, user, and workload operates within a secure and governed environment.',
+
+    deliver: [
+      'Security-first infrastructure aligned with operational needs',
+      'Identity, device, and access control across environments',
+      'Protection designed to support both IT and operational systems',
+    ],
+
+    result:
+      'Reduced risk, improved visibility, and stronger control across critical systems',
   },
+
   {
-    icon: <FaNetworkWired />,
-    title: 'Improved Safety & Compliance',
-    desc: 'Support regulatory compliance and operational safety through secure and modernised infrastructure.',
+    icon: <FaCloud />,
+    title: 'Cloud Modernization Without Disruption',
+    desc: 'We help utilities modernize at the right pace—without risking continuity of existing operations.',
+
+    deliver: [
+      'Cloud and hybrid infrastructure aligned to real workloads',
+      'Migration strategies built around uptime and performance',
+      'Flexible environments that scale as your operations evolve',
+    ],
+
+    result: 'Modern, scalable platforms without operational downtime',
   },
+
   {
-    icon: <FaChartLine />,
-    title: 'Future-Ready Energy Operations',
-    desc: 'Enable scalable, efficient, and adaptive digital environments that support long-term business growth.',
+    icon: <FaEye />,
+    title: 'Real-Time Visibility and Operational Insight',
+    desc: 'Utilities depend on fast decisions. We enable better control through improved system visibility.',
+
+    deliver: [
+      'Centralized monitoring across systems and environments',
+      'Performance tracking and system health visibility',
+      'Data-driven insights to support operational decision-making',
+    ],
+
+    result: 'Faster response times and better operational awareness',
+  },
+
+  {
+    icon: <FaCogs />,
+    title: 'Managed Services for Always-On Operations',
+    desc: 'Utilities require continuous uptime. Our managed services ensure your systems remain stable, secure, and optimized.',
+
+    deliver: [
+      'Proactive monitoring and issue resolution',
+      'Continuous system optimization and updates',
+      'Ongoing support aligned to business and operational needs',
+    ],
+
+    result:
+      'Higher system availability and reduced operational pressure on internal teams',
   },
 ];
 
@@ -37,17 +69,16 @@ const Benefits = () => {
       <div className={styles.benefitsContainer}>
         {/* TOP */}
         <div className={styles.benefitsTop}>
-          <span className={styles.benefitsTag}>OUTCOMES & BENEFITS</span>
+          <span className={styles.benefitsTag}>OUR SOLUTIONS</span>
 
           <h2>
-            Oil & Gas
-            <span> Outcomes & Benefits</span>
+            How Teckonnect Supports
+            <span> Utility Organizations</span>
           </h2>
 
           <p>
-            Teckonnect enables oil and gas organisations to modernise
-            operations, improve resilience, and maintain secure,
-            high-performance infrastructure across critical energy environments.
+            We don’t just provide IT services—we build operational confidence
+            across your environment.
           </p>
         </div>
 
@@ -58,13 +89,35 @@ const Benefits = () => {
               key={index}
               className={styles.benefitCard}
             >
+              {/* ICON */}
               <div className={styles.iconWrap}>{item.icon}</div>
 
-              <div className={styles.cardLine}></div>
+              {/* DOT LINE */}
+              <div className={styles.dotLine}></div>
 
+              {/* TITLE */}
               <h3>{item.title}</h3>
 
+              {/* DESCRIPTION */}
               <p>{item.desc}</p>
+
+              {/* WHAT WE DELIVER */}
+              <div className={styles.deliverSection}>
+                <h4>What we deliver:</h4>
+
+                <ul>
+                  {item.deliver.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* RESULT */}
+              <div className={styles.resultBox}>
+                <strong>Result:</strong>
+
+                <span>{item.result}</span>
+              </div>
             </div>
           ))}
         </div>

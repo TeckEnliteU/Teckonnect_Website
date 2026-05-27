@@ -603,6 +603,15 @@
 
   transform: translateX(1px);
 }
+
+.microsoftLogo img {
+  width: 150px;
+
+  margin-top: 130px;
+  margin-left: -20px; /* move left */
+  object-fit: contain;
+}
+
 /* =========================================
    RIGHT CONTENT
 ========================================= */
@@ -642,6 +651,13 @@
 }
 .services-descriptionm img {
   width: 110px;
+
+  margin-top: 80px;
+  object-fit: contain;
+}
+
+.awsLogo img {
+  width: 70px;
 
   margin-top: 80px;
 
@@ -904,7 +920,7 @@
 
   align-items: center;
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: 700;
 
@@ -974,74 +990,264 @@
 /* ==========================
    ANNOUNCEMENT BAR
 ========================== */
+/* parner inner page   */
 
-.announcement-bar {
-  width: 100%;
-  background: linear-gradient(90deg, #a3cf5d, #053a51);
+/* ==========================
+   PARTNERS DROPDOWN
+========================== */
+
+.partners-dropdown {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 10px 50px;
-  z-index: 99999;
-  box-sizing: border-box;
 }
 
-.announcement-content {
-  background: linear-gradient(90deg, #ffffff, #a3cf5d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* invisible hover bridge */
 
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.announcement-close {
+.partners-dropdown::before {
+  content: '';
   position: absolute;
-  right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: transparent;
+  z-index: 9999;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.partners-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  color: inherit;
+}
+
+/* ICON */
+
+.partners-icon {
+  transition: 0.3s ease;
+}
+
+.partners-dropdown:hover .partners-icon {
+  color: #008abd;
+  stroke: #008abd;
+}
+
+/* ==========================
+   MENU WRAPPER
+========================== */
+
+.partners-menu {
+  position: absolute;
+  top: 220%;
+  left: 160%;
+  transform: translateX(-50%);
+
+  width: 1070px;
+
+  background: #ffffff;
+  border-radius: 0 0 26px 26px;
+
+  padding: 18px 24px 24px;
+
+  display: flex;
+  gap: 34px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+
+  border-top: 1px solid #008abd;
+
+  z-index: 999999;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.partners-sidebar {
+  width: 430px;
+  min-width: 430px;
+
+  background: #f3f4f6;
+
+  border-radius: 32px;
+
+  padding: 30px 20px;
+}
+
+.partners-sidebar p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c8795;
+
+  margin-bottom: 22px;
+  padding-left: 14px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.partners-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.partners-grid button {
+  width: 100%;
   border: none;
   background: transparent;
-  color: #fff;
-  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 13px;
+  /* min-height: 54px; */
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #202938;
+
   cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: none;
 }
 
-.announcement-link {
-  color: #fff !important;
-  font-weight: 500;
+/* HOVER */
 
-  /* FIX WHITE LINK */
-  background: none !important;
-  -webkit-text-fill-color: #fff !important;
+.partners-grid button:hover {
+  background: rgba(0, 138, 189, 0.06);
+
+  transform: none;
 }
 
-.announcement-link:hover {
-  opacity: 0.9;
+/* ACTIVE BUTTON - SINGLE LAYER */
+
+.active-partner {
+  background: linear-gradient(90deg, #053a51, #a3cf5d) !important;
+
+  color: #ffffff !important;
+
+  border: none;
+  box-shadow: none !important;
 }
 
-.announcement-link:hover {
+.active-partner span {
+  color: #ffffff !important;
+}
+
+/* ==========================
+   RIGHT CONTENT
+========================== */
+
+.partners-content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.partners-content h2 {
+  font-size: 14px;
+  line-height: 1.2;
+
+  font-weight: 800;
+  color: #053a51;
+
+  margin-bottom: 18px;
+}
+
+.partners-content p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #66737c;
+
+  max-width: 540px;
+
+  margin-bottom: 28px;
+}
+
+/* EXPLORE LINK */
+
+.partnerExplore {
+  margin-top: 20px;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #2d7183;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.partnerExplore:hover {
+  color: #008abd;
+  transform: translateX(2px);
+}
+
+/* ==========================
+   ICON COLORS
+========================== */
+
+/* HOME PAGE */
+
+.partners-icon {
   color: #ffffff;
+  stroke: #ffffff;
 }
 
-/* MOBILE */
+/* SCROLLED NAVBAR */
 
-@media (max-width: 768px) {
-  .announcement-bar {
-    padding: 10px 40px 10px 15px;
+.navbar.scrolled .partners-icon {
+  color: #222;
+  stroke: #222;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .partners-menu {
+    width: 96%;
   }
+}
 
-  .announcement-content {
-    font-size: 12px;
-    text-align: left;
-  }
-
-  .announcement-close {
-    right: 12px;
-    font-size: 16px;
+@media (max-width: 992px) {
+  .partners-menu {
+    display: none;
   }
 }

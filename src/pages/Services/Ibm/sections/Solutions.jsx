@@ -13,35 +13,35 @@ const workflowSteps = [
   {
     number: '01',
     title: 'Assess',
-    icon: <FaSearch />,
+    // icon: <FaSearch />,
     desc: 'Current state analysis, infrastructure review, security posture validation, and business goal alignment.',
   },
 
   {
     number: '02',
     title: 'Design',
-    icon: <FaDraftingCompass />,
+    // icon: <FaDraftingCompass />,
     desc: 'Target operating model, cloud architecture planning, governance structure, and scalability roadmap.',
   },
 
   {
     number: '03',
     title: 'Transition',
-    icon: <FaExchangeAlt />,
+    // icon: <FaExchangeAlt />,
     desc: 'Knowledge transfer, onboarding workflows, tooling setup, automation, SLAs, and migration execution.',
   },
 
   {
     number: '04',
     title: 'Run',
-    icon: <FaPlayCircle />,
+    // icon: <FaPlayCircle />,
     desc: 'Continuous operations, monitoring, incident management, reporting, compliance, and optimisation support.',
   },
 
   {
     number: '05',
     title: 'Optimise',
-    icon: <FaChartLine />,
+    // icon: <FaChartLine />,
     desc: 'Performance tuning, AI-driven improvements, cost reduction, security enhancement, and innovation scaling.',
   },
 ];

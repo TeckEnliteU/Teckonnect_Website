@@ -1,102 +1,56 @@
 import React from 'react';
 import styles from '../OilGas.module.css';
 
-const challenges = [
-  {
-    title: 'Legacy Infrastructure & Remote Operations',
-    text: 'Many operations rely on legacy systems and remote assets, making integration, monitoring, and modernisation complex.',
-  },
-  {
-    title: 'Cybersecurity Risks in Critical Infrastructure',
-    text: 'Energy systems are prime targets for cyber threats, requiring strong protection across both IT and OT environments.',
-  },
-  {
-    title: 'Operational Downtime & Safety Compliance',
-    text: 'Unplanned downtime and regulatory requirements can significantly impact productivity and safety standards.',
-  },
-];
-
-const solutions = [
-  {
-    title: 'Industrial Cloud & Infrastructure Solutions',
-    text: 'We design scalable infrastructure that supports remote operations, data processing, and real-time monitoring.',
-  },
-  {
-    title: 'Energy Sector Cybersecurity',
-    text: 'We secure critical systems with advanced cybersecurity frameworks tailored for industrial environments.',
-  },
-  {
-    title: 'Data & Asset Monitoring Solutions',
-    text: 'We enable real-time insights into assets and operations to improve efficiency and reduce downtime.',
-  },
-  {
-    title: 'Digital Transformation for Energy Operations',
-    text: 'We modernise legacy systems and enable data-driven decision-making across the value chain.',
-  },
-];
-
 const Challenges = () => {
   return (
-    <section className={styles.challenges}>
-      <div className={styles.challengesContainer}>
-        {/* TOP */}
-        <div className={styles.challengeTop}>
-          <span>OIL & GAS CHALLENGES</span>
+    <section className={styles.utilitySection}>
+      <div className={styles.utilityContainer}>
+        <div className={styles.utilityContent}>
+          <span className={styles.sectionTag}>UTILITY CHALLENGES</span>
 
           <h2>
-            Key Challenges in the
-            <strong> Oil & Gas Industry</strong>
+            The Reality Utilities
+            <span> Are Facing Today</span>
+          </h2>
+
+          <div className={styles.contentBox}>
+            <p className={styles.mainText}>
+              Utility leaders are balancing legacy systems with modern digital
+              demands, increasing complexity and operational risk.
+            </p>
+
+            <p className={styles.subText}>
+              At the same time, infrastructure must remain continuously
+              available despite outages, cyber threats, and disruptions. Growing
+              regulatory expectations require secure and audit-ready
+              environments, while internal IT teams are stretched and
+              performance demands continue to rise.
+            </p>
+
+            <div className={styles.bottomNote}>
+              <p>
+                This creates a clear gap between operational expectations and
+                the ability of current technology environments to consistently
+                deliver.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SUPPORT SECTION */}
+        {/* <div className={styles.supportSection}>
+          <span className={styles.supportTag}>OUR APPROACH</span>
+
+          <h2>
+            How Teckonnect Supports
+            <span> Utility Organizations</span>
           </h2>
 
           <p>
-            Oil and gas organisations operate in high-risk, asset-intensive
-            environments where system reliability, operational continuity, and
-            cybersecurity are critical.
+            We don’t just provide IT services—we build operational confidence
+            across your environment.
           </p>
-        </div>
-
-        {/* CHALLENGES */}
-        <div className={styles.challengeGrid}>
-          {challenges.map((item, index) => (
-            <div
-              key={index}
-              className={styles.challengeCard}
-            >
-              <div className={styles.cardNumber}>0{index + 1}</div>
-
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* SOLUTIONS */}
-        <div className={styles.solutionHeader}>
-          <span>OUR SOLUTIONS</span>
-
-          <h2>
-            Our Oil & Gas
-            <strong> IT Solutions</strong>
-          </h2>
-
-          <p>
-            Teckonnect provides scalable and secure IT solutions designed to
-            support safe, efficient, and resilient energy operations across the
-            oil and gas value chain.
-          </p>
-        </div>
-
-        <div className={styles.solutionGrid}>
-          {solutions.map((item, index) => (
-            <div
-              key={index}
-              className={styles.solutionCard}
-            >
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

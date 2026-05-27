@@ -10,7 +10,7 @@
 
   background: #ffffff;
 
-  padding: 100px 70px;
+  padding: 70px 70px;
 }
 
 /* =========================================================
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 60px;
+  gap: 20px;
 }
 
 /* =========================================================
@@ -56,8 +56,8 @@
 
   text-transform: uppercase;
 
-  margin-bottom: 10px;
-
+  margin-top: 30px;
+  margin-bottom: 20px;
   display: inline-block;
 }
 
@@ -87,8 +87,6 @@
 ========================================================= */
 
 .heroDescription {
-  margin-top: 10px;
-
   max-width: 580px;
 
   color: #66737c;
@@ -104,7 +102,7 @@
 ========================================================= */
 
 .heroButtons {
-  margin-top: 60px;
+  margin-top: 50px;
 
   display: flex;
   align-items: center;
@@ -215,25 +213,6 @@
    BACKGROUND GLOW
 ========================================================= */
 
-.azureGlow {
-  position: absolute;
-
-  width: 360px;
-  height: 360px;
-
-  border-radius: 50%;
-
-  background: linear-gradient(
-    5deg,
-    rgba(0, 138, 189, 0.03),
-    rgba(163, 207, 93, 0.04)
-  );
-
-  filter: blur(10px);
-
-  animation: glowFloat 6s ease-in-out infinite;
-}
-
 /* =========================================================
    CARD
 ========================================================= */
@@ -250,13 +229,11 @@
 
   backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid #66737c3a;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  box-shadow: 0 30px 60px rgba(5, 58, 81, 0.12);
 
   animation: floatCard 5s ease-in-out infinite;
 
@@ -475,50 +452,9 @@
   position: relative;
   overflow: hidden;
 
-  padding: 90px 70px;
+  padding: 70px 70px;
 
-  background: linear-gradient(90deg, #f7f9fb 0%, #ffffff 35%, #f5fbff 100%);
-}
-
-/* =========================================================
-   GLOW EFFECTS
-========================================================= */
-
-.overviewGlowOne,
-.overviewGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.overviewGlowOne {
-  width: 520px;
-  height: 520px;
-
-  top: -220px;
-  right: -180px;
-
-  background: rgba(0, 138, 189, 0.08);
-
-  filter: blur(100px);
-
-  animation: floatGlow 14s ease-in-out infinite;
-}
-
-.overviewGlowTwo {
-  width: 420px;
-  height: 420px;
-
-  bottom: -180px;
-  left: -140px;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  filter: blur(100px);
-
-  animation: floatGlow 18s ease-in-out infinite;
+  background: #f8f8f8;
 }
 
 /* =========================================================
@@ -1004,48 +940,7 @@
 
   padding: 70px 70px;
 
-  background: #ffffff;
-}
-
-/* =========================================================
-   GLOW
-========================================================= */
-
-.featuresGlowOne,
-.featuresGlowTwo {
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.featuresGlowOne {
-  width: 520px;
-  height: 520px;
-
-  top: -240px;
-  right: -160px;
-
-  background: rgba(0, 138, 189, 0.08);
-
-  filter: blur(100px);
-
-  animation: floatGlow 15s ease-in-out infinite;
-}
-
-.featuresGlowTwo {
-  width: 420px;
-  height: 420px;
-
-  bottom: -180px;
-  left: -120px;
-
-  background: rgba(163, 207, 93, 0.16);
-
-  filter: blur(90px);
-
-  animation: floatGlow 18s ease-in-out infinite;
+  background: #f8f8f8;
 }
 
 /* =========================================================
@@ -1248,7 +1143,7 @@
 ========================================================= */
 
 .featureCard h3 {
-  margin-top: 15px;
+  margin-top: 10px;
 
   font-size: 14px;
   line-height: 1.5;
@@ -1263,14 +1158,14 @@
 ========================================================= */
 
 .cardLine {
-  width: 60px;
-  height: 4px;
+  width: 90px;
+  height: 1px;
 
   border-radius: 999px;
 
   margin: 28px 0;
 
-  background: linear-gradient(90deg, #008abd, #a3cf5d);
+  background: linear-gradient(90deg, #008abd);
 }
 
 /* =========================================================
@@ -1408,31 +1303,6 @@
 /* =========================================================
    BACKGROUND GLOW
 ========================================================= */
-
-.benefitsGlowOne,
-.benefitsGlowTwo {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  z-index: -1;
-  opacity: 0.12;
-}
-
-.benefitsGlowOne {
-  width: 420px;
-  height: 420px;
-  background: #008abd;
-  top: -120px;
-  left: -100px;
-}
-
-.benefitsGlowTwo {
-  width: 380px;
-  height: 380px;
-  background: #a3cf5d;
-  bottom: -120px;
-  right: -80px;
-}
 
 /* =========================================================
    CONTAINER
@@ -1674,19 +1544,47 @@
 
 /* PERFECT DOT ALIGN */
 
+/* REMOVE DOT */
+
 .benefitCard li::before,
 .benefitCardGreen li::before,
 .benefitCardBlue li::before,
 .benefitCardOrange li::before {
-  content: '';
+  content: '→';
+
   position: absolute;
   left: 0;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #a3cf5d;
-  box-shadow: 0 0 10px rgba(163, 207, 93, 0.35);
+  top: -1px;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  color: #008abd;
+
+  background: transparent;
+  box-shadow: none;
+
+  width: auto;
+  height: auto;
+}
+
+/* BETTER ALIGNMENT */
+
+.benefitCard li,
+.benefitCardGreen li,
+.benefitCardBlue li,
+.benefitCardOrange li {
+  list-style: none;
+  position: relative;
+
+  padding-left: 42px;
+
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4f6772;
+
+  display: flex;
+  align-items: flex-start;
 }
 /* =========================================================
    HOVER LIGHT EFFECT
@@ -1777,30 +1675,6 @@
 }
 
 /* SOFT BACKGROUND LIGHT */
-
-.azureSolutions::before {
-  content: '';
-  position: absolute;
-  top: -180px;
-  left: -180px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: rgba(0, 138, 189, 0.06);
-  filter: blur(120px);
-}
-
-.azureSolutions::after {
-  content: '';
-  position: absolute;
-  bottom: -160px;
-  right: -160px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: rgba(163, 207, 93, 0.12);
-  filter: blur(120px);
-}
 
 /* =========================================================
    CONTAINER
@@ -1912,22 +1786,6 @@
 
 /* TOP LINE */
 
-.solutionCard::before {
-  content: '';
-
-  position: absolute;
-
-  top: 0;
-  left: 34px;
-
-  width: 90px;
-  height: 4px;
-
-  border-radius: 30px;
-
-  background: linear-gradient(to right, #008abd, #a3cf5d);
-}
-
 /* HOVER */
 
 .solutionCard:hover {
@@ -1983,7 +1841,7 @@
   font-size: 13px;
   line-height: 1.5;
   font-weight: 500;
-  color: #667c89;
+  color: #66737c;
 
   margin-bottom: 10px;
 }
@@ -2004,11 +1862,11 @@
 
   border-radius: 100px;
 
-  background: rgba(163, 207, 93, 0.1);
+  background: rgba(93, 150, 207, 0.1);
 
   border: 1px solid rgba(163, 207, 93, 0.18);
 
-  color: #759c2f;
+  color: #008abd;
 
   font-size: 11px;
   font-weight: 800;
@@ -2094,65 +1952,12 @@
   position: relative;
   overflow: hidden;
 
-  padding: 100px 60px;
-
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(0, 138, 189, 0.08),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(163, 207, 93, 0.12),
-      transparent 28%
-    ),
-    #ffffff;
+  padding: 70px 60px;
 }
 
 /* =========================================================
    GLOW EFFECTS
 ========================================================= */
-
-.azureBusiness::before {
-  content: '';
-
-  position: absolute;
-
-  top: -260px;
-  right: -160px;
-
-  width: 620px;
-  height: 620px;
-
-  border-radius: 50%;
-
-  background: rgba(0, 138, 189, 0.08);
-
-  filter: blur(120px);
-
-  animation: glowFloat 18s ease-in-out infinite;
-}
-
-.azureBusiness::after {
-  content: '';
-
-  position: absolute;
-
-  bottom: -220px;
-  left: -120px;
-
-  width: 520px;
-  height: 520px;
-
-  border-radius: 50%;
-
-  background: rgba(163, 207, 93, 0.14);
-
-  filter: blur(100px);
-
-  animation: glowFloat 16s ease-in-out infinite;
-}
 
 /* =========================================================
    CONTAINER
@@ -2271,10 +2076,6 @@
 
   backdrop-filter: blur(20px);
 
-  box-shadow:
-    0 18px 50px rgba(5, 58, 81, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-
   transition:
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
@@ -2289,10 +2090,6 @@
   transform: translateY(-8px);
 
   border-color: rgba(0, 138, 189, 0.16);
-
-  box-shadow:
-    0 30px 80px rgba(0, 138, 189, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 /* =========================================================

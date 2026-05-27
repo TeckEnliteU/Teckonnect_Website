@@ -8,9 +8,9 @@
   width: 100%;
   overflow: hidden;
 
-  background: linear-gradient(to right, #ffffff 0%, #eef7ff 100%);
+  background: #ffffff;
 
-  padding: 120px 100px;
+  padding: 90px 100px;
 }
 
 /* ====================================
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 70px;
+  gap: 20px;
 }
 
 /* ====================================
@@ -49,8 +49,6 @@
   display: inline-flex;
   align-items: center;
 
-  gap: 10px;
-
   font-size: 13px;
   font-weight: 900;
 
@@ -60,8 +58,6 @@
   -webkit-text-fill-color: transparent;
 
   text-transform: uppercase;
-
-  margin-bottom: 12px;
 }
 
 /* DOT */
@@ -71,11 +67,11 @@
 ==================================== */
 
 .heroTitle {
-  font-size: 52px;
+  font-size: 46px;
 
-  font-weight: 800;
+  font-weight: 700;
 
-  line-height: 1.18;
+  line-height: 1.2;
 
   color: #000000;
 
@@ -93,15 +89,15 @@
 .heroSubtitle {
   font-size: 14px;
 
-  line-height: 1.8;
+  line-height: 1.5;
 
   color: #66737c;
 
   max-width: 620px;
 
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ====================================
@@ -193,23 +189,6 @@
    GLOW
 ==================================== */
 
-.microsoftGlow {
-  position: absolute;
-
-  width: 380px;
-  height: 380px;
-  background: linear-gradient(
-    5deg,
-    rgba(0, 138, 189, 0.03),
-    rgba(163, 207, 93, 0.04)
-  );
-  border-radius: 50%;
-
-  filter: blur(10px);
-
-  animation: glowFloat 6s ease-in-out infinite;
-}
-
 /* ====================================
    CARD
 ==================================== */
@@ -217,16 +196,16 @@
 .microsoftCard {
   position: relative;
 
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 220px;
+  border: 1px solid rgba(176, 176, 176, 0.253);
+  border-radius: 10%;
 
-  border-radius: 38px;
-
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.89);
 
   backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  /* border: 1px solid #66737c; */
 
   display: flex;
   justify-content: center;
@@ -242,7 +221,7 @@
 ==================================== */
 
 .microsoftImage {
-  width: 280px;
+  width: 240px;
 
   object-fit: contain;
 }
@@ -404,67 +383,30 @@
 =================================== */
 
 .overviewSection {
-  position: relative;
   width: 100%;
-  overflow: hidden;
-
-  background: #ffffff;
-
-  padding: 70px 30px;
+  background: #f8f8f8;
+  padding: 70px 120px;
 }
-
-/* SOFT BACKGROUND EFFECT */
-
-.overviewSection::before {
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(0, 138, 189, 0.05),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(163, 207, 93, 0.08),
-      transparent 28%
-    );
-
-  pointer-events: none;
-}
-
-/* ===================================
-   CONTAINER
-=================================== */
 
 .overviewContainer {
   width: 100%;
-  max-width: 1450px;
+  max-width: 1320px;
+  margin: auto;
 
-  margin: 0 auto;
-  padding: 0px 110px;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-
-  gap: 110px;
-
-  align-items: flex-start;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 50px;
+  align-items: center;
 }
 
-/* ===================================
-   LEFT CONTENT
-=================================== */
+/* ==========================
+   LEFT
+========================== */
 
 .overviewLeft {
-  width: 100%;
-
-  animation: fadeUp 1s ease;
+  position: sticky;
+  top: 100px;
 }
-
-/* LABEL */
 
 .overviewLabel {
   background: linear-gradient(90deg, #053a51, #a3cf5d);
@@ -476,137 +418,65 @@
   -webkit-text-fill-color: transparent;
 
   text-transform: uppercase;
-  margin-bottom: 10px;
+
   padding: auto;
   display: inline-block;
 }
 
-/* TITLE */
-
 .overviewTitle {
   font-size: 26px;
   line-height: 1.5;
-
-  font-weight: 700;
-
+  font-weight: 800;
   color: #053a51;
-
-  margin-bottom: 20px;
-
-  max-width: 700px;
-
-  font-family: 'Poppins', sans-serif;
-
-  animation: fadeUp 1.1s ease;
+  margin-bottom: 18px;
 }
-
-/* HIGHLIGHT */
 
 .overviewTitle span {
   color: #008abd;
 }
 
-/* DESCRIPTION */
-
 .overviewDescription {
-  font-size: 13px;
-  font-weight: 400;
-  color: #6b7280;
-  line-height: 1.7;
-  margin-bottom: 20px;
-
-  max-width: 840px;
-
-  animation: fadeUp 1.2s ease;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #66737c;
+  max-width: 500px;
 }
 
-/* ===================================
-   RIGHT CONTENT
-=================================== */
-
-.overviewRight {
-  width: 100%;
-
-  animation: fadeUp 1.3s ease;
-}
-
-/* TOP TEXT */
+/* ==========================
+   RIGHT
+========================== */
 
 .overviewTopText {
-  background: linear-gradient(90deg, #053a51, #a3cf5d);
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  font-weight: 900;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  padding: auto;
-  display: inline-block;
+  display: none;
 }
 
-/* ===================================
+.overviewRight {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ==========================
    CARD
-=================================== */
+========================== */
 
 .overviewCard {
-  position: relative;
-
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-
-  gap: 18px;
-
-  padding: 22px 24px;
-
-  margin-bottom: 18px;
-
-  border-radius: 14px;
-
   background: #ffffff;
-
   border: 1px solid rgba(5, 58, 81, 0.08);
+  border-radius: 24px;
+  padding: 24px;
 
-  overflow: hidden;
-
-  transition:
-    transform 0.35s ease,
-    border 0.35s ease,
-    box-shadow 0.35s ease;
-
-  box-shadow: 0 10px 25px rgba(5, 58, 81, 0.04);
-
-  animation: fadeUp 1.4s ease;
+  transition: 0.35s ease;
 }
-
-/* LEFT BORDER */
-
-.overviewCard::before {
-  content: '';
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 4px;
-  height: 100%;
-
-  background: #008abd;
-}
-
-/* CARD HOVER */
 
 .overviewCard:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 
-  border: 1px solid rgba(0, 138, 189, 0.18);
+  border-color: rgba(0, 138, 189, 0.14);
 
-  box-shadow: 0 18px 35px rgba(0, 138, 189, 0.12);
+  box-shadow:
+    0 18px 35px rgba(0, 138, 189, 0.08),
+    0 8px 18px rgba(5, 58, 81, 0.05);
 }
 
 /* ICON */
@@ -623,131 +493,79 @@
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   margin-bottom: 10px;
-
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease;
 }
 
-/* ICON HOVER */
+/* TITLE */
 
-/* CARD TEXT */
+/* TEXT */
 
 .overviewCard p {
   font-size: 13px;
+  font-weight: 600;
   line-height: 1.5;
-
-  color: #6b7280;
-
-  font-weight: 500;
+  color: #66737c;
+  margin: 0;
 }
 
-/* ===================================
-   ANIMATION
-=================================== */
+/* FEATURE LARGE CARD */
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(45px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.overviewCard:nth-child(2),
+.overviewCard:nth-child(5) {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 138, 189, 0.03),
+    rgba(163, 207, 93, 0.04)
+  );
 }
 
-/* ===================================
-   LAPTOP
-=================================== */
+/* ==========================
+   RESPONSIVE
+========================== */
 
-@media (max-width: 1200px) {
-  .overviewTitle {
-    font-size: 4.4rem;
-  }
-
-  .overviewContainer {
-    gap: 80px;
-  }
-}
-
-/* ===================================
-   TABLET
-=================================== */
-
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .overviewContainer {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-    gap: 60px;
-
-    padding-left: 40px;
-    padding-right: 40px;
+  .overviewLeft {
+    position: relative;
+    top: 0;
   }
 
   .overviewTitle {
-    font-size: 3.5rem;
+    font-size: 36px;
   }
 }
-
-/* ===================================
-   MOBILE
-=================================== */
 
 @media (max-width: 768px) {
   .overviewSection {
-    padding: 90px 0;
+    padding: 60px 20px;
   }
 
-  .overviewContainer {
-    padding-left: 22px;
-    padding-right: 22px;
+  .overviewRight {
+    grid-template-columns: 1fr;
   }
 
   .overviewTitle {
-    font-size: 2.7rem;
-
-    line-height: 1.08;
-
-    margin-bottom: 24px;
+    font-size: 30px;
   }
 
   .overviewDescription {
-    font-size: 1rem;
-
-    line-height: 1.9;
+    font-size: 14px;
   }
 
   .overviewCard {
-    padding: 18px;
-
-    gap: 14px;
+    padding: 20px;
+    border-radius: 20px;
   }
 
-  .overviewIcon {
-    width: 42px;
-    height: 42px;
-
-    min-width: 42px;
-
+  .overviewCard h3 {
     font-size: 16px;
   }
 
   .overviewCard p {
-    font-size: 0.95rem;
-
-    line-height: 1.7;
-  }
-}
-
-/* ===================================
-   SMALL MOBILE
-=================================== */
-
-@media (max-width: 480px) {
-  .overviewTitle {
-    font-size: 2.2rem;
+    font-size: 13px;
   }
 }
 /* features sections  */
@@ -767,27 +585,6 @@
 }
 
 /* SOFT BACKGROUND GLOW */
-
-.servicesSection::before {
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(0, 138, 189, 0.06),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(163, 207, 93, 0.1),
-      transparent 30%
-    );
-
-  pointer-events: none;
-}
 
 /* =========================================
    CONTAINER
@@ -824,7 +621,7 @@
 .servicesLabel {
   background: linear-gradient(90deg, #053a51, #a3cf5d);
   font-size: 13px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.1px;
   font-weight: 800;
 
   -webkit-background-clip: text;
@@ -840,8 +637,8 @@
 
 .servicesTitle {
   font-size: 26px;
-  letter-spacing: 1.5px;
-  font-weight: 900;
+
+  font-weight: 800;
   max-width: 920px;
   line-height: 1.3;
 
@@ -862,7 +659,7 @@
   font-size: 13px;
   line-height: 1.5;
 
-  color: #6b7280;
+  color: #66737c;
 
   max-width: 580px;
 
@@ -1112,8 +909,8 @@
 
 .benefitsSection {
   width: 100%;
-  background: #ffffff;
-  padding: 70px 0px;
+  background: #f8f8f8;
+  padding: 70px 70px;
   overflow: hidden;
 }
 
@@ -1232,12 +1029,6 @@
 }
 
 /* ICON HOVER */
-
-.benefitCard:hover .benefitIcon {
-  transform: translateY(-5px);
-
-  color: #a3cf5d;
-}
 
 /* =========================================
    CARD LINE
@@ -1393,46 +1184,12 @@
   width: 100%;
   overflow: hidden;
 
-  padding: 70px 0;
+  padding: 80px 70px;
 
   background: #ffffff;
 }
 
 /* BACKGROUND EFFECT */
-
-.whyTeckSection::before {
-  content: '';
-
-  position: absolute;
-  top: -300px;
-  right: -300px;
-
-  width: 700px;
-  height: 700px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(0, 138, 189, 0.08), transparent 70%);
-
-  pointer-events: none;
-}
-
-.whyTeckSection::after {
-  content: '';
-
-  position: absolute;
-  bottom: -250px;
-  left: -250px;
-
-  width: 700px;
-  height: 700px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(163, 207, 93, 0.1), transparent 70%);
-
-  pointer-events: none;
-}
 
 /* =========================================
    CONTAINER
@@ -1491,7 +1248,7 @@
 
   color: #053a51;
 
-  margin-bottom: 34px;
+  margin-bottom: 20px;
 }
 
 /* HIGHLIGHT */
@@ -1556,21 +1313,17 @@
 
   display: inline-block;
 
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1;
 
-  font-weight: 900;
-
   margin-bottom: 18px;
-
-  background: linear-gradient(180deg, #053a51, #008abd);
+  background: linear-gradient(90deg, #008abd);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-family: 'Poppins', sans-serif;
-
   animation: numberFloat 2s ease-in-out infinite;
+  font-weight: 800;
 }
 
 /* NUMBER SHADOW */
@@ -1852,70 +1605,17 @@
 /* ==============================6===========
    BUSINESS SECTION
 ========================================= */
-
 .businessSection {
-  position: relative;
   width: 100%;
+  background: #ffffff;
+  padding: 70px 120px;
   overflow: hidden;
-
-  padding: 60px 80px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
 }
-
-/* =========================================
-   BACKGROUND GLOW
-========================================= */
-
-.businessSection::before {
-  content: '';
-
-  position: absolute;
-  top: -320px;
-  left: -320px;
-
-  width: 750px;
-  height: 750px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(0, 138, 189, 0.08), transparent 70%);
-
-  pointer-events: none;
-}
-
-.businessSection::after {
-  content: '';
-
-  position: absolute;
-  bottom: -320px;
-  right: -320px;
-
-  width: 750px;
-  height: 750px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(163, 207, 93, 0.1), transparent 70%);
-
-  pointer-events: none;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
 
 .businessContainer {
-  position: relative;
-  z-index: 2;
-
   width: 100%;
-  max-width: 1500px;
-
-  margin: 0 auto;
-
-  padding-left: 70px;
-  padding-right: 70px;
+  max-width: 1350px;
+  margin: auto;
 }
 
 /* =========================================
@@ -1924,15 +1624,9 @@
 
 .businessLeft {
   text-align: center;
-
   max-width: 980px;
-
-  margin: 0 auto 130px;
-
-  animation: fadeUp 1s ease;
+  margin: 0 auto 70px;
 }
-
-/* LABEL */
 
 .businessLabel {
   background: linear-gradient(90deg, #053a51, #a3cf5d);
@@ -1949,49 +1643,36 @@
   display: inline-block;
 }
 
-/* TITLE */
-
 .businessTitle {
   font-size: 26px;
-  line-height: 1.7;
-
-  letter-spacing: 1.5px;
-
-  font-weight: 900;
-
+  line-height: 1.2;
+  font-weight: 800;
   color: #053a51;
-
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-
-/* HIGHLIGHT */
 
 .businessTitle span {
   color: #008abd;
 }
 
-/* GLOW */
-
-/* DESCRIPTION */
-
 .businessDescription {
-  margin-top: 14px;
-  font-size: 14px;
-  line-height: 2;
-
-  color: #667085;
+  max-width: 900px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #66737c;
 }
 
 /* =========================================
-   MODERN GRID
+   GRID
 ========================================= */
 
 .businessRight {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 70px 55px;
+  border-top: 1px dashed rgba(5, 58, 81, 0.14);
+  border-left: 1px dashed rgba(5, 58, 81, 0.14);
 }
 
 /* =========================================
@@ -2000,175 +1681,100 @@
 
 .businessCard {
   position: relative;
+  padding: 38px 26px;
 
-  padding-top: 80px;
+  border-right: 1px dashed rgba(5, 58, 81, 0.14);
+  border-bottom: 1px dashed rgba(5, 58, 81, 0.14);
 
-  animation: fadeUp 1s ease;
-
-  transition: transform 0.5s ease;
+  transition: 0.3s ease;
 }
 
-/* HOVER */
-
 .businessCard:hover {
-  transform: translateY(-10px);
+  background: rgba(0, 138, 189, 0.02);
 }
 
 /* NUMBER */
 
 .businessNumber {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  font-size: 46px;
+  font-size: 48px;
+  font-weight: 900;
   line-height: 1;
 
-  font-weight: 900;
+  color: rgba(5, 58, 81, 0.06);
 
-  color: rgba(5, 58, 81, 0.07);
-
-  letter-spacing: -3px;
-
-  transition: 0.5s ease;
-
-  font-family: 'Poppins', sans-serif;
-}
-
-/* NUMBER HOVER */
-
-.businessCard:hover .businessNumber {
-  color: rgba(0, 138, 189, 0.14);
-
-  transform: translateY(-6px);
+  margin-bottom: 20px;
 }
 
 /* TITLE */
 
 .businessCard h3 {
-  position: relative;
-
   font-size: 14px;
-  line-height: 1.5;
-
+  line-height: 1.4;
   font-weight: 700;
-
   color: #053a51;
-
-  margin-bottom: 18px;
-
-  padding-bottom: 18px;
-}
-
-/* LINE */
-
-.businessCard h3::after {
-  content: '';
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 70px;
-  height: 3px;
-
-  border-radius: 50px;
-
-  background: linear-gradient(90deg, #008abd, #a3cf5d);
-
-  transition: 0.5s ease;
-}
-
-/* LINE HOVER */
-
-.businessCard:hover h3::after {
-  width: 120px;
+  margin-bottom: 14px;
 }
 
 /* TEXT */
 
 .businessCard p {
   font-size: 13px;
-  line-height: 2;
-
-  color: #667085;
+  line-height: 1.5;
+  color: #66737c;
+  margin: 0;
 }
 
 /* =========================================
-   ANIMATION
+   RESPONSIVE
 ========================================= */
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .businessRight {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .businessTitle {
-    font-size: 4rem;
+    font-size: 38px;
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 768px) {
   .businessSection {
-    padding: 100px 0;
-  }
-
-  .businessContainer {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .businessTitle {
-    font-size: 2.9rem;
-
-    line-height: 1.05;
-  }
-
-  .businessDescription {
-    font-size: 15px;
-
-    line-height: 1.9;
+    padding: 60px 20px;
   }
 
   .businessRight {
     grid-template-columns: 1fr;
+  }
 
-    gap: 55px;
+  .businessLeft {
+    margin-bottom: 50px;
+  }
+
+  .businessTitle {
+    font-size: 30px;
+  }
+
+  .businessDescription {
+    font-size: 14px;
   }
 
   .businessCard {
-    padding-top: 65px;
+    padding: 28px 20px;
   }
 
   .businessNumber {
-    font-size: 4rem;
+    font-size: 38px;
   }
 
   .businessCard h3 {
-    font-size: 1.35rem;
+    font-size: 18px;
+  }
+
+  .businessCard p {
+    font-size: 14px;
   }
 }
-
 /* =========================================
    SMALL MOBILE
 ========================================= */

@@ -135,7 +135,7 @@ const Solutions = () => {
             </h3>
 
             <p>
-              From migration and DevOps automation to FinOps optimization and
+              From migration and Devops automation to Finops optimization and
               managed cloud services, we help enterprises maximize AWS
               performance securely.
             </p>

@@ -15,8 +15,7 @@ const ModernWorkplace = () => {
 
           <h2 className={styles.overviewTitle}>
             Microsoft Modern
-            <br />
-            <span>Workplace</span>
+            <span> Workplace</span>
           </h2>
 
           <p className={styles.overviewDescription}>
