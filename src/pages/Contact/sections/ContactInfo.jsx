@@ -155,7 +155,15 @@ export default function ContactInfo() {
             <div
               key={i}
               className={`${styles.addressCard} ${styles.reveal}`}
-              onClick={() => window.open(loc.map, '_blank')}
+              // onClick={() => window.open(loc.map, '_blank')}
+
+              onClick={() => {
+                const selectedText = window.getSelection()?.toString().trim();
+
+                if (selectedText) return; // Allow copy/select without opening map
+
+                window.open(loc.map, '_blank', 'noopener,noreferrer');
+              }}
             >
               <div className={styles.addressImage}>
                 <img
@@ -179,55 +187,63 @@ export default function ContactInfo() {
       </div>
 
       {/* ===== INDIA ===== */}
-      <div className={styles.addressCountrySection}>
-        <h4 className={styles.countryTitle}>TECKONNECT-INDIA</h4>
 
+      <div className={styles.addressCountryWrapper}>
+        {/* INDIA */}
         {offices[2].locations.map((loc, i) => (
           <div
             key={i}
-            className={`${styles.addressWideCard} ${styles.reveal}`}
-            onClick={() => window.open(loc.map, '_blank')}
+            className={styles.addressWideCard}
+            onClick={() => {
+              const selectedText = window.getSelection()?.toString().trim();
+
+              if (selectedText) return;
+
+              window.open(loc.map, '_blank', 'noopener,noreferrer');
+            }}
           >
             <div className={styles.addressWideImage}>
               <img
                 src={loc.image}
                 alt={loc.name}
-                // loading="lazy"
-                // decoding="async"
-                // fetchPriority="high"
               />
             </div>
 
             <div className={styles.addressWideInfo}>
+              <span className={styles.countryLabel}>TECKONNECT-INDIA</span>
+
               <h3>{loc.name}</h3>
+
               <p>{loc.address}</p>
             </div>
           </div>
         ))}
-      </div>
 
-      {/* ===== UK ===== */}
-      <div className={styles.addressCountrySection}>
-        <h4 className={styles.countryTitle}>TECKONNECT-UK</h4>
-
+        {/* UK */}
         {offices[1].locations.map((loc, i) => (
           <div
             key={i}
-            className={`${styles.addressWideCard} ${styles.reveal}`}
-            onClick={() => window.open(loc.map, '_blank')}
+            className={styles.addressWideCard}
+            onClick={() => {
+              const selectedText = window.getSelection()?.toString().trim();
+
+              if (selectedText) return;
+
+              window.open(loc.map, '_blank', 'noopener,noreferrer');
+            }}
           >
             <div className={styles.addressWideImage}>
               <img
                 src={loc.image}
                 alt={loc.name}
-                // loading="lazy"
-                // decoding="async"
-                // fetchPriority="high"
               />
             </div>
 
             <div className={styles.addressWideInfo}>
+              <span className={styles.countryLabel}>TECKONNECT-UK</span>
+
               <h3>{loc.name}</h3>
+
               <p>{loc.address}</p>
             </div>
           </div>

@@ -167,11 +167,12 @@ const industries = [
     img: `${import.meta.env.BASE_URL}images/logistics.jpg`,
     link: '/industries/logistics',
   },
+
   {
-    title: 'Oil & Gas',
-    desc: 'Enabling resilient and secure operations across remote and regulated environments where uptime is critical.',
-    img: `${import.meta.env.BASE_URL}images/oil.jpg`,
-    link: '/industries/oilgas',
+    title: 'Utilities',
+    desc: 'Supporting reliable and secure operations across distributed energy networks and infrastructure.',
+    img: `${import.meta.env.BASE_URL}images/utility.jpg`,
+    link: '/industries/utilities',
   },
   {
     title: 'Mining',
@@ -190,6 +191,13 @@ const industries = [
     desc: 'Supporting secure digital learning, collaboration, and reliable technology environments across schools and educational institutions.',
     img: '/images/6408.jpg',
     link: '/industries/Education',
+  },
+
+  {
+    title: 'NDIS',
+    desc: 'Helping disability support providers improve security, simplify compliance, streamline administration, and deliver better participant outcomes through secure, scalable technology solutions.',
+    img: `${import.meta.env.BASE_URL}images/ndis.jpg`,
+    link: '/industries/ndis',
   },
 ];
 

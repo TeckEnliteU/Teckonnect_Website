@@ -1,0 +1,514 @@
+/* ==========================================
+   BLOG DETAIL PAGE
+========================================== */
+
+.blogDetail {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.02);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 5%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.heroContent {
+  position: absolute;
+  left: 50%;
+  bottom: 55px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+.heroContent h1 {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 18px;
+  max-width: 900px;
+}
+
+.date {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* ==========================================
+   ARTICLE SECTION
+========================================== */
+
+.articleSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 80px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+/* ==========================================
+   ARTICLE
+========================================== */
+.shortDescription {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #4b5563;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.article {
+  width: 100%;
+}
+
+.articleContent {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Paragraphs */
+
+.articleContent p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Headings */
+
+.articleContent h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000000;
+  /* margin: 50px 0 22px; */
+  line-height: 1.3;
+}
+
+.articleContent h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  /* margin: 40px 0 18px; */
+  line-height: 1.35;
+  margin-bottom: 15px;
+}
+
+.articleContent h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  /* margin: 32px 0 16px; */
+  line-height: 1.4;
+}
+
+.articleContent h5 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+  /* margin: 28px 0 14px; */
+}
+
+.articleContent h6 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Lists */
+
+/* .articleContent ul,
+.articleContent ol {
+  margin: 20px 0 24px;
+  padding-left: 14px;
+}
+
+.articleContent li {
+  
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.articleContent li p {
+  margin: 0;
+} */
+/* Lists */
+
+.articleContent ul,
+.articleContent ol {
+  margin: 10px 0;
+  padding-left: 22px;
+}
+
+.articleContent li {
+  margin-bottom: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.articleContent li:last-child {
+  margin-bottom: 0;
+}
+
+/* Paragraph inside list */
+
+.articleContent li p {
+  margin: 0;
+  display: inline;
+}
+/* Strong */
+
+.articleContent strong {
+  color: #053a51;
+  font-weight: 700;
+}
+
+/* Links */
+
+.articleContent a {
+  color: #008abd;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.articleContent a:hover {
+  text-decoration: underline;
+}
+
+/* Horizontal Rule */
+
+.articleContent hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 45px 0;
+}
+/* ==========================================
+   TABLES
+========================================== */
+
+.articleContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 35px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #dbe4ea;
+  background: #fff;
+}
+
+.articleContent th {
+  background: #053a51;
+  color: #fff;
+  padding: 7px 7px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #dbe4ea;
+}
+
+.articleContent td {
+  padding: 7px 7px;
+  border: 1px solid #dbe4ea;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.3;
+  vertical-align: top;
+}
+
+.articleContent tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.articleContent tr:hover {
+  background: #eef7fb;
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+.articleContent img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 35px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Caption */
+
+.articleContent figure {
+  margin: 35px 0;
+}
+
+.articleContent figcaption {
+  margin-top: 10px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==========================================
+   BLOCKQUOTE
+========================================== */
+
+.articleContent blockquote {
+  margin: 35px 0;
+  padding: 24px 30px;
+  border-left: 5px solid #008abd;
+  background: #f5fbfd;
+  font-style: italic;
+  color: #374151;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   CODE
+========================================== */
+
+.articleContent pre {
+  overflow-x: auto;
+  background: #1f2937;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.articleContent code {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 14px;
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.loader {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #053a51;
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+.articleContent ::selection {
+  background: #008abd;
+  color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+  .heroContent {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: 420px;
+  }
+
+  .heroContent {
+    bottom: 40px;
+    padding: 0 25px;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+    max-width: 100%;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
+  .articleSection {
+    padding: 50px 20px 70px;
+  }
+
+  .articleContent {
+    font-size: 16px;
+  }
+
+  .articleContent p {
+    font-size: 16px;
+  }
+
+  .articleContent h2 {
+    font-size: 30px;
+  }
+
+  .articleContent h3 {
+    font-size: 24px;
+  }
+
+  .articleContent h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 340px;
+  }
+
+  .heroContent {
+    bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .heroContent h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .date {
+    font-size: 15px;
+  }
+
+  .articleSection {
+    padding: 40px 16px 60px;
+  }
+
+  .articleContent {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .articleContent p {
+    font-size: 15px;
+  }
+
+  .articleContent h2 {
+    font-size: 26px;
+  }
+
+  .articleContent h3 {
+    font-size: 22px;
+  }
+
+  .articleContent h4 {
+    font-size: 18px;
+  }
+
+  .articleContent table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .articleContent img {
+    border-radius: 8px;
+  }
+
+  .ctaSection {
+    margin-top: 50px;
+    padding: 0 16px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 280px;
+  }
+
+  .heroContent {
+    padding: 0 16px;
+    bottom: 25px;
+  }
+
+  .heroContent h1 {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .articleSection {
+    padding: 30px 15px 50px;
+  }
+
+  .articleContent p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .articleContent h2 {
+    font-size: 22px;
+  }
+
+  .articleContent h3 {
+    font-size: 20px;
+  }
+
+  .articleContent h4 {
+    font-size: 17px;
+  }
+
+  .articleContent ul,
+  .articleContent ol {
+    padding-left: 22px;
+  }
+}

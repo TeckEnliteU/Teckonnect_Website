@@ -25,30 +25,66 @@ section {
 /* ========================= */
 /* HERO SECTION */
 /* ========================= */
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
 .hero {
-  min-height: 95vh;
+  position: relative;
+  height: 100vh;
+  padding: 140px 20px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 0 20px;
-
-  background: linear-gradient(to right, #ffffff 0%, #eef7ff 50%, #bcdefc 100%);
-}
-
-/* CENTER WRAPPER */
-.centerWrap {
-  max-width: 900px;
   text-align: center;
+
+  overflow: hidden;
 }
 
-/* ========================= */
+/* IMAGE LAYER */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: url('/images/aboutus/About us Page.jpg') center/cover no-repeat;
+
+  filter: grayscale(100%) brightness(0.9);
+  z-index: 0;
+}
+
+/* OVERLAY */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(12, 74, 110, 0.85) 100%
+  );
+
+  z-index: 1;
+}
+
+/* CONTENT */
+.heroContent,
+.centerWrap {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 /* BADGE */
-/* ========================= */
 .badge {
   font-size: 14px;
   letter-spacing: 1.5px;
   font-weight: 900;
+
   background: linear-gradient(90deg, #ffffff, #a3cf5d);
 
   -webkit-background-clip: text;
@@ -56,32 +92,43 @@ section {
 
   text-transform: uppercase;
   margin-bottom: 10px;
-  padding: auto;
   display: inline-block;
 }
 
-/* ========================= */
 /* TITLE */
-/* ========================= */
 .title {
   font-size: 46px;
   font-weight: 700;
-  line-height: 1.15;
-  color: #000;
-  margin-bottom: 14px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 18px;
 }
 
-/* ========================= */
-/* SUBTITLE */
-/* ========================= */
+/* DESCRIPTION */
 .subtitle {
   font-size: 13px;
-  color: #6b7280;
   line-height: 1.7;
-  max-width: 750px;
-  margin: 0 auto;
+  color: #ffffff;
+
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* GSAP REVEAL SUPPORT */
+.reveal {
+  will-change: transform, opacity;
+}
+
+/* MASK */
+.textMask {
+  overflow: hidden;
+}
+
+.lineWrap {
+  display: inline-block;
+}
 /* ========================= */
 /* ANIMATION BASE */
 /* ========================= */
@@ -276,12 +323,26 @@ section {
 /* ============================= */
 /* CARD */
 /* ============================= */
+/* .serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
 .serviceCard {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  padding: 20px;
+  border-radius: 16px;
+
+  transition: all 0.25s ease;
 }
 
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
 /* ============================= */
 /* ICON */
 /* ============================= */
@@ -306,13 +367,23 @@ section {
 /* ============================= */
 /* TITLE */
 /* ============================= */
+/* .serviceCard h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+} */
 .serviceCard h3 {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #111;
+  transition: color 0.3s ease;
 }
 
+.serviceCard:hover h3 {
+  color: #008abd;
+}
 /* ============================= */
 /* TEXT */
 /* ============================= */
@@ -533,28 +604,40 @@ section {
   color: #fff;
 
   cursor: pointer;
-  overflow: hidden;
+  text-decoration: none !important;
+
   display: inline-flex;
   align-items: center;
-  text-decoration: none !important;
-  gap: 8px;
-}
+  gap: 0;
 
-/* Arrow initial state */
-.arrow {
-  opacity: 0;
-  transform: translateX(-10px);
   transition: all 0.3s ease;
 }
 
-/* On hover OR click feel */
+/* Arrow */
+.arrow {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  margin-left: 0;
+  transform: translateX(-6px);
+
+  transition:
+    opacity 0.3s ease,
+    max-width 0.3s ease,
+    margin-left 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover */
 .btn:hover .arrow,
 .btn:focus .arrow {
   opacity: 1;
+  max-width: 20px;
+  margin-left: 6px;
   transform: translateX(0);
 }
 
-/* Optional: button press animation */
+/* Click */
 .btn:active {
   transform: scale(0.96);
 }
@@ -673,32 +756,40 @@ section {
   font-size: 14px;
 
   cursor: pointer;
-
-  display: inline-flex; /* 🔥 needed */
-  align-items: center;
-  gap: 8px;
-
-  overflow: hidden;
   text-decoration: none !important;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+
+  transition: all 0.3s ease;
 }
 
-/* 🔥 Arrow */
+/* Arrow */
 .partnerBtn .arrow {
   opacity: 0;
-  transform: translateX(-10px);
+  max-width: 0;
+  overflow: hidden;
+  margin-left: 0;
+  transform: translateX(-6px);
+
   transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+    opacity 0.3s ease,
+    max-width 0.3s ease,
+    margin-left 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* 🔥 Hover effect */
+/* Hover */
 .partnerBtn:hover .arrow,
 .partnerBtn:focus .arrow {
   opacity: 1;
+  max-width: 20px;
+  margin-left: 6px;
   transform: translateX(0);
 }
 
-/* 🔥 Click press */
+/* Click */
 .partnerBtn:active {
   transform: scale(0.96);
 }
@@ -1078,28 +1169,36 @@ section {
 /* ============================= */
 
 .ctaSection {
-  padding: 40px 8%; /* 🔥 controls top & bottom space */
-  margin: 0; /* 🔥 removes unwanted extra gap */
-  background: #ffffff;
+  padding: 0; /* remove outer white spacing */
+  margin: 0;
+  background: transparent;
+  width: 100%;
 }
 
 .ctaBox {
   position: relative;
 
-  /* SPACE FIX */
-  padding: 70px 70px;
-  border-radius: 24px;
+  /* KEEP SAME HEIGHT/SPACING */
+  padding: 20px 8%;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* REMOVE BOX LOOK */
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+
   overflow: hidden;
 
+  /* SAME COLOR */
   background: linear-gradient(135deg, #053a51, #a3cf5d);
 
   text-align: center;
   color: white;
-
-  /* CENTER + WIDTH CONTROL */
-  max-width: 1100px;
-  margin: 0 auto; /* ✅ centers the box */
 }
+
 /* ============================= */
 /* ORBIT WRAPPER */
 /* ============================= */
@@ -1148,7 +1247,7 @@ section {
 
 /* LOGO */
 .orbit img {
-  width: 40px;
+  width: 30px;
   margin-top: -20px; /* push to top of circle */
 }
 
@@ -1183,40 +1282,62 @@ section {
   opacity: 0.95;
 }
 
+/* .ctaContent button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+
+  color: #111;
+} */
 .ctaContent button {
   margin-top: 30px;
   padding: 12px 20px;
   border-radius: 20px;
   border: none;
-  font-size: 14px;
+  font-size: 13px;
 
   background: linear-gradient(90deg, #ffffff, #a3cf5d);
   color: #111;
 
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    padding-right 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* 👉 arrow using CSS (no icon needed) */
 .ctaContent button::after {
   content: '→';
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all 0.3s ease;
-}
 
-/* 👉 hover OR click feel */
-.ctaContent button:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+  position: absolute;
+  right: 18px;
+  top: 50%;
+
+  transform: translate(-8px, -50%);
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .ctaContent button:hover {
+  padding-right: 38px; /* increase only right side */
   transform: translateY(-2px);
+}
+
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translate(0, -50%);
 }
 @media (max-width: 768px) {
   /* SECTION */

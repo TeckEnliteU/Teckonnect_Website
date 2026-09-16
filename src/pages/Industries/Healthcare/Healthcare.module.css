@@ -907,28 +907,42 @@
 }
 /* cta section */
 
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
 .ctaSection {
-  padding: 40px 8%; /* 🔥 controls top & bottom space */
-  margin: 0; /* 🔥 removes unwanted extra gap */
-  background: #f8fafc;
+  padding: 0; /* remove outer white spacing */
+  margin: 0;
+  background: transparent;
+  width: 100%;
 }
+
 .ctaBox {
   position: relative;
 
-  /* SPACE FIX */
-  padding: 70px 70px;
-  border-radius: 24px;
+  /* KEEP SAME HEIGHT/SPACING */
+  padding: 20px 8%;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* REMOVE BOX LOOK */
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+
   overflow: hidden;
 
+  /* SAME COLOR */
   background: linear-gradient(135deg, #053a51, #a3cf5d);
 
   text-align: center;
   color: white;
-
-  /* CENTER + WIDTH CONTROL */
-  max-width: 1100px;
-  margin: 0 auto; /* ✅ centers the box */
 }
+
 /* ============================= */
 /* ORBIT WRAPPER */
 /* ============================= */
@@ -977,7 +991,7 @@
 
 /* LOGO */
 .orbit img {
-  width: 40px;
+  width: 30px;
   margin-top: -20px; /* push to top of circle */
 }
 
@@ -1002,16 +1016,26 @@
 .ctaContent h2 {
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .ctaContent p {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.7;
   opacity: 0.95;
 }
 
+/* .ctaContent button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+
+  color: #111;
+} */
 .ctaContent button {
   margin-top: 30px;
   padding: 12px 20px;
@@ -1024,28 +1048,40 @@
 
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    padding-right 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* 👉 arrow using CSS (no icon needed) */
 .ctaContent button::after {
   content: '→';
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all 0.3s ease;
-}
 
-/* 👉 hover OR click feel */
-.ctaContent button:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+  position: absolute;
+  right: 18px;
+  top: 50%;
+
+  transform: translate(-8px, -50%);
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .ctaContent button:hover {
+  padding-right: 38px; /* increase only right side */
   transform: translateY(-2px);
+}
+
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translate(0, -50%);
 }
 @media (max-width: 768px) {
   /* SECTION */

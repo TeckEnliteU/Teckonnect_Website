@@ -20,19 +20,19 @@ import styles from '../home.module.css';
 // ];
 
 const logos = [
-  `${import.meta.env.BASE_URL}partners/pax8.svg`,
-  `${import.meta.env.BASE_URL}partners/TechData.svg`,
-  `${import.meta.env.BASE_URL}partners/Redington.svg`,
-  `${import.meta.env.BASE_URL}partners/Ingram MIcro.svg`,
-  `${import.meta.env.BASE_URL}partners/BriskInfosec.svg`,
-  `${import.meta.env.BASE_URL}partners/crayon.svg`,
-  `${import.meta.env.BASE_URL}partners/FCC.svg`,
-  `${import.meta.env.BASE_URL}partners/kissflow.svg`,
-  `${import.meta.env.BASE_URL}partners/mbs.svg`,
-  `${import.meta.env.BASE_URL}partners/salesforce.svg`,
-  `${import.meta.env.BASE_URL}partners/acronis.svg`,
-  `${import.meta.env.BASE_URL}partners/volody.svg`,
-  `${import.meta.env.BASE_URL}partners/SigniFlow.svg`,
+  `${import.meta.env.BASE_URL}log-partners/pax8.svg`,
+  `${import.meta.env.BASE_URL}log-partners/TechData.svg`,
+  `${import.meta.env.BASE_URL}log-partners/Redington.svg`,
+  `${import.meta.env.BASE_URL}log-partners/Ingram MIcro.svg`,
+  `${import.meta.env.BASE_URL}log-partners/BriskInfosec.svg`,
+  `${import.meta.env.BASE_URL}log-partners/crayon.svg`,
+  `${import.meta.env.BASE_URL}log-partners/FCC.svg`,
+  `${import.meta.env.BASE_URL}log-partners/kissflow.svg`,
+  `${import.meta.env.BASE_URL}log-partners/mbs.svg`,
+  `${import.meta.env.BASE_URL}log-partners/salesforce.svg`,
+  `${import.meta.env.BASE_URL}log-partners/acronis.svg`,
+  `${import.meta.env.BASE_URL}log-partners/volody.svg`,
+  `${import.meta.env.BASE_URL}log-partners/SigniFlow.svg`,
 ];
 const LogoStrip = () => {
   return (
@@ -42,7 +42,7 @@ const LogoStrip = () => {
         <div className={styles.logoText}>
           <h2>
             Trusted by leading <br />
-            companies worldwide
+            <span>companies worldwide</span>
           </h2>
         </div>
 

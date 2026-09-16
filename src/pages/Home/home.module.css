@@ -284,11 +284,28 @@ body {
 }
 
 .rightText {
+  position: relative;
+
   max-width: 420px;
+  padding-left: 28px;
+
   color: #666;
   font-size: 14px;
+  line-height: 1.9;
   margin-top: 56px;
-  line-height: 1.7;
+}
+
+.rightText::before {
+  content: '❝';
+  position: absolute;
+  left: 0;
+  top: -20px;
+
+  font-size: 22px;
+  line-height: 2;
+
+  color: #222121;
+  font-weight: 20;
 }
 
 /* ========================= */
@@ -359,13 +376,14 @@ body {
   padding: 30px 25px;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease;
+
+  /* transition: transform 0.3s ease; */
 }
 
 /* HOVER */
-.card:hover {
+/* .card:hover {
   transform: translateY(-6px);
-}
+} */
 
 /* ========================= */
 /* ICON */
@@ -573,12 +591,17 @@ body {
   align-items: flex-start;
   gap: 20px;
 
-  transition: all 0.3s ease;
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 .serviceItem:hover {
-  transform: translateY(-3px);
+  transform: translateY(-8px);
 }
+
+/* .serviceItem:hover {
+  transform: translateY(-3px);
+} */
 
 /* ============================= */
 /* ICON */
@@ -600,12 +623,12 @@ body {
   width: 26px;
   height: 26px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
-.serviceItem:hover .serviceIcon img {
+/* .serviceItem:hover .serviceIcon img {
   transform: scale(1.1);
-}
+} */
 
 /* ============================= */
 /* TEXT */
@@ -713,10 +736,6 @@ body {
   /* 🔥 ITEM FIX */
   .serviceItem {
     gap: 14px;
-  }
-
-  .serviceItem:hover {
-    transform: none; /* ❌ remove hover shift for mobile */
   }
 
   /* ICON */
@@ -854,6 +873,7 @@ body {
   color: #0b7fab;
   margin-bottom: 15px;
 }
+
 .cardIcon img {
   width: 28px;
   height: 28px;
@@ -976,11 +996,13 @@ body {
 /* ============================= */
 .logoText h2 {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 900;
   color: #111827;
   line-height: 1.4;
 }
-
+h2 span {
+  color: #0b7fab;
+}
 /* ============================= */
 /* STRIP */
 /* ============================= */
@@ -1030,7 +1052,9 @@ body {
 .logoItem:hover {
   opacity: 1;
 }
-
+.logoStrip:hover .track {
+  animation-play-state: paused;
+}
 /* ============================= */
 /* PERFECT LOOP ANIMATION */
 /* ============================= */
@@ -1246,8 +1270,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px; /* 👈 space between text + arrow */
-
+  gap: 0;
   margin-top: 30px;
   padding: 12px 20px;
 
@@ -1260,47 +1283,28 @@ body {
   font-size: 14px;
   font-weight: 500;
 
-  white-space: nowrap;
-
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-
-  transition: filter 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-/* 👉 Arrow (reserved space, no cut) */
 .IprimaryBtn::after {
   content: '→';
-
   opacity: 0;
-  transform: translateX(-4px);
-
-  display: inline-block;
-  width: 14px; /* 🔥 reserve space */
+  max-width: 0;
+  overflow: hidden;
+  transform: translateX(-6px);
 
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-}
-
-/* 👉 Hover */
-.IprimaryBtn:hover {
-  filter: brightness(1.05);
+    opacity 0.3s ease,
+    max-width 0.3s ease,
+    margin-left 0.3s ease,
+    transform 0.3s ease;
 }
 
 .IprimaryBtn:hover::after {
   opacity: 1;
+  max-width: 20px;
+  margin-left: 6px;
   transform: translateX(0);
-}
-
-/* 👉 Click (no movement = no cut) */
-.IprimaryBtn:active {
-  filter: brightness(0.92);
-}
-
-/* 👉 Safety (if any parent clips) */
-.IprimaryBtn {
-  overflow: visible;
 }
 /* ============================= */
 /* ARROW */
@@ -1352,27 +1356,34 @@ body {
 /* ============================= */
 
 .ctaSection {
-  padding: 40px 8%; /* 🔥 controls top & bottom space */
-  margin: 0; /* 🔥 removes unwanted extra gap */
-  background: #ffffff;
+  padding: 0; /* remove outer white spacing */
+  margin: 0;
+  background: transparent;
+  width: 100%;
 }
 
 .ctaBox {
   position: relative;
 
-  /* SPACE FIX */
-  padding: 70px 70px;
-  border-radius: 24px;
+  /* KEEP SAME HEIGHT/SPACING */
+  padding: 20px 8%;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* REMOVE BOX LOOK */
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+
   overflow: hidden;
 
+  /* SAME COLOR */
   background: linear-gradient(135deg, #053a51, #a3cf5d);
 
   text-align: center;
   color: white;
-
-  /* CENTER + WIDTH CONTROL */
-  max-width: 1100px;
-  margin: 0 auto; /* ✅ centers the box */
 }
 
 /* ============================= */
@@ -1480,28 +1491,40 @@ body {
 
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    padding-right 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* 👉 arrow using CSS (no icon needed) */
 .ctaContent button::after {
   content: '→';
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all 0.3s ease;
-}
 
-/* 👉 hover OR click feel */
-.ctaContent button:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+  position: absolute;
+  right: 18px;
+  top: 50%;
+
+  transform: translate(-8px, -50%);
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .ctaContent button:hover {
+  padding-right: 38px; /* increase only right side */
   transform: translateY(-2px);
+}
+
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translate(0, -50%);
 }
 @media (max-width: 768px) {
   /* SECTION */

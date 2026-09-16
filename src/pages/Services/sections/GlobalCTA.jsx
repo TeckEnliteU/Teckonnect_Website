@@ -89,7 +89,7 @@ export default function Cta() {
           </motion.h2>
 
           <motion.p variants={textReveal}>
-            Talk to our experts about your Microsoft, AWS, IBM, and Adobe
+            Book for Assesment about your Microsoft, AWS, IBM, and Adobe
             environments and see <br /> how a unified managed services approach
             reduces complexity and risk.
           </motion.p>

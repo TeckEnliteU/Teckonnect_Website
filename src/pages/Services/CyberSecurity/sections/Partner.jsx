@@ -6,7 +6,7 @@ import styles from '../CyberSecurity.module.css';
 import { Link } from 'react-router-dom';
 const partners = [
   {
-    logo: '/partners/BriskInfosec.svg',
+    logo: '/log-partners/BriskInfosec.svg',
 
     title: 'Briskinfosec-Powered Security Services',
 
@@ -26,7 +26,7 @@ const partners = [
   },
 
   {
-    logo: '/partners/acronis.svg',
+    logo: '/log-partners/acronis.svg',
 
     title: 'Acronis Cyber Protection Solutions',
 

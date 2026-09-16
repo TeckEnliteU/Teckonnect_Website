@@ -90,7 +90,7 @@ const Hero = () => {
             to="/contact"
             className={styles.primaryBtn}
           >
-            <span className="btnText">Book a free consultation</span>
+            <span className="btnText">Book for Assesment</span>
             <span className="btnArrow"></span>
           </Link>
 

@@ -10,10 +10,8 @@ const Partners = () => {
   return (
     <div>
       <Hero />
-
       <KeyTechnologyPartners />
       <PartnersList />
-
       <Cta />
     </div>
   );

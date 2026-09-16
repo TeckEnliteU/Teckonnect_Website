@@ -10,6 +10,7 @@ import GlobalCTA from './sections/GlobalCTA';
 import Industries from './sections/Industries';
 import TrustBar from './sections/TrustBar';
 import WhoWeAre from './sections/WhoWeAre';
+import CaseStudiesSection from '../Insights/CaseStudies/CaseStudiesSection';
 const Home = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const Home = () => {
       <Industries />
 
       <LogoMarquee />
+      <CaseStudiesSection />
 
       <GlobalCTA />
     </div>

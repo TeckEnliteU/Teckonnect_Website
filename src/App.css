@@ -8,7 +8,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
+* {
+  font-family: 'Onest', sans-serif;
+  box-sizing: border-box;
+}
 /* Better rendering */
 * {
   box-sizing: border-box;

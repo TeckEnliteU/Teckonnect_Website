@@ -86,12 +86,13 @@ export default function GlobalCTA() {
 
           <motion.p variants={textReveal}>
             Start a conversation to understand your current environment, risks,
+            <br />
             and opportunities—and explore a clearer way forward.
           </motion.p>
 
           <motion.div variants={textReveal}>
             <Link to="/contact">
-              <button className={styles.ctaBtn}>Talk to our experts</button>
+              <button className={styles.ctaBtn}>Book for Assesment</button>
             </Link>
           </motion.div>
         </motion.div>

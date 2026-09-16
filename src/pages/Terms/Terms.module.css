@@ -1,0 +1,138 @@
+.policyPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.policyHeader {
+  width: 100%;
+  text-align: center;
+  padding: 18px 20px;
+
+  /* border-top: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a; */
+
+  background: #f3f3f3;
+}
+
+.policyTitle {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 89px;
+  background: linear-gradient(90deg, #053a51 0%, #a3cf5d 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.policyContent {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 60px 40px 100px;
+}
+
+.policyContent h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #111;
+  margin: 0 0 25px;
+}
+
+.policyContent h2:not(:first-child) {
+  margin-top: 55px;
+}
+
+.policyContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  margin: 0 0 12px;
+}
+
+.policyContent ul,
+.policyContent ol {
+  margin: 0 0 25px 28px;
+  padding: 0;
+}
+
+.policyContent li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.policyContent strong {
+  font-weight: 700;
+  color: #111;
+}
+
+.policyContent a {
+  color: #008abd;
+  text-decoration: none;
+}
+
+.policyContent a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.policyContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+
+.policyContent th,
+.policyContent td {
+  border: 1px solid #d9d9d9;
+  padding: 12px;
+  text-align: left;
+}
+
+.policyContent th {
+  background: #f0f0f0;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .policyHeader {
+    padding: 18px 15px;
+  }
+
+  .policyTitle {
+    font-size: 18px;
+  }
+
+  .policyContent {
+    padding: 40px 20px 70px;
+  }
+
+  .policyContent h2 {
+    font-size: 18px;
+  }
+
+  .policyContent p,
+  .policyContent li {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,406 @@
+/* ===================================================
+   BLOGS
+=================================================== */
+
+/* .blogs {
+  width: 100%;
+  background: #fff;
+  padding: 20px 60px;
+
+  margin-bottom: 40px;
+} */
+.blogs {
+  width: 100%;
+  background: #fff;
+  padding: 20px 60px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ===================================================
+   HERO
+=================================================== */
+
+.hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  height: 350px; /* Keep your current height */
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+.heroContent h1 {
+  color: #fff;
+  font-size: 46px;
+  font-weight: 700;
+}
+
+/* ===================================================
+   INTRO
+=================================================== */
+
+.introSection {
+  padding: 55px 0 35px;
+}
+
+.introContainer {
+  width: 90%;
+  max-width: 1180px;
+  margin: auto;
+  text-align: center;
+}
+
+.introContainer h2 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000000;
+
+  max-width: 940px;
+  margin: auto;
+}
+
+/* ===================================================
+   SEARCH
+=================================================== */
+
+.searchSection {
+  margin-bottom: 55px;
+}
+
+.searchContainer {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 260px 1fr 170px;
+}
+
+.searchLabel {
+  display: flex;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #222;
+}
+
+.searchInput {
+  height: 48px;
+
+  border: 1px solid #d8d8d8;
+
+  padding: 0 18px;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #008abd;
+}
+
+.searchBtn {
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.searchBtn:hover {
+  opacity: 0.9;
+}
+/* ===================================================
+   GRID
+=================================================== */
+/* ===========================================
+   GRID SECTION
+=========================================== */
+
+.gridSection {
+  width: 92%;
+  max-width: 1400px;
+  margin: 60px auto 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.card {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+/* Badge */
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  min-width: 120px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(90deg, #9fd05b, #053a51);
+  color: #fff;
+
+  border-bottom-left-radius: 24px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Body */
+
+.cardBody {
+  padding: 18px 20px 22px;
+}
+
+.date {
+  display: block;
+  /* margin-bottom: 12px; */
+
+  font-size: 13px;
+  color: #666;
+}
+
+.date strong {
+  color: #008abd;
+}
+
+.cardTitle {
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  /* margin-bottom: 14px; */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.description {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.7;
+
+  /* margin-bottom: 22px; */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #008abd;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.readMore::after {
+  content: '→';
+  transition: 0.3s;
+}
+
+.card:hover .readMore::after {
+  transform: translateX(5px);
+}
+
+.card:hover .cardTitle {
+  color: #008abd;
+}
+
+/* ===========================================
+   NO RESULTS
+=========================================== */
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 0;
+  font-size: 22px;
+  color: #777;
+}
+.paginationWrapper {
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pageBtn,
+.pageArrow {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #e6e6e6;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.pageArrow {
+  background: transparent;
+  font-size: 26px;
+}
+
+.pageBtn:hover {
+  background: #053a51;
+  color: #fff;
+}
+
+.activePage {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: #fff;
+}
+
+.pageArrow:hover {
+  color: #053a51;
+}
+
+.pageArrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.gotoPage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gotoPage span {
+  font-size: 16px;
+  color: #111;
+}
+
+.gotoPage strong {
+  color: #008abd;
+}
+
+.gotoPage select {
+  width: 55px;
+
+  border: none;
+  border-bottom: 1px solid #222;
+
+  background: transparent;
+
+  outline: none;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .paginationWrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

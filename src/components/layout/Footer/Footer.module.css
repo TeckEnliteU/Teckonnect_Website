@@ -2,7 +2,7 @@
 /* FOOTER BASE */
 /* ========================= */
 .footer {
-  background: #053a51;
+  background: #252f3e;
   color: #fff;
   padding: 80px 6% 40px;
   position: relative;
@@ -118,19 +118,28 @@
 /* ========================= */
 .footer_contactItem {
   display: flex;
-  /* align-items: center; */
-  gap: 10px;
-  align-items: flex-start; /* icon starts at top */
-  margin-bottom: 12px;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
   color: #cfd6db;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .footer_contactItem svg {
   color: #a3cf5d;
-  font-size: 14px;
-  min-width: 16px;
+  font-size: 15px;
+  min-width: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.footer_contactItem span,
+.footer_contactItem a {
+  display: inline-block;
+  color: #cfd6db;
+  text-decoration: none;
+  line-height: 1.6;
 }
 
 /* ========================= */
@@ -166,7 +175,7 @@
 }
 
 .footer_bottom a:hover {
-  color: #a3cf5d;
+  color: #9ec85b;
 }
 
 /* ========================= */

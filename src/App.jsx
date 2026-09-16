@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import ScrollToTop from './components/layout/ScrollToTop';
 // Layout
 import Navbar from './components/layout/Navbar';
@@ -32,7 +33,7 @@ import Healthcare from './pages/Industries/Healthcare/Healthcare';
 import Manufacturing from './pages/Industries/Manufacturing/Manufacturing';
 import NonProfit from './pages/Industries/NonProfit/NonProfit';
 import Retail from './pages/Industries/Retail/Retail';
-
+import NDIS from './pages/Industries/NDIS/NDIS';
 import Mining from './pages/Industries/Mining/Mining';
 import Logistics from './pages/Industries/Logistics/Logistics';
 import SmallEnterpriseBusiness from './pages/Industries/SmallEnterpriseBusiness/SmallEnterpriseBusiness';
@@ -42,11 +43,99 @@ import AWSPartner from './pages/Partners/Aws/AwsPartner';
 import AdobePartner from './pages/Partners/Adobe/AdobePartner';
 import IBMPartner from './pages/Partners/Ibm/IBMPartner';
 import Utilities from './pages/Industries/OilGas/Utilities';
+import CaseStudyDetail from './pages/Insights/CaseStudies/CaseStudyDetail';
+import CaseStudies from './pages/Insights/CaseStudies/CaseStudies';
+import Insights from './pages/Insights/Insights';
+import Blogs from './pages/Insights/Blogs/Blogs';
+import BlogDetail from './pages/Insights/Blogs/BlogDetail';
+import Terms from './pages/Terms/Terms';
+import Privacy from './pages/Privacy/Privacy';
+import Cookies from './pages/Cookies/Cookies';
+import CookieBanner from './components/CookieBanner/CookieBanner';
+// function VisitorTracker() {
+//   const location = useLocation();
+
+//   useEffect(() => {
+//     const consent = localStorage.getItem('cookieConsent');
+
+//     if (consent !== 'accepted') return;
+
+//     let visitorId = localStorage.getItem('visitorId');
+
+//     if (!visitorId) {
+//       visitorId = crypto.randomUUID();
+//       localStorage.setItem('visitorId', visitorId);
+//     }
+
+//     fetch('https://teckonnect.com/visitor.php', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         visitorId,
+//         pageUrl: window.location.href,
+//         referrer: document.referrer,
+//         language: navigator.language,
+//         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+//         screenResolution: `${screen.width}x${screen.height}`,
+//       }),
+//     }).catch(console.error);
+//   }, [location.pathname]);
+
+//   return null;
+// }
+
+function VisitorTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookieConsent');
+
+    if (consent !== 'accepted') return;
+
+    let visitorId = localStorage.getItem('visitorId');
+
+    if (!visitorId) {
+      visitorId = crypto.randomUUID();
+      localStorage.setItem('visitorId', visitorId);
+    }
+
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    const visitorLocalTime = new Date()
+      .toLocaleString('sv-SE', {
+        timeZone: timezone,
+      })
+      .replace(' ', 'T');
+
+    fetch('https://teckonnect.com/visitor.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        visitorId,
+        pageUrl: window.location.href,
+        referrer: document.referrer,
+        language: navigator.language,
+        timezone,
+        visitorLocalTime,
+        screenResolution: `${screen.width}x${screen.height}`,
+      }),
+    }).catch(console.error);
+  }, [location.pathname]);
+
+  return null;
+}
 function App() {
   return (
     // <BrowserRouter>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
+
+      <VisitorTracker />
+      <CookieBanner />
       <Navbar />
 
       <div className="page">
@@ -102,6 +191,7 @@ function App() {
           />
 
           {/* inner pages end  */}
+
           <Route
             path="/partners"
             element={<Partners />}
@@ -131,6 +221,11 @@ function App() {
           <Route
             path="/about"
             element={<About />}
+          />
+
+          <Route
+            path="/contact-us"
+            element={<Contact />}
           />
           <Route
             path="/contact"
@@ -185,6 +280,47 @@ function App() {
           <Route
             path="/Industries/Education"
             element={<Education />}
+          />
+          <Route
+            path="/Industries/NDIS"
+            element={<NDIS />}
+          />
+          {/* Insights pages */}
+
+          <Route
+            path="/insights"
+            element={<Insights />}
+          />
+          <Route
+            path="/insights/case-studies"
+            element={<CaseStudies />}
+          />
+          <Route
+            path="/insights/case-studies/:slug"
+            element={<CaseStudyDetail />}
+          />
+
+          {/* Blogs pages  */}
+          <Route
+            path="/insights/blogs"
+            element={<Blogs />}
+          />
+          <Route
+            path="/insights/blogs/:slug"
+            element={<BlogDetail />}
+          />
+          {/* Terms and Privacy */}
+          <Route
+            path="/terms"
+            element={<Terms />}
+          />
+          <Route
+            path="/privacy"
+            element={<Privacy />}
+          />
+          <Route
+            path="/cookies"
+            element={<Cookies />}
           />
         </Routes>
       </div>

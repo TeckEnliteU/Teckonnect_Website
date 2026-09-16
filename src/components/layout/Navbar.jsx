@@ -27,6 +27,9 @@ function Navbar() {
   const [partnersOpen, setPartnersOpen] = useState(false);
 
   const [activePartner, setActivePartner] = useState('microsoft');
+
+  const [insightsOpen, setInsightsOpen] = useState(false);
+  const [activeInsight, setActiveInsight] = useState('case-studies');
   /* REFS */
 
   const searchRef = useRef(null);
@@ -49,6 +52,15 @@ function Navbar() {
     { name: 'About Us', path: '/about' },
 
     { name: 'Contact', path: '/contact' },
+
+    { name: 'Case Studies', path: '/case-studies' },
+
+    { name: 'Insights', path: '/insights' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Newsletter', path: '/newsletter' },
+    { name: 'Articles', path: '/articles' },
+    { name: 'White Papers', path: '/white-papers' },
   ];
 
   /* SCROLL EFFECT */
@@ -606,7 +618,18 @@ function Navbar() {
                         <span>Public Sector</span>
                         <span>›</span>
                       </button>
-
+                      <button
+                        className={
+                          activeIndustry === 'NDIS' ? 'active-industry' : ''
+                        }
+                        onMouseEnter={() => setActiveIndustry('NDIS')}
+                        onClick={() =>
+                          handleIndustryNavigate('/industries/ndis')
+                        }
+                      >
+                        <span>NDIS</span>
+                        <span>›</span>
+                      </button>
                       <button
                         className={
                           activeIndustry === 'healthcare'
@@ -756,6 +779,197 @@ function Navbar() {
                       onClick={() => handleIndustryNavigate('/industries')}
                     >
                       Explore All Industries →
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/*insights page   */}
+
+            {/* =======================
+        INSIGHTS
+======================= */}
+
+            <div
+              className="insights-dropdown"
+              onMouseLeave={() => setInsightsOpen(false)}
+            >
+              <button
+                className="insights-trigger"
+                onMouseEnter={() => setInsightsOpen(true)}
+              >
+                <NavLink
+                  to="/insights"
+                  onClick={() => setInsightsOpen(false)}
+                >
+                  Insights
+                </NavLink>
+
+                <svg
+                  className="insights-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              {insightsOpen && (
+                <div className="insights-menu">
+                  {/* LEFT */}
+
+                  <div className="insights-sidebar">
+                    <p>INSIGHTS</p>
+
+                    <div className="insights-grid">
+                      <button
+                        className={
+                          activeInsight === 'case-studies'
+                            ? 'active-insight'
+                            : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('case-studies')}
+                        onClick={() => handleNavigate('/insights/case-studies')}
+                      >
+                        <span>Case Studies</span>
+                        <span>›</span>
+                      </button>
+
+                      {/* <button
+                        className={
+                          activeInsight === 'blogs' ? 'active-insight' : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('blogs')}
+                        onClick={() => handleNavigate('/blogs')}
+                      >
+                        <span>Blogs</span>
+                        <span>›</span>
+                      </button> */}
+                      <button
+                        className={
+                          activeInsight === 'blogs' ? 'active-insight' : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('blogs')}
+                        onClick={() => handleNavigate('/insights/blogs')}
+                      >
+                        <span>Blogs</span>
+                        <span>›</span>
+                      </button>
+
+                      {/* <button
+                        className={
+                          activeInsight === 'newsletter' ? 'active-insight' : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('newsletter')}
+                        onClick={() => handleNavigate('/newsletter')}
+                      >
+                        <span>Newsletter</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activeInsight === 'articles' ? 'active-insight' : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('articles')}
+                        onClick={() => handleNavigate('/articles')}
+                      >
+                        <span>Articles</span>
+                        <span>›</span>
+                      </button>
+
+                      <button
+                        className={
+                          activeInsight === 'whitepapers'
+                            ? 'active-insight'
+                            : ''
+                        }
+                        onMouseEnter={() => setActiveInsight('whitepapers')}
+                        onClick={() => handleNavigate('/white-papers')}
+                      >
+                        <span>White Papers</span>
+                        <span>›</span>
+                      </button> */}
+                    </div>
+                  </div>
+
+                  {/* RIGHT */}
+
+                  <div className="insights-content">
+                    {activeInsight === 'case-studies' && (
+                      <>
+                        <h2>Explore Case Studies</h2>
+
+                        <p>
+                          Discover how Teckonnect has helped organisations solve
+                          complex business challenges through innovative
+                          technology solutions and measurable outcomes.
+                        </p>
+                      </>
+                    )}
+
+                    {activeInsight === 'blogs' && (
+                      <>
+                        <h2>Explore Blogs</h2>
+
+                        <p>
+                          Read expert insights, technology trends, cloud
+                          innovations, cybersecurity topics, AI, and digital
+                          transformation articles.
+                        </p>
+                      </>
+                    )}
+
+                    {activeInsight === 'newsletter' && (
+                      <>
+                        <h2>Explore Newsletters</h2>
+
+                        <p>
+                          Stay updated with the latest company news, technology
+                          updates, events and monthly highlights from
+                          Teckonnect.
+                        </p>
+                      </>
+                    )}
+
+                    {activeInsight === 'articles' && (
+                      <>
+                        <h2>Explore Articles</h2>
+
+                        <p>
+                          Browse in-depth technical articles covering enterprise
+                          IT, Microsoft, AWS, IBM, cybersecurity and modern
+                          workplace technologies.
+                        </p>
+                      </>
+                    )}
+
+                    {activeInsight === 'whitepapers' && (
+                      <>
+                        <h2>Explore White Papers</h2>
+
+                        <p>
+                          Access detailed research, best practices,
+                          implementation guides and enterprise technology
+                          recommendations.
+                        </p>
+                      </>
+                    )}
+
+                    <div
+                      className="insightsExplore"
+                      onClick={() => handleNavigate('/insights')}
+                    >
+                      Explore All Insights →
                     </div>
                   </div>
                 </div>
@@ -976,6 +1190,13 @@ function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               About Us
+            </NavLink>
+
+            <NavLink
+              to="/case-studies"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Case Studies
             </NavLink>
 
             <NavLink

@@ -63,40 +63,36 @@
 
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 0;
 
   text-decoration: none;
   cursor: pointer;
 
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-
-  /* ❌ remove translateY */
-  transition: filter 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-/* 👉 Arrow (space reserved, no cut) */
 .btn::after {
   content: '→';
-
   opacity: 0;
-  transform: translateX(-4px); /* small safe shift */
-
-  display: inline-block;
-  width: 14px; /* 👈 reserve space */
+  max-width: 0;
+  overflow: hidden;
+  transform: translateX(-6px);
 
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+    opacity 0.3s ease,
+    max-width 0.3s ease,
+    margin-left 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* 👉 Hover (smooth, no clipping) */
 .btn:hover::after {
   opacity: 1;
+  max-width: 20px;
+  margin-left: 6px;
   transform: translateX(0);
 }
 
-/* 👉 Hover feel (NO movement) */
 .btn:hover {
   filter: brightness(1.05);
 }

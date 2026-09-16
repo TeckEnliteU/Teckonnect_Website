@@ -58,7 +58,7 @@
 //             to="/contact"
 //             className={styles.secondaryBtn}
 //           >
-//             Talk to Our Experts
+//             Book for Assesment
 //           </Link>
 //         </div>
 //       </div>
@@ -111,7 +111,7 @@ const Microsoft365Hero = () => {
               to="/contact"
               className={styles.secondaryBtn}
             >
-              Talk to Our Experts
+              Book for Assesment
             </Link>
           </div>
         </div>

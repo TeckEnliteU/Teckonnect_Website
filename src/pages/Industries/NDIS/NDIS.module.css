@@ -1,0 +1,901 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.publicHero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  /* min-height: 780px; */
+  overflow: hidden;
+  padding: 120px 20px;
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/images/ndis.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   LEFT DARK GRADIENT
+========================================================= */
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 58, 81, 1) 0%,
+    rgba(5, 58, 81, 0.95) 20%,
+    rgba(5, 58, 81, 0.82) 38%,
+    rgba(5, 58, 81, 0.45) 55%,
+    rgba(5, 58, 81, 0) 75%
+  );
+
+  z-index: 2;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.heroContainer {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.heroTag {
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 92px;
+  text-transform: uppercase;
+
+  padding: auto;
+  display: inline-block;
+}
+
+.heroTag::after {
+  content: '';
+
+  width: 60px;
+  height: 2px;
+
+  background: #a3cf5d;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heroContent h1 {
+  color: #ffffff;
+
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.heroContent h1 span {
+  display: block;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  font-size: 46px;
+
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: auto;
+  display: inline-block;
+}
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.heroContent p {
+  color: #e6e6e6;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  max-width: 580px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .publicHero {
+    min-height: auto;
+    padding: 140px 0 100px;
+  }
+
+  .heroOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 58, 81, 0.96) 0%,
+      rgba(5, 58, 81, 0.88) 45%,
+      rgba(5, 58, 81, 0.7) 100%
+    );
+  }
+
+  .heroContainer {
+    padding: 0 30px;
+  }
+
+  .heroContent h1 {
+    font-size: 46px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .heroContent p {
+    line-height: 1.8;
+  }
+}
+/* overview section */
+
+/* ==========================================
+   OVERVIEW
+========================================== */
+
+.overview {
+  padding: 80px 120px;
+  background: #ffffff;
+}
+
+.overviewContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.overviewHeader {
+  margin-bottom: 55px;
+}
+
+.overviewTag {
+  display: inline-block;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.overviewHeader h2 {
+  margin-top: 18px;
+
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.overviewHeader h2 strong {
+  color: #008abd;
+}
+
+/* CARD */
+
+.overviewCard {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+
+  gap: 60px;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(0, 138, 189, 0.18);
+
+  border-left: 4px solid #008abd;
+
+  border-radius: 18px;
+}
+
+.caseTag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #008abd;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.overviewLeft p {
+  color: #667784;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  margin-bottom: 22px;
+}
+
+.overviewLeft p:last-child {
+  margin-bottom: 0;
+}
+
+.overviewRight ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overviewRight li {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 14px 0;
+
+  color: #667784;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  border-bottom: 1px solid rgba(0, 138, 189, 0.15);
+}
+
+.overviewRight li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .overview {
+    padding: 70px 30px;
+  }
+
+  .overviewCard {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview {
+    padding: 60px 20px;
+  }
+
+  .overviewHeader h2 {
+    font-size: 22px;
+  }
+
+  .overviewCard {
+    padding: 25px;
+  }
+
+  .overviewLeft p,
+  .overviewRight li {
+    font-size: 13px;
+  }
+}
+/* challenges */
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.challenges {
+  padding: 80px 120px;
+  background: #ffffff;
+}
+
+.challengesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.challengeTop {
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+
+.challengeTop span {
+  display: inline-block;
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.challengeTop h2 {
+  margin: 18px 0 22px;
+
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.challengeTop h2 strong {
+  color: #008abd;
+}
+
+.challengeTop p {
+  max-width: 650px;
+
+  color: #667784;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =====================================
+   SOLUTIONS
+===================================== */
+
+.solutionGrid {
+  border-top: 1px solid rgba(0, 138, 189, 0.15);
+}
+
+.solutionRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  gap: 45px;
+
+  padding: 35px 0;
+
+  border-bottom: 1px solid rgba(0, 138, 189, 0.15);
+
+  transition: 0.35s ease;
+}
+
+.solutionRow:hover {
+  padding-left: 12px;
+}
+
+.solutionLeft {
+  color: #008abd;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.solutionRight h3 {
+  color: #053a51;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.solutionRight p {
+  max-width: 760px;
+
+  color: #667784;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .challenges {
+    padding: 70px 30px;
+  }
+
+  .solutionRow {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .solutionRight h3 {
+    font-size: 18px;
+  }
+
+  .challengeTop h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenges {
+    padding: 60px 20px;
+  }
+
+  .challengeTop {
+    margin-bottom: 45px;
+  }
+
+  .challengeTop h2 {
+    font-size: 20px;
+  }
+
+  .solutionRight p {
+    font-size: 13px;
+  }
+}
+/* solution  */
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 120px;
+  background: #ffffff;
+}
+
+.benefitsContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* TOP */
+
+.benefitsTop {
+  text-align: center;
+  max-width: 850px;
+
+  margin: 0 auto 90px;
+}
+
+.benefitsTag {
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: auto;
+  display: inline-block;
+}
+
+.benefitsTop h2 {
+  color: #053a51;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+}
+
+.benefitsTop h2 span {
+  color: #008abd;
+}
+
+.benefitsTop p {
+  color: #6a7884;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* GRID */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.benefitCard {
+  position: relative;
+
+  padding: 20px 10px 0;
+
+  transition: all 0.45s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-12px);
+}
+
+/* ICON */
+
+.iconWrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(-180deg, #f6fdff, #c6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b7fab;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.iconWrap svg {
+  font-size: 24px;
+  color: #008abd;
+
+  transition: 0.4s ease;
+}
+
+.benefitCard:hover .iconWrap {
+  background: linear-gradient(135deg, #053a51, #008abd);
+
+  transform: translateY(-6px);
+}
+
+.benefitCard:hover .iconWrap svg {
+  color: #ffffff;
+}
+
+/* LINE */
+
+.cardLine {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(0, 138, 189, 0.2);
+
+  margin-bottom: 30px;
+}
+
+/* CONTENT */
+
+.benefitCard h3 {
+  color: #053a51;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  margin-bottom: 18px;
+}
+
+.benefitCard p {
+  color: #667784;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    padding: 100px 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsTop h2 {
+    font-size: 42px;
+  }
+}
+/* cta section */
+
+/* cta animation */
+/* ============================= */
+/* MAIN BOX */
+/* ============================= */
+
+.ctaSection {
+  padding: 0; /* remove outer white spacing */
+  margin: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.ctaBox {
+  position: relative;
+
+  /* KEEP SAME HEIGHT/SPACING */
+  padding: 20px 8%;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* REMOVE BOX LOOK */
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+
+  overflow: hidden;
+
+  /* SAME COLOR */
+  background: linear-gradient(135deg, #053a51, #a3cf5d);
+
+  text-align: center;
+  color: white;
+}
+
+/* ============================= */
+/* ORBIT WRAPPER */
+/* ============================= */
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ORBIT CIRCLES */
+/* ============================= */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* DIFFERENT SIZES */
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 12s linear infinite;
+}
+.orbit2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 18s linear infinite reverse;
+}
+.orbit3 {
+  width: 600px;
+  height: 600px;
+  animation: rotate 25s linear infinite;
+}
+.orbit4 {
+  width: 750px;
+  height: 750px;
+  animation: rotate 35s linear infinite reverse;
+}
+
+/* LOGO */
+.orbit img {
+  width: 30px;
+  margin-top: -20px; /* push to top of circle */
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* .ctaContent button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+
+  color: #111;
+} */
+.ctaContent button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+
+  background: linear-gradient(90deg, #ffffff, #a3cf5d);
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    padding-right 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctaContent button::after {
+  content: '→';
+
+  position: absolute;
+  right: 18px;
+  top: 50%;
+
+  transform: translate(-8px, -50%);
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctaContent button:hover {
+  padding-right: 38px; /* increase only right side */
+  transform: translateY(-2px);
+}
+
+.ctaContent button:hover::after {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+@media (max-width: 768px) {
+  /* SECTION */
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  /* BOX */
+  .ctaBox {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  /* 🔥 ORBIT CONTROL (KEY FIX) */
+  .orbitWrap {
+    transform: scale(0.6); /* shrink entire animation */
+  }
+
+  /* ORBIT SIZES REDUCED */
+  .orbit1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+
+  /* LOGO SIZE */
+  .orbit img {
+    width: 26px;
+    margin-top: -14px;
+  }
+
+  /* CONTENT */
+  .ctaContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .ctaContent button {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin-top: 20px;
+  }
+}

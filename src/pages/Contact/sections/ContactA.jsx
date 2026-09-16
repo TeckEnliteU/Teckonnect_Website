@@ -1,63 +1,5 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import styles from '../contact.module.css';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
-
-/* ========================= */
-/* 🔥 TEXT ANIMATION */
-/* ========================= */
-
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const textReveal = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-    // clipPath: 'inset(0 0 100% 0)',
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    clipPath: 'inset(0 0 0% 0)',
-    transition: {
-      duration: 1,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  },
-};
-
-/* ========================= */
-/* 🔥 CARD ANIMATION */
-/* ========================= */
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 80,
-    scale: 0.92,
-    rotateX: 15,
-  },
-  show: (i) => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    rotateX: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.9,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  }),
-};
 
 export default function Contact() {
   const cards = [
@@ -86,63 +28,28 @@ export default function Contact() {
 
   return (
     <section className={styles.infoSection}>
-      <motion.div
-        className={styles.infoContainer}
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: '-100px' }}
-      >
-        {/* 🔥 HEADING */}
-        <motion.h2
-          variants={textReveal}
-          className={styles.infoh2}
-        >
+      <div className={styles.infoContainer}>
+        {/* HEADING */}
+        <h2 className={styles.infoh2}>
           Stay connected with <br />
           dependable IT & cloud support
-        </motion.h2>
+        </h2>
 
-        {/* 🔥 SUBTEXT */}
-        <motion.p
-          variants={textReveal}
-          className={styles.infoText}
-        >
+        {/* SUBTEXT */}
+        <p className={styles.infoText}>
           From everyday IT operations to cloud architecture and cybersecurity,
           our specialists are here to support your business with clarity, speed,
           and accountability.
-        </motion.p>
+        </p>
 
-        {/* 🔥 CARDS */}
+        {/* CARDS */}
         <div className={styles.infoGrid}>
           {cards.map((card, i) => (
-            <motion.div
+            <div
               key={i}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              whileHover={{
-                y: -12,
-                scale: 1.04,
-                rotateX: 4,
-                rotateY: -4,
-              }}
-              whileTap={{ scale: 0.97 }}
               className={styles.infoCard}
             >
-              {/* ICON FLOAT */}
-              <motion.div
-                className={styles.infoIcon}
-                animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              >
-                {card.icon}
-              </motion.div>
+              <div className={styles.infoIcon}>{card.icon}</div>
 
               <h3 className={styles.infoTitle}>{card.title}</h3>
 
@@ -152,12 +59,11 @@ export default function Contact() {
 
               <p className={styles.infoFooter}>{card.footer}</p>
 
-              {/* 🔥 LIGHT SWEEP */}
               <span className={styles.cardGlow}></span>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

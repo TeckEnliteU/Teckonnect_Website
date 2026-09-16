@@ -1,0 +1,260 @@
+.caseStudies {
+  padding: 60px 80px;
+  background: #f5f7fb;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.headingWrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subHeading {
+  color: #0b7fab;
+  font-size: 26px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.heading {
+  display: inline;
+  font-size: 26px;
+  font-weight: 700;
+  color: #081c3a;
+  line-height: 1.1;
+}
+
+/* =========================
+   Grid
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+/* =========================
+   Card
+========================= */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* =========================
+   Image
+========================= */
+
+.image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.8s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* =========================
+   Green Overlay
+========================= */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    /* rgba(0, 0, 0, 0.65) 0%, */ /* dark top */ rgba(0, 0, 0, 0.4) 40%,
+    /* mid fade */ #053a51 100% /* blue bottom */
+  );
+
+  transition: all 0.5s ease;
+}
+
+/* =========================
+   Content
+========================= */
+
+.cardContent {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 22px;
+  z-index: 10;
+
+  transition: transform 0.35s ease;
+}
+
+/* =========================
+   Date
+========================= */
+
+.date {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   Title
+========================= */
+
+.title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+
+  margin-bottom: 14px;
+
+  max-width: 85%;
+}
+
+/* =========================
+   Learn More
+========================= */
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: opacity 0.3s ease;
+}
+
+.learnMore:hover {
+  opacity: 0.9;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* =========================
+   View More Button
+========================= */
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.viewMore {
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #053a51, #a3cf5d);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 22px;
+}
+
+.viewMore:hover {
+  filter: brightness(1.08);
+}
+
+/* 🔥 CLICK FEEL (STRONG) */
+.viewMore:active {
+  transform: scale(0.98); /* 👈 slight press */
+  filter: brightness(0.92); /* 👈 darker = pressed */
+}
+
+/* =========================
+   Loader
+========================= */
+
+.loader {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  .image {
+    height: 320px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .caseStudies {
+    padding: 80px 5%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .subHeading {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .image {
+    height: 300px;
+  }
+
+  .cardContent {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}
